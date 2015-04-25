@@ -1,0 +1,259 @@
+/* r.a.d.calendar business skin */
+
+.calendarWrapper_Business
+{
+	border: solid 1px #e0dfbe !important;
+	cursor: default;
+	font: normal 12px Arial, Verdana, Sans-serif;
+	color: #686868;
+	filter: progid:DXImageTransform.Microsoft.dropShadow(Color=c7c7a9,offX=4,offY=4,positive=true);
+	width: 98%;
+	background: #fffff2 url('Img/CommonBg.gif') repeat-x
+}
+
+.calendarWrapper_Business table
+{
+	width: 100%;
+}
+
+.calendarWrapper_Business
+{
+	font: normal 11px Arial, Verdana, Sans-Serif;
+	color: #5e5d41;
+	cursor: default;
+}
+
+.calendarWrapper_Business td
+{
+	text-align: right;
+	vertical-align: top;
+}
+
+.radCalDefault_Business,
+.radCalWeekendDefault_Business
+{
+	
+	background: #f9f8e0;
+	width: 110px;
+	height: 56px;
+	border-top: solid 1px #fff;
+	border-bottom: solid 1px #fff;
+	border-right: solid 1px #dadaa2;
+}
+
+.radCalHover_Business,
+.radCalWeekendHover_Business
+{
+	width: 110px;
+	height: 56px;
+	font: normal 11px Arial, Verdana, Sans-Serif;
+	background: #fffff2;
+	border-top: solid 1px #fff;
+	border-bottom: solid 1px #fff;
+	border-right: solid 1px #dadaa2;
+}
+
+.radCalSelect_Business,
+.radCalWeekendSelect_Business
+{
+	font: normal 11px Arial, Verdana, Sans-Serif;
+	background: #e5e4cc;
+	width: 110px;
+	height: 56px;
+	border-top: solid 1px #fff;
+	border-bottom: solid 1px #fff;
+	border-right: solid 1px #dadaa2;
+}
+
+.DaysOfWeek_Business
+{
+	color: black;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle !important;
+	text-align: center !important;
+	height: 46px;
+}
+
+.otherMonth_Business
+{
+	color: #dadada;
+	font: normal 11px Arial, Verdana, Sans-Serif;
+	width: 110px;
+	height: 56px;
+	border-top: solid 1px #f9f9f9;
+	border-left: solid 1px #f9f9f9;
+	border-right: solid 1px #f2f2f2;
+	border-bottom: solid 1px #f2f2f2;
+	background-color: #fffff2;
+	cursor: default;
+	text-align: center;
+}
+
+.outOfRange_Business
+{
+	color: #dadada;
+	font: normal 11px Arial, Verdana, Sans-Serif;
+	width: 35px;
+	height: 30px;
+	border-top: solid 1px #f9f9f9;
+	border-left: solid 1px #f9f9f9;
+	border-right: solid 1px #f2f2f2;
+	background: #f9f8e0;	
+	cursor: default;
+	text-align: center;
+}
+
+.titlebar_Business
+{
+	color: #fff;
+	font: bold 13px Arial, Verdana, Sans-Serif;
+	cursor: default;
+	text-align: center;
+	border: solid 1px #146ea6;
+	height: 29px;
+}
+
+.titlebar_Business td
+{
+	vertical-align: top;
+	
+}
+
+.titlebar_Business td img
+{
+	width: 22px;
+	height: 19px;
+	float: left;
+}
+
+.TableLayout_Business
+{
+	table-layout: fixed;
+}
+
+.TableLayout_Business td
+{
+	padding:0px;
+}
+
+/*** MonthYearFastNav ***/
+
+.MonthYearFastNav_Business
+{
+	border: solid 1px #c7c7a9;
+	background: #f9f8e0;
+	font: normal 10px Verdana;
+	color: #000000;
+	border-collapse: collapse;
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#666666,strength=3);
+}
+
+.MonthYearFastNav_Business td
+{
+	text-align: center;
+	vertical-align: middle;
+	border-bottom: 1px solid #c7c7a9;
+	cursor: hand;
+	padding: 4px;
+}
+
+.MonthYearFastNav_Business td.selected_Business
+{
+	background: #0dcbf5;
+	color: white;
+}
+
+.MonthYearFastNav_Business td.bottom_Business
+{
+	text-align: center;
+}
+
+.MonthYearFastNav_Business td input
+{
+	background: #0dcbf5;
+	border: 1px solid #c7c7a9;
+	font: normal 10px Verdana;
+	color: white;
+	float: left;
+	margin-right: 1px;
+}
+
+/*** MonthYearFastNav ***/
+
+/* cell links */
+
+.radCalDefault_Business a,
+.radCalWeekendDefault_Business a
+{
+	color: #7f7f7f;
+	font: normal 11px Arial, Verdana, Sans-Serif;
+	cursor: default;
+	text-decoration: none;
+	padding-top: 3px;
+	padding-right: 14px;
+	display:block;
+}
+
+.radCalDefault_Business img,
+.radCalHover_Business img,
+.radCalSelect_Business img,
+.radCalWeekendDefault_Business img,
+.radCalWeekendHover_Business img,
+.radCalWeekendSelect_Business img
+{
+	float: left;
+}
+
+.radCalHover_Business a,
+.radCalWeekendHover_Business a
+{
+	color: #7f7f7f;
+	font: normal 11px Arial, Verdana, Sans-Serif;
+	text-decoration: none;
+	padding-top: 3px;
+	padding-right: 14px;
+	display: block;
+}
+
+.radCalSelect_Business a,
+.radCalWeekendSelect_Business a
+{
+	color: #7f7f7f;
+	font: normal 11px Arial, Verdana, Sans-Serif;
+	cursor: default;
+	text-decoration: none;
+	padding-top: 3px;
+	padding-right: 14px;
+	display: block;
+}
+
+/* cell links end */
+
+.radPopupImage_Business img
+{
+	vertical-align: middle;
+	_vertical-align: top; /* IE fix */	
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-top: -1px; /* IE margins fix */
+	_margin-top: 0px; 
+	border-width: 0px;
+}
+
+.radDisabled_Business img
+{
+	 filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+
+.otherMonth_Business a,
+.otherMonth_Business a:hover
+{
+	color: #dadada;
+	text-decoration: none;
+	padding-top: 3px;
+	padding-right: 14px;
+	display: block;
+}

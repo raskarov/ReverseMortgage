@@ -1,0 +1,132 @@
+.radHoverCss_Outlook
+{
+	width: 179px;
+	color: #000000;
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	border: solid 1px #000080;
+}
+.radEnabledCss_Outlook
+{
+	width: 179px;
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	border: solid 1px #c4dbf9;
+}
+.radDisabledCss_Outlook
+{
+	width: 179px;
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: Gray;
+	border: solid 1px Grey; 
+	background-color: #e3e3e3;
+}
+
+.radEmptyMessageCss_Outlook
+{
+	width: 179px;
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	border: solid 1px #c4dbf9; 
+	background-color: #e0eeff;
+}
+
+.radFocusedCss_Outlook
+{
+	width: 179px;
+	color: #000000;
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	background-color: #fff;
+	border: solid 1px #000080;
+}
+
+.radNegativeCss_Outlook
+{
+	width: 179px;
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	color:  #000000;
+	border: solid 1px #990000; 
+}
+
+.radInvalidCss_Outlook
+{
+	width: 179px;
+	color: red;
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	border: solid 1px #ffad55;
+	background-color: #ffffff;
+}
+
+.radLabelCss_Outlook
+{
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	color: #000000; 
+	padding-right: 5px; 
+	font-size: 12px;
+}
+
+/* input buttons */
+.radInpButtonCss,
+.radInpButtonCss_Outlook a
+{
+    position: relative; top: 2px;
+}
+
+.radInpButtonCss_Outlook img
+{
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    -moz-opacity: 1; opacity: 1;
+    border: 0;
+}
+
+.radInpButtonCss_Outlook a:hover img
+{
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    -moz-opacity: 0.5; 
+    opacity: 0.5;
+}
+
+.radSpinUpCss_Outlook a,
+.radSpinDownCss_Outlook a
+{
+	/**/
+}
+
+.radSpinUpCss_Outlook a img,
+.radSpinDownCss_Outlook a img
+{
+	width: 7px; height: 4px;
+	border: 0;
+	position: relative;
+	top: -4px;
+	margin: 0 1px;
+}
+
+.radSpinUpCss_Outlook a:hover img,
+.radSpinDownCss_Outlook a:hover img
+{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	opacity: .5; -moz-opacity: .5;
+}
+/* end of input buttons */
+
+
+
+
+
+
+
+

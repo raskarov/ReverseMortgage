@@ -1,0 +1,11 @@
+<asp:GridView SkinID="TotalGrid" runat="server" CellPadding="0" GridLines="None" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" AutoGenerateColumns="false" ShowFooter="true" Width="98%">
+    <FooterStyle CssClass="footer" />
+    <RowStyle CssClass="tr" BackColor="#f0f2f4" />
+    <SelectedRowStyle CssClass="tr" BackColor="#d2d8db" Font-Bold="True" ForeColor="#FFFFFF" />
+    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Left" />
+    <HeaderStyle CssClass="th" />
+    <AlternatingRowStyle CssClass="tr" BackColor="White" />
+</asp:GridView>	    
+<asp:Label runat="server"  Font-Bold="true" Font-Size="Medium" SkinID="VendorHeader"></asp:Label>
+<asp:Label Font-Bold="true" ForeColor="red" runat="server" SkinID="VendorMessage"></asp:Label>
+<asp:Label runat="server" Font-Bold="True" ForeColor="Red" SkinID="ErrLabel" ></asp:Label>

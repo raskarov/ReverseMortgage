@@ -1,0 +1,101 @@
+/* RadInput GREY skin */
+
+.radHoverCss_Grey,
+.radEnabledCss_Grey,
+.radEmptyMessageCss_Grey,
+.radNegativeCss_Grey,
+.radFocusedCss_Grey,
+.radInvalidCss_Grey
+{
+	border: 0;
+	height: 21px; width: 179px;
+	font: normal 12px Arial, Verdana, Tahoma, Sans-Serif;
+	padding-top: 3px;
+	vertical-align: middle;
+	_background-attachment: fixed; /* IE6 */
+}
+
+.radHoverCss_Grey
+{
+	background: transparent url(Img/over.gif) no-repeat;
+	color: black;
+}
+
+.radEnabledCss_Grey,
+.radEmptyMessageCss_Grey,
+.radNegativeCss_Grey
+{
+	background: url(Img/default.gif) no-repeat;
+	color: #666;
+}
+
+.radDisabledCss_Grey
+{
+	background-image: url(Img/default.gif) no-repeat;
+	color: #666;
+}
+
+.radFocusedCss_Grey
+{
+	background: url(Img/focus.gif) no-repeat;
+	color: #111;
+}
+
+.radInvalidCss_Grey
+{
+	background: url(Img/error.gif) no-repeat;
+	color: red;
+}
+
+.radLabelCss_Grey
+{
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	color: #888; 
+	font-size: 12px;
+	padding-right: 5px;
+}
+
+/* input buttons */
+.radInpButtonCss_Grey a
+{
+    /**/
+}
+
+.radInpButtonCss_Grey img
+{
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    -moz-opacity: 1; opacity: 1;
+    border: 0;
+    position: relative; top: 4px;
+}
+
+.radInpButtonCss_Grey a:hover img
+{
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    -moz-opacity: 0.5; 
+    opacity: 0.5;
+}
+
+.radSpinUpCss_Grey a,
+.radSpinDownCss_Grey a
+{
+	/**/
+}
+
+.radSpinUpCss_Grey a img,
+.radSpinDownCss_Grey a img
+{
+	width: 7px; height: 4px;
+	border: 0;
+	position: relative;
+	top: -2px;
+	margin: 0 1px;
+}
+
+.radSpinUpCss_Grey a:hover img,
+.radSpinDownCss_Grey a:hover img
+{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	opacity: .5; -moz-opacity: .5;
+}
+/* end of input buttons */

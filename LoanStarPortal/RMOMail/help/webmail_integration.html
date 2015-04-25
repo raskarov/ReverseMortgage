@@ -1,0 +1,295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<!--meta HTTP-EQUIV="Content-Type" Content="text-html; charset=iso8859-1"-->
+		<link rel="stylesheet" href="help_styles.css" type="text/css">
+	</head>
+	<body>
+		<br>
+		<p class="wmh_header" align="center">How to integrate WebMail into another system</p>
+		<p class="wmh_reg">
+			WebMail can be easily integrated into any existing system.<br>
+			<br>
+			To bypass WebMail's login screen and enter user's email account directly, it is 
+			required to set up some data that identify user in WebMail system. WebMail 
+			provides Integration object for this purpose.<br>
+			<br>
+		<p class="wmh_reg">
+			<b>Usage</b> of Integration object is simple. <blockquote> 1. Add a reference to WebMailPro.dll to your project
+			(in Visual Studio 'Project->Add Reference...').<br><br>
+			    2. Import WebMailPro namespace:<br>
+				<br>
+				<span class="wmh_codeSample">using WebMailPro;</span>
+				<br>
+				<br>
+				3.&nbsp;&nbsp;Create "Integration" object:<br>
+				<br>
+				<span class="wmh_codeSample">Integration integr = new Integration(@"c:\webmail\data", @"http://myserver/webmailpro/");</span>
+				<br>
+				The first parameter is the path to the WebMail data folder. The same path is specified in 'web.config' file in the WebMail root folder.<br>
+				The second parameter is the path to the WebMail root folder.
+				<br>
+				<br>
+				4.&nbsp;&nbsp;Now, for instance, we need to log a user into WebMail bypassing standard login screen.
+				Let's call UserLoginByEmail method for this purpose:<br>
+				<br>
+				<span class="wmh_codeSample">integr.UserLoginByEmail(@"user@domian", "user", "password", WMStartPage.Mailbox);</span>
+				<br>
+				<a href="#consts">WMStartPage</a> is an enumeration determining the screen the user will be redirected to after logging in.
+				<br>
+				<br>
+				See also <a href="#usageexamples">Usage Examples</a> for details on user's 
+				account updates in WebMail system.<br>
+				<br>
+				<br>
+			</blockquote>
+		<p class="wmh_reg">
+			<a name="methods" class="wmh_txt"><b>Methods:</b></a><br>
+			<br>
+			<table style="MARGIN-LEFT:30px; VERTICAL-ALIGN:top; BORDER-COLLAPSE:collapse" cellpadding="4"
+				cellspacing="0" class="wmh_reg" border="0">
+				<tr>
+					<td class="wmh_desc_content" width="220"><i>GetAccountById(id)</i></td>
+					<td class="wmh_desc_content">
+						Gets <a href="#account">Account</a> object by id of user in the database
+						(awm_accounts.id_acct), or null on error.
+					</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content" width="220"><i>GetAccountByMailLogin(email, login)</i></td>
+					<td class="wmh_desc_content">
+						Gets <a href="#account">Account</a> object by e-mail address and login or null on error.
+						<br>
+						<br>
+						email, login - required parameters.
+					</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content" width="220"><i>CreateUser(email, login, password)</i></td>
+					<td class="wmh_desc_content">Creates a user in WebMail database.
+						<br>
+						<br>
+						email, login, password - required parameters
+						<br>
+						Default values are assigned to all other settings like POP3/IMAP4/SMTP servers, etc.
+					</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content" width="220"><i>CreateUserFromAccount(account)</i></td>
+					<td class="wmh_desc_content">
+					    Creates a user in WebMail database with settings specified in
+					    <a href="#account">Account</a> object.					    
+					</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content" width="220"><i>UserExists(email, login)</i></td>
+					<td class="wmh_desc_content">
+					    Checks if the user exists in WebMail database.
+						<br>
+						<br>
+						email, login - required parameters.
+						<br>
+						<br>
+						Returns true if the user exists, false if doesn't.
+					</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content" width="220"><i>UserLoginByEmail(email, login, 
+							startPage, password, recipient)</i></td>
+					<td class="wmh_desc_content">Performs login and redirects user into WebMail system.
+						<br>
+						<br>
+						email, login - required parameters.
+						<br>
+						startPage - a constant determining the screen the user will be redirected to after logging in.
+						<br>
+						password - may be equal to <b>null</b>
+						<br>
+						recipient - e-mail address which will be put into To field. Is used in case of redirection to compose message screen (WMStartPage.NewMessage) only.
+						</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content" colspan="2">
+					   All these methods may throw WebMailException.
+					</td>
+				</tr>
+			</table>
+			<br>
+		<p class="wmh_reg">
+			<a name="consts" class="wmh_txt"><b>WMStartPage enumeration members (determine the screen the user will be redirected to after logging in)</b></a><br>
+			<br>
+			<table style="MARGIN-LEFT:30px; VERTICAL-ALIGN:top; BORDER-COLLAPSE:collapse" cellpadding="4"
+				cellspacing="0" class="wmh_reg" border="0" ID="Table1">
+				<tr>
+					<td class="wmh_desc_header">Value</td>
+					<td class="wmh_desc_header">Description</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content" width="220" height="25"><i>Mailbox</i></td>
+					<td class="wmh_desc_content" height="25">Message list screen.</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>NewMessage</i></td>
+					<td class="wmh_desc_content">Compose message screen.</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>Settings</i></td>
+					<td class="wmh_desc_content">User's settings screen.</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>Contacts</i></td>
+					<td class="wmh_desc_content">User's contacts screen (addressbook).</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>Calendar</i></td>
+					<td class="wmh_desc_content">User's calendar screen.</td>
+				</tr>
+			</table>
+			<br>
+		<p class="wmh_reg">
+			<a name="account" class="wmh_txt"><b>Account object (represents a user account in WebMail)</b></a><br>
+			<br>
+			<table style="MARGIN-LEFT:30px; VERTICAL-ALIGN:top; BORDER-COLLAPSE:collapse" cellpadding="4"
+				cellspacing="0" class="wmh_reg" border="0" ID="Table2">
+				<tr>
+					<td class="wmh_desc_header">Value</td>
+					<td class="wmh_desc_header">Description</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content" width="220" height="25"><i>ID (int)</i></td>
+					<td class="wmh_desc_content" height="25">Account unique identifier
+						(awm_accounts.id_acct).</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>Email (string)</i></td>
+					<td class="wmh_desc_content">Email address.</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>DefaultAccount (bool)</i></td>
+					<td class="wmh_desc_content">Indicates if the account is default (primary), i.e. can be used
+					    for logging into WebMail.</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>MailIncomingProtocol (WebMailPro.IncomingMailProtocol)</i></td>
+					<td class="wmh_desc_content">Protocol of the account.
+						<br>
+						<br>
+						Possible values:<br>
+						Pop3 - POP3 protocol.<br>
+						Imap4 - IMAP4 protocol.<br>
+						WMServer - communicating with local mail server.</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>MailIncomingHost (string)</i></td>
+					<td class="wmh_desc_content">Incoming mail server address (e.g. mail.domain.com).</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>MailIncomingPort (int)</i></td>
+					<td class="wmh_desc_content">Incoming mail server port number (110 for POP3, 143 for IMAP4).</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>MailIncomingLogin (string)</i></td>
+					<td class="wmh_desc_content">Login for incoming mail server.</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>MailIncomingPassword (string)</i></td>
+					<td class="wmh_desc_content">Password for incoming mail server.</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>MailOutgoingHost (string)</i></td>
+					<td class="wmh_desc_content">Outgoing mail server address (e.g. mail.domain.com).</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>MailOutgoingPort (int)</i></td>
+					<td class="wmh_desc_content">Outgoing mail server port number (25 for SMTP).</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>MailOutgoingLogin (string)</i></td>
+					<td class="wmh_desc_content">Login for outgoing mail server.</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>MailOutgoingPassword (string)</i></td>
+					<td class="wmh_desc_content">Password for outgoing mail server.</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>FriendlyName (string)</i></td>
+					<td class="wmh_desc_content">A name to be added to e-mail address in From field of outgoing messages.</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>GetMailAtLogin (bool)</i></td>
+					<td class="wmh_desc_content">Indicates if message receiving should be performed automatically
+					    after logging into WebMail under this account.</td>
+				</tr>
+			</table>
+			<br>
+		<p class="wmh_reg">
+			<a name="usageexamples" class="wmh_txt"><b>Usage examples:</b></a><br>
+			<br>
+			Example 1: <blockquote style="MARGIN-TOP:6px"> On the ASP.NET page you want to launch 
+				WebMail from, add the lines similar to the following:<br>
+				<br>
+				<pre class="wmh_codeSample">
+Integration integr = new Integration(@"c:\webmail\data", @"http://myserver/webmailpro/");
+try
+{
+	integr.UserLoginByEmail(@"user@domain", "user", "password", WMStartPage.NewMessage, "user1@domain");
+}
+catch (WebMailException ex)
+{
+	// handle exception
+}
+		</pre>
+				The code above will redirect to WebMail system and immediately open 
+				message compose screen for user 'user1@domain'.<br>
+				<br>
+				Once UserLoginByEmail method called, there are two cases possible:<br>
+				<br>
+				1. Specified email address was found in WebMail database. The user is 
+				redirected to the requested screen of the account. Email account properties are taken 
+				from the database (specified through "WebMail Settings" in "Administration 
+				Panel").<br>
+				<br>
+				2. If there is no users with such credentials in the WebMail database or an error occurred, WebMailException will be thrown.
+				<br>
+				<br>
+</blockquote>
+			Example 2: <blockquote>
+				<pre class="wmh_codeSample">
+Integration integr = new Integration(@"c:\webmail\data", @"http://myserver/webmailpro/");
+try
+{
+	integr.CreateUser("user@localhost", "user", "password");
+}
+catch (WebMailException ex)
+{
+	Response.Write(ex.Message);
+}
+				</pre>
+				This sample creates a user in WebMail database and displays error description on error.
+			</blockquote>
+			Example 3: <blockquote>
+				<pre class="wmh_codeSample">
+Integration integr = new Integration(@"c:\webmail\data", @"http://myserver/webmailpro/");
+try
+{
+	Account acct = integr.GetAccountByMailLogin("user@localhost", "user", "password");
+	Response.Write(acct.Email);
+}
+catch (WebMailException ex)
+{
+	// handle exception
+}
+		</pre>
+				This sample gets all user's data (as Account object) from WebMail database.
+			</blockquote>
+			<br>
+			<hr>
+		<p class="wmh_reg" align="center">
+			If you have any questions don't hesitate to email to <a href="mailto:support@afterlogic.com">
+				support@afterlogic.com</a><br>
+			Or visit our support web page at <a href="http://www.afterlogic.com/support" target="_blank">
+				http://www.afterlogic.com/support</a><br>
+			or web forum at <a href="http://www.afterlogic.com/forum" target="_blank">http://www.afterlogic.com/forum</a>
+		</p>
+	</body>
+</html>

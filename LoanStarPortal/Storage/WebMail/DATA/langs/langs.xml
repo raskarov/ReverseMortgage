@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<langs>
+	<lang>
+		<FriendlyName>Danish</FriendlyName>
+		<CultureName>da</CultureName>
+	</lang>
+	<lang>
+		<FriendlyName>Dutch</FriendlyName>
+		<CultureName>nl</CultureName>
+	</lang>
+	<lang>
+		<FriendlyName>English</FriendlyName>
+		<CultureName>en</CultureName>
+	</lang>
+	<lang>
+		<FriendlyName>French</FriendlyName>
+		<CultureName>fr</CultureName>
+	</lang>
+	<lang>
+		<FriendlyName>German</FriendlyName>
+		<CultureName>de</CultureName>
+	</lang>
+	<lang>
+		<FriendlyName>Hungarian</FriendlyName>
+		<CultureName>hu</CultureName>
+	</lang>
+	<lang>
+		<FriendlyName>Portuguese-Brazil</FriendlyName>
+		<CultureName>pt-BR</CultureName>
+	</lang>
+	<lang>
+		<FriendlyName>Russian</FriendlyName>
+		<CultureName>ru</CultureName>
+	</lang>
+	<lang>
+		<FriendlyName>Swedish</FriendlyName>
+		<CultureName>sv</CultureName>
+	</lang>
+	<lang>
+		<FriendlyName>Turkish</FriendlyName>
+		<CultureName>tr</CultureName>
+	</lang>
+</langs>

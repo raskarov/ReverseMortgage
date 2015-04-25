@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanStarPortal", "LoanStarPortal\LoanStarPortal.csproj", "{D5386194-34E1-4047-8DBA-78C1DB4C3597}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{8C8F25C6-A23B-425E-A3AB-3D7ACEB8F832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtDataLoad", "ExtDataLoad\ExtDataLoad.csproj", "{DAC78543-F2F7-4029-99B5-B31515C0AEA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanStarReports", "LoanStarReports\LoanStarReports.csproj", "{C94D1C1C-CA76-4854-8214-8A471B4790DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMOriginatorDataService", "RMOriginatorDataService\RMOriginatorDataService.csproj", "{A4125866-B4B1-43EF-8F2E-22845DB74CB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Crystal Reports", "Crystal Reports", "{BBDD1F3B-40D1-4432-A00F-079AAC663377}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Crystal Reports", "Crystal Reports", "{CC5B9852-5990-43A8-9F62-5D45DA7E02CC}"
+	ProjectSection(SolutionItems) = preProject
+		Libs\Crystal reports\CrystalDecisions.CrystalReports.Engine.dll = Libs\Crystal reports\CrystalDecisions.CrystalReports.Engine.dll
+		Libs\Crystal reports\CrystalDecisions.CrystalReports.Engine.xml = Libs\Crystal reports\CrystalDecisions.CrystalReports.Engine.xml
+		Libs\Crystal reports\CrystalDecisions.ReportSource.dll = Libs\Crystal reports\CrystalDecisions.ReportSource.dll
+		Libs\Crystal reports\CrystalDecisions.ReportSource.xml = Libs\Crystal reports\CrystalDecisions.ReportSource.xml
+		Libs\Crystal reports\CrystalDecisions.Shared.dll = Libs\Crystal reports\CrystalDecisions.Shared.dll
+		Libs\Crystal reports\CrystalDecisions.Shared.xml = Libs\Crystal reports\CrystalDecisions.Shared.xml
+		Libs\Crystal reports\CrystalDecisions.Web.dll = Libs\Crystal reports\CrystalDecisions.Web.dll
+		Libs\Crystal reports\CrystalDecisions.Web.xml = Libs\Crystal reports\CrystalDecisions.Web.xml
+		Libs\Crystal reports\CrystalDecisions.Windows.Forms.dll = Libs\Crystal reports\CrystalDecisions.Windows.Forms.dll
+		Libs\Crystal reports\CrystalDecisions.Windows.Forms.xml = Libs\Crystal reports\CrystalDecisions.Windows.Forms.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{8FB4CC61-A097-45F4-A367-FBABEC81DAAF}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5386194-34E1-4047-8DBA-78C1DB4C3597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5386194-34E1-4047-8DBA-78C1DB4C3597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5386194-34E1-4047-8DBA-78C1DB4C3597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5386194-34E1-4047-8DBA-78C1DB4C3597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C8F25C6-A23B-425E-A3AB-3D7ACEB8F832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C8F25C6-A23B-425E-A3AB-3D7ACEB8F832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C8F25C6-A23B-425E-A3AB-3D7ACEB8F832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C8F25C6-A23B-425E-A3AB-3D7ACEB8F832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAC78543-F2F7-4029-99B5-B31515C0AEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAC78543-F2F7-4029-99B5-B31515C0AEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAC78543-F2F7-4029-99B5-B31515C0AEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAC78543-F2F7-4029-99B5-B31515C0AEA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C94D1C1C-CA76-4854-8214-8A471B4790DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C94D1C1C-CA76-4854-8214-8A471B4790DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C94D1C1C-CA76-4854-8214-8A471B4790DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C94D1C1C-CA76-4854-8214-8A471B4790DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4125866-B4B1-43EF-8F2E-22845DB74CB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4125866-B4B1-43EF-8F2E-22845DB74CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4125866-B4B1-43EF-8F2E-22845DB74CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4125866-B4B1-43EF-8F2E-22845DB74CB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CC5B9852-5990-43A8-9F62-5D45DA7E02CC} = {BBDD1F3B-40D1-4432-A00F-079AAC663377}
+	EndGlobalSection
+EndGlobal

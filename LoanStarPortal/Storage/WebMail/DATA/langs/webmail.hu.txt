@@ -1,0 +1,816 @@
+﻿PROC_ERROR_ACCT_CREATE = Hiba a felhasználói fiók létrehozása közben!
+PROC_WRONG_ACCT_PWD = Hibás jelszó
+PROC_CANT_LOG_NONDEF = Nem lehetséges a belépés a nem szabványos fiókba
+PROC_CANT_INS_NEW_FILTER = Nem lehet új szűrőt létrehozni
+PROC_FOLDER_EXIST = A könyvtár már létezik
+PROC_CANT_CREATE_FLD = Nem lehet könyvtárat létrehozni
+PROC_CANT_INS_NEW_GROUP = Nem lehet új csoportot létrehozni
+PROC_CANT_INS_NEW_CONT = Nem lehet új névjegyet létrehozni
+PROC_CANT_INS_NEW_CONTS = Nem lehet új névjegye(ke)t létrehozni
+PROC_CANT_ADD_NEW_CONT_TO_GRP = Nem lehet a névjegyeket a csoportba helyezni
+PROC_ERROR_ACCT_UPDATE = Hiba a fiók frissítése közben
+PROC_CANT_UPDATE_CONT_SETTINGS = Nem lehet frissíteni a névjegyek beállításait
+PROC_CANT_GET_SETTINGS = Nem lehet a beállításokat lekérni
+PROC_CANT_UPDATE_ACCT = Nem lehet frissíteni a fiókot
+PROC_ERROR_DEL_FLD = Hiba a mappa(ák) törlése közben
+PROC_CANT_UPDATE_CONT = Nem lehet frissíteni a névjegyet
+PROC_CANT_GET_FLDS = Nem lehet kiolvasni a mappák listáját
+PROC_CANT_GET_MSG_LIST = Nem lehet lekérni az üzenetek listáját
+PROC_MSG_HAS_DELETED = Ez az üzenet már törölve lett a szerverről
+PROC_CANT_LOAD_CONT_SETTINGS = Nem lehet betölteni a névjegyek beállítását
+PROC_CANT_LOAD_SIGNATURE = Nem lehet betölteni az aláírást
+PROC_CANT_GET_CONT_FROM_DB = Nem lehet lekérdezi a névjegyet az adatbázisból
+PROC_CANT_GET_CONTS_FROM_DB = Nem lehet lekérdezni a névjegye(ke)t az adatbázisból
+PROC_CANT_DEL_ACCT_BY_ID = Nem lehet törölni a fiókot
+PROC_CANT_DEL_FILTER_BY_ID = Nem lehet törölni a szűrőt
+PROC_CANT_DEL_CONT_GROUPS = Nem lehet törölni a névjegye(ke)t és/vagy a csoportokat
+PROC_WRONG_ACCT_ACCESS = Azonosítatlan hozzáféési kísérlet észlelve a fiókhoz.
+PROC_SESSION_ERROR = Az előző munkamenet megszakítva időtúllépés miatt.
+
+MailBoxIsFull = A postafiók megtelt.
+WebMailException = WebMail kivételes hiba történt
+InvalidUid = Érvénytelen üzenet azonosító
+CantCreateContactGroup = Nem lehet létrehozni a csoportot
+CantCreateUser = Nem lehet a felhasználót létrehozni
+CantCreateAccount = Nem lehet a fiókot létrehozni
+SessionIsEmpty = A munkamenet üres
+FileIsTooBig = Túl nagy méretű fájl
+
+PROC_CANT_MARK_ALL_MSG_READ = Nem lehet az összes üzenetet megjelölni olvasottként
+PROC_CANT_MARK_ALL_MSG_UNREAD = Nem lehet az összes üzenetet megjelölni olvasatlanként
+PROC_CANT_PURGE_MSGS = Nem lehet véglegesen törölni az üzenete(ke)t
+PROC_CANT_DEL_MSGS = Nem lehet törölni az üzenete(ke)t
+PROC_CANT_UNDEL_MSGS = Nem lehet visszavonni a törlését az üzenet(ek)nek
+PROC_CANT_MARK_MSGS_READ = Nem lehet megjelölni ovasottként az üzenete(ke)t
+PROC_CANT_MARK_MSGS_UNREAD = Nem lehet megjelölni olvasatlanként az üzenete(ke)t
+PROC_CANT_SET_MSG_FLAGS = Nem lehet beállítani az üzenethez megjelölést
+PROC_CANT_REMOVE_MSG_FLAGS = Nem lehet eltávolítani az üzenethez a megjelölést
+PROC_CANT_CHANGE_MSG_FLD = Nem lehet az mappát váltani az üzenet(ek)hez
+PROC_CANT_SEND_MSG = Nem lehet elküldeni az üzenetet.
+PROC_CANT_SAVE_MSG = Nem lehet elmenteni az üzenetet
+PROC_CANT_GET_ACCT_LIST = Nem lehet lekérni a mappák listáját
+PROC_CANT_GET_FILTER_LIST = Nem lehet lekérni a szűrők listáját
+
+PROC_CANT_LEAVE_BLANK = Nem hagyhatja üresen a *-al jelölt mezőket
+	
+PROC_CANT_UPD_FLD = Nem lehet frissíteni a mappát
+PROC_CANT_UPD_FILTER = Nem lehet frissíteni a szűrőt
+
+ACCT_CANT_ADD_DEF_ACCT = Nem lehet hozzáadni ezt a fiókot, mert másik felhasználhó már használja alapértelmezettként.
+ACCT_CANT_UPD_TO_DEF_ACCT = Nem lehet beállítani a fiókot alapértelmezettnek.
+ACCT_CANT_CREATE_IMAP_ACCT = Nem lehet új fiókot létrehozni (IMAP4 kapcsolódási hiba)
+ACCT_CANT_DEL_LAST_DEF_ACCT = Nem lehet törölni az utolsó alapértelmezett fiókot
+
+LANG_LoginInfo = Belépési információk
+LANG_Email = E-mail cím
+LANG_Login = Postafiók
+LANG_Password = Jelszó
+LANG_IncServer = Bejövő Üzenet
+LANG_PopProtocol = POP3
+LANG_ImapProtocol = IMAP4
+LANG_IncPort = Port
+LANG_OutServer = SMTP Szerver
+LANG_OutPort = Port
+LANG_UseSmtpAuth = SMTP hitelesítés használata
+LANG_SignMe = Automatikus beléptetés
+LANG_Enter = Belépés
+
+TitleLogin = Belépés
+TitleMessagesListView = Üzenetek listája
+TitleMessagesList = Üzenetek listája
+TitleViewMessage = Üzenet megtekintése
+TitleNewMessage = Új üzenet
+TitleSettings = Beállítások
+TitleContacts = Címjegyzék
+
+StandardLogin = Egyszerűsített&nbsp;Belépés
+AdvancedLogin = Bővített&nbsp;Belépés
+
+InfoWebMailLoading = Kérem várjon amíg a WebMail töltődik&hellip;
+Loading = Töltés&hellip;
+InfoMessagesLoad = Kérjem várjon amíg a WebMail az üzenetek listáját tölti
+InfoEmptyFolder = A mappa üres
+InfoPageLoading = Az oldal még töltődik...
+InfoSendMessage = Az üzenet elküldve
+InfoSaveMessage = Az üzenet elmentve
+; You have imported 3 new contact(s) into your contacts list.
+InfoHaveImported = Ön 
+InfoNewContacts =  új névjegyet sikeresen importált.
+InfoToDelete = A(z) 
+InfoDeleteContent =  mappa törléséhez először törölnie kell a teljes tartalmát.
+InfoDeleteNotEmptyFolders = Nem üres mappák törlése nem lehetséges. A törléshez először ürítse a tartalmukat.
+InfoRequiredFields = * kötelező mezők
+
+ConfirmAreYouSure = Biztos benne?
+ConfirmDirectModeAreYouSure = A kijelölt üzenetek VÉGLEGESEN törlődnek! Biztos benne?
+ConfirmSaveSettings = A beállítások még nem kerültek mentésre. Kattintson az OK-ra a mentéshez.
+ConfirmSaveContactsSettings = A névjegy beállítások még nem kerültek mentésre. Kattintson az OK-ra a mentéshez.
+ConfirmSaveAcctProp = A fiók tulajdonságai még nem kerültek mentésre. Kattintson az OK-ra a mentéshez.
+ConfirmSaveFilter = A szűrő tulajdonságai még nem merültek mentésre. Kattintson az OK-ra a mentéshez.
+ConfirmSaveSignature = Az aláírás nem lett elmentve. Kattintson az OK-ra a mentéshez.
+ConfirmSavefolders = A mappák nem lettek elmentve. Kattintson az OK-ra a mentéshez.
+ConfirmHtmlToPlain = Figyelmeztetés: azzal, hogy megváltoztatja a formátumát az üzenetnek HTML-ről sima szövegre, az formátum elveszik. Kattintson az OK-ra a folytatáshoz.
+ConfirmAddFolder = Mielőtt mappát adna hozzá a változásokat mentenie kell. Kattintson az OK-ra a mentéshez.
+ConfirmEmptySubject = A tárgy mező üres, biztosan folytatja?
+
+WarningEmailBlank = Nem hagyhatja az<br />E-mail cím: mezőt üresen
+WarningLoginBlank = Nem hagyhatja a<br />Postafiók: mezőt üresen
+WarningToBlank = Nem hagyhatja a Címzett: mezőt üresen
+WarningServerPortBlank = Nem hagyhatja a POP3<br />SMTP szerver/port mezőket üresen
+WarningEmptySearchLine = Üres keresés. Kérjük adja meg a keresett szöveget
+WarningMarkListItem = Kérjük jelöljön meg legalább egy üzenetet a listában
+WarningFolderMove = A mappa nem helyezhető át, mert más szinten van
+WarningContactNotComplete = Kérjük adjon meg e-mail címet vagy nevet
+WarningGroupNotComplete = Kérjük adjon meg egy csoportnevet
+
+WarningEmailFieldBlank = Nem hagyhatja üresen az E-mail mezőt
+WarningIncServerBlank = Nem hagyhatja üresen a POP3(IMAP4) Szerver mezőt
+WarningIncPortBlank = Nem hagyhatja üresen a POP3(IMAP4) Szerver Port mezőt
+WarningIncLoginBlank = Nem hagyhatja üresen a POP3(IMAP4) Azonosító mezőt
+WarningIncPortNumber = Kérjük adjon meg pozitív számot a POP3(IMAP4) port mezőben.
+DefaultIncPortNumber = Alapértelmezett POP3(IMAP4) portszám a 110(143).
+WarningIncPassBlank = Nem hagyhatja üresen a POP3(IMAP4) Jelszó mezőt
+WarningOutPortBlank = Nem hagyhatja üresen a SMTP Szerver Port mezőt
+WarningOutPortNumber = Kérjük adjon meg pozitív számot az SMTP port mezőben.
+WarningCorrectEmail = Kérjük adjon meg valós e-mail címet.
+DefaultOutPortNumber = Az alapértelmezett SMTP port a 25.
+
+WarningCsvExtention = A kiterjesztésnek .csv-nek kell lennie
+WarningImportFileType = Kérjük válassza ki azt az alkalmazást ahonnan az adatokat importálni szeretné
+WarningEmptyImportFile = Kérjük válassza ki a fájt a Tallózás gombra kattintva
+	
+WarningContactsPerPage = A névjegyek száma oldalanként értékének pozitívnak kell lennie
+WarningMessagesPerPage = Az üzenetek száma oldalanként értékének pozitívnak kell lennie
+WarningMailsOnServerDays = Kérjük adjon meg pozitív számot az Üzenetek tárolása a szervere mezőben.
+WarningEmptyFilter = Adjon meg egy karatkerláncot
+WarningEmptyFolderName = Adjon meg a mappa nevét
+
+ErrorConnectionFailed = Sikertelen kapcsolódás
+ErrorRequestFailed = Az adatok lekérése sikertelen
+ErrorAbsentXMLHttpRequest = Az XMLHttpRequest objektum hibás
+ErrorWithoutDesc = Leírás nélküli hiba történt
+ErrorParsing = Hiba az XML fájl olvasása közben.
+ResponseText = Válasz szöveg:
+ErrorEmptyXmlPacket = Üres XML csomag
+ErrorImportContacts = Hiba a névjegyek importálása közben
+ErrorNoContacts = Nincs importálandó névjegy.
+ErrorCheckMail = Az üzenetek fogadása hiba miatt megszakadt. Lehetséges, hogy nem minden üzenet lett lekérve.
+
+LoggingToServer = Kapcsolódás a szerverhez&hellip;
+GettingMsgsNum = Az üzenetek számának lekérése
+RetrievingMessage = Üzenetek fogadása
+DeletingMessage = Üzenet törlése
+DeletingMessages = Üzenet(ek) törlése
+Of =  
+Connection = Kapcsolat
+Charset = Karakterkészlet
+AutoSelect = Automatikus választás
+
+Contacts = Címjegyzék
+ClassicVersion = Klasszikus nézet
+Logout = Kilépés
+Settings = Beállítások
+
+LookFor = Keresés
+SearchIn = Keresés
+QuickSearch = Csak a Feladó, Címzett, Tárgy mezőkben keressen (gyorsabb).
+SlowSearch = Keresés a teljes üzenetben
+AllMailFolders = Össszes mappa
+AllGroups = Összes csoport
+
+NewMessage = Új üzenet
+CheckMail = Fogadás
+ReloadFolders = A mappák újraolvasása
+EmptyTrash = Szemetesláda ürítése
+MarkAsRead = Megjelöl olvasottként
+MarkAsUnread = Megjelöl olvasatlanként
+MarkFlag = Megjelöl
+MarkUnflag = Megjelölés törlése
+MarkAllRead = Az összes megjelölése olvasottként
+MarkAllUnread = Az összes megjelölése olvasatlanként
+Reply = Válasz
+ReplyAll = Válasz mindenkinek
+Delete = Törlés
+Undelete = Visszaállítás
+PurgeDeleted = A törölt üzenetek megsemmisítése
+MoveToFolder = Mozgatás másik mappába
+Forward = Továbbítás
+
+HideFolders = Mappák elrejtése
+ShowFolders = Mappák megjelenítése
+ManageFolders = Mappák kezelése
+SyncFolder = Szinkronizált mappa
+NewMessages = Új üzenetek
+Messages = Üzenet(ek)
+
+From = Feladó
+To = Címzett
+Date = Dátum
+Size = Méret
+Subject = Tárgy
+
+FirstPage = Első oldal
+PreviousPage = Előző oldal
+NextPage = Következő oldal
+LastPage = Utolsó oldal
+
+SwitchToPlain = Váltás sima szövegre
+SwitchToHTML = Váltás HTML-re
+AddToAddressBokk = Hozzáadás a címjegyzékhez
+ClickToDownload = Kattintson ide a letöltéshez
+View = Megtekint
+ShowFullHeaders = Üzenet fejléc megtekintése
+HideFullHeaders = Üzenet fejléc elrejtése
+
+MessagesInFolder = üzenet a mappában
+YouUsing = Felhasznált adat: 
+OfYour = , a teljeses rendelkezésre állóból: 
+Mb = MB
+Kb = KB
+B = B
+
+SendMessage = Elküld
+SaveMessage = Mentés
+Print = Nyomtatás
+PreviousMsg = Előző üzenet
+NextMsg = Következő üzenet
+AddressBook = Címlista
+ShowBCC = Titkos másolat megjelenítése
+HideBCC = Titkos másolat elrejtése
+CC = Másolatot kap
+BCC = Titkos másolat
+ReplyTo = Válasz mint
+AttachFile = Fájl csatolása
+Attach = Csatolás
+Re = Re
+OriginalMessage = Eredeti üzenet
+Sent = Elküldve
+Fwd = Továbbítva
+Low = Alacsony
+Normal = Normál
+High = Magas
+Importance = Fontosság
+Close = Bezár
+	
+Common = Általános
+EmailAccounts = E-mail fiókok
+	
+MsgsPerPage = Üzenet oldalanként
+DisableRTE = A szövegszerkesztő kikapcsolása
+Skin = Téma
+DefCharset = Alapértelmezett karakterkészlet
+DefCharsetInc = Alapértelmezett karakterkészlet fogadásnál
+DefCharsetOut = Alapértelmezett karakterkészlet küldésnél
+DefTimeOffset = Alapértelmezett időzóna
+DefLanguage = Alapértelmezett nyelv
+DefDateFormat = Alapértelmezett dátum formátum
+ShowViewPane = Betekintő nézet használata
+Save = Mentés
+Cancel = Mégsem
+OK = OK
+	
+Remove = Eltávolít
+AddNewAccount = Új fiók létrehozása
+Signature = Aláírás
+Filters = Szűrők
+Properties = Tulajdonságok
+UseForLogin = Ennek a mappának a tulajdonságainak használata (felhasználónév és jelszó) belépéshez
+MailFriendlyName = Az Ön neve
+MailEmail = E-mail
+MailIncHost = Beérkező üzenet
+Imap4 = IMAP4
+Pop3 = POP3
+MailIncPort = Port
+MailIncLogin = Postafiók
+MailIncPass = Jelszó
+MailOutHost = SMTP Szerver
+MailOutPort = Port
+MailOutLogin = SMTP azonosító
+MailOutPass = SMTP jelszó
+MailOutAuth1 = SMTP kiszolgáló hitelesítést igényel
+MailOutAuth2 = (Az SMTP azonosító/jelszó mezőket üresen hagyhatja ha azok megegyeznek a POP3/IMAP4 beállításokkal)
+UseFriendlyNm1 = Felhasználóbarát megjelenés a "Feladó:" mezőben
+UseFriendlyNm2 = (Az Ön Neve &lt;emailcim@mail.com&gt;)
+GetmailAtLogin = Levelek letöltése bejelentkezéskor
+MailMode0 = A letöltött üzenetek törlése a szerverről
+MailMode1 = Az üzenetek tárolása a szerveren
+MailMode2 = Az üzenetek megőrzése a szerveren
+MailsOnServerDays = napig
+MailMode3 = Az üzenet törlése a szerverről amennyiben törölésre kerül a Lomtárból
+InboxSyncType = A Beérkezett üzenetek mappa szinkronizálásának típusa
+	
+SyncTypeNo = Ne szinkronizáljon
+SyncTypeNewHeaders = Új fejlécek
+SyncTypeAllHeaders = Összes fejléc
+SyncTypeNewMessages = Új üzenetek
+SyncTypeAllMessages = Összes üzenet
+SyncTypeDirectMode = Direkt mód
+	
+Pop3SyncTypeEntireHeaders = Csak a fejléceket
+Pop3SyncTypeEntireMessages = Teljes üzeneteket
+Pop3SyncTypeDirectMode = Direkt mód
+	
+DeleteFromDb = Az üzenet törlése az adatbázisból amennyiben már nem létezik a szervern
+
+EditFilter = Szűrő&nbsp;szerkesztése
+NewFilter = Új szűrő létrehozása
+Field = Mező
+Condition = Feltétel
+ContainSubstring = Szövegrészt tartalmaz
+ContainExactPhrase = Pontos szövegrész
+NotContainSubstring = Nem tartalmazza a szövegrészt
+FilterDesc_At = 
+FilterDesc_Field = mező
+Action = Tevékenység
+DoNothing = Ne csináljon semmit
+DeleteFromServer = Azonall törölje a szerverről
+MarkGrey = Jelenítse meg szürkén
+Add = Hozzáadás
+OtherFilterSettings = Egyéb szűrő beállítás
+ConsiderXSpam = Vegye figyelembe az X-Spam fejlécet
+Apply = Alkalmaz
+
+InsertLink = Link beszúrása
+RemoveLink = Link törlése
+Numbering = Számozás
+Bullets = Felsorolás
+HorizontalLine = Vízszintes vonal
+Bold = Félkövér
+Italic = Dőlt
+Underline = Aláhúzs
+AlignLeft = Balra rendezett
+Center = Középre rendezett
+AlignRight = Jobbra rendezett
+Justify = Sorkizárt
+FontColor = Betű színe
+Background = Háttér
+SwitchToPlainMode = Normál szöveg nézetre váltás
+SwitchToHTMLMode = HTML szövegre váltás
+AddSignatures = Aláírás hozzáadása minden kimenő üzenethez
+DontAddToReplies = Az aláírást ne adja hozzá a válaszokhoz és a továbbításhoz
+
+Folder = Mappa
+Msgs = Üzenetek
+Synchronize = Szinkronizálás
+ShowThisFolder = A mappa megjelenítése
+Total = Összes
+DeleteSelected = Kijelöltek törlése
+AddNewFolder = Új mappa hozzáadása
+NewFolder = Új mappa
+ParentFolder = Szülő mappa
+NoParent = Nincs szülő
+OnMailServer = Ezt a mappát hozza létre a WebMailban és a szerveren
+InWebMail = Ezt a mappát hozza létre csak a WebMailban
+FolderName = Mappa neve
+
+ContactsPerPage = Névjegyek oldalanként
+WhiteList = Címjegyzék mint fehér-lista
+
+CharsetDefault = Alapértelmezett
+CharsetArabicAlphabetISO = Arabic Alphabet (ISO)
+CharsetArabicAlphabet = Arabic Alphabet (Windows)
+CharsetBalticAlphabetISO = Baltic Alphabet (ISO)
+CharsetBalticAlphabet = Baltic Alphabet (Windows)
+CharsetCentralEuropeanAlphabetISO = Central European Alphabet (ISO)
+CharsetCentralEuropeanAlphabet = Central European Alphabet (Windows)
+CharsetChineseSimplifiedEUC = Chinese Simplified (EUC)
+CharsetChineseSimplifiedGB = Chinese Simplified (GB2312)
+CharsetChineseTraditional = Chinese Traditional (Big5)
+CharsetCyrillicAlphabetISO = Cyrillic Alphabet (ISO)
+CharsetCyrillicAlphabetKOI8R = Cyrillic Alphabet (KOI8-R)
+CharsetCyrillicAlphabet = Cyrillic Alphabet (Windows)
+CharsetGreekAlphabetISO = Greek Alphabet (ISO)
+CharsetGreekAlphabet = Greek Alphabet (Windows)
+CharsetHebrewAlphabetISO = Hebrew Alphabet (ISO)
+CharsetHebrewAlphabet = Hebrew Alphabet (Windows)
+CharsetJapanese = Japanese
+CharsetJapaneseShiftJIS = Japanese (Shift-JIS)
+CharsetKoreanEUC = Korean (EUC)
+CharsetKoreanISO = Korean (ISO)
+CharsetLatin3AlphabetISO = Latin 3 Alphabet (ISO)
+CharsetTurkishAlphabet = Turkish Alphabet
+CharsetUniversalAlphabetUTF7 = Universal Alphabet (UTF-7)
+CharsetUniversalAlphabetUTF8 = Universal Alphabet (UTF-8)
+CharsetVietnameseAlphabet = Vietnamese Alphabet (Windows)
+CharsetWesternAlphabetISO = Western Alphabet (ISO)
+CharsetWesternAlphabet = Western Alphabet (Windows)
+
+TimeDefault = Alapértelmezett
+TimeEniwetok = Eniwetok, Kwajalein, Dateline Time
+TimeMidwayIsland = Midway Island, Samoa
+TimeHawaii = Hawaii
+TimeAlaska = Alaska
+TimePacific = Pacific Time (US & Canada); Tijuana
+TimeArizona = Arizona
+TimeMountain = Mountain Time (US & Canada)
+TimeCentralAmerica = Central America
+TimeCentral = Central Time (US & Canada)
+TimeMexicoCity = Mexico City, Tegucigalpa
+TimeSaskatchewan = Saskatchewan
+TimeIndiana = Indiana (East)
+TimeEastern = Eastern Time (US & Canada)
+TimeBogota = Bogota, Lima, Quito
+TimeSantiago = Santiago
+TimeCaracas = Caracas, La Paz
+TimeAtlanticCanada = Atlantic Time (Canada)
+TimeNewfoundland = Newfoundland
+TimeGreenland = Greenland
+TimeBuenosAires = Buenos Aires, Georgetown
+TimeBrasilia = Brasilia
+TimeMidAtlantic = Mid-Atlantic
+TimeCapeVerde = Cape Verde Is.
+TimeAzores = Azores
+TimeMonrovia = Casablanca, Monrovia
+TimeGMT = Dublin, Edinburgh, Lisbon, London
+TimeBerlin = Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna
+TimePrague = Belgrade, Bratislava, Budapest, Ljubljana, Prague
+TimeParis = Brussels, Copenhagen, Madrid, Paris
+TimeSarajevo = Sarajevo, Skopje, Sofija, Vilnius, Warsaw, Zagreb
+TimeWestCentralAfrica = West Central Africa
+TimeAthens = Athens, Istanbul, Minsk
+TimeEasternEurope = Bucharest
+TimeCairo = Cairo
+TimeHarare = Harare, Pretoria
+TimeHelsinki = Helsinki, Riga, Tallinn
+TimeIsrael = Israel, Jerusalem Standard Time
+TimeBaghdad = Baghdad
+TimeArab = Arab, Kuwait, Riyadh
+TimeMoscow = Moscow, St. Petersburg, Volgograd
+TimeEastAfrica = East Africa, Nairobi
+TimeTehran = Tehran
+TimeAbuDhabi = Abu Dhabi, Muscat
+TimeCaucasus = Baku, Tbilisi, Yerevan
+TimeKabul = Kabul
+TimeEkaterinburg = Ekaterinburg
+TimeIslamabad = Islamabad, Karachi, Sverdlovsk, Tashkent
+TimeBombay = Calcutta, Chennai, Mumbai, New Delhi, India Standard Time
+TimeNepal = Kathmandu, Nepal
+TimeAlmaty = Almaty, Novosibirsk, North Central Asia
+TimeDhaka = Astana, Dhaka
+TimeSriLanka = Sri Jayawardenepura, Sri Lanka
+TimeRangoon = Rangoon
+TimeBangkok = Bangkok, Hanoi, Jakarta
+TimeKrasnoyarsk = Krasnoyarsk
+TimeBeijing = Beijing, Chongqing, Hong Kong SAR, Urumqi
+TimeIrkutsk = Irkutsk, Ulaan Bataar
+TimeSingapore = Kuala Lumpur, Singapore
+TimePerth = Perth, Western Australia
+TimeTaipei = Taipei
+TimeTokyo = Osaka, Sapporo, Tokyo
+TimeSeoul = Seoul, Korea Standard time
+TimeYakutsk = Yakutsk
+TimeAdelaide = Adelaide, Central Australia
+TimeDarwin = Darwin
+TimeBrisbane = Brisbane, East Australia
+TimeSydney = Canberra, Melbourne, Sydney, Hobart
+TimeGuam = Guam, Port Moresby
+TimeHobart = Hobart, Tasmania
+TimeVladivostock = Vladivostok
+TimeMagadan = Magadan, Solomon Is., New Caledonia
+TimeWellington = Auckland, Wellington
+TimeFiji = Fiji Islands, Kamchatka, Marshall Is.
+TimeTonga = Nuku'alofa, Tonga,
+
+LanguageEnglish = English
+LanguageCatala = Catalan
+LanguageNederlands = Dutch
+LanguageFrench = French
+LanguageGerman = German
+LanguageItaliano = Italian
+LanguagePortuguese = Portuguese (BR)
+LanguageEspanyol = Spanish
+LanguageSwedish = Swedish
+LanguageTurkish = Turkish
+
+DateDefault = Alapértelmezett
+DateDDMMYY = DD/MM/YY
+DateMMDDYY = MM/DD/YY
+DateDDMonth = DD Month (01 Jan)
+DateAdvanced = Bővített
+
+NewContact = Új névjegy
+NewGroup = Új csoport
+AddContactsTo = A névjegy hozzáadása
+ImportContacts = Névjegyek importálása
+
+Name = Név
+Email = E-mail
+DefaultEmail = Alapértelmezett e-mail
+NotSpecifiedYet = Nem megadott
+ContactName = Név
+Birthday = Születésnap
+Month = Hónap
+January = Január
+February = Február
+March = Március
+April = Április
+May = Május
+June = Június
+July = Július
+August = Augusztus
+September = Szeptember
+October = Október
+November = November
+December = December
+Day = Nap
+Year = Év
+UseFriendlyName1 = Olvasható név használata
+UseFriendlyName2 = (például, John Doe &lt;johndoe@mail.com&gt;)
+Personal = Személyes
+PersonalEmail = Személyes e-mail
+StreetAddress = Utca
+City = Város
+Fax = Fax
+StateProvince = Megye/Tartomány
+Phone = Telefon
+ZipCode = Irányítószám
+Mobile = Mobil
+CountryRegion = Ország/Régió
+WebPage = Weboldal
+Go = Ugrás
+Home = Otthon
+Business = Céges
+BusinessEmail = Céges e-mail
+Company = Cégnév
+JobTitle = Beosztás
+Department = Részegység
+Office = Iroda
+Pager = Személyhívó
+Other = Egyéb
+OtherEmail = Egyéb e-mail
+Notes = Megjegyzések
+Groups = Csoportok
+ShowAddFields = További mezők megjelenítése
+HideAddFields = További mezők elrejtése
+EditContact = Névjegy szerkesztése
+GroupName = Csoport neve
+AddContacts = Névjegyek hozzáadása
+CommentAddContacts = (Ha több címet kíván megadni, használjon vesszőt az elválasztáshoz)
+CreateGroup = Csoport hozzáadása
+Rename = átnevezés
+MailGroup = Levelező csoport
+RemoveFromGroup = Eltávolitás a csoportból
+UseImportTo = Az Importálás használata elősegíti, hogy a címjegyzékét áthozza Microsoft Outlook, Microsoft Outlook Express levelezőkből a WebMail címjegyzékébe.
+Outlook1 = Microsoft Outlook 2000/XP/2003
+Outlook2 = Microsoft Outlook Express 6
+SelectImportFile = Válassza ki a fájlt (.CSV formátumban) melyet importálni szeretne
+Import = Importálás
+ContactsMessage = Ez a névjegyek oldala!!!
+ContactsCount = névjegy
+GroupsCount = csoport
+
+; webmail 4.1 constants
+PicturesBlocked = A képek ebben az üzenetben blokkolva vannak az Ön biztonsága érdekében.
+ShowPictures = Képek megjelenítése
+ShowPicturesFromSender = A képek megjelenítése minden esetben ettől a feladótól
+AlwaysShowPictures = A képek megjelenítése minden esetben
+
+TreatAsOrganization = Kezelés szervezetként
+
+WarningGroupAlreadyExist = Ilyen nevű csoport már létezik. Kérjük adjon meg más nevet.
+WarningCorrectFolderName = Kérjük adjon meg helyes mappa nevet.
+WarningLoginFieldBlank = Nem hagyhatja a Belépés mezőt üresen.
+WarningCorrectLogin = Kérjük töltse ki helyesen a Belépés mezőt.
+WarningPassBlank = Nem hagyhatja a Jelszó mezőt üresen.
+WarningCorrectIncServer = Kérjük adjon meg helyes POP3(IMAP) szerver címet.
+WarningCorrectSMTPServer = Kérjük adjon meg helyes SMTP szerver címet.
+WarningFromBlank = Nem hagyhatja a Feladó mezőt üresen.
+WarningAdvancedDateFormat = Kérjük adja meg a dátum/idő formátumát.
+
+AdvancedDateHelpTitle = Bővített dátum formátum
+AdvancedDateHelpIntro = Amikor a &quot;Bővített formátum&quot; mezőt kiválasztja, megadhatja a dátum megjelenítésének formátumát szabadon. A következő lehetőségeket használhatjah ':' vagy '/' elválasztó karakterekkel:
+AdvancedDateHelpConclusion = Például ha ezt adja meg a szöveg mezőben &quot;mm/dd/yyyy&quot;, a dátum ebben a formában fog megjelenni: hónap/nap/év (pl.: 11/23/2005)
+AdvancedDateHelpDayOfMonth = A hónap napja (1-től 31-ig)
+AdvancedDateHelpNumericMonth = Hónap (1-től 12-ig)
+AdvancedDateHelpTextualMonth = Hónap (Jan..Dec)
+AdvancedDateHelpYear2 = Év, 2 számjegy
+AdvancedDateHelpYear4 = Év, 4 számjegy
+AdvancedDateHelpDayOfYear = Az év napja (1-től 366-ig)
+AdvancedDateHelpQuarter = Negyedév
+AdvancedDateHelpDayOfWeek = A hét napja (Hét..Vas)
+AdvancedDateHelpWeekOfYear = Hét (1..53)
+
+InfoNoMessagesFound = Nincs új üzenet.
+ErrorSMTPConnect = Nem lehet csatlakozni az SMTP kiszolgálóhoz. Kérjük ellenőrizze a beállításokat.
+ErrorSMTPAuth = Hibás felhasználónév vagy jelszó. Sikertelen SMTP hitelesítés.
+ReportMessageSent = Az üzenet elküldve.
+ReportMessageSaved = Az üzenet elmentve.
+ErrorPOP3Connect = Sikertelen kapcsolódás a POP3 kiszolgálóhoz. Kérjük ellenőrizze a beállításokat.
+ErrorIMAP4Connect = Sikertelen kapcsolódás az IMAP4 kiszolgálóhoz. Kérjük ellenőrizze a beállításokat.
+ErrorPOP3IMAP4Auth = Hibás e-mail cím/postafiók és/vagy jelszó. Sikertelen belépés.
+ErrorGetMailLimit = A postafiókja megtelt.
+
+ReportSettingsUpdatedSuccessfuly = A beállítások sikeresen elmentve.
+ReportAccountCreatedSuccessfuly = A fiók sikeresen létrehozva.
+ReportAccountUpdatedSuccessfuly = A fiók sikeresen frissítve.
+ConfirmDeleteAccount = Biztosan törli a fiókot?
+ReportFiltersUpdatedSuccessfuly = A szűrő beállításai sikeresen elmentve.
+ReportSignatureUpdatedSuccessfuly = Az aláírás sikeresen elmentve.
+ReportFoldersUpdatedSuccessfuly = A mappa beállítások sikeresen elmentve.
+ReportContactsSettingsUpdatedSuccessfuly = Címjegyzék beállítások sikeresen elmentve.
+
+ErrorInvalidCSV = A kiválasztott CSV fájl formátuma hibás.
+; The group "guies" was successfully added.
+ReportGroupSuccessfulyAdded1 = A csoport
+ReportGroupSuccessfulyAdded2 = sikeresen hozzáadva.
+ReportGroupUpdatedSuccessfuly = A csoport adatai sikeresen elmentve.
+ReportContactSuccessfulyAdded = A névjegy sikeresen hozzáadva.
+ReportContactUpdatedSuccessfuly = A névjegy változásai sikeresen elmentve.
+; Contact(s) was added to group "friends".
+ReportContactAddedToGroup = A névjegy hozzáadva a következő csoporthoz
+AlertNoContactsGroupsSelected = Nincs kiválasztva névjegy vagy csoport.
+
+InfoListNotContainAddress = Ha a lista nem tartalmazz a névjegyet amit keres, folytassa a kezdőbetűk begépelését
+	
+DirectAccess = D
+DirectAccessTitle = Direkt mód. WebMail direktben használja a szerver üzeneteket.
+
+FolderInbox = Beérkezett üzenetek
+FolderSentItems = Elküldött elemek
+FolderDrafts = Piszkozatok
+FolderTrash = Lomtár
+
+LanguageDanish = Danish
+LanguagePolish = Polish
+
+FileLargerAttachment = A csatolás mérete túl nagy.
+FilePartiallyUploaded = A csatolás csak egy része került feltöltésre hiba miatt.
+NoFileUploaded = A csatolás nem lett feltöltve.
+MissingTempFolder = Az átmeneti tároló könyvtár hiányzik.
+MissingTempFile = Az átmeneti fájl hiányzik.
+UnknownUploadError = Ismeretlen fájl feltöltési hiba.
+FileLargerThan = Fájl feltöltési hiba. Valószínű, hogy a fájl mérete nagyobb, mint 
+PROC_CANT_LOAD_DB = Nem lehet csatlakozni az adatbázishoz.
+PROC_CANT_LOAD_LANG = Nem létező nyelvi fájl.
+PROC_CANT_LOAD_ACCT = A fiók nem létezik, valószínűleg törölésre került.
+
+DomainDosntExist = Ilyen domain név nem létezik a szerveren.
+ServerIsDisable = A levelező kiszolgáló használatát az adminisztrátor megtiltotta.
+
+PROC_ACCOUNT_EXISTS = A fiók nem hozható létre, mert már létezik.
+PROC_CANT_GET_MESSAGES_COUNT = Nem lehet lekérdezni a mappában található üzenetek számát.
+PROC_CANT_MAIL_SIZE = Nem lehet lekérdezni a levél méretét.
+
+Organization = Szervezet
+WarningOutServerBlank = Nem hagyhatja az SMTP Szerver mezőt üresen
+
+;
+Refresh = Frissítés
+MessagesInInbox = Üzenet a beérkezett üzenetekben
+InfoEmptyInbox = Nincs üzenet
+
+; webmail 4.2 constants
+LanguagePortugueseBrazil = Portuguese-Brazil
+LanguageHungarian = Magyar
+
+BackToList = Vissza a listához
+InfoNoContactsGroups = Nincsenek névjegyek vagy csoportok.
+InfoNewContactsGroups = Létrehozhat új névjegyeket/csoportokat vagy beimportálhatja azokat .CSV fájlból MS Outlook formátumban.
+DefTimeFormat = Alapértelmezett idő formátum
+SpellNoSuggestions = Nincs javaslat
+SpellWait = Kérem várjon&hellip;
+
+InfoNoMessageSelected = Nincs kiválasztott üzenet.
+InfoSingleDoubleClick = Kattintson akármelyik üzenetre egyet az előnézetért, kettőt pedig a teljes megjelenítésért.
+
+; calendar
+TitleDay = Napi nézet
+TitleWeek = Heti nézet
+TitleMonth = Havi nézet
+
+ErrorNotSupportBrowser = AfterLogic Calendar nem támogatja az Ön böngészőjét. Kérem használjon FireFox 2.0 vagy jobb, Opera 9.0 vagy jobb, Internet Explorer 6.0 vagy jobb, Safari 3.0.2 vagy jobb böngészőket
+ErrorTurnedOffActiveX = ActiveX támogatás kikapcsolva . <br/>Ennek bekapcsolása szükséges a program használatához.
+
+Calendar = Naptár
+
+TabDay = Nap
+TabWeek = Hét
+TabMonth = Hónap
+
+ToolNewEvent = Új&nbsp;Esemény
+ToolBack = Vissza
+ToolToday = Ma
+AltNewEvent = Új esemény
+AltBack = Vissza
+AltToday = Ma
+CalendarHeader = Naptár
+CalendarsManager = Naptár kezelő
+
+CalendarActionNew = Új naptár
+EventHeaderNew = Új esemény
+CalendarHeaderNew = Új Naptár
+
+EventSubject = Tárgy
+EventCalendar = Naptár
+EventFrom = Kezdete
+EventTill = Vége
+CalendarDescription = Leírás
+CalendarColor = Szín
+CalendarName = Naptár neve
+CalendarDefaultName = Az én naptáram
+
+ButtonSave = Ment
+ButtonCancel = Mégsem
+ButtonDelete = Törlés
+
+AltPrevMonth = Előző Hónap
+AltNextMonth = Köv. Hónap
+
+CalendarHeaderEdit = Naptár szerkesztés
+CalendarActionEdit = Naptár szerkesztés
+ConfirmDeleteCalendar = Biztosan törli a naptárat
+InfoDeleting = Törlés...
+WarningCalendarNameBlank = Nem hagyhatja a naptár nevét üresen.
+ErrorCalendarNotCreated = A naptár nem lett létrehozva
+WarningSubjectBlank = Nem hagyhatja a tárgyat üresen.
+WarningIncorrectTime = A megadott időpont hibás karaktereket is tarmalaz.
+WarningIncorrectFromTime = A kezdete időpont hibás.
+WarningIncorrectTillTime = A vége időpont hibás.
+WarningStartEndDate = A vége dátumnak nagyobbnak vagy egyenlőnek kell lenni a kezdetnél.
+WarningStartEndTime = A végének később kell lennie a kezdetnél.
+WarningIncorrectDate = A dátumnak valósnak kell lennie.
+InfoLoading = Töltés...
+EventCreate = Új esemény
+CalendarHideOther = A többi naptár elrejtése
+CalendarShowOther = A többi naptár megjelenítése
+CalendarRemove = Naptár eltávolítása
+EventHeaderEdit = Esemény szerkesztése
+
+InfoSaving = Mentés...
+SettingsDisplayName = Név megjelenítése
+SettingsTimeFormat = Idő formátum
+SettingsDateFormat = Dátum formátum
+SettingsShowWeekends = Hétvégék megjelenítése
+SettingsWorkdayStarts = A munkanapok kezdődnek
+SettingsWorkdayEnds = végződnek
+SettingsShowWorkday = Munkanap megjelenítése
+SettingsWeekStartsOn = A hét kezdődik
+SettingsDefaultTab = Alapértelmezett fül
+SettingsCountry = Ország
+SettingsTimeZone = Időzóna
+SettingsAllTimeZones = Összes időzóna
+
+WarningWorkdayStartsEnds = A 'Munkanapok végződnek' időpontnak későbbinek kell lennie, mint a 'Munkanapok kezdődnek'
+ReportSettingsUpdated = A beállítások sikeresen elmentve.
+
+SettingsTabCalendar = Naptár
+
+FullMonthJanuary = Január
+FullMonthFebruary = Február
+FullMonthMarch = Március
+FullMonthApril = Április
+FullMonthMay = Május
+FullMonthJune = Június
+FullMonthJuly = Július
+FullMonthAugust = Augusztus
+FullMonthSeptember = Szeptember
+FullMonthOctober = Október
+FullMonthNovember = November
+FullMonthDecember = December
+
+ShortMonthJanuary = Jan
+ShortMonthFebruary = Feb
+ShortMonthMarch = Már
+ShortMonthApril = Ápr
+ShortMonthMay = Máj
+ShortMonthJune = Jún
+ShortMonthJuly = Júl
+ShortMonthAugust = Aug
+ShortMonthSeptember = Szep
+ShortMonthOctober = Okt
+ShortMonthNovember = Nov
+ShortMonthDecember = Dec
+
+FullDayMonday = Hétfő
+FullDayTuesday = Kedd
+FullDayWednesday = Szerda
+FullDayThursday = Csütörtök
+FullDayFriday = Péntek
+FullDaySaturday = Szombat
+FullDaySunday = Vasárnap
+
+DayToolMonday = Hét
+DayToolTuesday = Ked
+DayToolWednesday = Szer
+DayToolThursday = Csüt
+DayToolFriday = Pén
+DayToolSaturday = Szo
+DayToolSunday = Vas
+
+CalendarTableDayMonday = H
+CalendarTableDayTuesday = K
+CalendarTableDayWednesday = SZ
+CalendarTableDayThursday = CS
+CalendarTableDayFriday = P
+CalendarTableDaySaturday = SZo
+CalendarTableDaySunday = V
+
+ErrorParseJSON = A JSON rendszer kimenetének értelmezése közben hiba lépett fel.
+
+ErrorLoadCalendar = Nem lehetséges a naptárak betöltése
+ErrorLoadEvents = Nem lehetséges az események betöltése
+ErrorUpdateEvent = Nem lehetséges az esemény mentése
+ErrorDeleteEvent = Nem lehetséges az esemény törlése
+ErrorUpdateCalendar = Nem lehetséges a naptár elmentése
+ErrorDeleteCalendar = Nem lehetséges a naptár törlése
+ErrorGeneral = Hiba történt a szerveren, próbálkozzon később.

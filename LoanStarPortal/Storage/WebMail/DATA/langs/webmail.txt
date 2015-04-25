@@ -1,0 +1,820 @@
+﻿
+; core strings
+
+PROC_ERROR_ACCT_CREATE = There was an error while creating account
+PROC_WRONG_ACCT_PWD = Wrong account password
+PROC_CANT_LOG_NONDEF = Can't login into non-default account
+PROC_CANT_INS_NEW_FILTER = Can't insert new filter
+PROC_FOLDER_EXIST = Folder name already exist
+PROC_CANT_CREATE_FLD = Can't create folder
+PROC_CANT_INS_NEW_GROUP = Can't insert new group
+PROC_CANT_INS_NEW_CONT = Can't insert new contact
+PROC_CANT_INS_NEW_CONTS = Can't insert new contact(s)
+PROC_CANT_ADD_NEW_CONT_TO_GRP = Can't add contact(s) into group
+PROC_ERROR_ACCT_UPDATE = There was an error while updating account
+PROC_CANT_UPDATE_CONT_SETTINGS = Can't update contacts settings
+PROC_CANT_GET_SETTINGS = Can't get settings
+PROC_CANT_UPDATE_ACCT = Can't update account
+PROC_ERROR_DEL_FLD = There was an error while deleting folder(s)
+PROC_CANT_UPDATE_CONT = Can't update contact
+PROC_CANT_GET_FLDS = Can't get folders tree
+PROC_CANT_GET_MSG_LIST = Can't get message list
+PROC_MSG_HAS_DELETED = This message has already been deleted from the mail server
+PROC_CANT_LOAD_CONT_SETTINGS = Can't load contacts settings
+PROC_CANT_LOAD_SIGNATURE = Can't load account signature
+PROC_CANT_GET_CONT_FROM_DB = Can't get contact from DB
+PROC_CANT_GET_CONTS_FROM_DB = Can't get contact(s) from DB
+PROC_CANT_DEL_ACCT_BY_ID = Can't delete account by id
+PROC_CANT_DEL_FILTER_BY_ID = Can't delete filter by id
+PROC_CANT_DEL_CONT_GROUPS = Can't delete contact(s) and/or groups
+PROC_WRONG_ACCT_ACCESS = An attempt of unauthorized access to account of another user detected.
+PROC_SESSION_ERROR = The previous session was terminated due to a timeout.
+
+MailBoxIsFull = Mailbox is full
+WebMailException = RMOMail exception occured
+InvalidUid = Invalid Message UID
+CantCreateContactGroup = Can't create contact group
+CantCreateUser = Can't create user
+CantCreateAccount = Can't create account
+SessionIsEmpty = Session is empty
+FileIsTooBig = The file is too big
+
+PROC_CANT_MARK_ALL_MSG_READ = Can't mark all messages as read
+PROC_CANT_MARK_ALL_MSG_UNREAD = Can't mark all messages as unread
+PROC_CANT_PURGE_MSGS = Can't purge message(s)
+PROC_CANT_DEL_MSGS = Can't delete message(s)
+PROC_CANT_UNDEL_MSGS = Can't undelete message(s)
+PROC_CANT_MARK_MSGS_READ = Can't mark message(s) as read
+PROC_CANT_MARK_MSGS_UNREAD = Can't mark message(s) as unread
+PROC_CANT_SET_MSG_FLAGS = Can't set message flag(s)
+PROC_CANT_REMOVE_MSG_FLAGS = Can't remove message flag(s)
+PROC_CANT_CHANGE_MSG_FLD = Can't change message(s) folder
+PROC_CANT_SEND_MSG = Can't send message.
+PROC_CANT_SAVE_MSG = Can't save message.
+PROC_CANT_GET_ACCT_LIST = Can't get account list
+PROC_CANT_GET_FILTER_LIST = Can't get filters list
+
+PROC_CANT_LEAVE_BLANK = You can't leave * fields blank
+
+PROC_CANT_UPD_FLD = Can't update folder
+PROC_CANT_UPD_FILTER = Can't update filter
+
+ACCT_CANT_ADD_DEF_ACCT = This account cannot be added because it's used as a default account by another user.
+ACCT_CANT_UPD_TO_DEF_ACCT = This account status cannot be changed to default.
+ACCT_CANT_CREATE_IMAP_ACCT = Can't create new account (IMAP4 connection error)
+ACCT_CANT_DEL_LAST_DEF_ACCT = Can't delete last default account
+
+LANG_LoginInfo = Login Information
+LANG_Email = Email
+LANG_Login = Login
+LANG_Password = Password
+LANG_IncServer = Incoming&nbsp;Mail
+LANG_PopProtocol = POP3
+LANG_ImapProtocol = IMAP4
+LANG_IncPort = Port
+LANG_OutServer =SMTP&nbsp;Server
+LANG_OutPort = Port
+LANG_UseSmtpAuth = Use&nbsp;SMTP&nbsp;authentication
+LANG_SignMe = Sign me in automatically
+LANG_Enter = Enter
+
+; interface strings
+
+TitleLogin = Login
+TitleMessagesListView = Messages List
+TitleMessagesList = Messages List
+TitleViewMessage = View Message
+TitleNewMessage = New Message
+TitleSettings = Settings
+TitleContacts = Contacts
+
+StandardLogin = Standard&nbsp;Login
+AdvancedLogin = Advanced&nbsp;Login
+
+InfoWebMailLoading = Please wait while RMOMail is loading&hellip;
+Loading = Loading&hellip;
+InfoMessagesLoad = Please wait while RMOMail is loading messages list
+InfoEmptyFolder = The folder is empty
+InfoPageLoading = The page is still loading...
+InfoSendMessage = The message was sent
+InfoSaveMessage = The message was saved
+InfoHaveImported = You have imported
+InfoNewContacts = new contact(s) into your contacts list.
+InfoToDelete = To delete 
+InfoDeleteContent =  folder you should delete all its contents first.
+InfoDeleteNotEmptyFolders = Deleting non-empty folders is not allowed. To delete non-checkable folders, delete their contents first.
+InfoRequiredFields = * required fields
+
+ConfirmAreYouSure = Are you sure?
+ConfirmDirectModeAreYouSure = The selected message(s) will be PERMANENTLY deleted! Are you sure?
+ConfirmSaveSettings = The settings was not saved. Select OK to save.
+ConfirmSaveContactsSettings = The contacts settings was not saved. Select OK to save.
+ConfirmSaveAcctProp = The account properties were not saved. Select OK to save.
+ConfirmSaveFilter = The filters properties were not saved. Select OK to save.
+ConfirmSaveSignature = The signature was not saved. Select OK to save.
+ConfirmSavefolders = The folders was not saved. Select OK to save.
+ConfirmHtmlToPlain = Warning: By changing the formatting of this message from HTML to plain text, you will lose any current formatting in the message. Select OK to continue.
+ConfirmAddFolder = Before adding folder it is necessary to aplly changes. Select OK to save.
+ConfirmEmptySubject = The subject field is empty. Do you wish to continue?
+
+WarningEmailBlank = You cannot leave<br />Email: field blank
+WarningLoginBlank = You cannot leave<br />Login: field blank
+WarningToBlank = You cannot leave To: field blank
+WarningServerPortBlank = You cannot leave POP3 and<br />SMTP server/port fields blank
+WarningEmptySearchLine = Empty search line. Please enter substring you need to find
+WarningMarkListItem = Please mark at least one item in the list
+WarningFolderMove = The folder can't be moved because this is another level
+WarningContactNotComplete = Please enter email or name
+WarningGroupNotComplete = Please enter group name
+
+WarningEmailFieldBlank = You cannot leave Email field blank
+WarningIncServerBlank = You cannot leave POP3(IMAP4) Server field blank
+WarningIncPortBlank = You cannot leave POP3(IMAP4) Server Port field blank
+WarningIncLoginBlank = You cannot leave POP3(IMAP4) Login field blank
+WarningIncPortNumber = You should specify a positive number in POP3(IMAP4) port field.
+DefaultIncPortNumber = Default POP3(IMAP4) port number is 110(143).
+WarningIncPassBlank = You cannot leave POP3(IMAP4) Password field blank
+WarningOutPortBlank = You cannot leave SMTP Server Port field blank
+WarningOutPortNumber = You should specify a positive number in SMTP port field.
+WarningCorrectEmail = You should specify a correct e-mail.
+DefaultOutPortNumber = Default SMTP port number is 25.
+
+WarningCsvExtention = Extention should be .csv
+WarningImportFileType = Please select the application that you want to copy your contacts from
+WarningEmptyImportFile = Please select a file by clicking the browse button
+
+WarningContactsPerPage = Contacts per page value is positive number
+WarningMessagesPerPage = Messages per page value is positive number
+WarningMailsOnServerDays = You should specify a positive number in Messages on server days field.
+WarningEmptyFilter = Please enter substring
+WarningEmptyFolderName = Please enter folder name
+
+ErrorConnectionFailed = Connection is unsuccessful
+ErrorRequestFailed = The data transfer has not been completed
+ErrorAbsentXMLHttpRequest = The object XMLHttpRequest is absent
+ErrorWithoutDesc = The error without description occured
+ErrorParsing = Error while parsing XML.
+ResponseText = Response text:
+ErrorEmptyXmlPacket = Empty XML packet
+ErrorImportContacts = Error while importing contacts
+ErrorNoContacts = No contacts for import
+ErrorCheckMail = Receiving messages terminated due to an error. Probably, not all the messages were received.
+
+LoggingToServer = Logging on to server&hellip;
+GettingMsgsNum = Getting number of messages
+RetrievingMessage = Retrieving message
+DeletingMessage = Deleting message
+DeletingMessages = Deleting message(s)
+Of = of
+Connection = Connection
+Charset = Charset
+AutoSelect = Auto-Select
+
+Contacts = Contacts
+ClassicVersion = Classic Version
+Logout = Logout
+Settings = Settings
+
+LookFor = Look for: 
+SearchIn = Search in: 
+QuickSearch = Search the From, To and Subject fields only (quicker).
+SlowSearch = Search entire message
+AllMailFolders = All Mail Folders
+AllGroups = All Groups
+
+NewMessage = New Message
+CheckMail = Check Mail
+ReloadFolders = Reload Folders Tree
+EmptyTrash = Empty Trash
+MarkAsRead = Mark As Read
+MarkAsUnread = Mark As Unread
+MarkFlag = Flag
+MarkUnflag = Unflag
+MarkAllRead = Mark All Read
+MarkAllUnread = Mark All Unread
+Reply = Reply
+ReplyAll = Reply to All
+Delete = Delete
+Undelete = Undelete
+PurgeDeleted = Purge deleted
+MoveToFolder = Move to Folder
+Forward = Forward
+
+HideFolders = Hide Folders
+ShowFolders = Show Folders
+ManageFolders = Manage Folders
+SyncFolder = Synchronized folder
+NewMessages = New Messages
+Messages = Message(s)
+
+From = From
+To = To
+Date = Date
+Size = Size
+Subject = Subject
+
+FirstPage = First Page
+PreviousPage = Previous Page
+NextPage = Next Page
+LastPage = Last Page
+
+SwitchToPlain = Switch to Plain Text View
+SwitchToHTML = Switch to HTML View
+AddToAddressBokk = Add to Address Book
+ClickToDownload = Click to download 
+View = View
+ShowFullHeaders = Show Full Headers
+HideFullHeaders = Hide Full Headers
+
+MessagesInFolder = Message(s) in Folder
+YouUsing = You are using
+OfYour = of your
+Mb = MB
+Kb = KB
+B = B
+
+SendMessage = Send
+SaveMessage = Save
+Print = Print
+PreviousMsg = Previous Message
+NextMsg = Next Message
+AddressBook = Address Book
+ShowBCC = Show BCC
+HideBCC = Hide BCC
+CC = CC
+BCC = BCC
+ReplyTo = Reply&nbsp;To
+AttachFile = Attach File
+Attach = Attach
+Re = Re
+OriginalMessage = Original Message
+Sent = Sent
+Fwd = Fwd
+Low = Low
+Normal = Normal
+High = High
+Importance = Importance
+Close = Close
+
+Common = Common
+EmailAccounts = Email Accounts
+
+MsgsPerPage = Messages per page
+DisableRTE = Disable rich-text editor
+Skin = Skin
+DefCharset = Default charset
+DefCharsetInc = Default incoming charset
+DefCharsetOut = Default outgoing charset
+DefTimeOffset = Default time offset
+DefLanguage = Default language
+DefDateFormat = Default date format
+ShowViewPane = Messages list with preview pane
+Save = Save
+Cancel = Cancel
+OK = OK
+
+Remove = Remove
+AddNewAccount = Add New Account
+Signature = Signature
+Filters = Filters
+Properties = Properties
+UseForLogin = Use this account properties (login and password) for login
+MailFriendlyName = Your name
+MailEmail = Email
+MailIncHost = Incoming Mail
+Imap4 = Imap4
+Pop3 = Pop3
+MailIncPort = Port
+MailIncLogin = Login
+MailIncPass = Password
+MailOutHost = SMTP Server
+MailOutPort = Port
+MailOutLogin = SMTP Login
+MailOutPass = SMTP Password
+MailOutAuth1 = Use SMTP authentication
+MailOutAuth2 = (You may leave SMTP login/password fields blank, if they're the same as POP3/IMAP4 login/password)
+UseFriendlyNm1 = Use Friendly Name in "From:" field
+UseFriendlyNm2 = (Your name &lt;sender@mail.com&gt;)
+GetmailAtLogin = Get/Synchronize Mails at login
+MailMode0 = Delete received messages from server
+MailMode1 = Leave messages on server
+MailMode2 = Keep messages on server for
+MailsOnServerDays = day(s)
+MailMode3 = Delete message from server when it is removed from Trash
+InboxSyncType = Type of Inbox Synchronization
+
+SyncTypeNo = Don't Synchronize
+SyncTypeNewHeaders = New Headers
+SyncTypeAllHeaders = All Headers
+SyncTypeNewMessages = New Messages
+SyncTypeAllMessages = All Messages
+SyncTypeDirectMode = Direct Mode
+
+Pop3SyncTypeEntireHeaders = Headers Only
+Pop3SyncTypeEntireMessages = Entire Messages
+Pop3SyncTypeDirectMode = Direct Mode
+
+DeleteFromDb = Delete message from database if it no longer exists on mail server
+
+EditFilter = Edit filter
+NewFilter = Add New Filter
+Field = Field
+Condition = Condition
+ContainSubstring = Contain substring
+ContainExactPhrase = Contain exact phrase
+NotContainSubstring = Not contain substring
+FilterDesc_At = at
+FilterDesc_Field = field
+Action = Action
+DoNothing = Do nothing
+DeleteFromServer = Delete from server Immediately
+MarkGrey = Mark grey
+Add = Add
+OtherFilterSettings = Other filter settings
+ConsiderXSpam = Consider X-Spam headers
+Apply = Apply
+
+InsertLink = Insert Link
+RemoveLink = Remove Link
+Numbering = Numbering
+Bullets = Bullets
+HorizontalLine = Horizontal Line
+Bold = Bold
+Italic = Italic
+Underline = Underline
+AlignLeft = Align Left
+Center = Center
+AlignRight = Align Right
+Justify = Justify
+FontColor = Font Color
+Background = Background
+SwitchToPlainMode = Switch to Plain Text Mode
+SwitchToHTMLMode = Switch to HTML Mode
+AddSignatures = Add signatures to all outgoing messages
+DontAddToReplies = Don't add signatures to Replies and Forwards
+
+Folder = Folder
+Msgs = Msg's
+Synchronize = Synchronize
+ShowThisFolder = Show This Folder
+Total = Total
+DeleteSelected = Delete Selected
+AddNewFolder = Add New Folder
+NewFolder = New Folder
+ParentFolder = Parent Folder
+NoParent = No Parent
+OnMailServer = Create this Folder in RMOMail and on Mail Server
+InWebMail = Create this Folder Only in RMOMail
+FolderName = Folder Name
+
+ContactsPerPage = Contacts per page
+WhiteList = Address Book as White List
+
+CharsetDefault = Default
+CharsetArabicAlphabetISO = Arabic Alphabet (ISO)
+CharsetArabicAlphabet = Arabic Alphabet (Windows)
+CharsetBalticAlphabetISO = Baltic Alphabet (ISO)
+CharsetBalticAlphabet = Baltic Alphabet (Windows)
+CharsetCentralEuropeanAlphabetISO = Central European Alphabet (ISO)
+CharsetCentralEuropeanAlphabet = Central European Alphabet (Windows)
+CharsetChineseSimplifiedEUC = Chinese Simplified (EUC)
+CharsetChineseSimplifiedGB = Chinese Simplified (GB2312)
+CharsetChineseTraditional = Chinese Traditional (Big5)
+CharsetCyrillicAlphabetISO = Cyrillic Alphabet (ISO)
+CharsetCyrillicAlphabetKOI8R = Cyrillic Alphabet (KOI8-R)
+CharsetCyrillicAlphabet = Cyrillic Alphabet (Windows)
+CharsetGreekAlphabetISO = Greek Alphabet (ISO)
+CharsetGreekAlphabet = Greek Alphabet (Windows)
+CharsetHebrewAlphabetISO = Hebrew Alphabet (ISO)
+CharsetHebrewAlphabet = Hebrew Alphabet (Windows)
+CharsetJapanese = Japanese
+CharsetJapaneseShiftJIS = Japanese (Shift-JIS)
+CharsetKoreanEUC = Korean (EUC)
+CharsetKoreanISO = Korean (ISO)
+CharsetLatin3AlphabetISO = Latin 3 Alphabet (ISO)
+CharsetTurkishAlphabet = Turkish Alphabet
+CharsetUniversalAlphabetUTF7 = Universal Alphabet (UTF-7)
+CharsetUniversalAlphabetUTF8 = Universal Alphabet (UTF-8)
+CharsetVietnameseAlphabet = Vietnamese Alphabet (Windows)
+CharsetWesternAlphabetISO = Western Alphabet (ISO)
+CharsetWesternAlphabet = Western Alphabet (Windows)
+
+TimeDefault = Default
+TimeEniwetok = Eniwetok, Kwajalein, Dateline Time
+TimeMidwayIsland = Midway Island, Samoa
+TimeHawaii = Hawaii
+TimeAlaska = Alaska
+TimePacific = Pacific Time (US & Canada); Tijuana
+TimeArizona = Arizona
+TimeMountain = Mountain Time (US & Canada)
+TimeCentralAmerica = Central America
+TimeCentral = Central Time (US & Canada)
+TimeMexicoCity = Mexico City, Tegucigalpa
+TimeSaskatchewan = Saskatchewan
+TimeIndiana = Indiana (East)
+TimeEastern = Eastern Time (US & Canada)
+TimeBogota = Bogota, Lima, Quito
+TimeSantiago = Santiago
+TimeCaracas = Caracas, La Paz
+TimeAtlanticCanada = Atlantic Time (Canada)
+TimeNewfoundland = Newfoundland
+TimeGreenland = Greenland
+TimeBuenosAires = Buenos Aires, Georgetown
+TimeBrasilia = Brasilia
+TimeMidAtlantic = Mid-Atlantic
+TimeCapeVerde = Cape Verde Is.
+TimeAzores = Azores
+TimeMonrovia = Casablanca, Monrovia
+TimeGMT = Dublin, Edinburgh, Lisbon, London
+TimeBerlin = Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna
+TimePrague = Belgrade, Bratislava, Budapest, Ljubljana, Prague
+TimeParis = Brussels, Copenhagen, Madrid, Paris
+TimeSarajevo = Sarajevo, Skopje, Sofija, Vilnius, Warsaw, Zagreb
+TimeWestCentralAfrica = West Central Africa
+TimeAthens = Athens, Istanbul, Minsk
+TimeEasternEurope = Bucharest
+TimeCairo = Cairo
+TimeHarare = Harare, Pretoria
+TimeHelsinki = Helsinki, Riga, Tallinn
+TimeIsrael = Israel, Jerusalem Standard Time
+TimeBaghdad = Baghdad
+TimeArab = Arab, Kuwait, Riyadh
+TimeMoscow = Moscow, St. Petersburg, Volgograd
+TimeEastAfrica = East Africa, Nairobi
+TimeTehran = Tehran
+TimeAbuDhabi = Abu Dhabi, Muscat
+TimeCaucasus = Baku, Tbilisi, Yerevan
+TimeKabul = Kabul
+TimeEkaterinburg = Ekaterinburg
+TimeIslamabad = Islamabad, Karachi, Sverdlovsk, Tashkent
+TimeBombay = Calcutta, Chennai, Mumbai, New Delhi, India Standard Time
+TimeNepal = Kathmandu, Nepal
+TimeAlmaty = Almaty, Novosibirsk, North Central Asia
+TimeDhaka = Astana, Dhaka
+TimeSriLanka = Sri Jayawardenepura, Sri Lanka
+TimeRangoon = Rangoon
+TimeBangkok = Bangkok, Hanoi, Jakarta
+TimeKrasnoyarsk = Krasnoyarsk
+TimeBeijing = Beijing, Chongqing, Hong Kong SAR, Urumqi
+TimeIrkutsk = Irkutsk, Ulaan Bataar
+TimeSingapore = Kuala Lumpur, Singapore
+TimePerth = Perth, Western Australia
+TimeTaipei = Taipei
+TimeTokyo = Osaka, Sapporo, Tokyo
+TimeSeoul = Seoul, Korea Standard time
+TimeYakutsk = Yakutsk
+TimeAdelaide = Adelaide, Central Australia
+TimeDarwin = Darwin
+TimeBrisbane = Brisbane, East Australia
+TimeSydney = Canberra, Melbourne, Sydney, Hobart
+TimeGuam = Guam, Port Moresby
+TimeHobart = Hobart, Tasmania
+TimeVladivostock = Vladivostok
+TimeMagadan = Magadan, Solomon Is., New Caledonia
+TimeWellington = Auckland, Wellington
+TimeFiji = Fiji Islands, Kamchatka, Marshall Is.
+TimeTonga = Nuku'alofa, Tonga
+
+LanguageEnglish = English
+LanguageCatala = Catalan
+LanguageNederlands = Dutch
+LanguageFrench = French
+LanguageGerman = German
+LanguageItaliano = Italian
+LanguagePortuguese = Portuguese (BR)
+LanguageEspanyol = Spanish
+LanguageSwedish = Swedish
+LanguageTurkish = Turkish
+
+DateDefault = Default
+DateDDMMYY = DD/MM/YY
+DateMMDDYY = MM/DD/YY
+DateDDMonth = DD Month (01 Jan)
+DateAdvanced = Advanced
+
+NewContact = New Contact
+NewGroup = New Group
+AddContactsTo = Add Contacts to
+ImportContacts = Import Contacts
+
+Name = Name
+Email = Email
+DefaultEmail = Default Email
+NotSpecifiedYet = Not specified yet
+ContactName = Name
+Birthday = Birthday
+Month = Month
+January = January
+February = February
+March = March
+April = April
+May = May
+June = June
+July = July
+August = August
+September = September
+October = October
+November = November
+December = December
+Day = Day
+Year = Year
+UseFriendlyName1 = Use Friendly Name
+UseFriendlyName2 = (for example, John Doe &lt;johndoe@mail.com&gt;)
+Personal = Personal
+PersonalEmail = Personal E-mail
+StreetAddress = Street Address
+City = City
+Fax = Fax
+StateProvince = State/Province
+Phone = Phone
+ZipCode = Zip Code
+Mobile = Mobile
+CountryRegion = Country/Region
+WebPage = Web Page
+Go = Go
+Home = Home
+Business = Business
+BusinessEmail = Business E-mail
+Company = Company
+JobTitle = Job Title
+Department = Department
+Office = Office
+Pager = Pager
+Other = Other
+OtherEmail = Other E-mail
+Notes = Notes
+Groups = Groups
+ShowAddFields = Show additional fields
+HideAddFields = Hide additional fields
+EditContact = Edit contact information
+GroupName = Group Name
+AddContacts = Add Contacts
+CommentAddContacts = (If you're going to specify more than one address, please separate them with commas)
+CreateGroup = Create Group
+Rename = rename
+MailGroup = Mail Group
+RemoveFromGroup = Remove from Group
+UseImportTo = Use Import to copy your contacts from Microsoft Outlook, Microsoft Outlook Express into your RMOMail contacts list.
+Outlook1 = Microsoft Outlook 2000/XP/2003
+Outlook2 = Microsoft Outlook Express 6
+SelectImportFile = Select the file (.CSV format) that you want to import
+Import = Import
+ContactsMessage = This is contacts page!!!
+ContactsCount = contact(s)
+GroupsCount = group(s)
+
+; webmail 4.1 constants
+PicturesBlocked = Pictures in this message have been blocked for your safety.
+ShowPictures = Show pictures
+ShowPicturesFromSender = Always show pictures in messages from this sender
+AlwaysShowPictures = Always show pictures in messages
+
+TreatAsOrganization = Treat as an organization
+
+WarningGroupAlreadyExist = Group with such name already exists. Please specify another name.
+WarningCorrectFolderName = You should specify a correct folder name.
+WarningLoginFieldBlank = You cannot leave Login field blank.
+WarningCorrectLogin = You should specify a correct login.
+WarningPassBlank = You cannot leave Password field blank.
+WarningCorrectIncServer = You should specify a correct POP3(IMAP) server address.
+WarningCorrectSMTPServer = You should specify a correct SMTP server address.
+WarningFromBlank = You cannot leave From: field blank.
+WarningAdvancedDateFormat = Please specify a date-time format.
+
+AdvancedDateHelpTitle = Advanced Date
+AdvancedDateHelpIntro = When the &quot;Advanced&quot; field is selected, you can use the text box to set your own date format, which would be displayed in RMOMail. The following options are used for this purpose along with ':' or '/' delimiter char:
+AdvancedDateHelpConclusion = For instance, if you've specified &quot;mm/dd/yyyy&quot; value in the text box of &quot;Advanced&quot; field, the date is displayed as month/day/year (i.e. 11/23/2005)
+AdvancedDateHelpDayOfMonth = Day of month (1 through 31)
+AdvancedDateHelpNumericMonth = Month (1 through 12)
+AdvancedDateHelpTextualMonth = Month (Jan through Dec)
+AdvancedDateHelpYear2 = Year, 2 digits
+AdvancedDateHelpYear4 = Year, 4 digits
+AdvancedDateHelpDayOfYear = Day of year (1 through 366)
+AdvancedDateHelpQuarter = Quarter
+AdvancedDateHelpDayOfWeek = Day of week (Mon through Sun)
+AdvancedDateHelpWeekOfYear = Week of year (1 through 53)
+
+InfoNoMessagesFound = No messages found.
+ErrorSMTPConnect = Can't connect to SMTP server. Check SMTP server settings.
+ErrorSMTPAuth = Wrong username and/or password. Authentication failed.
+ReportMessageSent = Your message has been sent.
+ReportMessageSaved = Your message has been saved.
+ErrorPOP3Connect = Can't connect to POP3 server, check POP3 server settings.
+ErrorIMAP4Connect = Can't connect to IMAP4 server, check IMAP4 server settings.
+ErrorPOP3IMAP4Auth = Wrong email/login and/or password. Authentication failed.
+ErrorGetMailLimit = Sorry, your mailbox size limit is exceeded.
+
+ReportSettingsUpdatedSuccessfuly = Settings have been updated successfully.
+ReportAccountCreatedSuccessfuly = Account has been created successfully.
+ReportAccountUpdatedSuccessfuly = Account has been updated successfully.
+ConfirmDeleteAccount = Are you sure you want to delete account?
+ReportFiltersUpdatedSuccessfuly = Filters have been updated successfully.
+ReportSignatureUpdatedSuccessfuly = Signature has been updated successfully.
+ReportFoldersUpdatedSuccessfuly = Folders have been updated successfully.
+ReportContactsSettingsUpdatedSuccessfuly = Contacts' settings have been updated successfully.
+
+ErrorInvalidCSV = CSV file you selected has invalid format.
+;The group "guies" was successfully added.
+ReportGroupSuccessfulyAdded1 = The group
+ReportGroupSuccessfulyAdded2 = was successfully added.
+ReportGroupUpdatedSuccessfuly = Group has been updated successfully.
+ReportContactSuccessfulyAdded = Contact was successfully added.
+ReportContactUpdatedSuccessfuly = Contact has been updated successfully.
+;Contact(s) was added to group "friends".
+ReportContactAddedToGroup = Contact(s) was added to group
+AlertNoContactsGroupsSelected = No contacts or groups selected.
+
+InfoListNotContainAddress = If the list doesn't contain the address you're looking for, keep typing its first chars.
+
+DirectAccess = D
+DirectAccessTitle = Direct Mode. RMOMail accesses messages directly on mail server.
+
+FolderInbox = Inbox
+FolderSentItems = Sent Items
+FolderDrafts = Drafts
+FolderTrash = Trash
+
+LanguageDanish = Danish
+LanguagePolish = Polish
+
+FileLargerAttachment = The file size exceeds Attachment Size limit.
+FilePartiallyUploaded = Only a part of the file was uploaded due to an unknown error.
+NoFileUploaded = No file was uploaded.
+MissingTempFolder = The temporary folder is missing.
+MissingTempFile = The temporary file is missing.
+UnknownUploadError = An unknown file upload error occurred.
+FileLargerThan = File upload error. Most probably, the file is larger than 
+PROC_CANT_LOAD_DB = Can't connect to database.
+PROC_CANT_LOAD_LANG = Can't find required language file.
+PROC_CANT_LOAD_ACCT = The account doesn't exist, perhaps, it has just been deleted.
+
+DomainDosntExist = Such domain doesn't exist on mail server.
+ServerIsDisable = Using mail server is prohibited by administrator.
+
+PROC_ACCOUNT_EXISTS = The account cannot be created because it already exists.
+PROC_CANT_GET_MESSAGES_COUNT = Can't get folder message count.
+PROC_CANT_MAIL_SIZE = Can't get mail storage size.
+
+Organization = Organization
+WarningOutServerBlank = You cannot leave SMTP Server field blank
+
+;
+Refresh = Refresh
+MessagesInInbox = Message(s) in Inbox
+InfoEmptyInbox = Inbox is empty
+
+; webmail 4.2 constants
+LanguagePortugueseBrazil = Portuguese-Brazil
+LanguageHungarian = Hungarian
+
+BackToList = Back to List
+InfoNoContactsGroups = No contacts or groups.
+InfoNewContactsGroups = You can either create new contacts/groups or import contacts from a .CSV file in MS Outlook format.
+DefTimeFormat = Default time format
+SpellNoSuggestions = No suggestions
+SpellWait = Please wait&hellip;
+
+InfoNoMessageSelected = No message selected.
+InfoSingleDoubleClick = You can either single-click any message in the list to preview it here or double-click to view it full size.	
+
+; calendar
+TitleDay = Day View
+TitleWeek = Week View
+TitleMonth = Month View
+
+ErrorNotSupportBrowser = AfterLogic Calendar doesn't support your browser. Please use FireFox 2.0 or higher, Opera 9.0 or      higher, Internet Explorer 6.0 or higher, Safari 3.0.2 or higher.
+ErrorTurnedOffActiveX = ActiveX support is turned off . <br/>You should turn it on in order to use this application.
+
+Calendar = Calendar
+
+TabDay = Day
+TabWeek = Week
+TabMonth = Month
+
+ToolNewEvent = New&nbsp;Event
+ToolBack = Back
+ToolToday = Today
+AltNewEvent = New Event
+AltBack = Back
+AltToday = Today
+CalendarHeader = Calendar
+CalendarsManager = Calendars Manager
+
+CalendarActionNew = New calendar
+EventHeaderNew = New Event
+CalendarHeaderNew = New Calendar
+
+EventSubject = Subject
+EventCalendar = Calendar
+EventFrom = From
+EventTill = till
+CalendarDescription = Description
+CalendarColor = Color
+CalendarName = Calendar Name
+CalendarDefaultName = My Calendar
+
+ButtonSave = Save
+ButtonCancel = Cancel
+ButtonDelete = Delete
+
+AltPrevMonth = Prev Month
+AltNextMonth = Next Month
+
+CalendarHeaderEdit = Edit Calendar
+CalendarActionEdit = Edit Calendar
+ConfirmDeleteCalendar = Are you sure you want to delete calendar
+InfoDeleting = Deleting...
+WarningCalendarNameBlank = You cannot leave the calendar name blank.
+ErrorCalendarNotCreated = Calendar not created.
+WarningSubjectBlank = You cannot leave the subject blank.
+WarningIncorrectTime = The specified time contains illegal characters.
+WarningIncorrectFromTime = The from time is incorrect.
+WarningIncorrectTillTime = The till time is incorrect.
+WarningStartEndDate = The end date must be greater or equal to the start date.
+WarningStartEndTime = The end time must be greater than the start time.
+WarningIncorrectDate = The date must be correct.
+InfoLoading = Loading...
+EventCreate = Create event
+CalendarHideOther = Hide other calendars
+CalendarShowOther = Show other calendars
+CalendarRemove = Remove Calendar
+EventHeaderEdit = Edit Event
+
+InfoSaving = Saving...
+SettingsDisplayName = Display Name
+SettingsTimeFormat = Time Format
+SettingsDateFormat = Date Format
+SettingsShowWeekends = Show weekends
+SettingsWorkdayStarts = Workday starts
+SettingsWorkdayEnds = ends
+SettingsShowWorkday = Show workday
+SettingsWeekStartsOn = Week starts on
+SettingsDefaultTab = Default Tab
+SettingsCountry = Country
+SettingsTimeZone = Time Zone
+SettingsAllTimeZones = All time zones
+
+WarningWorkdayStartsEnds = The 'Workday ends' time must be greater than the 'Workday starts' time
+ReportSettingsUpdated = Settings have been updated successfully.
+
+SettingsTabCalendar = Calendar
+
+FullMonthJanuary = January
+FullMonthFebruary = February
+FullMonthMarch = March
+FullMonthApril = April
+FullMonthMay = May
+FullMonthJune = June
+FullMonthJuly = July
+FullMonthAugust = August
+FullMonthSeptember = September
+FullMonthOctober = October
+FullMonthNovember = November
+FullMonthDecember = December
+
+ShortMonthJanuary = Jan
+ShortMonthFebruary = Feb
+ShortMonthMarch = Mar
+ShortMonthApril = Apr
+ShortMonthMay = May
+ShortMonthJune = Jun
+ShortMonthJuly = Jul
+ShortMonthAugust = Aug
+ShortMonthSeptember = Sep
+ShortMonthOctober = Oct
+ShortMonthNovember = Nov
+ShortMonthDecember = Dec
+
+FullDayMonday = Monday
+FullDayTuesday = Tuesday
+FullDayWednesday = Wednesday
+FullDayThursday = Thursday
+FullDayFriday = Friday
+FullDaySaturday = Saturday
+FullDaySunday = Sunday
+
+DayToolMonday = Mon
+DayToolTuesday = Tue
+DayToolWednesday = Wed
+DayToolThursday = Thu
+DayToolFriday = Fri
+DayToolSaturday = Sat
+DayToolSunday = Sun
+
+CalendarTableDayMonday = M
+CalendarTableDayTuesday = T
+CalendarTableDayWednesday = W
+CalendarTableDayThursday = T
+CalendarTableDayFriday = F
+CalendarTableDaySaturday = S
+CalendarTableDaySunday = S
+
+ErrorParseJSON = The JSON response returned by the server cannot be parsed.
+
+ErrorLoadCalendar = Unable to load calendars
+ErrorLoadEvents = Unable to load events
+ErrorUpdateEvent = Unable to save event
+ErrorDeleteEvent = Unable to delete event
+ErrorUpdateCalendar = Unable to save calendar
+ErrorDeleteCalendar = Unable to delete calendar
+ErrorGeneral = An error occured on the server. Try again later.

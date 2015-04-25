@@ -1,0 +1,180 @@
+/* r.a.d.calendar WebBlue skin */
+
+table.calendarWrapper_WebBlue
+{
+	background: white;
+	cursor: default;
+}
+
+.TableLayout_WebBlue td
+{
+	width: 20px;
+	font: normal 11px Arial, Verdana, Sans-serf;
+}
+
+.TableLayout_WebBlue td a
+{
+	text-align: center;
+	width: 15px;
+	height: 13px;
+	padding: 1px;
+	display: block;
+	text-decoration: none;
+	color: #000000;
+	cursor: default;
+}
+
+.DaysOfWeek_WebBlue
+{
+	color: #000000;
+	text-align: center;
+	text-transform: uppercase;
+	height: 17px;
+	background: url('Img/DaysOfWeekBg.gif');
+}
+
+.otherMonth_WebBlue a
+{
+	color: #d1d1d1 !important;
+	padding: 1px;
+	display: block;
+	width: 100%;
+	text-align: center !important;
+	height: 13px;
+	margin: 1px;
+}
+
+.otherMonth_WebBlue span
+{
+	color: #d1d1d1;
+	padding: 1px;
+	display: block;
+	width: 100%;
+	height: 13px;
+	text-align: center !important;
+	margin: 1px;
+}
+
+.outOfRange_WebBlue span
+{
+	background: #ffffff;
+	color: #000000;
+	display: block;
+	width: 100%;
+	height: 13px;
+	text-align: center !important;
+}
+
+.titlebar_WebBlue
+{
+	font: bold 11px Arial, Verdana, Sans-serf;
+	height: 20px !important;
+	width: 100%;
+	color: white;
+	background: #000000 url('Img/titlebarBg.gif') repeat-x;
+}
+
+.titlebar_WebBlue img
+{
+
+}
+
+.MonthYearFastNav_WebBlue
+{
+	background: white;
+	font: normal 8pt Tahoma;
+	color: #000;
+	border-collapse: separate;
+	cursor: hand;
+	cursor: pointer;
+}
+
+.MonthYearFastNav_WebBlue td
+{
+	background: white;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.MonthYearFastNav_WebBlue td.selected_WebBlue
+{
+	background: #ffffff;
+	color: black;
+	text-align: center;
+}
+
+.MonthYearFastNav_WebBlue td.bottom_WebBlue
+{
+	text-align: right;
+	padding-left: 9px;
+}
+
+.MonthYearFastNav_WebBlue td input
+{
+	background: #ced8dd;
+	font: normal 11px Arial, Verdana, Sans-serf;
+	color: #000000;
+	float: left;
+	width: auto;
+	margin-right: 6px;
+}
+
+.radCalDefault_WebBlue a:hover,
+.radCalHover_WebBlue a:hover,
+.radCalWeekendDefault_WebBlue a:hover, 
+.radCalWeekendHover_WebBlue a:hover
+{
+	height: 13px;
+	display: block;
+}
+
+.radCalDefault_WebBlue a,
+.radCalHover_WebBlue a,
+.radCalWeekendDefault_WebBlue a, 
+.radCalWeekendHover_WebBlue a
+{
+	background: #fff;
+	text-align: right;
+	height: 13px;
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+
+.radCalToday_WebBlue a
+{
+	background: white;
+	color: black !important;
+}
+
+.radCalTodaySelected_WebBlue a
+{
+	background: #ced8dd;
+	color: black !important;
+}
+
+.radCalSelect_WebBlue a,
+.radCalWeekendSelect_WebBlue a
+{
+	background: #ced8dd;
+	color: black !important;
+	text-align: center !important;
+}
+
+.radPopupImage_WebBlue img
+{
+	vertical-align: bottom;
+	_vertical-align: bottom; /* IE fix */	
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-top: 2px; /* IE margins fix */
+	_margin-top: 1px; 
+	border-width: 0px;
+}
+
+.radDisabled_WebBlue img
+{
+	 filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}

@@ -1,0 +1,141 @@
+/* r.a.d.panelbar 4 Outlook skin */
+
+.RadPanelbar_PipeLine
+{
+	background: white;
+	white-space: nowrap;
+}
+
+.RadPanelbar_PipeLine .rootGroup
+{
+	/*border: solid 1px #002d96;*/
+	border-top: 0px;
+}
+
+.RadPanelbar_PipeLine .text
+{
+	padding: 0px 20px; /* vertical - horizontal */
+	font: bold 11px Arial, Verdana, Sans-serif;
+	line-height: 22px;
+}
+
+.RadPanelbar_PipeLine .image
+{
+	margin: 4px; /* vertical - horizontal */
+}
+
+
+.RadPanelbar_PipeLine .rootGroup .link
+{
+	/*border-top: solid 1px #002d96;*/
+	background: #8EC1EB url('Img/RootItemBkg.gif') repeat-x;
+	color: #15428B;
+}
+
+.RadPanelbar_PipeLine .rootGroup .inner_link
+{
+	color:#000000;
+	display:block;
+	background:url('Img/RootItemBkgActive_inner.gif') repeat-x;
+	height:14px;
+	line-height:14px;
+}
+
+/* span class="text" */
+.RadPanelbar_PipeLine .rootGroup .text
+{
+	font-weight: normal;
+	font-size:13px;
+}
+
+.RadPanelbar_PipeLine .rootGroup .link:hover
+{
+	background: #FEB552 url('Img/RootItemBkgActive.gif') repeat-x;
+	color:#000000;
+}
+
+.RadPanelbar_PipeLine .rootGroup .disabled:hover
+{
+	border-top: solid 1px #002d96;
+	background: #7da5e0 url('Img/RootItemBkg.gif') repeat-x;
+	color: #10110f;
+}
+
+.RadPanelbar_PipeLine .group .text
+{
+	background-color: transparent;
+	font-weight: normal;
+	font-size:13px;
+	padding: 0px 20px; /* vertical-horizontal */
+	padding-left: 30px;
+	border: 0px;
+	
+	line-height: 16px;
+}
+
+.RadPanelbar_PipeLine .group .textUpdateNeeded
+{
+	color: Red;
+	background-color: transparent;
+	font-weight: normal;
+	font-size:13px;
+	border: 0px;
+	
+	line-height: 16px;
+}
+
+.RadPanelbar_PipeLine .level2 .text
+{
+	padding-left: 43px;
+	line-height: 23px;
+}
+
+.RadPanelbar_PipeLine .rootGroup .selected .text
+{
+	background: #ee9515 url('Img/RootItemBkgActive.gif') repeat-x;
+	color:#000000;
+}
+
+/* child item link */
+.RadPanelbar_PipeLine .group .link
+{
+	background: none;
+	border: 0px;
+}
+
+/* child item link:hover */
+.RadPanelbar_PipeLine .group .link:hover
+{
+	background: none;
+	text-decoration: underline;
+}
+
+.RadPanelbar_PipeLine .group .selected .text
+{
+	background: Yellow;
+	text-decoration: none;
+}
+.RadPanelbar_PipeLine .group .textUpdateNeededSelected .text
+{
+	color: Red;
+	background: Yellow;
+	text-decoration: none;
+}
+
+.RadPanelbar_PipeLine .rootGroup .disabled:hover,
+.RadPanelbar_PipeLine .rootGroup .disabled .text
+{
+	background: #7da5e0 url('Img/RootItemBkg.gif') repeat-x;
+	color: #ccc;
+	cursor: default;
+}
+
+.RadPanelbar_PipeLine .rootGroup .group .disabled:hover,
+.RadPanelbar_PipeLine .rootGroup .group .disabled .text
+{
+	border:none;
+	text-decoration:none;
+	background:none;
+	color: #ccc;
+	cursor: default;
+}

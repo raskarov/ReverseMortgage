@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PipeLine" targetNamespace="http://tempuri.org/PipeLine.xsd" xmlns:mstns="http://tempuri.org/PipeLine.xsd" xmlns="http://tempuri.org/PipeLine.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PipeLine" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PipeLine" msprop:Generator_DataSetName="PipeLine">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MortgageUser" msprop:Generator_UserTableName="MortgageUser" msprop:Generator_RowDeletedName="MortgageUserRowDeleted" msprop:Generator_TableClassName="MortgageUserDataTable" msprop:Generator_RowChangedName="MortgageUserRowChanged" msprop:Generator_RowClassName="MortgageUserRow" msprop:Generator_RowChangingName="MortgageUserRowChanging" msprop:Generator_RowEvArgName="MortgageUserRowChangeEvent" msprop:Generator_RowEvHandlerName="MortgageUserRowChangeEventHandler" msprop:Generator_TablePropName="MortgageUser" msprop:Generator_TableVarName="tableMortgageUser" msprop:Generator_RowDeletingName="MortgageUserRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MPID" msprop:Generator_UserColumnName="MPID" msprop:Generator_ColumnPropNameInRow="MPID" msprop:Generator_ColumnVarNameInTable="columnMPID" msprop:Generator_ColumnPropNameInTable="MPIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="YBID" msprop:Generator_UserColumnName="YBID" msprop:Generator_ColumnPropNameInRow="YBID" msprop:Generator_ColumnVarNameInTable="columnYBID" msprop:Generator_ColumnPropNameInTable="YBIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MPStatusID" msprop:Generator_UserColumnName="MPStatusID" msprop:Generator_ColumnPropNameInRow="MPStatusID" msprop:Generator_ColumnVarNameInTable="columnMPStatusID" msprop:Generator_ColumnPropNameInTable="MPStatusIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MPProductID" msprop:Generator_UserColumnName="MPProductID" msprop:Generator_ColumnPropNameInRow="MPProductID" msprop:Generator_ColumnVarNameInTable="columnMPProductID" msprop:Generator_ColumnPropNameInTable="MPProductIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="YBStateID" msprop:Generator_UserColumnName="YBStateID" msprop:Generator_ColumnPropNameInRow="YBStateID" msprop:Generator_ColumnVarNameInTable="columnYBStateID" msprop:Generator_ColumnPropNameInTable="YBStateIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MPStatusName" msprop:Generator_UserColumnName="MPStatusName" msprop:Generator_ColumnPropNameInRow="MPStatusName" msprop:Generator_ColumnVarNameInTable="columnMPStatusName" msprop:Generator_ColumnPropNameInTable="MPStatusNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MPProductName" msprop:Generator_UserColumnName="MPProductName" msprop:Generator_ColumnPropNameInRow="MPProductName" msprop:Generator_ColumnVarNameInTable="columnMPProductName" msprop:Generator_ColumnPropNameInTable="MPProductNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="YBStateAbbr" msprop:Generator_UserColumnName="YBStateAbbr" msprop:Generator_ColumnPropNameInRow="YBStateAbbr" msprop:Generator_ColumnVarNameInTable="columnYBStateAbbr" msprop:Generator_ColumnPropNameInTable="YBStateAbbrColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ClosingDate" msprop:Generator_UserColumnName="ClosingDate" msprop:Generator_ColumnPropNameInRow="ClosingDate" msprop:Generator_ColumnVarNameInTable="columnClosingDate" msprop:Generator_ColumnPropNameInTable="ClosingDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="YBFullName" msprop:Generator_UserColumnName="YBFullName" msprop:Generator_ColumnPropNameInRow="YBFullName" msprop:Generator_ColumnVarNameInTable="columnYBFullName" msprop:Generator_ColumnPropNameInTable="YBFullNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LOFullName" msprop:Generator_UserColumnName="LOFullName" msprop:Generator_ColumnPropNameInRow="LOFullName" msprop:Generator_ColumnVarNameInTable="columnLOFullName" msprop:Generator_ColumnPropNameInTable="LOFullNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PFullName" msprop:Generator_UserColumnName="PFullName" msprop:Generator_ColumnPropNameInRow="PFullName" msprop:Generator_ColumnVarNameInTable="columnPFullName" msprop:Generator_ColumnPropNameInTable="PFullNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LOID" msprop:Generator_UserColumnName="LOID" msprop:Generator_ColumnPropNameInRow="LOID" msprop:Generator_ColumnVarNameInTable="columnLOID" msprop:Generator_ColumnPropNameInTable="LOIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PID" msprop:Generator_UserColumnName="PID" msprop:Generator_ColumnPropNameInRow="PID" msprop:Generator_ColumnVarNameInTable="columnPID" msprop:Generator_ColumnPropNameInTable="PIDColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

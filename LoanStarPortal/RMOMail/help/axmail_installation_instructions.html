@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta HTTP-EQUIV="Content-Type" Content="text-html; charset=utf-8">
+		<link rel="stylesheet" href="help_styles.css" type="text/css">
+	</head>
+	<body>
+		<br>
+		<table border="0" cellpadding="0" cellspacing="0" width="90%" class="wmh_reg">
+			<tr>
+				<td align="center" class="wmh_header">AfterLogic XMail Server Integration Instructions for Windows</td>
+			<tr>
+				<td>
+					<br>
+					<ol>
+						<li>
+Download and install <a href="http://www.afterlogic.com/download/xmail-server.asp" target="_blank">AfterLogic XMail Server</a> using the installation instructions shipped with the product.<br>
+							<br><br>
+						</li>
+						<li>
+							Make sure admin service is accessible at localhost:6017 (by default) address.<br>
+							If the address is different, change it in the following XML section of the web/web.config file:<br>
+							<pre>
+	&lt;appSettings&gt;
+		&lt;add key="dataFolderPath" value="c:\webmail\DATA\" /&gt;
+		&lt;add key="WMServerHost" value="localhost" /&gt;
+		&lt;add key="WMServerPort" value="6017" /&gt;
+	&lt;/appSettings&gt;
+							</pre>
+							Change values of <b>WMServerHost</b> and <b>WMServerPort</b> keys.
+						</li><br>
+						<li>
+							Grant full control permission to web server process (Internet Guest Account and ASP.NET users)
+							over XMail/MailRoot/domains folder and ctrlaccounts.tab file. 
+							<br><br>
+						</li>
+						<li>
+						    In WebMail Admin Console / <a href="webmail_administration.html#7">Mail Server Integration</a>,
+						    turn "Enable Integration" option on and specify correct path to XMail/MailRoot folder in "Path to Server" field.
+							<br><br>
+						</li>
+					</ol>
+					<br>
+					<hr>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					If you have any questions don't hesitate to email to <a href="mailto:support@afterlogic.com">
+						support@afterlogic.com</a><br>
+					Or visit our support web page at <a href="http://www.afterlogic.com/support" target="_blank">
+						http://www.afterlogic.com/support</a><br>
+					or web forum at <a href="http://www.afterlogic.com/forum" target="_blank">http://www.afterlogic.com/forum</a>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

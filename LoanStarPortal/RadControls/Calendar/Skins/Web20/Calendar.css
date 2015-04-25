@@ -1,0 +1,193 @@
+/* r.a.d.calendar Web20 skin */
+
+.calendarWrapper_Web20,
+.radCalPreviewDefault_Web20
+{
+	background: #e7f1ff url('Img/calendarBg.gif') repeat-x;
+	border: solid 1px #6788be !important;
+	cursor: default;
+	width: 100% !important;
+}
+
+.TableLayout_Web20
+{
+	width: 100%;
+}
+
+.TableLayout_Web20 td
+{
+	text-align: center;
+	vertical-align:top;
+	color: #7f7f7f;
+	cursor: default;
+	width: 14%;
+}
+
+/* all links in the calendar */
+.TableLayout_Web20 td a
+{
+	line-height: 45px;
+	vertical-align:top;
+	text-decoration: none;
+	display: block;
+}
+
+.radCalWeekendDefault_Web20,
+.radCalWeekendHover_Web20,
+.radCalWeekendSelect_Web20,
+.radCalDefault_Web20,
+.radCalHover_Web20,
+.radCalSelect_Web20,
+.otherMonth_Web20
+{
+	border: solid 1px #dde1e4;
+	background: white;
+}
+
+.radCalToday_Web20
+{
+	border: solid 1px #dde1e4;
+	background: #E6E7D5;
+}
+
+.radCalWeekendDefault_Web20 td,
+.radCalWeekendHover_Web20 td,
+.radCalWeekendSelect_Web20 td
+{
+	visibility:hidden;
+}
+
+.radCalToday_Web20 a
+{
+	font: normal 18px Arial, Verdana, Sans-serif;
+	color: black;
+	background: #E6E7D5;
+}
+
+.radCalDefault_Web20 a,
+.radCalWeekendDefault_Web20 a
+{
+	color: #333;
+	font: normal 12px Arial, Verdana, Sans-serif;
+}
+
+.radCalWeekendHover_Web20,
+.radCalHover_Web20
+{
+	background: #e7f1ff;
+}
+
+.radCalWeekendHover_Web20 a,
+.radCalHover_Web20 a
+{
+	font: normal 18px Arial, Verdana, Sans-serif;
+	color: black;
+	background: #e7f1ff;
+}
+
+.radCalWeekendSelect_Web20,
+.radCalSelect_Web20
+{
+	background: yellow;	
+}
+
+.radCalWeekendSelect_Web20 a,
+.radCalSelect_Web20 a
+{
+	font: normal 18px Arial, Verdana, Sans-serif;
+	color: black;
+	background: yellow;
+}
+
+.otherMonth_Web20 a
+{
+	color: #ccc;
+	cursor: no-drop;
+}
+
+.outOfRange_Web20
+{
+	background-color: white;
+	color: #ccc;	
+	cursor: no-drop;
+	border: solid 1px #dde1e4;
+}
+
+
+.DaysOfWeek_Web20
+{
+	color: #333 !important;
+	font-weight: bold;
+	cursor: default;
+	background: #e7f1ff;
+	text-align: center;
+	line-height: 23px;
+	width: 32px;
+	border-bottom: solid 1px #a5bedf;
+}
+
+.titlebar_Web20, .titlebar_Web20 td 
+{
+	color: #ffffff;
+	font-family:Arial, Verdana, Sans-serif;
+	font-size:18px;
+	font: 18px;
+	font-weight:bold;
+	background: transparent;
+	line-height: 18px;
+}
+
+.MonthYearFastNav_Web20
+{	
+	border: 1px solid #6788be;
+	background: white;
+	border-collapse: collapse;
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#666666,strength=3);
+}
+
+.MonthYearFastNav_Web20 td
+{
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #d8dde0;
+	cursor: hand;
+	padding: 4px;
+	font: normal 11px Arial, Verdana, Sans-Serif;
+	color: black;
+}
+
+.MonthYearFastNav_Web20 td.selected_Web20
+{
+	background: #dcfc5c;
+	color: black;
+	border-color: #d8dde0;
+}
+
+.MonthYearFastNav_Web20 td input
+{
+	background: transparent url('Img/ContextMenuInputBg.gif') repeat-x;
+	border: solid 1px #6788be;
+	font: bold 11px Arial, Verdana, Sans-Serif;
+	color: white;
+	float: left;
+	margin-right: 1px;
+	padding: 0px 2px;
+}
+
+.radPopupImage_Web20 img
+{
+	vertical-align: middle;
+	_vertical-align: top; /* IE fix */	
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-top: -1px; /* IE margins fix */
+	_margin-top: 0px; 
+	border-width: 0px;
+}
+
+.radDisabled_Web20 img
+{
+	 filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}

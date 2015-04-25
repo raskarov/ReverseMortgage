@@ -1,0 +1,2973 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BEEDF15E-9D22-4541-BD0F-740BFA1CC760}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>WebMailPro</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebMailPro</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJson, Version=0.5.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MailBee.NET, Version=4.0.2.114, Culture=neutral, PublicKeyToken=cd85b70fb26f9fc1, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=5.0.8.1, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NetSpell.SpellChecker, Version=2.1.7.20504, Culture=neutral, PublicKeyToken=318b389f0db66e46, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="advanced_data_help.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="basewebmail.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="calendar.aspx" />
+    <Content Include="calendar\inc.calendar-settings.js" />
+    <Content Include="calendar\processing.aspx" />
+    <Content Include="calendar\lib.js" />
+    <Content Include="calendar\SaveAdmSettings.js" />
+    <Content Include="calendar\skins\Barbie\calendar_header_back.gif" />
+    <Content Include="calendar\skins\Barbie\calendar_styles.css" />
+    <Content Include="calendar\skins\Barbie\flower_left.gif" />
+    <Content Include="calendar\skins\Barbie\menu\back.gif" />
+    <Content Include="calendar\skins\Barbie\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\Barbie\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\Barbie\menu\new_event.gif" />
+    <Content Include="calendar\skins\Barbie\menu\today.gif" />
+    <Content Include="calendar\skins\Barbie\tabs_bg.gif" />
+    <Content Include="calendar\skins\Barbie\tabs_bg_activ.gif" />
+    <Content Include="calendar\skins\Barbie\upper_indent.gif" />
+    <Content Include="calendar\skins\calendar\arrow_bottom.gif" />
+    <Content Include="calendar\skins\calendar\arrow_bottom_light.gif" />
+    <Content Include="calendar\skins\calendar\editwindow_arrow_bottom.gif" />
+    <Content Include="calendar\skins\calendar\event_10_arrow_left.gif" />
+    <Content Include="calendar\skins\calendar\event_10_arrow_right.gif" />
+    <Content Include="calendar\skins\calendar\event_11_arrow_left.gif" />
+    <Content Include="calendar\skins\calendar\event_11_arrow_right.gif" />
+    <Content Include="calendar\skins\calendar\event_12_arrow_left.gif" />
+    <Content Include="calendar\skins\calendar\event_12_arrow_right.gif" />
+    <Content Include="calendar\skins\calendar\event_13_arrow_left.gif" />
+    <Content Include="calendar\skins\calendar\event_13_arrow_right.gif" />
+    <Content Include="calendar\skins\calendar\event_14_arrow_left.gif" />
+    <Content Include="calendar\skins\calendar\event_14_arrow_right.gif" />
+    <Content Include="calendar\skins\calendar\event_1_arrow_left.gif" />
+    <Content Include="calendar\skins\calendar\event_1_arrow_right.gif" />
+    <Content Include="calendar\skins\calendar\event_2_arrow_left.gif" />
+    <Content Include="calendar\skins\calendar\event_2_arrow_right.gif" />
+    <Content Include="calendar\skins\calendar\event_3_arrow_left.gif" />
+    <Content Include="calendar\skins\calendar\event_3_arrow_right.gif" />
+    <Content Include="calendar\skins\calendar\event_4_arrow_left.gif" />
+    <Content Include="calendar\skins\calendar\event_4_arrow_right.gif" />
+    <Content Include="calendar\skins\calendar\event_5_arrow_left.gif" />
+    <Content Include="calendar\skins\calendar\event_5_arrow_right.gif" />
+    <Content Include="calendar\skins\calendar\event_6_arrow_left.gif" />
+    <Content Include="calendar\skins\calendar\event_6_arrow_right.gif" />
+    <Content Include="calendar\skins\calendar\event_7_arrow_left.gif" />
+    <Content Include="calendar\skins\calendar\event_7_arrow_right.gif" />
+    <Content Include="calendar\skins\calendar\event_8_arrow_left.gif" />
+    <Content Include="calendar\skins\calendar\event_8_arrow_right.gif" />
+    <Content Include="calendar\skins\calendar\event_9_arrow_left.gif" />
+    <Content Include="calendar\skins\calendar\event_9_arrow_right.gif" />
+    <Content Include="calendar\skins\calendar\event_arrow_down6.gif" />
+    <Content Include="calendar\skins\calendar\event_arrow_up6.gif" />
+    <Content Include="calendar\skins\calendar\event_middle_1.gif" />
+    <Content Include="calendar\skins\calendar\event_middle_10.gif" />
+    <Content Include="calendar\skins\calendar\event_middle_11.gif" />
+    <Content Include="calendar\skins\calendar\event_middle_12.gif" />
+    <Content Include="calendar\skins\calendar\event_middle_13.gif" />
+    <Content Include="calendar\skins\calendar\event_middle_14.gif" />
+    <Content Include="calendar\skins\calendar\event_middle_2.gif" />
+    <Content Include="calendar\skins\calendar\event_middle_3.gif" />
+    <Content Include="calendar\skins\calendar\event_middle_4.gif" />
+    <Content Include="calendar\skins\calendar\event_middle_5.gif" />
+    <Content Include="calendar\skins\calendar\event_middle_6.gif" />
+    <Content Include="calendar\skins\calendar\event_middle_7.gif" />
+    <Content Include="calendar\skins\calendar\event_middle_8.gif" />
+    <Content Include="calendar\skins\calendar\event_middle_9.gif" />
+    <Content Include="calendar\skins\calendar\event_middle_grey.gif" />
+    <Content Include="calendar\skins\calendar\minicalendar_arrow_bottom.gif" />
+    <Content Include="calendar\skins\calendar\minicalendar_arrow_bottom_activ.gif" />
+    <Content Include="calendar\skins\calendar\minicalendar_arrow_left_activ.gif" />
+    <Content Include="calendar\skins\calendar\minicalendar_arrow_right_activ.gif" />
+    <Content Include="calendar\skins\Dark Green\calendar_header_back.gif" />
+    <Content Include="calendar\skins\Dark Green\calendar_styles.css" />
+    <Content Include="calendar\skins\Dark Green\menu\back.gif" />
+    <Content Include="calendar\skins\Dark Green\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\Dark Green\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\Dark Green\menu\new_event.gif" />
+    <Content Include="calendar\skins\Dark Green\menu\today.gif" />
+    <Content Include="calendar\skins\Dark Green\tabs_bg.gif" />
+    <Content Include="calendar\skins\Dark Green\tabs_bg_activ.gif" />
+    <Content Include="calendar\skins\Dark Green\toolbar_back.gif" />
+    <Content Include="calendar\skins\Dark_Blue\calendar_header_back.gif" />
+    <Content Include="calendar\skins\Dark_Blue\calendar_styles.css" />
+    <Content Include="calendar\skins\Dark_Blue\menu\back.gif" />
+    <Content Include="calendar\skins\Dark_Blue\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\Dark_Blue\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\Dark_Blue\menu\new_event.gif" />
+    <Content Include="calendar\skins\Dark_Blue\menu\today.gif" />
+    <Content Include="calendar\skins\Dark_Blue\tabs_bg.gif" />
+    <Content Include="calendar\skins\Dark_Blue\tabs_bg_activ.gif" />
+    <Content Include="calendar\skins\Dark_Blue\toolbar_back.gif" />
+    <Content Include="calendar\skins\Dark_Orange\calendar_header_back.gif" />
+    <Content Include="calendar\skins\Dark_Orange\calendar_styles.css" />
+    <Content Include="calendar\skins\Dark_Orange\menu\back.gif" />
+    <Content Include="calendar\skins\Dark_Orange\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\Dark_Orange\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\Dark_Orange\menu\new_event.gif" />
+    <Content Include="calendar\skins\Dark_Orange\menu\today.gif" />
+    <Content Include="calendar\skins\Dark_Orange\tabs_bg.gif" />
+    <Content Include="calendar\skins\Dark_Orange\tabs_bg_activ.gif" />
+    <Content Include="calendar\skins\Dark_Orange\toolbar_back.gif" />
+    <Content Include="calendar\skins\Dark_Orange_Lite\calendar_header_back.gif" />
+    <Content Include="calendar\skins\Dark_Orange_Lite\calendar_styles.css" />
+    <Content Include="calendar\skins\Dark_Orange_Lite\menu\back.gif" />
+    <Content Include="calendar\skins\Dark_Orange_Lite\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\Dark_Orange_Lite\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\Dark_Orange_Lite\menu\new_event.gif" />
+    <Content Include="calendar\skins\Dark_Orange_Lite\menu\today.gif" />
+    <Content Include="calendar\skins\Dark_Orange_Lite\tabs_bg.gif" />
+    <Content Include="calendar\skins\Dark_Orange_Lite\tabs_bg_activ.gif" />
+    <Content Include="calendar\skins\Dark_Orange_Lite\toolbar_back.gif" />
+    <Content Include="calendar\skins\error.gif" />
+    <Content Include="calendar\skins\Flat_Green\calendar_styles.css" />
+    <Content Include="calendar\skins\Flat_Green\menu\back.gif" />
+    <Content Include="calendar\skins\Flat_Green\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\Flat_Green\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\Flat_Green\menu\new_event.gif" />
+    <Content Include="calendar\skins\Flat_Green\menu\today.gif" />
+    <Content Include="calendar\skins\Flat_Lite\calendar_styles.css" />
+    <Content Include="calendar\skins\Flat_Lite\menu\back.gif" />
+    <Content Include="calendar\skins\Flat_Lite\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\Flat_Lite\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\Flat_Lite\menu\new_event.gif" />
+    <Content Include="calendar\skins\Flat_Lite\menu\today.gif" />
+    <Content Include="calendar\skins\Flat_Original\calendar_styles.css" />
+    <Content Include="calendar\skins\Flat_Original\menu\back.gif" />
+    <Content Include="calendar\skins\Flat_Original\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\Flat_Original\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\Flat_Original\menu\new_event.gif" />
+    <Content Include="calendar\skins\Flat_Original\menu\today.gif" />
+    <Content Include="calendar\skins\header_back.gif" />
+    <Content Include="calendar\skins\Hotmail_Style\calendar_header_back.gif" />
+    <Content Include="calendar\skins\Hotmail_Style\calendar_styles.css" />
+    <Content Include="calendar\skins\Hotmail_Style\menu\back.gif" />
+    <Content Include="calendar\skins\Hotmail_Style\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\Hotmail_Style\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\Hotmail_Style\menu\new_event.gif" />
+    <Content Include="calendar\skins\Hotmail_Style\menu\today.gif" />
+    <Content Include="calendar\skins\Hotmail_Style\tabs_bg.gif" />
+    <Content Include="calendar\skins\Hotmail_Style\tabs_bg_activ.gif" />
+    <Content Include="calendar\skins\Hotmail_Style\upper_indent.gif" />
+    <Content Include="calendar\skins\iForum\calendar_header_back.gif" />
+    <Content Include="calendar\skins\iForum\calendar_header_back1.gif" />
+    <Content Include="calendar\skins\iForum\calendar_styles.css" />
+    <Content Include="calendar\skins\iForum\menu\back.gif" />
+    <Content Include="calendar\skins\iForum\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\iForum\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\iForum\menu\new_event.gif" />
+    <Content Include="calendar\skins\iForum\menu\today.gif" />
+    <Content Include="calendar\skins\iForum\tabs_bg.gif" />
+    <Content Include="calendar\skins\iForum\tabs_bg_activ.gif" />
+    <Content Include="calendar\skins\Light_Blue\calendar_header_back.gif" />
+    <Content Include="calendar\skins\Light_Blue\calendar_styles.css" />
+    <Content Include="calendar\skins\Light_Blue\menu\back.gif" />
+    <Content Include="calendar\skins\Light_Blue\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\Light_Blue\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\Light_Blue\menu\new_event.gif" />
+    <Content Include="calendar\skins\Light_Blue\menu\today.gif" />
+    <Content Include="calendar\skins\Light_Blue\tabs_bg.gif" />
+    <Content Include="calendar\skins\Light_Blue\tabs_bg_activ.gif" />
+    <Content Include="calendar\skins\Light_Gray\calendar_header_back.gif" />
+    <Content Include="calendar\skins\Light_Gray\calendar_styles.css" />
+    <Content Include="calendar\skins\Light_Gray\menu\back.gif" />
+    <Content Include="calendar\skins\Light_Gray\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\Light_Gray\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\Light_Gray\menu\new_event.gif" />
+    <Content Include="calendar\skins\Light_Gray\menu\today.gif" />
+    <Content Include="calendar\skins\Light_Gray\tabs_bg.gif" />
+    <Content Include="calendar\skins\Light_Gray\tabs_bg_activ.gif" />
+    <Content Include="calendar\skins\Light_Green\calendar_header_back.gif" />
+    <Content Include="calendar\skins\Light_Green\calendar_styles.css" />
+    <Content Include="calendar\skins\Light_Green\menu\back.gif" />
+    <Content Include="calendar\skins\Light_Green\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\Light_Green\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\Light_Green\menu\new_event.gif" />
+    <Content Include="calendar\skins\Light_Green\menu\today.gif" />
+    <Content Include="calendar\skins\Light_Green\tabs_bg.gif" />
+    <Content Include="calendar\skins\Light_Green\tabs_bg_activ.gif" />
+    <Content Include="calendar\skins\login_error.gif" />
+    <Content Include="calendar\skins\Mac_Style\calendar_header_back.gif" />
+    <Content Include="calendar\skins\Mac_Style\calendar_styles.css" />
+    <Content Include="calendar\skins\Mac_Style\menu\back.gif" />
+    <Content Include="calendar\skins\Mac_Style\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\Mac_Style\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\Mac_Style\menu\new_event.gif" />
+    <Content Include="calendar\skins\Mac_Style\menu\today.gif" />
+    <Content Include="calendar\skins\Mac_Style\tabs_bg.gif" />
+    <Content Include="calendar\skins\Mac_Style\tabs_bg_activ.gif" />
+    <Content Include="calendar\skins\Red_line\calendar_header_back.gif" />
+    <Content Include="calendar\skins\Red_line\calendar_styles.css" />
+    <Content Include="calendar\skins\Red_line\menu\back.gif" />
+    <Content Include="calendar\skins\Red_line\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\Red_line\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\Red_line\menu\new_event.gif" />
+    <Content Include="calendar\skins\Red_line\menu\today.gif" />
+    <Content Include="calendar\skins\Red_line\tabs_bg.gif" />
+    <Content Include="calendar\skins\Red_line\tabs_bg_activ.gif" />
+    <Content Include="calendar\skins\tip_info.gif" />
+    <Content Include="calendar\skins\Ya-Ya\calendar_header_back.gif" />
+    <Content Include="calendar\skins\Ya-Ya\calendar_styles.css" />
+    <Content Include="calendar\skins\Ya-Ya\menu\back.gif" />
+    <Content Include="calendar\skins\Ya-Ya\menu\calendar_arrow_left.gif" />
+    <Content Include="calendar\skins\Ya-Ya\menu\calendar_arrow_right.gif" />
+    <Content Include="calendar\skins\Ya-Ya\menu\new_event.gif" />
+    <Content Include="calendar\skins\Ya-Ya\menu\today.gif" />
+    <Content Include="calendar\skins\Ya-Ya\tabs_bg.gif" />
+    <Content Include="calendar\skins\Ya-Ya\tabs_bg_activ.gif" />
+    <Content Include="calendar\skins\Ya-Ya\tabs_bg_activ_left.gif" />
+    <Content Include="calendar\skins\Ya-Ya\tabs_bg_activ_right.gif" />
+    <Content Include="calendar\skins\Ya-Ya\tabs_bg_left.gif" />
+    <Content Include="calendar\skins\Ya-Ya\tabs_bg_right.gif" />
+    <Content Include="calendar\skins\Ya-Ya\upper_indent.gif" />
+    <Content Include="calendar\_edit_window_dropdowns.js" />
+    <Content Include="calendar\_functions.js" />
+    <Content Include="check-mail.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="class.common.js" />
+    <Content Include="class.html-editor.js" />
+    <Content Include="class.login.js" />
+    <Content Include="class.screens-parts.js" />
+    <Content Include="class.variable-table.js" />
+    <Content Include="class.webmail-parts.js" />
+    <Content Include="class.webmail.js" />
+    <Content Include="class.xml-parsers.js" />
+    <Content Include="classic\AccountsList.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\class_accountedit.js" />
+    <Content Include="classic\class_cnewcontactscreen.js" />
+    <Content Include="classic\class_contactsmini.js" />
+    <Content Include="classic\class_contacts_selection.js" />
+    <Content Include="classic\class_maillist.js" />
+    <Content Include="classic\class_maillist_resizer.js" />
+    <Content Include="classic\class_pageswitcher_classic.js" />
+    <Content Include="classic\ContactContainer.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\Contacts.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\contacts_resizer.js" />
+    <Content Include="classic\Default.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\FoldersPart.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\GroupContainer.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\ImportContacts.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\Information.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\LowToolbar.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\MailList.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\MessageContainer.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\NewMessage.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\Settings.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\SettingsCommon.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\SettingsContacts.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\SettingsEmailAccounts.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\SettingsEmailAccountsFilters.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\SettingsEmailAccountsManageFolders.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\SettingsEmailAccountsProperties.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\SettingsEmailAccountsSignature.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\Toolbar.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="classic\ViewMessage.ascx" />
+    <Content Include="contactlist.aspx" />
+    <Content Include="Copyright.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="default.aspx" />
+    <Content Include="download_view_attachment.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="edit-area.aspx" />
+    <Content Include="empty.html" />
+    <Content Include="get_attachment_binary.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Global.asax">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="help\axmail_installation_instructions.html" />
+    <Content Include="help\contents.html" />
+    <Content Include="help\create_skin.html" />
+    <Content Include="help\default.htm" />
+    <Content Include="help\faq.html" />
+    <Content Include="help\help_styles.css" />
+    <Content Include="help\images\big_bee.gif" />
+    <Content Include="help\images\calendar_activ_time_tab.gif" />
+    <Content Include="help\images\calendar_dayheaders.gif" />
+    <Content Include="help\images\calendar_mainblock.gif" />
+    <Content Include="help\images\calendar_passiv_time_tab.gif" />
+    <Content Include="help\images\calendar_small_cal_and_cManager.gif" />
+    <Content Include="help\images\calendar_time_tabs.gif" />
+    <Content Include="help\images\calendar_toolbar.gif" />
+    <Content Include="help\images\calendar_workareamonth.gif" />
+    <Content Include="help\images\calendar_workareaweek.gif" />
+    <Content Include="help\images\wm_accountslist.gif" />
+    <Content Include="help\images\wm_contacts.gif" />
+    <Content Include="help\images\wm_contacts_edit.gif" />
+    <Content Include="help\images\wm_contacts_view.gif" />
+    <Content Include="help\images\wm_folders.gif" />
+    <Content Include="help\images\wm_list.gif" />
+    <Content Include="help\images\wm_login.gif" />
+    <Content Include="help\images\wm_low_toolbar.gif" />
+    <Content Include="help\images\wm_message_container.gif" />
+    <Content Include="help\images\wm_new_message.gif" />
+    <Content Include="help\images\wm_page_switcher.gif" />
+    <Content Include="help\images\wm_progress_bar.gif" />
+    <Content Include="help\images\wm_settings_manage_folders.gif" />
+    <Content Include="help\images\wm_toolbar.gif" />
+    <Content Include="help\installation_instructions.html" />
+    <Content Include="help\license_agreement.html" />
+    <Content Include="help\overview.html" />
+    <Content Include="help\start.html" />
+    <Content Include="help\system_requirements.html" />
+    <Content Include="help\webmail_administration.html" />
+    <Content Include="help\webmail_integration.html" />
+    <Content Include="history-storage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="images\1x1.gif" />
+    <Content Include="images\html_editor\bg_color.gif" />
+    <Content Include="images\html_editor\bld.gif" />
+    <Content Include="images\html_editor\cnt.gif" />
+    <Content Include="images\html_editor\copy.gif" />
+    <Content Include="images\html_editor\cut.gif" />
+    <Content Include="images\html_editor\font_color.gif" />
+    <Content Include="images\html_editor\full.gif" />
+    <Content Include="images\html_editor\hrule.gif" />
+    <Content Include="images\html_editor\itl.gif" />
+    <Content Include="images\html_editor\lft.gif" />
+    <Content Include="images\html_editor\link.gif" />
+    <Content Include="images\html_editor\list.gif" />
+    <Content Include="images\html_editor\number.gif" />
+    <Content Include="images\html_editor\paste.gif" />
+    <Content Include="images\html_editor\print.gif" />
+    <Content Include="images\html_editor\redo.gif" />
+    <Content Include="images\html_editor\rt.gif" />
+    <Content Include="images\html_editor\spell.gif" />
+    <Content Include="images\html_editor\undo.gif" />
+    <Content Include="images\html_editor\undrln.gif" />
+    <Content Include="images\html_editor\unlink.gif" />
+    <Content Include="images\icons\application_asp.gif" />
+    <Content Include="images\icons\application_css.gif" />
+    <Content Include="images\icons\application_doc.gif" />
+    <Content Include="images\icons\application_html.gif" />
+    <Content Include="images\icons\application_pdf.gif" />
+    <Content Include="images\icons\application_xls.gif" />
+    <Content Include="images\icons\attach.gif" />
+    <Content Include="images\icons\executable.gif" />
+    <Content Include="images\icons\image_bmp.gif" />
+    <Content Include="images\icons\image_gif.gif" />
+    <Content Include="images\icons\image_jpeg.gif" />
+    <Content Include="images\icons\image_tiff.gif" />
+    <Content Include="images\icons\text_plain.gif" />
+    <Content Include="images\redline.gif" />
+    <Content Include="import.aspx" />
+    <Content Include="Integration\integr.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="langs_js.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="linkcreator.html" />
+    <Content Include="Logo.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="mailadm.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="MailAdm\mailadm_calendar_settings.ascx" />
+    <Content Include="MailAdm\mailadm_database_settings.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="MailAdm\mailadm_debug_settings.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="MailAdm\mailadm_interface_settings.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="MailAdm\mailadm_login.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="MailAdm\mailadm_login_settings.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="MailAdm\mailadm_mail_server_integration.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="MailAdm\mailadm_menu.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="MailAdm\mailadm_user_details.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="MailAdm\mailadm_user_management.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="MailAdm\mailadm_webmail_settings.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="msgprint.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="screen.account-properties.js" />
+    <Content Include="screen.accounts-settings.js" />
+    <Content Include="screen.common-settings.js" />
+    <Content Include="screen.contacts.js" />
+    <Content Include="screen.messages-list.js" />
+    <Content Include="screen.messages-list-view.js" />
+    <Content Include="screen.new-message.js" />
+    <Content Include="screen.user-settings.js" />
+    <Content Include="screen.view-contact.js" />
+    <Content Include="screen.view-message.js" />
+    <Content Include="session_saver.aspx" />
+    <Content Include="skins\Barbie\admin_arrow_1.gif" />
+    <Content Include="skins\Barbie\admin_arrow_2.gif" />
+    <Content Include="skins\Barbie\contacts\bottom.gif" />
+    <Content Include="skins\Barbie\contacts\bottom_left.gif" />
+    <Content Include="skins\Barbie\contacts\bottom_right.gif" />
+    <Content Include="skins\Barbie\contacts\close.gif" />
+    <Content Include="skins\Barbie\contacts\group.gif" />
+    <Content Include="skins\Barbie\contacts\left.gif" />
+    <Content Include="skins\Barbie\contacts\right.gif" />
+    <Content Include="skins\Barbie\contacts\save.gif" />
+    <Content Include="skins\Barbie\contacts\top.gif" />
+    <Content Include="skins\Barbie\contacts\top_left.gif" />
+    <Content Include="skins\Barbie\contacts\top_right.gif" />
+    <Content Include="skins\Barbie\error.gif" />
+    <Content Include="skins\Barbie\flower_left.gif" />
+    <Content Include="skins\Barbie\flower_login.gif" />
+    <Content Include="skins\Barbie\flower_right.gif" />
+    <Content Include="skins\Barbie\flower_set.gif" />
+    <Content Include="skins\Barbie\flower_top.gif" />
+    <Content Include="skins\Barbie\folders\down.gif" />
+    <Content Include="skins\Barbie\folders\down_inactive.gif" />
+    <Content Include="skins\Barbie\folders\folder.gif" />
+    <Content Include="skins\Barbie\folders\folder_drafts.gif" />
+    <Content Include="skins\Barbie\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\Barbie\folders\folder_inbox.gif" />
+    <Content Include="skins\Barbie\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\Barbie\folders\folder_send.gif" />
+    <Content Include="skins\Barbie\folders\folder_send_sync.gif" />
+    <Content Include="skins\Barbie\folders\folder_sync.gif" />
+    <Content Include="skins\Barbie\folders\folder_trash.gif" />
+    <Content Include="skins\Barbie\folders\folder_trash_sync.gif" />
+    <Content Include="skins\Barbie\folders\hide.gif" />
+    <Content Include="skins\Barbie\folders\hide_folders.gif" />
+    <Content Include="skins\Barbie\folders\show.gif" />
+    <Content Include="skins\Barbie\folders\show_folders.gif" />
+    <Content Include="skins\Barbie\folders\up.gif" />
+    <Content Include="skins\Barbie\folders\up_inactive.gif" />
+    <Content Include="skins\Barbie\folders_back.gif" />
+    <Content Include="skins\Barbie\header_back.gif" />
+    <Content Include="skins\Barbie\icons\forwarded_read.gif" />
+    <Content Include="skins\Barbie\icons\forwarded_unread.gif" />
+    <Content Include="skins\Barbie\icons\help.gif" />
+    <Content Include="skins\Barbie\icons\replied_read.gif" />
+    <Content Include="skins\Barbie\icons\replied_unread.gif" />
+    <Content Include="skins\Barbie\info.gif" />
+    <Content Include="skins\Barbie\login_error.gif" />
+    <Content Include="skins\Barbie\logo.gif" />
+    <Content Include="skins\Barbie\menu\accounts_arrow.gif" />
+    <Content Include="skins\Barbie\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\Barbie\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\Barbie\menu\add_contacts_to.gif" />
+    <Content Include="skins\Barbie\menu\arrow_down.gif" />
+    <Content Include="skins\Barbie\menu\arrow_up.gif" />
+    <Content Include="skins\Barbie\menu\attachment.gif" />
+    <Content Include="skins\Barbie\menu\back_to_list.gif" />
+    <Content Include="skins\Barbie\menu\check_mail.gif" />
+    <Content Include="skins\Barbie\menu\delete.gif" />
+    <Content Include="skins\Barbie\menu\empty_trash.gif" />
+    <Content Include="skins\Barbie\menu\flag.gif" />
+    <Content Include="skins\Barbie\menu\forward.gif" />
+    <Content Include="skins\Barbie\menu\import_contacts.gif" />
+    <Content Include="skins\Barbie\menu\mark_all_read.gif" />
+    <Content Include="skins\Barbie\menu\mark_all_unread.gif" />
+    <Content Include="skins\Barbie\menu\mark_as_read.gif" />
+    <Content Include="skins\Barbie\menu\mark_as_unread.gif" />
+    <Content Include="skins\Barbie\menu\message_down.gif" />
+    <Content Include="skins\Barbie\menu\message_down_inactive.gif" />
+    <Content Include="skins\Barbie\menu\message_up.gif" />
+    <Content Include="skins\Barbie\menu\message_up_inactive.gif" />
+    <Content Include="skins\Barbie\menu\move_to_folder.gif" />
+    <Content Include="skins\Barbie\menu\new_contact.gif" />
+    <Content Include="skins\Barbie\menu\new_group.gif" />
+    <Content Include="skins\Barbie\menu\new_message.gif" />
+    <Content Include="skins\Barbie\menu\order_arrow_down.gif" />
+    <Content Include="skins\Barbie\menu\order_arrow_up.gif" />
+    <Content Include="skins\Barbie\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\Barbie\menu\print.gif" />
+    <Content Include="skins\Barbie\menu\priority_high.gif" />
+    <Content Include="skins\Barbie\menu\priority_low.gif" />
+    <Content Include="skins\Barbie\menu\priority_normal.gif" />
+    <Content Include="skins\Barbie\menu\purge.gif" />
+    <Content Include="skins\Barbie\menu\reload_folders.gif" />
+    <Content Include="skins\Barbie\menu\reply.gif" />
+    <Content Include="skins\Barbie\menu\replyall.gif" />
+    <Content Include="skins\Barbie\menu\save.gif" />
+    <Content Include="skins\Barbie\menu\search_button.gif" />
+    <Content Include="skins\Barbie\menu\search_button_big.gif" />
+    <Content Include="skins\Barbie\menu\send.gif" />
+    <Content Include="skins\Barbie\menu\unflag.gif" />
+    <Content Include="skins\Barbie\msg_drop.gif" />
+    <Content Include="skins\Barbie\msg_not_drop.gif" />
+    <Content Include="skins\Barbie\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\Barbie\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\Barbie\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\Barbie\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\Barbie\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\Barbie\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\Barbie\settings\menu_accounts.gif" />
+    <Content Include="skins\Barbie\settings\menu_calendar.gif" />
+    <Content Include="skins\Barbie\settings\menu_common.gif" />
+    <Content Include="skins\Barbie\settings\menu_contacts.gif" />
+    <Content Include="skins\Barbie\styles.css" />
+    <Content Include="skins\Barbie\tip_arrow.gif" />
+    <Content Include="skins\Barbie\tip_info.gif" />
+    <Content Include="skins\Barbie\toolbar_back.gif" />
+    <Content Include="skins\Barbie\wait.gif" />
+    <Content Include="skins\Dark Green\admin_arrow_1.gif" />
+    <Content Include="skins\Dark Green\admin_arrow_2.gif" />
+    <Content Include="skins\Dark Green\contacts\bottom.gif" />
+    <Content Include="skins\Dark Green\contacts\bottom_left.gif" />
+    <Content Include="skins\Dark Green\contacts\bottom_right.gif" />
+    <Content Include="skins\Dark Green\contacts\close.gif" />
+    <Content Include="skins\Dark Green\contacts\group.gif" />
+    <Content Include="skins\Dark Green\contacts\left.gif" />
+    <Content Include="skins\Dark Green\contacts\right.gif" />
+    <Content Include="skins\Dark Green\contacts\save.gif" />
+    <Content Include="skins\Dark Green\contacts\top.gif" />
+    <Content Include="skins\Dark Green\contacts\top_left.gif" />
+    <Content Include="skins\Dark Green\contacts\top_right.gif" />
+    <Content Include="skins\Dark Green\empty_back.gif" />
+    <Content Include="skins\Dark Green\error.gif" />
+    <Content Include="skins\Dark Green\folders\down.gif" />
+    <Content Include="skins\Dark Green\folders\down_inactive.gif" />
+    <Content Include="skins\Dark Green\folders\folder.gif" />
+    <Content Include="skins\Dark Green\folders\folder_drafts.gif" />
+    <Content Include="skins\Dark Green\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\Dark Green\folders\folder_inbox.gif" />
+    <Content Include="skins\Dark Green\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\Dark Green\folders\folder_send.gif" />
+    <Content Include="skins\Dark Green\folders\folder_send_sync.gif" />
+    <Content Include="skins\Dark Green\folders\folder_sync.gif" />
+    <Content Include="skins\Dark Green\folders\folder_trash.gif" />
+    <Content Include="skins\Dark Green\folders\folder_trash_sync.gif" />
+    <Content Include="skins\Dark Green\folders\hide.gif" />
+    <Content Include="skins\Dark Green\folders\hide_folders.gif" />
+    <Content Include="skins\Dark Green\folders\show.gif" />
+    <Content Include="skins\Dark Green\folders\show_folders.gif" />
+    <Content Include="skins\Dark Green\folders\up.gif" />
+    <Content Include="skins\Dark Green\folders\up_inactive.gif" />
+    <Content Include="skins\Dark Green\folders_back.gif" />
+    <Content Include="skins\Dark Green\gradient.gif" />
+    <Content Include="skins\Dark Green\header.jpg" />
+    <Content Include="skins\Dark Green\headers_back.gif" />
+    <Content Include="skins\Dark Green\icons\forwarded_read.gif" />
+    <Content Include="skins\Dark Green\icons\forwarded_unread.gif" />
+    <Content Include="skins\Dark Green\icons\help.gif" />
+    <Content Include="skins\Dark Green\icons\replied_read.gif" />
+    <Content Include="skins\Dark Green\icons\replied_unread.gif" />
+    <Content Include="skins\Dark Green\info.gif" />
+    <Content Include="skins\Dark Green\login_error.gif" />
+    <Content Include="skins\Dark Green\menu\accounts_arrow.gif" />
+    <Content Include="skins\Dark Green\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\Dark Green\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\Dark Green\menu\add_contacts_to.gif" />
+    <Content Include="skins\Dark Green\menu\arrow_down.gif" />
+    <Content Include="skins\Dark Green\menu\arrow_up.gif" />
+    <Content Include="skins\Dark Green\menu\attachment.gif" />
+    <Content Include="skins\Dark Green\menu\back_to_list.gif" />
+    <Content Include="skins\Dark Green\menu\check_mail.gif" />
+    <Content Include="skins\Dark Green\menu\delete.gif" />
+    <Content Include="skins\Dark Green\menu\empty_trash.gif" />
+    <Content Include="skins\Dark Green\menu\flag.gif" />
+    <Content Include="skins\Dark Green\menu\forward.gif" />
+    <Content Include="skins\Dark Green\menu\import_contacts.gif" />
+    <Content Include="skins\Dark Green\menu\mark_all_read.gif" />
+    <Content Include="skins\Dark Green\menu\mark_all_unread.gif" />
+    <Content Include="skins\Dark Green\menu\mark_as_read.gif" />
+    <Content Include="skins\Dark Green\menu\mark_as_unread.gif" />
+    <Content Include="skins\Dark Green\menu\message_down.gif" />
+    <Content Include="skins\Dark Green\menu\message_down_inactive.gif" />
+    <Content Include="skins\Dark Green\menu\message_up.gif" />
+    <Content Include="skins\Dark Green\menu\message_up_inactive.gif" />
+    <Content Include="skins\Dark Green\menu\move_to_folder.gif" />
+    <Content Include="skins\Dark Green\menu\new_contact.gif" />
+    <Content Include="skins\Dark Green\menu\new_group.gif" />
+    <Content Include="skins\Dark Green\menu\new_message.gif" />
+    <Content Include="skins\Dark Green\menu\order_arrow_down.gif" />
+    <Content Include="skins\Dark Green\menu\order_arrow_up.gif" />
+    <Content Include="skins\Dark Green\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\Dark Green\menu\print.gif" />
+    <Content Include="skins\Dark Green\menu\priority_high.gif" />
+    <Content Include="skins\Dark Green\menu\priority_low.gif" />
+    <Content Include="skins\Dark Green\menu\priority_normal.gif" />
+    <Content Include="skins\Dark Green\menu\purge.gif" />
+    <Content Include="skins\Dark Green\menu\reload_folders.gif" />
+    <Content Include="skins\Dark Green\menu\reply.gif" />
+    <Content Include="skins\Dark Green\menu\replyall.gif" />
+    <Content Include="skins\Dark Green\menu\save.gif" />
+    <Content Include="skins\Dark Green\menu\search_button.gif" />
+    <Content Include="skins\Dark Green\menu\search_button_big.gif" />
+    <Content Include="skins\Dark Green\menu\send.gif" />
+    <Content Include="skins\Dark Green\menu\unflag.gif" />
+    <Content Include="skins\Dark Green\msg_drop.gif" />
+    <Content Include="skins\Dark Green\msg_not_drop.gif" />
+    <Content Include="skins\Dark Green\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\Dark Green\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\Dark Green\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\Dark Green\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\Dark Green\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\Dark Green\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\Dark Green\settings\menu_accounts.gif" />
+    <Content Include="skins\Dark Green\settings\menu_calendar.gif" />
+    <Content Include="skins\Dark Green\settings\menu_common.gif" />
+    <Content Include="skins\Dark Green\settings\menu_contacts.gif" />
+    <Content Include="skins\Dark Green\styles.css" />
+    <Content Include="skins\Dark Green\tip_arrow.gif" />
+    <Content Include="skins\Dark Green\tip_info.gif" />
+    <Content Include="skins\Dark Green\wait.gif" />
+    <Content Include="skins\Dark_Blue\admin_arrow_1.gif" />
+    <Content Include="skins\Dark_Blue\admin_arrow_2.gif" />
+    <Content Include="skins\Dark_Blue\back.gif" />
+    <Content Include="skins\Dark_Blue\contacts\bottom.gif" />
+    <Content Include="skins\Dark_Blue\contacts\bottom_left.gif" />
+    <Content Include="skins\Dark_Blue\contacts\bottom_right.gif" />
+    <Content Include="skins\Dark_Blue\contacts\close.gif" />
+    <Content Include="skins\Dark_Blue\contacts\group.gif" />
+    <Content Include="skins\Dark_Blue\contacts\left.gif" />
+    <Content Include="skins\Dark_Blue\contacts\right.gif" />
+    <Content Include="skins\Dark_Blue\contacts\save.gif" />
+    <Content Include="skins\Dark_Blue\contacts\top.gif" />
+    <Content Include="skins\Dark_Blue\contacts\top_left.gif" />
+    <Content Include="skins\Dark_Blue\contacts\top_right.gif" />
+    <Content Include="skins\Dark_Blue\empty_back.gif" />
+    <Content Include="skins\Dark_Blue\error.gif" />
+    <Content Include="skins\Dark_Blue\folders\down.gif" />
+    <Content Include="skins\Dark_Blue\folders\down_inactive.gif" />
+    <Content Include="skins\Dark_Blue\folders\folder.gif" />
+    <Content Include="skins\Dark_Blue\folders\folder_drafts.gif" />
+    <Content Include="skins\Dark_Blue\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\Dark_Blue\folders\folder_inbox.gif" />
+    <Content Include="skins\Dark_Blue\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\Dark_Blue\folders\folder_send.gif" />
+    <Content Include="skins\Dark_Blue\folders\folder_send_sync.gif" />
+    <Content Include="skins\Dark_Blue\folders\folder_sync.gif" />
+    <Content Include="skins\Dark_Blue\folders\folder_trash.gif" />
+    <Content Include="skins\Dark_Blue\folders\folder_trash_sync.gif" />
+    <Content Include="skins\Dark_Blue\folders\hide.gif" />
+    <Content Include="skins\Dark_Blue\folders\hide_folders.gif" />
+    <Content Include="skins\Dark_Blue\folders\show.gif" />
+    <Content Include="skins\Dark_Blue\folders\show_folders.gif" />
+    <Content Include="skins\Dark_Blue\folders\up.gif" />
+    <Content Include="skins\Dark_Blue\folders\up_inactive.gif" />
+    <Content Include="skins\Dark_Blue\folders_back.gif" />
+    <Content Include="skins\Dark_Blue\gradient.gif" />
+    <Content Include="skins\Dark_Blue\header.jpg" />
+    <Content Include="skins\Dark_Blue\headers_back.gif" />
+    <Content Include="skins\Dark_Blue\icons\forwarded_read.gif" />
+    <Content Include="skins\Dark_Blue\icons\forwarded_unread.gif" />
+    <Content Include="skins\Dark_Blue\icons\help.gif" />
+    <Content Include="skins\Dark_Blue\icons\replied_read.gif" />
+    <Content Include="skins\Dark_Blue\icons\replied_unread.gif" />
+    <Content Include="skins\Dark_Blue\info.gif" />
+    <Content Include="skins\Dark_Blue\login_error.gif" />
+    <Content Include="skins\Dark_Blue\menu\accounts_arrow.gif" />
+    <Content Include="skins\Dark_Blue\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\Dark_Blue\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\Dark_Blue\menu\add_contacts_to.gif" />
+    <Content Include="skins\Dark_Blue\menu\arrow_down.gif" />
+    <Content Include="skins\Dark_Blue\menu\arrow_up.gif" />
+    <Content Include="skins\Dark_Blue\menu\attachment.gif" />
+    <Content Include="skins\Dark_Blue\menu\back_to_list.gif" />
+    <Content Include="skins\Dark_Blue\menu\check_mail.gif" />
+    <Content Include="skins\Dark_Blue\menu\delete.gif" />
+    <Content Include="skins\Dark_Blue\menu\empty_trash.gif" />
+    <Content Include="skins\Dark_Blue\menu\flag.gif" />
+    <Content Include="skins\Dark_Blue\menu\forward.gif" />
+    <Content Include="skins\Dark_Blue\menu\import_contacts.gif" />
+    <Content Include="skins\Dark_Blue\menu\mark_all_read.gif" />
+    <Content Include="skins\Dark_Blue\menu\mark_all_unread.gif" />
+    <Content Include="skins\Dark_Blue\menu\mark_as_read.gif" />
+    <Content Include="skins\Dark_Blue\menu\mark_as_unread.gif" />
+    <Content Include="skins\Dark_Blue\menu\message_down.gif" />
+    <Content Include="skins\Dark_Blue\menu\message_down_inactive.gif" />
+    <Content Include="skins\Dark_Blue\menu\message_up.gif" />
+    <Content Include="skins\Dark_Blue\menu\message_up_inactive.gif" />
+    <Content Include="skins\Dark_Blue\menu\move_to_folder.gif" />
+    <Content Include="skins\Dark_Blue\menu\new_contact.gif" />
+    <Content Include="skins\Dark_Blue\menu\new_group.gif" />
+    <Content Include="skins\Dark_Blue\menu\new_message.gif" />
+    <Content Include="skins\Dark_Blue\menu\order_arrow_down.gif" />
+    <Content Include="skins\Dark_Blue\menu\order_arrow_up.gif" />
+    <Content Include="skins\Dark_Blue\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\Dark_Blue\menu\print.gif" />
+    <Content Include="skins\Dark_Blue\menu\priority_high.gif" />
+    <Content Include="skins\Dark_Blue\menu\priority_low.gif" />
+    <Content Include="skins\Dark_Blue\menu\priority_normal.gif" />
+    <Content Include="skins\Dark_Blue\menu\purge.gif" />
+    <Content Include="skins\Dark_Blue\menu\reload_folders.gif" />
+    <Content Include="skins\Dark_Blue\menu\reply.gif" />
+    <Content Include="skins\Dark_Blue\menu\replyall.gif" />
+    <Content Include="skins\Dark_Blue\menu\save.gif" />
+    <Content Include="skins\Dark_Blue\menu\search_button.gif" />
+    <Content Include="skins\Dark_Blue\menu\search_button_big.gif" />
+    <Content Include="skins\Dark_Blue\menu\send.gif" />
+    <Content Include="skins\Dark_Blue\menu\unflag.gif" />
+    <Content Include="skins\Dark_Blue\msg_drop.gif" />
+    <Content Include="skins\Dark_Blue\msg_not_drop.gif" />
+    <Content Include="skins\Dark_Blue\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\Dark_Blue\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\Dark_Blue\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\Dark_Blue\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\Dark_Blue\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\Dark_Blue\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\Dark_Blue\settings\menu_accounts.gif" />
+    <Content Include="skins\Dark_Blue\settings\menu_calendar.gif" />
+    <Content Include="skins\Dark_Blue\settings\menu_common.gif" />
+    <Content Include="skins\Dark_Blue\settings\menu_contacts.gif" />
+    <Content Include="skins\Dark_Blue\styles.css" />
+    <Content Include="skins\Dark_Blue\tip_arrow.gif" />
+    <Content Include="skins\Dark_Blue\tip_info.gif" />
+    <Content Include="skins\Dark_Blue\wait.gif" />
+    <Content Include="skins\Dark_Orange\admin_arrow_1.gif" />
+    <Content Include="skins\Dark_Orange\admin_arrow_2.gif" />
+    <Content Include="skins\Dark_Orange\back.gif" />
+    <Content Include="skins\Dark_Orange\contacts\bottom.gif" />
+    <Content Include="skins\Dark_Orange\contacts\bottom_left.gif" />
+    <Content Include="skins\Dark_Orange\contacts\bottom_right.gif" />
+    <Content Include="skins\Dark_Orange\contacts\close.gif" />
+    <Content Include="skins\Dark_Orange\contacts\group.gif" />
+    <Content Include="skins\Dark_Orange\contacts\left.gif" />
+    <Content Include="skins\Dark_Orange\contacts\right.gif" />
+    <Content Include="skins\Dark_Orange\contacts\save.gif" />
+    <Content Include="skins\Dark_Orange\contacts\top.gif" />
+    <Content Include="skins\Dark_Orange\contacts\top_left.gif" />
+    <Content Include="skins\Dark_Orange\contacts\top_right.gif" />
+    <Content Include="skins\Dark_Orange\error.gif" />
+    <Content Include="skins\Dark_Orange\folders\down.gif" />
+    <Content Include="skins\Dark_Orange\folders\down_inactive.gif" />
+    <Content Include="skins\Dark_Orange\folders\folder.gif" />
+    <Content Include="skins\Dark_Orange\folders\folder_drafts.gif" />
+    <Content Include="skins\Dark_Orange\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\Dark_Orange\folders\folder_inbox.gif" />
+    <Content Include="skins\Dark_Orange\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\Dark_Orange\folders\folder_send.gif" />
+    <Content Include="skins\Dark_Orange\folders\folder_send_sync.gif" />
+    <Content Include="skins\Dark_Orange\folders\folder_sync.gif" />
+    <Content Include="skins\Dark_Orange\folders\folder_trash.gif" />
+    <Content Include="skins\Dark_Orange\folders\folder_trash_sync.gif" />
+    <Content Include="skins\Dark_Orange\folders\hide.gif" />
+    <Content Include="skins\Dark_Orange\folders\hide_folders.gif" />
+    <Content Include="skins\Dark_Orange\folders\show.gif" />
+    <Content Include="skins\Dark_Orange\folders\show_folders.gif" />
+    <Content Include="skins\Dark_Orange\folders\up.gif" />
+    <Content Include="skins\Dark_Orange\folders\up_inactive.gif" />
+    <Content Include="skins\Dark_Orange\folders_back.gif" />
+    <Content Include="skins\Dark_Orange\headers_back.gif" />
+    <Content Include="skins\Dark_Orange\icons\forwarded_read.gif" />
+    <Content Include="skins\Dark_Orange\icons\forwarded_unread.gif" />
+    <Content Include="skins\Dark_Orange\icons\help.gif" />
+    <Content Include="skins\Dark_Orange\icons\replied_read.gif" />
+    <Content Include="skins\Dark_Orange\icons\replied_unread.gif" />
+    <Content Include="skins\Dark_Orange\info.gif" />
+    <Content Include="skins\Dark_Orange\login_error.gif" />
+    <Content Include="skins\Dark_Orange\menu\accounts_arrow.gif" />
+    <Content Include="skins\Dark_Orange\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\Dark_Orange\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\Dark_Orange\menu\add_contacts_to.gif" />
+    <Content Include="skins\Dark_Orange\menu\arrow_down.gif" />
+    <Content Include="skins\Dark_Orange\menu\arrow_up.gif" />
+    <Content Include="skins\Dark_Orange\menu\attachment.gif" />
+    <Content Include="skins\Dark_Orange\menu\back_to_list.gif" />
+    <Content Include="skins\Dark_Orange\menu\check_mail.gif" />
+    <Content Include="skins\Dark_Orange\menu\delete.gif" />
+    <Content Include="skins\Dark_Orange\menu\empty_trash.gif" />
+    <Content Include="skins\Dark_Orange\menu\flag.gif" />
+    <Content Include="skins\Dark_Orange\menu\forward.gif" />
+    <Content Include="skins\Dark_Orange\menu\import_contacts.gif" />
+    <Content Include="skins\Dark_Orange\menu\mark_all_read.gif" />
+    <Content Include="skins\Dark_Orange\menu\mark_all_unread.gif" />
+    <Content Include="skins\Dark_Orange\menu\mark_as_read.gif" />
+    <Content Include="skins\Dark_Orange\menu\mark_as_unread.gif" />
+    <Content Include="skins\Dark_Orange\menu\message_down.gif" />
+    <Content Include="skins\Dark_Orange\menu\message_down_inactive.gif" />
+    <Content Include="skins\Dark_Orange\menu\message_up.gif" />
+    <Content Include="skins\Dark_Orange\menu\message_up_inactive.gif" />
+    <Content Include="skins\Dark_Orange\menu\move_to_folder.gif" />
+    <Content Include="skins\Dark_Orange\menu\new_contact.gif" />
+    <Content Include="skins\Dark_Orange\menu\new_group.gif" />
+    <Content Include="skins\Dark_Orange\menu\new_message.gif" />
+    <Content Include="skins\Dark_Orange\menu\order_arrow_down.gif" />
+    <Content Include="skins\Dark_Orange\menu\order_arrow_up.gif" />
+    <Content Include="skins\Dark_Orange\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\Dark_Orange\menu\print.gif" />
+    <Content Include="skins\Dark_Orange\menu\priority_high.gif" />
+    <Content Include="skins\Dark_Orange\menu\priority_low.gif" />
+    <Content Include="skins\Dark_Orange\menu\priority_normal.gif" />
+    <Content Include="skins\Dark_Orange\menu\purge.gif" />
+    <Content Include="skins\Dark_Orange\menu\reload_folders.gif" />
+    <Content Include="skins\Dark_Orange\menu\reply.gif" />
+    <Content Include="skins\Dark_Orange\menu\replyall.gif" />
+    <Content Include="skins\Dark_Orange\menu\save.gif" />
+    <Content Include="skins\Dark_Orange\menu\search_button.gif" />
+    <Content Include="skins\Dark_Orange\menu\search_button_big.gif" />
+    <Content Include="skins\Dark_Orange\menu\send.gif" />
+    <Content Include="skins\Dark_Orange\menu\unflag.gif" />
+    <Content Include="skins\Dark_Orange\msg_drop.gif" />
+    <Content Include="skins\Dark_Orange\msg_not_drop.gif" />
+    <Content Include="skins\Dark_Orange\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\Dark_Orange\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\Dark_Orange\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\Dark_Orange\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\Dark_Orange\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\Dark_Orange\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\Dark_Orange\settings\menu_accounts.gif" />
+    <Content Include="skins\Dark_Orange\settings\menu_calendar.gif" />
+    <Content Include="skins\Dark_Orange\settings\menu_common.gif" />
+    <Content Include="skins\Dark_Orange\settings\menu_contacts.gif" />
+    <Content Include="skins\Dark_Orange\styles.css" />
+    <Content Include="skins\Dark_Orange\tip_arrow.gif" />
+    <Content Include="skins\Dark_Orange\tip_info.gif" />
+    <Content Include="skins\Dark_Orange\wait.gif" />
+    <Content Include="skins\Dark_Orange_Lite\admin_arrow_1.gif" />
+    <Content Include="skins\Dark_Orange_Lite\admin_arrow_2.gif" />
+    <Content Include="skins\Dark_Orange_Lite\back.gif" />
+    <Content Include="skins\Dark_Orange_Lite\contacts\bottom.gif" />
+    <Content Include="skins\Dark_Orange_Lite\contacts\bottom_left.gif" />
+    <Content Include="skins\Dark_Orange_Lite\contacts\bottom_right.gif" />
+    <Content Include="skins\Dark_Orange_Lite\contacts\close.gif" />
+    <Content Include="skins\Dark_Orange_Lite\contacts\group.gif" />
+    <Content Include="skins\Dark_Orange_Lite\contacts\left.gif" />
+    <Content Include="skins\Dark_Orange_Lite\contacts\right.gif" />
+    <Content Include="skins\Dark_Orange_Lite\contacts\save.gif" />
+    <Content Include="skins\Dark_Orange_Lite\contacts\top.gif" />
+    <Content Include="skins\Dark_Orange_Lite\contacts\top_left.gif" />
+    <Content Include="skins\Dark_Orange_Lite\contacts\top_right.gif" />
+    <Content Include="skins\Dark_Orange_Lite\empty_back.gif" />
+    <Content Include="skins\Dark_Orange_Lite\error.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\down.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\down_inactive.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\folder.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\folder_drafts.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\folder_inbox.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\folder_send.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\folder_send_sync.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\folder_sync.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\folder_trash.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\folder_trash_sync.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\hide.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\hide_folders.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\show.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\show_folders.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\up.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders\up_inactive.gif" />
+    <Content Include="skins\Dark_Orange_Lite\folders_back.gif" />
+    <Content Include="skins\Dark_Orange_Lite\headers_back.gif" />
+    <Content Include="skins\Dark_Orange_Lite\icons\forwarded_read.gif" />
+    <Content Include="skins\Dark_Orange_Lite\icons\forwarded_unread.gif" />
+    <Content Include="skins\Dark_Orange_Lite\icons\help.gif" />
+    <Content Include="skins\Dark_Orange_Lite\icons\replied_read.gif" />
+    <Content Include="skins\Dark_Orange_Lite\icons\replied_unread.gif" />
+    <Content Include="skins\Dark_Orange_Lite\info.gif" />
+    <Content Include="skins\Dark_Orange_Lite\login_error.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\accounts_arrow.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\add_contacts_to.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\arrow_down.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\arrow_up.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\attachment.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\back_to_list.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\check_mail.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\delete.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\empty_trash.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\flag.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\forward.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\import_contacts.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\mark_all_read.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\mark_all_unread.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\mark_as_read.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\mark_as_unread.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\message_down.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\message_down_inactive.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\message_up.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\message_up_inactive.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\move_to_folder.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\new_contact.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\new_group.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\new_message.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\order_arrow_down.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\order_arrow_up.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\print.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\priority_high.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\priority_low.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\priority_normal.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\purge.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\reload_folders.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\reply.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\replyall.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\save.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\search_button.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\search_button_big.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\send.gif" />
+    <Content Include="skins\Dark_Orange_Lite\menu\unflag.gif" />
+    <Content Include="skins\Dark_Orange_Lite\msg_drop.gif" />
+    <Content Include="skins\Dark_Orange_Lite\msg_not_drop.gif" />
+    <Content Include="skins\Dark_Orange_Lite\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\Dark_Orange_Lite\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\Dark_Orange_Lite\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\Dark_Orange_Lite\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\Dark_Orange_Lite\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\Dark_Orange_Lite\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\Dark_Orange_Lite\settings\menu_accounts.gif" />
+    <Content Include="skins\Dark_Orange_Lite\settings\menu_calendar.gif" />
+    <Content Include="skins\Dark_Orange_Lite\settings\menu_common.gif" />
+    <Content Include="skins\Dark_Orange_Lite\settings\menu_contacts.gif" />
+    <Content Include="skins\Dark_Orange_Lite\styles.css" />
+    <Content Include="skins\Dark_Orange_Lite\tip_arrow.gif" />
+    <Content Include="skins\Dark_Orange_Lite\tip_info.gif" />
+    <Content Include="skins\Dark_Orange_Lite\wait.gif" />
+    <Content Include="skins\Flat_Green\admin_arrow_1.gif" />
+    <Content Include="skins\Flat_Green\admin_arrow_2.gif" />
+    <Content Include="skins\Flat_Green\contacts\bottom.gif" />
+    <Content Include="skins\Flat_Green\contacts\bottom_left.gif" />
+    <Content Include="skins\Flat_Green\contacts\bottom_right.gif" />
+    <Content Include="skins\Flat_Green\contacts\close.gif" />
+    <Content Include="skins\Flat_Green\contacts\group.gif" />
+    <Content Include="skins\Flat_Green\contacts\left.gif" />
+    <Content Include="skins\Flat_Green\contacts\right.gif" />
+    <Content Include="skins\Flat_Green\contacts\save.gif" />
+    <Content Include="skins\Flat_Green\contacts\top.gif" />
+    <Content Include="skins\Flat_Green\contacts\top_left.gif" />
+    <Content Include="skins\Flat_Green\contacts\top_right.gif" />
+    <Content Include="skins\Flat_Green\error.gif" />
+    <Content Include="skins\Flat_Green\folders\down.gif" />
+    <Content Include="skins\Flat_Green\folders\down_inactive.gif" />
+    <Content Include="skins\Flat_Green\folders\folder.gif" />
+    <Content Include="skins\Flat_Green\folders\folder_drafts.gif" />
+    <Content Include="skins\Flat_Green\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\Flat_Green\folders\folder_inbox.gif" />
+    <Content Include="skins\Flat_Green\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\Flat_Green\folders\folder_send.gif" />
+    <Content Include="skins\Flat_Green\folders\folder_send_sync.gif" />
+    <Content Include="skins\Flat_Green\folders\folder_sync.gif" />
+    <Content Include="skins\Flat_Green\folders\folder_trash.gif" />
+    <Content Include="skins\Flat_Green\folders\folder_trash_sync.gif" />
+    <Content Include="skins\Flat_Green\folders\hide.gif" />
+    <Content Include="skins\Flat_Green\folders\hide_folders.gif" />
+    <Content Include="skins\Flat_Green\folders\show.gif" />
+    <Content Include="skins\Flat_Green\folders\show_folders.gif" />
+    <Content Include="skins\Flat_Green\folders\up.gif" />
+    <Content Include="skins\Flat_Green\folders\up_inactive.gif" />
+    <Content Include="skins\Flat_Green\folders_back.gif" />
+    <Content Include="skins\Flat_Green\icons\forwarded_read.gif" />
+    <Content Include="skins\Flat_Green\icons\forwarded_unread.gif" />
+    <Content Include="skins\Flat_Green\icons\help.gif" />
+    <Content Include="skins\Flat_Green\icons\replied_read.gif" />
+    <Content Include="skins\Flat_Green\icons\replied_unread.gif" />
+    <Content Include="skins\Flat_Green\info.gif" />
+    <Content Include="skins\Flat_Green\login_error.gif" />
+    <Content Include="skins\Flat_Green\menu\accounts_arrow.gif" />
+    <Content Include="skins\Flat_Green\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\Flat_Green\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\Flat_Green\menu\add_contacts_to.gif" />
+    <Content Include="skins\Flat_Green\menu\arrow_down.gif" />
+    <Content Include="skins\Flat_Green\menu\arrow_up.gif" />
+    <Content Include="skins\Flat_Green\menu\attachment.gif" />
+    <Content Include="skins\Flat_Green\menu\back_to_list.gif" />
+    <Content Include="skins\Flat_Green\menu\check_mail.gif" />
+    <Content Include="skins\Flat_Green\menu\delete.gif" />
+    <Content Include="skins\Flat_Green\menu\empty_trash.gif" />
+    <Content Include="skins\Flat_Green\menu\flag.gif" />
+    <Content Include="skins\Flat_Green\menu\forward.gif" />
+    <Content Include="skins\Flat_Green\menu\import_contacts.gif" />
+    <Content Include="skins\Flat_Green\menu\mark_all_read.gif" />
+    <Content Include="skins\Flat_Green\menu\mark_all_unread.gif" />
+    <Content Include="skins\Flat_Green\menu\mark_as_read.gif" />
+    <Content Include="skins\Flat_Green\menu\mark_as_unread.gif" />
+    <Content Include="skins\Flat_Green\menu\message_down.gif" />
+    <Content Include="skins\Flat_Green\menu\message_down_inactive.gif" />
+    <Content Include="skins\Flat_Green\menu\message_up.gif" />
+    <Content Include="skins\Flat_Green\menu\message_up_inactive.gif" />
+    <Content Include="skins\Flat_Green\menu\move_to_folder.gif" />
+    <Content Include="skins\Flat_Green\menu\new_contact.gif" />
+    <Content Include="skins\Flat_Green\menu\new_group.gif" />
+    <Content Include="skins\Flat_Green\menu\new_message.gif" />
+    <Content Include="skins\Flat_Green\menu\order_arrow_down.gif" />
+    <Content Include="skins\Flat_Green\menu\order_arrow_up.gif" />
+    <Content Include="skins\Flat_Green\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\Flat_Green\menu\print.gif" />
+    <Content Include="skins\Flat_Green\menu\priority_high.gif" />
+    <Content Include="skins\Flat_Green\menu\priority_low.gif" />
+    <Content Include="skins\Flat_Green\menu\priority_normal.gif" />
+    <Content Include="skins\Flat_Green\menu\purge.gif" />
+    <Content Include="skins\Flat_Green\menu\reload_folders.gif" />
+    <Content Include="skins\Flat_Green\menu\reply.gif" />
+    <Content Include="skins\Flat_Green\menu\replyall.gif" />
+    <Content Include="skins\Flat_Green\menu\save.gif" />
+    <Content Include="skins\Flat_Green\menu\search_button.gif" />
+    <Content Include="skins\Flat_Green\menu\search_button_big.gif" />
+    <Content Include="skins\Flat_Green\menu\send.gif" />
+    <Content Include="skins\Flat_Green\menu\unflag.gif" />
+    <Content Include="skins\Flat_Green\msg_drop.gif" />
+    <Content Include="skins\Flat_Green\msg_not_drop.gif" />
+    <Content Include="skins\Flat_Green\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\Flat_Green\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\Flat_Green\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\Flat_Green\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\Flat_Green\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\Flat_Green\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\Flat_Green\settings\menu_accounts.gif" />
+    <Content Include="skins\Flat_Green\settings\menu_calendar.gif" />
+    <Content Include="skins\Flat_Green\settings\menu_common.gif" />
+    <Content Include="skins\Flat_Green\settings\menu_contacts.gif" />
+    <Content Include="skins\Flat_Green\styles.css" />
+    <Content Include="skins\Flat_Green\tip_arrow.gif" />
+    <Content Include="skins\Flat_Green\tip_info.gif" />
+    <Content Include="skins\Flat_Green\wait.gif" />
+    <Content Include="skins\Flat_Lite\admin_arrow_1.gif" />
+    <Content Include="skins\Flat_Lite\admin_arrow_2.gif" />
+    <Content Include="skins\Flat_Lite\contacts\bottom.gif" />
+    <Content Include="skins\Flat_Lite\contacts\bottom_left.gif" />
+    <Content Include="skins\Flat_Lite\contacts\bottom_right.gif" />
+    <Content Include="skins\Flat_Lite\contacts\close.gif" />
+    <Content Include="skins\Flat_Lite\contacts\group.gif" />
+    <Content Include="skins\Flat_Lite\contacts\left.gif" />
+    <Content Include="skins\Flat_Lite\contacts\right.gif" />
+    <Content Include="skins\Flat_Lite\contacts\save.gif" />
+    <Content Include="skins\Flat_Lite\contacts\top.gif" />
+    <Content Include="skins\Flat_Lite\contacts\top_left.gif" />
+    <Content Include="skins\Flat_Lite\contacts\top_right.gif" />
+    <Content Include="skins\Flat_Lite\error.gif" />
+    <Content Include="skins\Flat_Lite\folders\down.gif" />
+    <Content Include="skins\Flat_Lite\folders\down_inactive.gif" />
+    <Content Include="skins\Flat_Lite\folders\folder.gif" />
+    <Content Include="skins\Flat_Lite\folders\folder_drafts.gif" />
+    <Content Include="skins\Flat_Lite\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\Flat_Lite\folders\folder_inbox.gif" />
+    <Content Include="skins\Flat_Lite\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\Flat_Lite\folders\folder_send.gif" />
+    <Content Include="skins\Flat_Lite\folders\folder_send_sync.gif" />
+    <Content Include="skins\Flat_Lite\folders\folder_sync.gif" />
+    <Content Include="skins\Flat_Lite\folders\folder_trash.gif" />
+    <Content Include="skins\Flat_Lite\folders\folder_trash_sync.gif" />
+    <Content Include="skins\Flat_Lite\folders\hide.gif" />
+    <Content Include="skins\Flat_Lite\folders\hide_folders.gif" />
+    <Content Include="skins\Flat_Lite\folders\show.gif" />
+    <Content Include="skins\Flat_Lite\folders\show_folders.gif" />
+    <Content Include="skins\Flat_Lite\folders\up.gif" />
+    <Content Include="skins\Flat_Lite\folders\up_inactive.gif" />
+    <Content Include="skins\Flat_Lite\folders_back.gif" />
+    <Content Include="skins\Flat_Lite\icons\forwarded_read.gif" />
+    <Content Include="skins\Flat_Lite\icons\forwarded_unread.gif" />
+    <Content Include="skins\Flat_Lite\icons\help.gif" />
+    <Content Include="skins\Flat_Lite\icons\replied_read.gif" />
+    <Content Include="skins\Flat_Lite\icons\replied_unread.gif" />
+    <Content Include="skins\Flat_Lite\info.gif" />
+    <Content Include="skins\Flat_Lite\login_error.gif" />
+    <Content Include="skins\Flat_Lite\logo.gif" />
+    <Content Include="skins\Flat_Lite\menu\accounts_arrow.gif" />
+    <Content Include="skins\Flat_Lite\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\Flat_Lite\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\Flat_Lite\menu\add_contacts_to.gif" />
+    <Content Include="skins\Flat_Lite\menu\arrow_down.gif" />
+    <Content Include="skins\Flat_Lite\menu\arrow_up.gif" />
+    <Content Include="skins\Flat_Lite\menu\attachment.gif" />
+    <Content Include="skins\Flat_Lite\menu\back_to_list.gif" />
+    <Content Include="skins\Flat_Lite\menu\check_mail.gif" />
+    <Content Include="skins\Flat_Lite\menu\delete.gif" />
+    <Content Include="skins\Flat_Lite\menu\empty_trash.gif" />
+    <Content Include="skins\Flat_Lite\menu\flag.gif" />
+    <Content Include="skins\Flat_Lite\menu\forward.gif" />
+    <Content Include="skins\Flat_Lite\menu\import_contacts.gif" />
+    <Content Include="skins\Flat_Lite\menu\mark_all_read.gif" />
+    <Content Include="skins\Flat_Lite\menu\mark_all_unread.gif" />
+    <Content Include="skins\Flat_Lite\menu\mark_as_read.gif" />
+    <Content Include="skins\Flat_Lite\menu\mark_as_unread.gif" />
+    <Content Include="skins\Flat_Lite\menu\message_down.gif" />
+    <Content Include="skins\Flat_Lite\menu\message_down_inactive.gif" />
+    <Content Include="skins\Flat_Lite\menu\message_up.gif" />
+    <Content Include="skins\Flat_Lite\menu\message_up_inactive.gif" />
+    <Content Include="skins\Flat_Lite\menu\move_to_folder.gif" />
+    <Content Include="skins\Flat_Lite\menu\new_contact.gif" />
+    <Content Include="skins\Flat_Lite\menu\new_group.gif" />
+    <Content Include="skins\Flat_Lite\menu\new_message.gif" />
+    <Content Include="skins\Flat_Lite\menu\order_arrow_down.gif" />
+    <Content Include="skins\Flat_Lite\menu\order_arrow_up.gif" />
+    <Content Include="skins\Flat_Lite\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\Flat_Lite\menu\print.gif" />
+    <Content Include="skins\Flat_Lite\menu\priority_high.gif" />
+    <Content Include="skins\Flat_Lite\menu\priority_low.gif" />
+    <Content Include="skins\Flat_Lite\menu\priority_normal.gif" />
+    <Content Include="skins\Flat_Lite\menu\purge.gif" />
+    <Content Include="skins\Flat_Lite\menu\reload_folders.gif" />
+    <Content Include="skins\Flat_Lite\menu\reply.gif" />
+    <Content Include="skins\Flat_Lite\menu\replyall.gif" />
+    <Content Include="skins\Flat_Lite\menu\save.gif" />
+    <Content Include="skins\Flat_Lite\menu\search_button.gif" />
+    <Content Include="skins\Flat_Lite\menu\search_button_big.gif" />
+    <Content Include="skins\Flat_Lite\menu\send.gif" />
+    <Content Include="skins\Flat_Lite\menu\unflag.gif" />
+    <Content Include="skins\Flat_Lite\msg_drop.gif" />
+    <Content Include="skins\Flat_Lite\msg_not_drop.gif" />
+    <Content Include="skins\Flat_Lite\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\Flat_Lite\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\Flat_Lite\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\Flat_Lite\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\Flat_Lite\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\Flat_Lite\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\Flat_Lite\settings\menu_accounts.gif" />
+    <Content Include="skins\Flat_Lite\settings\menu_calendar.gif" />
+    <Content Include="skins\Flat_Lite\settings\menu_common.gif" />
+    <Content Include="skins\Flat_Lite\settings\menu_contacts.gif" />
+    <Content Include="skins\Flat_Lite\styles.css" />
+    <Content Include="skins\Flat_Lite\tip_arrow.gif" />
+    <Content Include="skins\Flat_Lite\tip_info.gif" />
+    <Content Include="skins\Flat_Lite\toolbar_back.gif" />
+    <Content Include="skins\Flat_Lite\wait.gif" />
+    <Content Include="skins\Flat_Original\admin_arrow_1.gif" />
+    <Content Include="skins\Flat_Original\admin_arrow_2.gif" />
+    <Content Include="skins\Flat_Original\contacts\bottom.gif" />
+    <Content Include="skins\Flat_Original\contacts\bottom_left.gif" />
+    <Content Include="skins\Flat_Original\contacts\bottom_right.gif" />
+    <Content Include="skins\Flat_Original\contacts\close.gif" />
+    <Content Include="skins\Flat_Original\contacts\group.gif" />
+    <Content Include="skins\Flat_Original\contacts\left.gif" />
+    <Content Include="skins\Flat_Original\contacts\right.gif" />
+    <Content Include="skins\Flat_Original\contacts\save.gif" />
+    <Content Include="skins\Flat_Original\contacts\top.gif" />
+    <Content Include="skins\Flat_Original\contacts\top_left.gif" />
+    <Content Include="skins\Flat_Original\contacts\top_right.gif" />
+    <Content Include="skins\Flat_Original\error.gif" />
+    <Content Include="skins\Flat_Original\folders\down.gif" />
+    <Content Include="skins\Flat_Original\folders\down_inactive.gif" />
+    <Content Include="skins\Flat_Original\folders\folder.gif" />
+    <Content Include="skins\Flat_Original\folders\folder_drafts.gif" />
+    <Content Include="skins\Flat_Original\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\Flat_Original\folders\folder_inbox.gif" />
+    <Content Include="skins\Flat_Original\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\Flat_Original\folders\folder_send.gif" />
+    <Content Include="skins\Flat_Original\folders\folder_send_sync.gif" />
+    <Content Include="skins\Flat_Original\folders\folder_sync.gif" />
+    <Content Include="skins\Flat_Original\folders\folder_trash.gif" />
+    <Content Include="skins\Flat_Original\folders\folder_trash_sync.gif" />
+    <Content Include="skins\Flat_Original\folders\hide.gif" />
+    <Content Include="skins\Flat_Original\folders\hide_folders.gif" />
+    <Content Include="skins\Flat_Original\folders\show.gif" />
+    <Content Include="skins\Flat_Original\folders\show_folders.gif" />
+    <Content Include="skins\Flat_Original\folders\up.gif" />
+    <Content Include="skins\Flat_Original\folders\up_inactive.gif" />
+    <Content Include="skins\Flat_Original\icons\forwarded_read.gif" />
+    <Content Include="skins\Flat_Original\icons\forwarded_unread.gif" />
+    <Content Include="skins\Flat_Original\icons\help.gif" />
+    <Content Include="skins\Flat_Original\icons\replied_read.gif" />
+    <Content Include="skins\Flat_Original\icons\replied_unread.gif" />
+    <Content Include="skins\Flat_Original\info.gif" />
+    <Content Include="skins\Flat_Original\login_error.gif" />
+    <Content Include="skins\Flat_Original\menu\accounts_arrow.gif" />
+    <Content Include="skins\Flat_Original\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\Flat_Original\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\Flat_Original\menu\add_contacts_to.gif" />
+    <Content Include="skins\Flat_Original\menu\arrow_down.gif" />
+    <Content Include="skins\Flat_Original\menu\arrow_up.gif" />
+    <Content Include="skins\Flat_Original\menu\attachment.gif" />
+    <Content Include="skins\Flat_Original\menu\back_to_list.gif" />
+    <Content Include="skins\Flat_Original\menu\check_mail.gif" />
+    <Content Include="skins\Flat_Original\menu\delete.gif" />
+    <Content Include="skins\Flat_Original\menu\empty_trash.gif" />
+    <Content Include="skins\Flat_Original\menu\flag.gif" />
+    <Content Include="skins\Flat_Original\menu\forward.gif" />
+    <Content Include="skins\Flat_Original\menu\import_contacts.gif" />
+    <Content Include="skins\Flat_Original\menu\mark_all_read.gif" />
+    <Content Include="skins\Flat_Original\menu\mark_all_unread.gif" />
+    <Content Include="skins\Flat_Original\menu\mark_as_read.gif" />
+    <Content Include="skins\Flat_Original\menu\mark_as_unread.gif" />
+    <Content Include="skins\Flat_Original\menu\message_down.gif" />
+    <Content Include="skins\Flat_Original\menu\message_down_inactive.gif" />
+    <Content Include="skins\Flat_Original\menu\message_up.gif" />
+    <Content Include="skins\Flat_Original\menu\message_up_inactive.gif" />
+    <Content Include="skins\Flat_Original\menu\move_to_folder.gif" />
+    <Content Include="skins\Flat_Original\menu\new_contact.gif" />
+    <Content Include="skins\Flat_Original\menu\new_group.gif" />
+    <Content Include="skins\Flat_Original\menu\new_message.gif" />
+    <Content Include="skins\Flat_Original\menu\order_arrow_down.gif" />
+    <Content Include="skins\Flat_Original\menu\order_arrow_up.gif" />
+    <Content Include="skins\Flat_Original\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\Flat_Original\menu\print.gif" />
+    <Content Include="skins\Flat_Original\menu\priority_high.gif" />
+    <Content Include="skins\Flat_Original\menu\priority_low.gif" />
+    <Content Include="skins\Flat_Original\menu\priority_normal.gif" />
+    <Content Include="skins\Flat_Original\menu\purge.gif" />
+    <Content Include="skins\Flat_Original\menu\reload_folders.gif" />
+    <Content Include="skins\Flat_Original\menu\reply.gif" />
+    <Content Include="skins\Flat_Original\menu\replyall.gif" />
+    <Content Include="skins\Flat_Original\menu\save.gif" />
+    <Content Include="skins\Flat_Original\menu\search_button.gif" />
+    <Content Include="skins\Flat_Original\menu\search_button_big.gif" />
+    <Content Include="skins\Flat_Original\menu\send.gif" />
+    <Content Include="skins\Flat_Original\menu\unflag.gif" />
+    <Content Include="skins\Flat_Original\msg_drop.gif" />
+    <Content Include="skins\Flat_Original\msg_not_drop.gif" />
+    <Content Include="skins\Flat_Original\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\Flat_Original\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\Flat_Original\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\Flat_Original\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\Flat_Original\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\Flat_Original\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\Flat_Original\settings\menu_accounts.gif" />
+    <Content Include="skins\Flat_Original\settings\menu_calendar.gif" />
+    <Content Include="skins\Flat_Original\settings\menu_common.gif" />
+    <Content Include="skins\Flat_Original\settings\menu_contacts.gif" />
+    <Content Include="skins\Flat_Original\styles.css" />
+    <Content Include="skins\Flat_Original\tip_arrow.gif" />
+    <Content Include="skins\Flat_Original\tip_info.gif" />
+    <Content Include="skins\Flat_Original\wait.gif" />
+    <Content Include="skins\Hotmail_Style\admin_arrow_1.gif" />
+    <Content Include="skins\Hotmail_Style\admin_arrow_2.gif" />
+    <Content Include="skins\Hotmail_Style\contacts\bottom.gif" />
+    <Content Include="skins\Hotmail_Style\contacts\bottom_left.gif" />
+    <Content Include="skins\Hotmail_Style\contacts\bottom_right.gif" />
+    <Content Include="skins\Hotmail_Style\contacts\close.gif" />
+    <Content Include="skins\Hotmail_Style\contacts\group.gif" />
+    <Content Include="skins\Hotmail_Style\contacts\left.gif" />
+    <Content Include="skins\Hotmail_Style\contacts\right.gif" />
+    <Content Include="skins\Hotmail_Style\contacts\save.gif" />
+    <Content Include="skins\Hotmail_Style\contacts\top.gif" />
+    <Content Include="skins\Hotmail_Style\contacts\top_left.gif" />
+    <Content Include="skins\Hotmail_Style\contacts\top_right.gif" />
+    <Content Include="skins\Hotmail_Style\error.gif" />
+    <Content Include="skins\Hotmail_Style\folders\down.gif" />
+    <Content Include="skins\Hotmail_Style\folders\down_inactive.gif" />
+    <Content Include="skins\Hotmail_Style\folders\folder.gif" />
+    <Content Include="skins\Hotmail_Style\folders\folder_drafts.gif" />
+    <Content Include="skins\Hotmail_Style\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\Hotmail_Style\folders\folder_inbox.gif" />
+    <Content Include="skins\Hotmail_Style\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\Hotmail_Style\folders\folder_send.gif" />
+    <Content Include="skins\Hotmail_Style\folders\folder_send_sync.gif" />
+    <Content Include="skins\Hotmail_Style\folders\folder_sync.gif" />
+    <Content Include="skins\Hotmail_Style\folders\folder_trash.gif" />
+    <Content Include="skins\Hotmail_Style\folders\folder_trash_sync.gif" />
+    <Content Include="skins\Hotmail_Style\folders\hide.gif" />
+    <Content Include="skins\Hotmail_Style\folders\hide_folders.gif" />
+    <Content Include="skins\Hotmail_Style\folders\show.gif" />
+    <Content Include="skins\Hotmail_Style\folders\show_folders.gif" />
+    <Content Include="skins\Hotmail_Style\folders\up.gif" />
+    <Content Include="skins\Hotmail_Style\folders\up_inactive.gif" />
+    <Content Include="skins\Hotmail_Style\folders_back.gif" />
+    <Content Include="skins\Hotmail_Style\gradient.jpg" />
+    <Content Include="skins\Hotmail_Style\header.jpg" />
+    <Content Include="skins\Hotmail_Style\header_back.gif" />
+    <Content Include="skins\Hotmail_Style\icons\forwarded_read.gif" />
+    <Content Include="skins\Hotmail_Style\icons\forwarded_unread.gif" />
+    <Content Include="skins\Hotmail_Style\icons\help.gif" />
+    <Content Include="skins\Hotmail_Style\icons\replied_read.gif" />
+    <Content Include="skins\Hotmail_Style\icons\replied_unread.gif" />
+    <Content Include="skins\Hotmail_Style\info.gif" />
+    <Content Include="skins\Hotmail_Style\login_error.gif" />
+    <Content Include="skins\Hotmail_Style\menu\accounts_arrow.gif" />
+    <Content Include="skins\Hotmail_Style\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\Hotmail_Style\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\Hotmail_Style\menu\add_contacts_to.gif" />
+    <Content Include="skins\Hotmail_Style\menu\arrow_down.gif" />
+    <Content Include="skins\Hotmail_Style\menu\arrow_up.gif" />
+    <Content Include="skins\Hotmail_Style\menu\attachment.gif" />
+    <Content Include="skins\Hotmail_Style\menu\back_to_list.gif" />
+    <Content Include="skins\Hotmail_Style\menu\check_mail.gif" />
+    <Content Include="skins\Hotmail_Style\menu\delete.gif" />
+    <Content Include="skins\Hotmail_Style\menu\empty_trash.gif" />
+    <Content Include="skins\Hotmail_Style\menu\flag.gif" />
+    <Content Include="skins\Hotmail_Style\menu\forward.gif" />
+    <Content Include="skins\Hotmail_Style\menu\import_contacts.gif" />
+    <Content Include="skins\Hotmail_Style\menu\mark_all_read.gif" />
+    <Content Include="skins\Hotmail_Style\menu\mark_all_unread.gif" />
+    <Content Include="skins\Hotmail_Style\menu\mark_as_read.gif" />
+    <Content Include="skins\Hotmail_Style\menu\mark_as_unread.gif" />
+    <Content Include="skins\Hotmail_Style\menu\message_down.gif" />
+    <Content Include="skins\Hotmail_Style\menu\message_down_inactive.gif" />
+    <Content Include="skins\Hotmail_Style\menu\message_up.gif" />
+    <Content Include="skins\Hotmail_Style\menu\message_up_inactive.gif" />
+    <Content Include="skins\Hotmail_Style\menu\move_to_folder.gif" />
+    <Content Include="skins\Hotmail_Style\menu\new_contact.gif" />
+    <Content Include="skins\Hotmail_Style\menu\new_group.gif" />
+    <Content Include="skins\Hotmail_Style\menu\new_message.gif" />
+    <Content Include="skins\Hotmail_Style\menu\order_arrow_down.gif" />
+    <Content Include="skins\Hotmail_Style\menu\order_arrow_up.gif" />
+    <Content Include="skins\Hotmail_Style\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\Hotmail_Style\menu\print.gif" />
+    <Content Include="skins\Hotmail_Style\menu\priority_high.gif" />
+    <Content Include="skins\Hotmail_Style\menu\priority_low.gif" />
+    <Content Include="skins\Hotmail_Style\menu\priority_normal.gif" />
+    <Content Include="skins\Hotmail_Style\menu\purge.gif" />
+    <Content Include="skins\Hotmail_Style\menu\reload_folders.gif" />
+    <Content Include="skins\Hotmail_Style\menu\reply.gif" />
+    <Content Include="skins\Hotmail_Style\menu\replyall.gif" />
+    <Content Include="skins\Hotmail_Style\menu\save.gif" />
+    <Content Include="skins\Hotmail_Style\menu\search_button.gif" />
+    <Content Include="skins\Hotmail_Style\menu\search_button_big.gif" />
+    <Content Include="skins\Hotmail_Style\menu\send.gif" />
+    <Content Include="skins\Hotmail_Style\menu\unflag.gif" />
+    <Content Include="skins\Hotmail_Style\msg_drop.gif" />
+    <Content Include="skins\Hotmail_Style\msg_not_drop.gif" />
+    <Content Include="skins\Hotmail_Style\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\Hotmail_Style\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\Hotmail_Style\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\Hotmail_Style\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\Hotmail_Style\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\Hotmail_Style\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\Hotmail_Style\settings\menu_accounts.gif" />
+    <Content Include="skins\Hotmail_Style\settings\menu_calendar.gif" />
+    <Content Include="skins\Hotmail_Style\settings\menu_common.gif" />
+    <Content Include="skins\Hotmail_Style\settings\menu_contacts.gif" />
+    <Content Include="skins\Hotmail_Style\styles.css" />
+    <Content Include="skins\Hotmail_Style\tip_arrow.gif" />
+    <Content Include="skins\Hotmail_Style\tip_info.gif" />
+    <Content Include="skins\Hotmail_Style\toolbar_back.gif" />
+    <Content Include="skins\Hotmail_Style\wait.gif" />
+    <Content Include="skins\iForum\admin_arrow_1.gif" />
+    <Content Include="skins\iForum\admin_arrow_2.gif" />
+    <Content Include="skins\iForum\contacts\bottom.gif" />
+    <Content Include="skins\iForum\contacts\bottom_left.gif" />
+    <Content Include="skins\iForum\contacts\bottom_right.gif" />
+    <Content Include="skins\iForum\contacts\close.gif" />
+    <Content Include="skins\iForum\contacts\group.gif" />
+    <Content Include="skins\iForum\contacts\left.gif" />
+    <Content Include="skins\iForum\contacts\right.gif" />
+    <Content Include="skins\iForum\contacts\save.gif" />
+    <Content Include="skins\iForum\contacts\top.gif" />
+    <Content Include="skins\iForum\contacts\top_left.gif" />
+    <Content Include="skins\iForum\contacts\top_right.gif" />
+    <Content Include="skins\iForum\error.gif" />
+    <Content Include="skins\iForum\folders\down.gif" />
+    <Content Include="skins\iForum\folders\down_inactive.gif" />
+    <Content Include="skins\iForum\folders\folder.gif" />
+    <Content Include="skins\iForum\folders\folder_drafts.gif" />
+    <Content Include="skins\iForum\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\iForum\folders\folder_inbox.gif" />
+    <Content Include="skins\iForum\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\iForum\folders\folder_send.gif" />
+    <Content Include="skins\iForum\folders\folder_send_sync.gif" />
+    <Content Include="skins\iForum\folders\folder_sync.gif" />
+    <Content Include="skins\iForum\folders\folder_trash.gif" />
+    <Content Include="skins\iForum\folders\folder_trash_sync.gif" />
+    <Content Include="skins\iForum\folders\hide.gif" />
+    <Content Include="skins\iForum\folders\hide_folders.gif" />
+    <Content Include="skins\iForum\folders\show.gif" />
+    <Content Include="skins\iForum\folders\show_folders.gif" />
+    <Content Include="skins\iForum\folders\up.gif" />
+    <Content Include="skins\iForum\folders\up_inactive.gif" />
+    <Content Include="skins\iForum\folders_back.gif" />
+    <Content Include="skins\iForum\icons\forwarded_read.gif" />
+    <Content Include="skins\iForum\icons\forwarded_unread.gif" />
+    <Content Include="skins\iForum\icons\help.gif" />
+    <Content Include="skins\iForum\icons\replied_read.gif" />
+    <Content Include="skins\iForum\icons\replied_unread.gif" />
+    <Content Include="skins\iForum\info.gif" />
+    <Content Include="skins\iForum\login_error.gif" />
+    <Content Include="skins\iForum\menu\accounts_arrow.gif" />
+    <Content Include="skins\iForum\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\iForum\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\iForum\menu\add_contacts_to.gif" />
+    <Content Include="skins\iForum\menu\arrow_down.gif" />
+    <Content Include="skins\iForum\menu\arrow_up.gif" />
+    <Content Include="skins\iForum\menu\attachment.gif" />
+    <Content Include="skins\iForum\menu\back_to_list.gif" />
+    <Content Include="skins\iForum\menu\check_mail.gif" />
+    <Content Include="skins\iForum\menu\delete.gif" />
+    <Content Include="skins\iForum\menu\empty_trash.gif" />
+    <Content Include="skins\iForum\menu\flag.gif" />
+    <Content Include="skins\iForum\menu\forward.gif" />
+    <Content Include="skins\iForum\menu\import_contacts.gif" />
+    <Content Include="skins\iForum\menu\mark_all_read.gif" />
+    <Content Include="skins\iForum\menu\mark_all_unread.gif" />
+    <Content Include="skins\iForum\menu\mark_as_read.gif" />
+    <Content Include="skins\iForum\menu\mark_as_unread.gif" />
+    <Content Include="skins\iForum\menu\message_down.gif" />
+    <Content Include="skins\iForum\menu\message_down_inactive.gif" />
+    <Content Include="skins\iForum\menu\message_up.gif" />
+    <Content Include="skins\iForum\menu\message_up_inactive.gif" />
+    <Content Include="skins\iForum\menu\move_to_folder.gif" />
+    <Content Include="skins\iForum\menu\new_contact.gif" />
+    <Content Include="skins\iForum\menu\new_group.gif" />
+    <Content Include="skins\iForum\menu\new_message.gif" />
+    <Content Include="skins\iForum\menu\order_arrow_down.gif" />
+    <Content Include="skins\iForum\menu\order_arrow_up.gif" />
+    <Content Include="skins\iForum\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\iForum\menu\print.gif" />
+    <Content Include="skins\iForum\menu\priority_high.gif" />
+    <Content Include="skins\iForum\menu\priority_low.gif" />
+    <Content Include="skins\iForum\menu\priority_normal.gif" />
+    <Content Include="skins\iForum\menu\purge.gif" />
+    <Content Include="skins\iForum\menu\reload_folders.gif" />
+    <Content Include="skins\iForum\menu\reply.gif" />
+    <Content Include="skins\iForum\menu\replyall.gif" />
+    <Content Include="skins\iForum\menu\save.gif" />
+    <Content Include="skins\iForum\menu\search_button.gif" />
+    <Content Include="skins\iForum\menu\search_button_big.gif" />
+    <Content Include="skins\iForum\menu\send.gif" />
+    <Content Include="skins\iForum\menu\unflag.gif" />
+    <Content Include="skins\iForum\msg_drop.gif" />
+    <Content Include="skins\iForum\msg_not_drop.gif" />
+    <Content Include="skins\iForum\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\iForum\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\iForum\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\iForum\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\iForum\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\iForum\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\iForum\settings\menu_accounts.gif" />
+    <Content Include="skins\iForum\settings\menu_calendar.gif" />
+    <Content Include="skins\iForum\settings\menu_common.gif" />
+    <Content Include="skins\iForum\settings\menu_contacts.gif" />
+    <Content Include="skins\iForum\styles.css" />
+    <Content Include="skins\iForum\tip_arrow.gif" />
+    <Content Include="skins\iForum\tip_info.gif" />
+    <Content Include="skins\iForum\toolbar_back.gif" />
+    <Content Include="skins\iForum\wait.gif" />
+    <Content Include="skins\iForum\wm_body.gif" />
+    <Content Include="skins\Light_Blue\accountlist_bg.gif" />
+    <Content Include="skins\Light_Blue\accountlist_separator.gif" />
+    <Content Include="skins\Light_Blue\accountlist_separator_right.gif" />
+    <Content Include="skins\Light_Blue\admin_arrow_1.gif" />
+    <Content Include="skins\Light_Blue\admin_arrow_2.gif" />
+    <Content Include="skins\Light_Blue\contacts\bottom.gif" />
+    <Content Include="skins\Light_Blue\contacts\bottom_left.gif" />
+    <Content Include="skins\Light_Blue\contacts\bottom_right.gif" />
+    <Content Include="skins\Light_Blue\contacts\close.gif" />
+    <Content Include="skins\Light_Blue\contacts\group.gif" />
+    <Content Include="skins\Light_Blue\contacts\left.gif" />
+    <Content Include="skins\Light_Blue\contacts\right.gif" />
+    <Content Include="skins\Light_Blue\contacts\save.gif" />
+    <Content Include="skins\Light_Blue\contacts\top.gif" />
+    <Content Include="skins\Light_Blue\contacts\top_left.gif" />
+    <Content Include="skins\Light_Blue\contacts\top_right.gif" />
+    <Content Include="skins\Light_Blue\error.gif" />
+    <Content Include="skins\Light_Blue\folders\down.gif" />
+    <Content Include="skins\Light_Blue\folders\down_inactive.gif" />
+    <Content Include="skins\Light_Blue\folders\folder.gif" />
+    <Content Include="skins\Light_Blue\folders\folder_drafts.gif" />
+    <Content Include="skins\Light_Blue\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\Light_Blue\folders\folder_inbox.gif" />
+    <Content Include="skins\Light_Blue\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\Light_Blue\folders\folder_send.gif" />
+    <Content Include="skins\Light_Blue\folders\folder_send_sync.gif" />
+    <Content Include="skins\Light_Blue\folders\folder_sync.gif" />
+    <Content Include="skins\Light_Blue\folders\folder_trash.gif" />
+    <Content Include="skins\Light_Blue\folders\folder_trash_sync.gif" />
+    <Content Include="skins\Light_Blue\folders\hide.gif" />
+    <Content Include="skins\Light_Blue\folders\hide_folders.gif" />
+    <Content Include="skins\Light_Blue\folders\show.gif" />
+    <Content Include="skins\Light_Blue\folders\show_folders.gif" />
+    <Content Include="skins\Light_Blue\folders\up.gif" />
+    <Content Include="skins\Light_Blue\folders\up_inactive.gif" />
+    <Content Include="skins\Light_Blue\folders_back.gif" />
+    <Content Include="skins\Light_Blue\headers_back.gif" />
+    <Content Include="skins\Light_Blue\icons\forwarded_read.gif" />
+    <Content Include="skins\Light_Blue\icons\forwarded_unread.gif" />
+    <Content Include="skins\Light_Blue\icons\replied_read.gif" />
+    <Content Include="skins\Light_Blue\icons\replied_unread.gif" />
+    <Content Include="skins\Light_Blue\info.gif" />
+    <Content Include="skins\Light_Blue\login_error.gif" />
+    <Content Include="skins\Light_Blue\menu\accounts_arrow.gif" />
+    <Content Include="skins\Light_Blue\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\Light_Blue\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\Light_Blue\menu\add_contacts_to.gif" />
+    <Content Include="skins\Light_Blue\menu\arrow_down.gif" />
+    <Content Include="skins\Light_Blue\menu\arrow_up.gif" />
+    <Content Include="skins\Light_Blue\menu\attachment.gif" />
+    <Content Include="skins\Light_Blue\menu\back_to_list.gif" />
+    <Content Include="skins\Light_Blue\menu\check_mail.gif" />
+    <Content Include="skins\Light_Blue\menu\delete.gif" />
+    <Content Include="skins\Light_Blue\menu\empty_trash.gif" />
+    <Content Include="skins\Light_Blue\menu\flag.gif" />
+    <Content Include="skins\Light_Blue\menu\forward.gif" />
+    <Content Include="skins\Light_Blue\menu\import_contacts.gif" />
+    <Content Include="skins\Light_Blue\menu\mark_all_read.gif" />
+    <Content Include="skins\Light_Blue\menu\mark_all_unread.gif" />
+    <Content Include="skins\Light_Blue\menu\mark_as_read.gif" />
+    <Content Include="skins\Light_Blue\menu\mark_as_unread.gif" />
+    <Content Include="skins\Light_Blue\menu\message_down.gif" />
+    <Content Include="skins\Light_Blue\menu\message_down_inactive.gif" />
+    <Content Include="skins\Light_Blue\menu\message_up.gif" />
+    <Content Include="skins\Light_Blue\menu\message_up_inactive.gif" />
+    <Content Include="skins\Light_Blue\menu\move_to_folder.gif" />
+    <Content Include="skins\Light_Blue\menu\new_contact.gif" />
+    <Content Include="skins\Light_Blue\menu\new_group.gif" />
+    <Content Include="skins\Light_Blue\menu\new_message.gif" />
+    <Content Include="skins\Light_Blue\menu\order_arrow_down.gif" />
+    <Content Include="skins\Light_Blue\menu\order_arrow_up.gif" />
+    <Content Include="skins\Light_Blue\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\Light_Blue\menu\print.gif" />
+    <Content Include="skins\Light_Blue\menu\priority_high.gif" />
+    <Content Include="skins\Light_Blue\menu\priority_low.gif" />
+    <Content Include="skins\Light_Blue\menu\priority_normal.gif" />
+    <Content Include="skins\Light_Blue\menu\purge.gif" />
+    <Content Include="skins\Light_Blue\menu\reload_folders.gif" />
+    <Content Include="skins\Light_Blue\menu\reply.gif" />
+    <Content Include="skins\Light_Blue\menu\replyall.gif" />
+    <Content Include="skins\Light_Blue\menu\save.gif" />
+    <Content Include="skins\Light_Blue\menu\search_button.gif" />
+    <Content Include="skins\Light_Blue\menu\search_button_big.gif" />
+    <Content Include="skins\Light_Blue\menu\send.gif" />
+    <Content Include="skins\Light_Blue\menu\unflag.gif" />
+    <Content Include="skins\Light_Blue\msg_drop.gif" />
+    <Content Include="skins\Light_Blue\msg_not_drop.gif" />
+    <Content Include="skins\Light_Blue\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\Light_Blue\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\Light_Blue\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\Light_Blue\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\Light_Blue\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\Light_Blue\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\Light_Blue\settings\menu_accounts.gif" />
+    <Content Include="skins\Light_Blue\settings\menu_calendar.gif" />
+    <Content Include="skins\Light_Blue\settings\menu_common.gif" />
+    <Content Include="skins\Light_Blue\settings\menu_contacts.gif" />
+    <Content Include="skins\Light_Blue\styles.css" />
+    <Content Include="skins\Light_Blue\tip_arrow.gif" />
+    <Content Include="skins\Light_Blue\tip_info.gif" />
+    <Content Include="skins\Light_Blue\toolbar_back.gif" />
+    <Content Include="skins\Light_Blue\toolbar_back_over.gif" />
+    <Content Include="skins\Light_Blue\wait.gif" />
+    <Content Include="skins\Light_Gray\accountlist_separator.gif" />
+    <Content Include="skins\Light_Gray\accountlist_separator_right.gif" />
+    <Content Include="skins\Light_Gray\admin_arrow_1.gif" />
+    <Content Include="skins\Light_Gray\admin_arrow_2.gif" />
+    <Content Include="skins\Light_Gray\contacts\bottom.gif" />
+    <Content Include="skins\Light_Gray\contacts\bottom_left.gif" />
+    <Content Include="skins\Light_Gray\contacts\bottom_right.gif" />
+    <Content Include="skins\Light_Gray\contacts\close.gif" />
+    <Content Include="skins\Light_Gray\contacts\group.gif" />
+    <Content Include="skins\Light_Gray\contacts\left.gif" />
+    <Content Include="skins\Light_Gray\contacts\right.gif" />
+    <Content Include="skins\Light_Gray\contacts\save.gif" />
+    <Content Include="skins\Light_Gray\contacts\top.gif" />
+    <Content Include="skins\Light_Gray\contacts\top_left.gif" />
+    <Content Include="skins\Light_Gray\contacts\top_right.gif" />
+    <Content Include="skins\Light_Gray\error.gif" />
+    <Content Include="skins\Light_Gray\folders\down.gif" />
+    <Content Include="skins\Light_Gray\folders\down_inactive.gif" />
+    <Content Include="skins\Light_Gray\folders\folder.gif" />
+    <Content Include="skins\Light_Gray\folders\folder_drafts.gif" />
+    <Content Include="skins\Light_Gray\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\Light_Gray\folders\folder_inbox.gif" />
+    <Content Include="skins\Light_Gray\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\Light_Gray\folders\folder_send.gif" />
+    <Content Include="skins\Light_Gray\folders\folder_send_sync.gif" />
+    <Content Include="skins\Light_Gray\folders\folder_sync.gif" />
+    <Content Include="skins\Light_Gray\folders\folder_trash.gif" />
+    <Content Include="skins\Light_Gray\folders\folder_trash_sync.gif" />
+    <Content Include="skins\Light_Gray\folders\hide.gif" />
+    <Content Include="skins\Light_Gray\folders\hide_folders.gif" />
+    <Content Include="skins\Light_Gray\folders\show.gif" />
+    <Content Include="skins\Light_Gray\folders\show_folders.gif" />
+    <Content Include="skins\Light_Gray\folders\up.gif" />
+    <Content Include="skins\Light_Gray\folders\up_inactive.gif" />
+    <Content Include="skins\Light_Gray\folders_back.gif" />
+    <Content Include="skins\Light_Gray\icons\forwarded_read.gif" />
+    <Content Include="skins\Light_Gray\icons\forwarded_unread.gif" />
+    <Content Include="skins\Light_Gray\icons\help.gif" />
+    <Content Include="skins\Light_Gray\icons\replied_read.gif" />
+    <Content Include="skins\Light_Gray\icons\replied_unread.gif" />
+    <Content Include="skins\Light_Gray\info.gif" />
+    <Content Include="skins\Light_Gray\login_error.gif" />
+    <Content Include="skins\Light_Gray\menu\accounts_arrow.gif" />
+    <Content Include="skins\Light_Gray\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\Light_Gray\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\Light_Gray\menu\add_contacts_to.gif" />
+    <Content Include="skins\Light_Gray\menu\arrow_down.gif" />
+    <Content Include="skins\Light_Gray\menu\arrow_up.gif" />
+    <Content Include="skins\Light_Gray\menu\attachment.gif" />
+    <Content Include="skins\Light_Gray\menu\back_to_list.gif" />
+    <Content Include="skins\Light_Gray\menu\check_mail.gif" />
+    <Content Include="skins\Light_Gray\menu\delete.gif" />
+    <Content Include="skins\Light_Gray\menu\empty_trash.gif" />
+    <Content Include="skins\Light_Gray\menu\flag.gif" />
+    <Content Include="skins\Light_Gray\menu\forward.gif" />
+    <Content Include="skins\Light_Gray\menu\import_contacts.gif" />
+    <Content Include="skins\Light_Gray\menu\mark_all_read.gif" />
+    <Content Include="skins\Light_Gray\menu\mark_all_unread.gif" />
+    <Content Include="skins\Light_Gray\menu\mark_as_read.gif" />
+    <Content Include="skins\Light_Gray\menu\mark_as_unread.gif" />
+    <Content Include="skins\Light_Gray\menu\message_down.gif" />
+    <Content Include="skins\Light_Gray\menu\message_down_inactive.gif" />
+    <Content Include="skins\Light_Gray\menu\message_up.gif" />
+    <Content Include="skins\Light_Gray\menu\message_up_inactive.gif" />
+    <Content Include="skins\Light_Gray\menu\move_to_folder.gif" />
+    <Content Include="skins\Light_Gray\menu\new_contact.gif" />
+    <Content Include="skins\Light_Gray\menu\new_group.gif" />
+    <Content Include="skins\Light_Gray\menu\new_message.gif" />
+    <Content Include="skins\Light_Gray\menu\order_arrow_down.gif" />
+    <Content Include="skins\Light_Gray\menu\order_arrow_up.gif" />
+    <Content Include="skins\Light_Gray\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\Light_Gray\menu\print.gif" />
+    <Content Include="skins\Light_Gray\menu\priority_high.gif" />
+    <Content Include="skins\Light_Gray\menu\priority_low.gif" />
+    <Content Include="skins\Light_Gray\menu\priority_normal.gif" />
+    <Content Include="skins\Light_Gray\menu\purge.gif" />
+    <Content Include="skins\Light_Gray\menu\reload_folders.gif" />
+    <Content Include="skins\Light_Gray\menu\reply.gif" />
+    <Content Include="skins\Light_Gray\menu\replyall.gif" />
+    <Content Include="skins\Light_Gray\menu\save.gif" />
+    <Content Include="skins\Light_Gray\menu\search_button.gif" />
+    <Content Include="skins\Light_Gray\menu\search_button_big.gif" />
+    <Content Include="skins\Light_Gray\menu\send.gif" />
+    <Content Include="skins\Light_Gray\menu\unflag.gif" />
+    <Content Include="skins\Light_Gray\msg_drop.gif" />
+    <Content Include="skins\Light_Gray\msg_not_drop.gif" />
+    <Content Include="skins\Light_Gray\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\Light_Gray\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\Light_Gray\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\Light_Gray\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\Light_Gray\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\Light_Gray\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\Light_Gray\settings\menu_accounts.gif" />
+    <Content Include="skins\Light_Gray\settings\menu_calendar.gif" />
+    <Content Include="skins\Light_Gray\settings\menu_common.gif" />
+    <Content Include="skins\Light_Gray\settings\menu_contacts.gif" />
+    <Content Include="skins\Light_Gray\styles.css" />
+    <Content Include="skins\Light_Gray\tip_arrow.gif" />
+    <Content Include="skins\Light_Gray\tip_info.gif" />
+    <Content Include="skins\Light_Gray\toolbar_back.gif" />
+    <Content Include="skins\Light_Gray\toolbar_back_over.gif" />
+    <Content Include="skins\Light_Gray\wait.gif" />
+    <Content Include="skins\Light_Green\accountlist_bg.gif" />
+    <Content Include="skins\Light_Green\accountlist_separator.gif" />
+    <Content Include="skins\Light_Green\accountlist_separator_right.gif" />
+    <Content Include="skins\Light_Green\admin_arrow_1.gif" />
+    <Content Include="skins\Light_Green\admin_arrow_2.gif" />
+    <Content Include="skins\Light_Green\contacts\bottom.gif" />
+    <Content Include="skins\Light_Green\contacts\bottom_left.gif" />
+    <Content Include="skins\Light_Green\contacts\bottom_right.gif" />
+    <Content Include="skins\Light_Green\contacts\close.gif" />
+    <Content Include="skins\Light_Green\contacts\group.gif" />
+    <Content Include="skins\Light_Green\contacts\left.gif" />
+    <Content Include="skins\Light_Green\contacts\right.gif" />
+    <Content Include="skins\Light_Green\contacts\save.gif" />
+    <Content Include="skins\Light_Green\contacts\top.gif" />
+    <Content Include="skins\Light_Green\contacts\top_left.gif" />
+    <Content Include="skins\Light_Green\contacts\top_right.gif" />
+    <Content Include="skins\Light_Green\error.gif" />
+    <Content Include="skins\Light_Green\folders\down.gif" />
+    <Content Include="skins\Light_Green\folders\down_inactive.gif" />
+    <Content Include="skins\Light_Green\folders\folder.gif" />
+    <Content Include="skins\Light_Green\folders\folder_drafts.gif" />
+    <Content Include="skins\Light_Green\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\Light_Green\folders\folder_inbox.gif" />
+    <Content Include="skins\Light_Green\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\Light_Green\folders\folder_send.gif" />
+    <Content Include="skins\Light_Green\folders\folder_send_sync.gif" />
+    <Content Include="skins\Light_Green\folders\folder_sync.gif" />
+    <Content Include="skins\Light_Green\folders\folder_trash.gif" />
+    <Content Include="skins\Light_Green\folders\folder_trash_sync.gif" />
+    <Content Include="skins\Light_Green\folders\hide.gif" />
+    <Content Include="skins\Light_Green\folders\hide_folders.gif" />
+    <Content Include="skins\Light_Green\folders\show.gif" />
+    <Content Include="skins\Light_Green\folders\show_folders.gif" />
+    <Content Include="skins\Light_Green\folders\up.gif" />
+    <Content Include="skins\Light_Green\folders\up_inactive.gif" />
+    <Content Include="skins\Light_Green\folders_back.gif" />
+    <Content Include="skins\Light_Green\header_back.gif" />
+    <Content Include="skins\Light_Green\icons\forwarded_read.gif" />
+    <Content Include="skins\Light_Green\icons\forwarded_unread.gif" />
+    <Content Include="skins\Light_Green\icons\help.gif" />
+    <Content Include="skins\Light_Green\icons\replied_read.gif" />
+    <Content Include="skins\Light_Green\icons\replied_unread.gif" />
+    <Content Include="skins\Light_Green\info.gif" />
+    <Content Include="skins\Light_Green\login_error.gif" />
+    <Content Include="skins\Light_Green\logo.gif" />
+    <Content Include="skins\Light_Green\menu\accounts_arrow.gif" />
+    <Content Include="skins\Light_Green\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\Light_Green\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\Light_Green\menu\add_contacts_to.gif" />
+    <Content Include="skins\Light_Green\menu\arrow_down.gif" />
+    <Content Include="skins\Light_Green\menu\arrow_up.gif" />
+    <Content Include="skins\Light_Green\menu\attachment.gif" />
+    <Content Include="skins\Light_Green\menu\back_to_list.gif" />
+    <Content Include="skins\Light_Green\menu\check_mail.gif" />
+    <Content Include="skins\Light_Green\menu\delete.gif" />
+    <Content Include="skins\Light_Green\menu\empty_trash.gif" />
+    <Content Include="skins\Light_Green\menu\flag.gif" />
+    <Content Include="skins\Light_Green\menu\forward.gif" />
+    <Content Include="skins\Light_Green\menu\import_contacts.gif" />
+    <Content Include="skins\Light_Green\menu\mark_all_read.gif" />
+    <Content Include="skins\Light_Green\menu\mark_all_unread.gif" />
+    <Content Include="skins\Light_Green\menu\mark_as_read.gif" />
+    <Content Include="skins\Light_Green\menu\mark_as_unread.gif" />
+    <Content Include="skins\Light_Green\menu\message_down.gif" />
+    <Content Include="skins\Light_Green\menu\message_down_inactive.gif" />
+    <Content Include="skins\Light_Green\menu\message_up.gif" />
+    <Content Include="skins\Light_Green\menu\message_up_inactive.gif" />
+    <Content Include="skins\Light_Green\menu\move_to_folder.gif" />
+    <Content Include="skins\Light_Green\menu\new_contact.gif" />
+    <Content Include="skins\Light_Green\menu\new_group.gif" />
+    <Content Include="skins\Light_Green\menu\new_message.gif" />
+    <Content Include="skins\Light_Green\menu\order_arrow_down.gif" />
+    <Content Include="skins\Light_Green\menu\order_arrow_up.gif" />
+    <Content Include="skins\Light_Green\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\Light_Green\menu\print.gif" />
+    <Content Include="skins\Light_Green\menu\priority_high.gif" />
+    <Content Include="skins\Light_Green\menu\priority_low.gif" />
+    <Content Include="skins\Light_Green\menu\priority_normal.gif" />
+    <Content Include="skins\Light_Green\menu\purge.gif" />
+    <Content Include="skins\Light_Green\menu\reload_folders.gif" />
+    <Content Include="skins\Light_Green\menu\reply.gif" />
+    <Content Include="skins\Light_Green\menu\replyall.gif" />
+    <Content Include="skins\Light_Green\menu\save.gif" />
+    <Content Include="skins\Light_Green\menu\search_button.gif" />
+    <Content Include="skins\Light_Green\menu\search_button_big.gif" />
+    <Content Include="skins\Light_Green\menu\send.gif" />
+    <Content Include="skins\Light_Green\menu\unflag.gif" />
+    <Content Include="skins\Light_Green\message_container_bg.gif" />
+    <Content Include="skins\Light_Green\msg_drop.gif" />
+    <Content Include="skins\Light_Green\msg_not_drop.gif" />
+    <Content Include="skins\Light_Green\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\Light_Green\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\Light_Green\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\Light_Green\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\Light_Green\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\Light_Green\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\Light_Green\settings\menu_accounts.gif" />
+    <Content Include="skins\Light_Green\settings\menu_calendar.gif" />
+    <Content Include="skins\Light_Green\settings\menu_common.gif" />
+    <Content Include="skins\Light_Green\settings\menu_contacts.gif" />
+    <Content Include="skins\Light_Green\styles.css" />
+    <Content Include="skins\Light_Green\tip_arrow.gif" />
+    <Content Include="skins\Light_Green\tip_info.gif" />
+    <Content Include="skins\Light_Green\toolbar_back.gif" />
+    <Content Include="skins\Light_Green\toolbar_back_over.gif" />
+    <Content Include="skins\Light_Green\wait.gif" />
+    <Content Include="skins\Mac_Style\acc_back.gif" />
+    <Content Include="skins\Mac_Style\admin_arrow_1.gif" />
+    <Content Include="skins\Mac_Style\admin_arrow_2.gif" />
+    <Content Include="skins\Mac_Style\contacts\bottom.gif" />
+    <Content Include="skins\Mac_Style\contacts\bottom_left.gif" />
+    <Content Include="skins\Mac_Style\contacts\bottom_right.gif" />
+    <Content Include="skins\Mac_Style\contacts\close.gif" />
+    <Content Include="skins\Mac_Style\contacts\group.gif" />
+    <Content Include="skins\Mac_Style\contacts\left.gif" />
+    <Content Include="skins\Mac_Style\contacts\right.gif" />
+    <Content Include="skins\Mac_Style\contacts\save.gif" />
+    <Content Include="skins\Mac_Style\contacts\top.gif" />
+    <Content Include="skins\Mac_Style\contacts\top_left.gif" />
+    <Content Include="skins\Mac_Style\contacts\top_right.gif" />
+    <Content Include="skins\Mac_Style\empty_back.gif" />
+    <Content Include="skins\Mac_Style\error.gif" />
+    <Content Include="skins\Mac_Style\folders\down.gif" />
+    <Content Include="skins\Mac_Style\folders\down_inactive.gif" />
+    <Content Include="skins\Mac_Style\folders\folder.gif" />
+    <Content Include="skins\Mac_Style\folders\folder_drafts.gif" />
+    <Content Include="skins\Mac_Style\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\Mac_Style\folders\folder_inbox.gif" />
+    <Content Include="skins\Mac_Style\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\Mac_Style\folders\folder_send.gif" />
+    <Content Include="skins\Mac_Style\folders\folder_send_sync.gif" />
+    <Content Include="skins\Mac_Style\folders\folder_sync.gif" />
+    <Content Include="skins\Mac_Style\folders\folder_trash.gif" />
+    <Content Include="skins\Mac_Style\folders\folder_trash_sync.gif" />
+    <Content Include="skins\Mac_Style\folders\hide.gif" />
+    <Content Include="skins\Mac_Style\folders\hide_folders.gif" />
+    <Content Include="skins\Mac_Style\folders\show.gif" />
+    <Content Include="skins\Mac_Style\folders\show_folders.gif" />
+    <Content Include="skins\Mac_Style\folders\up.gif" />
+    <Content Include="skins\Mac_Style\folders\up_inactive.gif" />
+    <Content Include="skins\Mac_Style\folders_back.gif" />
+    <Content Include="skins\Mac_Style\headers_back.gif" />
+    <Content Include="skins\Mac_Style\header_back.gif" />
+    <Content Include="skins\Mac_Style\icons\forwarded_read.gif" />
+    <Content Include="skins\Mac_Style\icons\forwarded_unread.gif" />
+    <Content Include="skins\Mac_Style\icons\help.gif" />
+    <Content Include="skins\Mac_Style\icons\replied_read.gif" />
+    <Content Include="skins\Mac_Style\icons\replied_unread.gif" />
+    <Content Include="skins\Mac_Style\info.gif" />
+    <Content Include="skins\Mac_Style\login_error.gif" />
+    <Content Include="skins\Mac_Style\logo.gif" />
+    <Content Include="skins\Mac_Style\low_toolbar_back.gif" />
+    <Content Include="skins\Mac_Style\menu\accounts_arrow.gif" />
+    <Content Include="skins\Mac_Style\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\Mac_Style\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\Mac_Style\menu\add_contacts_to.gif" />
+    <Content Include="skins\Mac_Style\menu\arrow_down.gif" />
+    <Content Include="skins\Mac_Style\menu\arrow_up.gif" />
+    <Content Include="skins\Mac_Style\menu\attachment.gif" />
+    <Content Include="skins\Mac_Style\menu\back_to_list.gif" />
+    <Content Include="skins\Mac_Style\menu\check_mail.gif" />
+    <Content Include="skins\Mac_Style\menu\delete.gif" />
+    <Content Include="skins\Mac_Style\menu\empty_trash.gif" />
+    <Content Include="skins\Mac_Style\menu\flag.gif" />
+    <Content Include="skins\Mac_Style\menu\forward.gif" />
+    <Content Include="skins\Mac_Style\menu\import_contacts.gif" />
+    <Content Include="skins\Mac_Style\menu\mark_all_read.gif" />
+    <Content Include="skins\Mac_Style\menu\mark_all_unread.gif" />
+    <Content Include="skins\Mac_Style\menu\mark_as_read.gif" />
+    <Content Include="skins\Mac_Style\menu\mark_as_unread.gif" />
+    <Content Include="skins\Mac_Style\menu\message_down.gif" />
+    <Content Include="skins\Mac_Style\menu\message_down_inactive.gif" />
+    <Content Include="skins\Mac_Style\menu\message_up.gif" />
+    <Content Include="skins\Mac_Style\menu\message_up_inactive.gif" />
+    <Content Include="skins\Mac_Style\menu\move_to_folder.gif" />
+    <Content Include="skins\Mac_Style\menu\new_contact.gif" />
+    <Content Include="skins\Mac_Style\menu\new_group.gif" />
+    <Content Include="skins\Mac_Style\menu\new_message.gif" />
+    <Content Include="skins\Mac_Style\menu\order_arrow_down.gif" />
+    <Content Include="skins\Mac_Style\menu\order_arrow_up.gif" />
+    <Content Include="skins\Mac_Style\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\Mac_Style\menu\print.gif" />
+    <Content Include="skins\Mac_Style\menu\priority_high.gif" />
+    <Content Include="skins\Mac_Style\menu\priority_low.gif" />
+    <Content Include="skins\Mac_Style\menu\priority_normal.gif" />
+    <Content Include="skins\Mac_Style\menu\purge.gif" />
+    <Content Include="skins\Mac_Style\menu\reload_folders.gif" />
+    <Content Include="skins\Mac_Style\menu\reply.gif" />
+    <Content Include="skins\Mac_Style\menu\replyall.gif" />
+    <Content Include="skins\Mac_Style\menu\save.gif" />
+    <Content Include="skins\Mac_Style\menu\search_button.gif" />
+    <Content Include="skins\Mac_Style\menu\search_button_big.gif" />
+    <Content Include="skins\Mac_Style\menu\send.gif" />
+    <Content Include="skins\Mac_Style\menu\unflag.gif" />
+    <Content Include="skins\Mac_Style\msg_drop.gif" />
+    <Content Include="skins\Mac_Style\msg_not_drop.gif" />
+    <Content Include="skins\Mac_Style\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\Mac_Style\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\Mac_Style\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\Mac_Style\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\Mac_Style\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\Mac_Style\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\Mac_Style\select_back.gif" />
+    <Content Include="skins\Mac_Style\settings\menu_accounts.gif" />
+    <Content Include="skins\Mac_Style\settings\menu_calendar.gif" />
+    <Content Include="skins\Mac_Style\settings\menu_common.gif" />
+    <Content Include="skins\Mac_Style\settings\menu_contacts.gif" />
+    <Content Include="skins\Mac_Style\styles.css" />
+    <Content Include="skins\Mac_Style\tip_arrow.gif" />
+    <Content Include="skins\Mac_Style\tip_info.gif" />
+    <Content Include="skins\Mac_Style\toolbar_back.gif" />
+    <Content Include="skins\Mac_Style\tool_down_back.gif" />
+    <Content Include="skins\Mac_Style\tool_over_back.gif" />
+    <Content Include="skins\Mac_Style\wait.gif" />
+    <Content Include="skins\Red_line\acc_back.gif" />
+    <Content Include="skins\Red_line\admin_arrow_1.gif" />
+    <Content Include="skins\Red_line\admin_arrow_2.gif" />
+    <Content Include="skins\Red_line\contacts\bottom.gif" />
+    <Content Include="skins\Red_line\contacts\bottom_left.gif" />
+    <Content Include="skins\Red_line\contacts\bottom_right.gif" />
+    <Content Include="skins\Red_line\contacts\close.gif" />
+    <Content Include="skins\Red_line\contacts\group.gif" />
+    <Content Include="skins\Red_line\contacts\left.gif" />
+    <Content Include="skins\Red_line\contacts\right.gif" />
+    <Content Include="skins\Red_line\contacts\save.gif" />
+    <Content Include="skins\Red_line\contacts\top.gif" />
+    <Content Include="skins\Red_line\contacts\top_left.gif" />
+    <Content Include="skins\Red_line\contacts\top_right.gif" />
+    <Content Include="skins\Red_line\error.gif" />
+    <Content Include="skins\Red_line\folders\down.gif" />
+    <Content Include="skins\Red_line\folders\down_inactive.gif" />
+    <Content Include="skins\Red_line\folders\folder.gif" />
+    <Content Include="skins\Red_line\folders\folder_drafts.gif" />
+    <Content Include="skins\Red_line\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\Red_line\folders\folder_inbox.gif" />
+    <Content Include="skins\Red_line\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\Red_line\folders\folder_send.gif" />
+    <Content Include="skins\Red_line\folders\folder_send_sync.gif" />
+    <Content Include="skins\Red_line\folders\folder_sync.gif" />
+    <Content Include="skins\Red_line\folders\folder_trash.gif" />
+    <Content Include="skins\Red_line\folders\folder_trash_sync.gif" />
+    <Content Include="skins\Red_line\folders\hide.gif" />
+    <Content Include="skins\Red_line\folders\hide_folders.gif" />
+    <Content Include="skins\Red_line\folders\show.gif" />
+    <Content Include="skins\Red_line\folders\show_folders.gif" />
+    <Content Include="skins\Red_line\folders\up.gif" />
+    <Content Include="skins\Red_line\folders\up_inactive.gif" />
+    <Content Include="skins\Red_line\folders_back.gif" />
+    <Content Include="skins\Red_line\header_back.gif" />
+    <Content Include="skins\Red_line\icons\forwarded_read.gif" />
+    <Content Include="skins\Red_line\icons\forwarded_unread.gif" />
+    <Content Include="skins\Red_line\icons\help.gif" />
+    <Content Include="skins\Red_line\icons\replied_read.gif" />
+    <Content Include="skins\Red_line\icons\replied_unread.gif" />
+    <Content Include="skins\Red_line\info.gif" />
+    <Content Include="skins\Red_line\item_over_back.gif" />
+    <Content Include="skins\Red_line\login_error.gif" />
+    <Content Include="skins\Red_line\logo.gif" />
+    <Content Include="skins\Red_line\menu\accounts_arrow.gif" />
+    <Content Include="skins\Red_line\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\Red_line\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\Red_line\menu\add_contacts_to.gif" />
+    <Content Include="skins\Red_line\menu\arrow_down.gif" />
+    <Content Include="skins\Red_line\menu\arrow_up.gif" />
+    <Content Include="skins\Red_line\menu\attachment.gif" />
+    <Content Include="skins\Red_line\menu\back_to_list.gif" />
+    <Content Include="skins\Red_line\menu\check_mail.gif" />
+    <Content Include="skins\Red_line\menu\delete.gif" />
+    <Content Include="skins\Red_line\menu\empty_trash.gif" />
+    <Content Include="skins\Red_line\menu\flag.gif" />
+    <Content Include="skins\Red_line\menu\forward.gif" />
+    <Content Include="skins\Red_line\menu\import_contacts.gif" />
+    <Content Include="skins\Red_line\menu\mark_all_read.gif" />
+    <Content Include="skins\Red_line\menu\mark_all_unread.gif" />
+    <Content Include="skins\Red_line\menu\mark_as_read.gif" />
+    <Content Include="skins\Red_line\menu\mark_as_unread.gif" />
+    <Content Include="skins\Red_line\menu\message_down.gif" />
+    <Content Include="skins\Red_line\menu\message_down_inactive.gif" />
+    <Content Include="skins\Red_line\menu\message_up.gif" />
+    <Content Include="skins\Red_line\menu\message_up_inactive.gif" />
+    <Content Include="skins\Red_line\menu\move_to_folder.gif" />
+    <Content Include="skins\Red_line\menu\new_contact.gif" />
+    <Content Include="skins\Red_line\menu\new_group.gif" />
+    <Content Include="skins\Red_line\menu\new_message.gif" />
+    <Content Include="skins\Red_line\menu\order_arrow_down.gif" />
+    <Content Include="skins\Red_line\menu\order_arrow_up.gif" />
+    <Content Include="skins\Red_line\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\Red_line\menu\print.gif" />
+    <Content Include="skins\Red_line\menu\priority_high.gif" />
+    <Content Include="skins\Red_line\menu\priority_low.gif" />
+    <Content Include="skins\Red_line\menu\priority_normal.gif" />
+    <Content Include="skins\Red_line\menu\purge.gif" />
+    <Content Include="skins\Red_line\menu\reload_folders.gif" />
+    <Content Include="skins\Red_line\menu\reply.gif" />
+    <Content Include="skins\Red_line\menu\replyall.gif" />
+    <Content Include="skins\Red_line\menu\save.gif" />
+    <Content Include="skins\Red_line\menu\search_button.gif" />
+    <Content Include="skins\Red_line\menu\search_button_big.gif" />
+    <Content Include="skins\Red_line\menu\send.gif" />
+    <Content Include="skins\Red_line\menu\unflag.gif" />
+    <Content Include="skins\Red_line\msg_drop.gif" />
+    <Content Include="skins\Red_line\msg_not_drop.gif" />
+    <Content Include="skins\Red_line\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\Red_line\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\Red_line\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\Red_line\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\Red_line\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\Red_line\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\Red_line\press_back.gif" />
+    <Content Include="skins\Red_line\settings\menu_accounts.gif" />
+    <Content Include="skins\Red_line\settings\menu_calendar.gif" />
+    <Content Include="skins\Red_line\settings\menu_common.gif" />
+    <Content Include="skins\Red_line\settings\menu_contacts.gif" />
+    <Content Include="skins\Red_line\styles.css" />
+    <Content Include="skins\Red_line\tip_arrow.gif" />
+    <Content Include="skins\Red_line\tip_info.gif" />
+    <Content Include="skins\Red_line\toolbar_back.gif" />
+    <Content Include="skins\Red_line\wait.gif" />
+    <Content Include="skins\Ya-Ya\admin_arrow_1.gif" />
+    <Content Include="skins\Ya-Ya\admin_arrow_2.gif" />
+    <Content Include="skins\Ya-Ya\contacts\bottom.gif" />
+    <Content Include="skins\Ya-Ya\contacts\bottom_left.gif" />
+    <Content Include="skins\Ya-Ya\contacts\bottom_right.gif" />
+    <Content Include="skins\Ya-Ya\contacts\close.gif" />
+    <Content Include="skins\Ya-Ya\contacts\group.gif" />
+    <Content Include="skins\Ya-Ya\contacts\left.gif" />
+    <Content Include="skins\Ya-Ya\contacts\right.gif" />
+    <Content Include="skins\Ya-Ya\contacts\save.gif" />
+    <Content Include="skins\Ya-Ya\contacts\top.gif" />
+    <Content Include="skins\Ya-Ya\contacts\top_left.gif" />
+    <Content Include="skins\Ya-Ya\contacts\top_right.gif" />
+    <Content Include="skins\Ya-Ya\error.gif" />
+    <Content Include="skins\Ya-Ya\folders\down.gif" />
+    <Content Include="skins\Ya-Ya\folders\down_inactive.gif" />
+    <Content Include="skins\Ya-Ya\folders\folder.gif" />
+    <Content Include="skins\Ya-Ya\folders\folder_drafts.gif" />
+    <Content Include="skins\Ya-Ya\folders\folder_drafts_sync.gif" />
+    <Content Include="skins\Ya-Ya\folders\folder_inbox.gif" />
+    <Content Include="skins\Ya-Ya\folders\folder_inbox_sync.gif" />
+    <Content Include="skins\Ya-Ya\folders\folder_send.gif" />
+    <Content Include="skins\Ya-Ya\folders\folder_send_sync.gif" />
+    <Content Include="skins\Ya-Ya\folders\folder_sync.gif" />
+    <Content Include="skins\Ya-Ya\folders\folder_trash.gif" />
+    <Content Include="skins\Ya-Ya\folders\folder_trash_sync.gif" />
+    <Content Include="skins\Ya-Ya\folders\hide.gif" />
+    <Content Include="skins\Ya-Ya\folders\hide_folders.gif" />
+    <Content Include="skins\Ya-Ya\folders\show.gif" />
+    <Content Include="skins\Ya-Ya\folders\show_folders.gif" />
+    <Content Include="skins\Ya-Ya\folders\up.gif" />
+    <Content Include="skins\Ya-Ya\folders\up_inactive.gif" />
+    <Content Include="skins\Ya-Ya\folders_back.gif" />
+    <Content Include="skins\Ya-Ya\footer_back.gif" />
+    <Content Include="skins\Ya-Ya\header_back.gif" />
+    <Content Include="skins\Ya-Ya\icons\forwarded_read.gif" />
+    <Content Include="skins\Ya-Ya\icons\forwarded_unread.gif" />
+    <Content Include="skins\Ya-Ya\icons\help.gif" />
+    <Content Include="skins\Ya-Ya\icons\replied_read.gif" />
+    <Content Include="skins\Ya-Ya\icons\replied_unread.gif" />
+    <Content Include="skins\Ya-Ya\info.gif" />
+    <Content Include="skins\Ya-Ya\login_error.gif" />
+    <Content Include="skins\Ya-Ya\menu\accounts_arrow.gif" />
+    <Content Include="skins\Ya-Ya\menu\accounts_arrow_down.gif" />
+    <Content Include="skins\Ya-Ya\menu\accounts_arrow_over.gif" />
+    <Content Include="skins\Ya-Ya\menu\add_contacts_to.gif" />
+    <Content Include="skins\Ya-Ya\menu\arrow_down.gif" />
+    <Content Include="skins\Ya-Ya\menu\arrow_up.gif" />
+    <Content Include="skins\Ya-Ya\menu\attachment.gif" />
+    <Content Include="skins\Ya-Ya\menu\back_to_list.gif" />
+    <Content Include="skins\Ya-Ya\menu\check_mail.gif" />
+    <Content Include="skins\Ya-Ya\menu\delete.gif" />
+    <Content Include="skins\Ya-Ya\menu\empty_trash.gif" />
+    <Content Include="skins\Ya-Ya\menu\flag.gif" />
+    <Content Include="skins\Ya-Ya\menu\forward.gif" />
+    <Content Include="skins\Ya-Ya\menu\import_contacts.gif" />
+    <Content Include="skins\Ya-Ya\menu\mark_all_read.gif" />
+    <Content Include="skins\Ya-Ya\menu\mark_all_unread.gif" />
+    <Content Include="skins\Ya-Ya\menu\mark_as_read.gif" />
+    <Content Include="skins\Ya-Ya\menu\mark_as_unread.gif" />
+    <Content Include="skins\Ya-Ya\menu\message_down.gif" />
+    <Content Include="skins\Ya-Ya\menu\message_down_inactive.gif" />
+    <Content Include="skins\Ya-Ya\menu\message_up.gif" />
+    <Content Include="skins\Ya-Ya\menu\message_up_inactive.gif" />
+    <Content Include="skins\Ya-Ya\menu\move_to_folder.gif" />
+    <Content Include="skins\Ya-Ya\menu\new_contact.gif" />
+    <Content Include="skins\Ya-Ya\menu\new_group.gif" />
+    <Content Include="skins\Ya-Ya\menu\new_message.gif" />
+    <Content Include="skins\Ya-Ya\menu\order_arrow_down.gif" />
+    <Content Include="skins\Ya-Ya\menu\order_arrow_up.gif" />
+    <Content Include="skins\Ya-Ya\menu\popup_menu_arrow.gif" />
+    <Content Include="skins\Ya-Ya\menu\print.gif" />
+    <Content Include="skins\Ya-Ya\menu\priority_high.gif" />
+    <Content Include="skins\Ya-Ya\menu\priority_low.gif" />
+    <Content Include="skins\Ya-Ya\menu\priority_normal.gif" />
+    <Content Include="skins\Ya-Ya\menu\purge.gif" />
+    <Content Include="skins\Ya-Ya\menu\reload_folders.gif" />
+    <Content Include="skins\Ya-Ya\menu\reply.gif" />
+    <Content Include="skins\Ya-Ya\menu\replyall.gif" />
+    <Content Include="skins\Ya-Ya\menu\save.gif" />
+    <Content Include="skins\Ya-Ya\menu\search_button.gif" />
+    <Content Include="skins\Ya-Ya\menu\search_button_big.gif" />
+    <Content Include="skins\Ya-Ya\menu\send.gif" />
+    <Content Include="skins\Ya-Ya\menu\unflag.gif" />
+    <Content Include="skins\Ya-Ya\msg_drop.gif" />
+    <Content Include="skins\Ya-Ya\msg_not_drop.gif" />
+    <Content Include="skins\Ya-Ya\page_switchers\inbox_first_page.gif" />
+    <Content Include="skins\Ya-Ya\page_switchers\inbox_last_page.gif" />
+    <Content Include="skins\Ya-Ya\page_switchers\inbox_left_border.gif" />
+    <Content Include="skins\Ya-Ya\page_switchers\inbox_next_page.gif" />
+    <Content Include="skins\Ya-Ya\page_switchers\inbox_prev_page.gif" />
+    <Content Include="skins\Ya-Ya\page_switchers\inbox_right_border.gif" />
+    <Content Include="skins\Ya-Ya\settings\menu_accounts.gif" />
+    <Content Include="skins\Ya-Ya\settings\menu_calendar.gif" />
+    <Content Include="skins\Ya-Ya\settings\menu_common.gif" />
+    <Content Include="skins\Ya-Ya\settings\menu_contacts.gif" />
+    <Content Include="skins\Ya-Ya\styles.css" />
+    <Content Include="skins\Ya-Ya\tip_arrow.gif" />
+    <Content Include="skins\Ya-Ya\tip_info.gif" />
+    <Content Include="skins\Ya-Ya\toolbar_back.gif" />
+    <Content Include="skins\Ya-Ya\used.gif" />
+    <Content Include="skins\Ya-Ya\wait.gif" />
+    <Content Include="spellcheck.aspx" />
+    <Content Include="updateDB.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="upload.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="webmail.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WebMailWrapper.aspx" />
+    <Content Include="xml_processing.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="_class_selection.js" />
+    <Content Include="_defines.js" />
+    <Content Include="_functions.js" />
+    <Compile Include="advanced_data_help.aspx.cs">
+      <DependentUpon>advanced_data_help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="advanced_data_help.aspx.designer.cs">
+      <DependentUpon>advanced_data_help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Domain.cs" />
+    <Compile Include="basewebmail.aspx.designer.cs">
+      <DependentUpon>basewebmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="calendar.aspx.designer.cs">
+      <DependentUpon>calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="calendar\AccessDBWorker.cs" />
+    <Compile Include="calendar\CalendarDBWorker.cs" />
+    <Compile Include="calendar\MsSQLDBWorker.cs" />
+    <Compile Include="calendar\MySQLDBWorker.cs" />
+    <Compile Include="calendar\OdbcDBWorker.cs" />
+    <Compile Include="calendar\processing.aspx.designer.cs">
+      <DependentUpon>processing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="check-mail.aspx.designer.cs">
+      <DependentUpon>check-mail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\AccountsList.ascx.designer.cs">
+      <DependentUpon>AccountsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\ContactContainer.ascx.designer.cs">
+      <DependentUpon>ContactContainer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\Contacts.ascx.designer.cs">
+      <DependentUpon>Contacts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\Default.ascx.designer.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\FoldersPart.ascx.designer.cs">
+      <DependentUpon>FoldersPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\GroupContainer.ascx.designer.cs">
+      <DependentUpon>GroupContainer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\ImportContacts.ascx.designer.cs">
+      <DependentUpon>ImportContacts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\Information.ascx.designer.cs">
+      <DependentUpon>Information.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\LowToolbar.ascx.designer.cs">
+      <DependentUpon>LowToolbar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\MailList.ascx.designer.cs">
+      <DependentUpon>MailList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\MessageContainer.ascx.designer.cs">
+      <DependentUpon>MessageContainer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\NewMessage.ascx.designer.cs">
+      <DependentUpon>NewMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\Settings.ascx.designer.cs">
+      <DependentUpon>Settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\SettingsCommon.ascx.designer.cs">
+      <DependentUpon>SettingsCommon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\SettingsContacts.ascx.designer.cs">
+      <DependentUpon>SettingsContacts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\SettingsEmailAccounts.ascx.designer.cs">
+      <DependentUpon>SettingsEmailAccounts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\SettingsEmailAccountsFilters.ascx.designer.cs">
+      <DependentUpon>SettingsEmailAccountsFilters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\SettingsEmailAccountsManageFolders.ascx.designer.cs">
+      <DependentUpon>SettingsEmailAccountsManageFolders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\SettingsEmailAccountsProperties.ascx.designer.cs">
+      <DependentUpon>SettingsEmailAccountsProperties.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\SettingsEmailAccountsSignature.ascx.designer.cs">
+      <DependentUpon>SettingsEmailAccountsSignature.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\Toolbar.ascx.designer.cs">
+      <DependentUpon>Toolbar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="classic\ViewMessage.ascx.designer.cs">
+      <DependentUpon>ViewMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Account.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\AddressBookContact.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\AddressBookGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\BaseWebMailActions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="Classes\CalendarObjects.cs" />
+    <Compile Include="Classes\CommandCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Constants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\CsvParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\DbManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\DbManagerCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\DbStorage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Enumerations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Exceptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\FileSystem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Filter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Folder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\FolderCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\ImapStorage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Log.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\MailProcessor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\MailStorage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\MsAccessCommandCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\MsAccessDbManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\MsSqlStorage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\MySqlCommandCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\MySqlDbManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Pop3Storage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\SettingsManagement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Smtp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\TempRow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\User.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\UsersData.cs" />
+    <Compile Include="Classes\Utils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\WebMailMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\WebMailMessageCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\WebmailResourceManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\WMServerStorage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\XmlPacketManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="basewebmail.aspx.cs">
+      <DependentUpon>basewebmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="calendar.aspx.cs">
+      <DependentUpon>calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="calendar\CalendarResourceManager.cs" />
+    <Compile Include="calendar\DBHelper.cs" />
+    <Compile Include="calendar\ExecutionLog.cs" />
+    <Compile Include="calendar\processing.aspx.cs">
+      <DependentUpon>processing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="check-mail.aspx.cs">
+      <DependentUpon>check-mail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\AccountsList.ascx.cs">
+      <DependentUpon>AccountsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\ContactContainer.ascx.cs">
+      <DependentUpon>ContactContainer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\Contacts.ascx.cs">
+      <DependentUpon>Contacts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\Default.ascx.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\FoldersPart.ascx.cs">
+      <DependentUpon>FoldersPart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\GroupContainer.ascx.cs">
+      <DependentUpon>GroupContainer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\ImportContacts.ascx.cs">
+      <DependentUpon>ImportContacts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\Information.ascx.cs">
+      <DependentUpon>Information.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\jsbuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classic\LowToolbar.ascx.cs">
+      <DependentUpon>LowToolbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\MailList.ascx.cs">
+      <DependentUpon>MailList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\MessageContainer.ascx.cs">
+      <DependentUpon>MessageContainer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\NewMessage.ascx.cs">
+      <DependentUpon>NewMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\Settings.ascx.cs">
+      <DependentUpon>Settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\SettingsCommon.ascx.cs">
+      <DependentUpon>SettingsCommon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\SettingsContacts.ascx.cs">
+      <DependentUpon>SettingsContacts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\SettingsEmailAccounts.ascx.cs">
+      <DependentUpon>SettingsEmailAccounts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\SettingsEmailAccountsFilters.ascx.cs">
+      <DependentUpon>SettingsEmailAccountsFilters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\SettingsEmailAccountsManageFolders.ascx.cs">
+      <DependentUpon>SettingsEmailAccountsManageFolders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\SettingsEmailAccountsProperties.ascx.cs">
+      <DependentUpon>SettingsEmailAccountsProperties.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\SettingsEmailAccountsSignature.ascx.cs">
+      <DependentUpon>SettingsEmailAccountsSignature.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\Toolbar.ascx.cs">
+      <DependentUpon>Toolbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classic\ViewMessage.ascx.cs">
+      <DependentUpon>ViewMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contactlist.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>contactlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contactlist.aspx.designer.cs">
+      <DependentUpon>contactlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Copyright.ascx.cs">
+      <DependentUpon>Copyright.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Copyright.ascx.designer.cs">
+      <DependentUpon>Copyright.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="download_view_attachment.aspx.cs">
+      <DependentUpon>download_view_attachment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="download_view_attachment.aspx.designer.cs">
+      <DependentUpon>download_view_attachment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="get_attachment_binary.aspx.cs">
+      <DependentUpon>get_attachment_binary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="get_attachment_binary.aspx.designer.cs">
+      <DependentUpon>get_attachment_binary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="history-storage.aspx.cs">
+      <DependentUpon>history-storage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="history-storage.aspx.designer.cs">
+      <DependentUpon>history-storage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="import.aspx.cs">
+      <DependentUpon>import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="import.aspx.designer.cs">
+      <DependentUpon>import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\integr.aspx.cs">
+      <DependentUpon>integr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Integration\integr.aspx.designer.cs">
+      <DependentUpon>integr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Integration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="langs_js.aspx.cs">
+      <DependentUpon>langs_js.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="langs_js.aspx.designer.cs">
+      <DependentUpon>langs_js.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logo.ascx.cs">
+      <DependentUpon>Logo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logo.ascx.designer.cs">
+      <DependentUpon>Logo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="mailadm.aspx.cs">
+      <DependentUpon>mailadm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mailadm.aspx.designer.cs">
+      <DependentUpon>mailadm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_calendar_settings.ascx.cs">
+      <DependentUpon>mailadm_calendar_settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_calendar_settings.ascx.designer.cs">
+      <DependentUpon>mailadm_calendar_settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_database_settings.ascx.cs">
+      <DependentUpon>mailadm_database_settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_database_settings.ascx.designer.cs">
+      <DependentUpon>mailadm_database_settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_debug_settings.ascx.cs">
+      <DependentUpon>mailadm_debug_settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_debug_settings.ascx.designer.cs">
+      <DependentUpon>mailadm_debug_settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_interface_settings.ascx.cs">
+      <DependentUpon>mailadm_interface_settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_interface_settings.ascx.designer.cs">
+      <DependentUpon>mailadm_interface_settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_login.ascx.cs">
+      <DependentUpon>mailadm_login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_login.ascx.designer.cs">
+      <DependentUpon>mailadm_login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_login_settings.ascx.cs">
+      <DependentUpon>mailadm_login_settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_login_settings.ascx.designer.cs">
+      <DependentUpon>mailadm_login_settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_mail_server_integration.ascx.cs">
+      <DependentUpon>mailadm_mail_server_integration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_mail_server_integration.ascx.designer.cs">
+      <DependentUpon>mailadm_mail_server_integration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_menu.ascx.cs">
+      <DependentUpon>mailadm_menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_menu.ascx.designer.cs">
+      <DependentUpon>mailadm_menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_user_details.ascx.cs">
+      <DependentUpon>mailadm_user_details.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_user_details.ascx.designer.cs">
+      <DependentUpon>mailadm_user_details.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_user_management.ascx.cs">
+      <DependentUpon>mailadm_user_management.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_user_management.ascx.designer.cs">
+      <DependentUpon>mailadm_user_management.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_webmail_settings.ascx.cs">
+      <DependentUpon>mailadm_webmail_settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailAdm\mailadm_webmail_settings.ascx.designer.cs">
+      <DependentUpon>mailadm_webmail_settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="msgprint.aspx.cs">
+      <DependentUpon>msgprint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="msgprint.aspx.designer.cs">
+      <DependentUpon>msgprint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="session_saver.aspx.cs">
+      <DependentUpon>session_saver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="session_saver.aspx.designer.cs">
+      <DependentUpon>session_saver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="spellcheck.aspx.cs">
+      <DependentUpon>spellcheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="spellcheck.aspx.designer.cs">
+      <DependentUpon>spellcheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updateDB.aspx.cs">
+      <DependentUpon>updateDB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updateDB.aspx.designer.cs">
+      <DependentUpon>updateDB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="upload.aspx.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="upload.aspx.designer.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="webmail.aspx.cs">
+      <DependentUpon>webmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="webmail.aspx.designer.cs">
+      <DependentUpon>webmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebMailWrapper.aspx.cs">
+      <DependentUpon>WebMailWrapper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebMailWrapper.aspx.designer.cs">
+      <DependentUpon>WebMailWrapper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xml_processing.aspx.cs">
+      <DependentUpon>xml_processing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xml_processing.aspx.designer.cs">
+      <DependentUpon>xml_processing.aspx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="advanced_data_help.aspx.resx">
+      <DependentUpon>advanced_data_help.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="basewebmail.aspx.resx">
+      <DependentUpon>basewebmail.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="check-mail.aspx.resx">
+      <DependentUpon>check-mail.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\AccountsList.ascx.resx">
+      <DependentUpon>AccountsList.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\ContactContainer.ascx.resx">
+      <DependentUpon>ContactContainer.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\Contacts.ascx.resx">
+      <DependentUpon>Contacts.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\Default.ascx.resx">
+      <DependentUpon>Default.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\FoldersPart.ascx.resx">
+      <DependentUpon>FoldersPart.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\GroupContainer.ascx.resx">
+      <DependentUpon>GroupContainer.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\ImportContacts.ascx.resx">
+      <DependentUpon>ImportContacts.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\Information.ascx.resx">
+      <DependentUpon>Information.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\LowToolbar.ascx.resx">
+      <DependentUpon>LowToolbar.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\MailList.ascx.resx">
+      <DependentUpon>MailList.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\MessageContainer.ascx.resx">
+      <DependentUpon>MessageContainer.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\NewMessage.ascx.resx">
+      <DependentUpon>NewMessage.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\Settings.ascx.resx">
+      <DependentUpon>Settings.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\SettingsCommon.ascx.resx">
+      <DependentUpon>SettingsCommon.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\SettingsContacts.ascx.resx">
+      <DependentUpon>SettingsContacts.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\SettingsEmailAccounts.ascx.resx">
+      <DependentUpon>SettingsEmailAccounts.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\SettingsEmailAccountsFilters.ascx.resx">
+      <DependentUpon>SettingsEmailAccountsFilters.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\SettingsEmailAccountsManageFolders.ascx.resx">
+      <DependentUpon>SettingsEmailAccountsManageFolders.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\SettingsEmailAccountsProperties.ascx.resx">
+      <DependentUpon>SettingsEmailAccountsProperties.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\SettingsEmailAccountsSignature.ascx.resx">
+      <DependentUpon>SettingsEmailAccountsSignature.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\Toolbar.ascx.resx">
+      <DependentUpon>Toolbar.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classic\ViewMessage.ascx.resx">
+      <DependentUpon>ViewMessage.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Copyright.ascx.resx">
+      <DependentUpon>Copyright.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="default.aspx.resx">
+      <DependentUpon>default.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="download_view_attachment.aspx.resx">
+      <DependentUpon>download_view_attachment.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="get_attachment_binary.aspx.resx">
+      <DependentUpon>get_attachment_binary.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="history-storage.aspx.resx">
+      <DependentUpon>history-storage.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="import.aspx.resx">
+      <DependentUpon>import.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\integr.aspx.resx">
+      <DependentUpon>integr.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="langs_js.aspx.resx">
+      <DependentUpon>langs_js.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logo.ascx.resx">
+      <DependentUpon>Logo.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mailadm.aspx.resx">
+      <DependentUpon>mailadm.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailAdm\mailadm_database_settings.ascx.resx">
+      <DependentUpon>mailadm_database_settings.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailAdm\mailadm_debug_settings.ascx.resx">
+      <DependentUpon>mailadm_debug_settings.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailAdm\mailadm_interface_settings.ascx.resx">
+      <DependentUpon>mailadm_interface_settings.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailAdm\mailadm_login.ascx.resx">
+      <DependentUpon>mailadm_login.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailAdm\mailadm_login_settings.ascx.resx">
+      <DependentUpon>mailadm_login_settings.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailAdm\mailadm_mail_server_integration.ascx.resx">
+      <DependentUpon>mailadm_mail_server_integration.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailAdm\mailadm_menu.ascx.resx">
+      <DependentUpon>mailadm_menu.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailAdm\mailadm_user_details.ascx.resx">
+      <DependentUpon>mailadm_user_details.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailAdm\mailadm_user_management.ascx.resx">
+      <DependentUpon>mailadm_user_management.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailAdm\mailadm_webmail_settings.ascx.resx">
+      <DependentUpon>mailadm_webmail_settings.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="msgprint.aspx.resx">
+      <DependentUpon>msgprint.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="session_saver.aspx.resx">
+      <DependentUpon>session_saver.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateDB.aspx.resx">
+      <DependentUpon>updateDB.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="upload.aspx.resx">
+      <DependentUpon>upload.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="webmail.aspx.resx">
+      <DependentUpon>webmail.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xml_processing.aspx.resx">
+      <DependentUpon>xml_processing.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5299</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

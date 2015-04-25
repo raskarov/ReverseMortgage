@@ -1,0 +1,104 @@
+﻿/* RdInput MAC skin */
+
+.radHoverCss_Inox,
+.radEnabledCss_Inox,
+.radDisabledCss_Inox,
+.radEmptyMessageCss_Inox,
+.radFocusedCss_Inox,
+.radNegativeCss_Inox,
+.radInvalidCss_Inox
+{
+	border: 0;
+	_background-attachment: fixed; /* IE */
+	height: 20px; width: 163px;
+	font: bold 12px Verdana, Arial, Sans-serif;
+	padding-top: 3px; 
+	padding-left: 3px;
+}
+
+.radHoverCss_Inox
+{
+	background: transparent url(Img/hover.gif) no-repeat;
+	color: #333;	
+}
+.radEnabledCss_Inox,
+.radEmptyMessageCss_Inox,
+.radNegativeCss_Inox
+{
+	background: transparent url(Img/default.gif) no-repeat;
+	color: #b7b7b7;
+}
+
+.radFocusedCss_Inox
+{
+	background: transparent url(Img/focus.gif) no-repeat;
+	color: #333;
+}
+
+.radEmptyMessageCss_Inox
+{
+	color: gray;
+}
+
+.radNegativeCss_Inox
+{
+	color: #990000;
+}
+
+.radInvalidCss_Inox
+{
+	background: transparent url(Img/error.gif) no-repeat;
+	color: red;
+}
+
+.radLabelCss_Inox 
+{
+	font: normal 10px Verdana, Arial, Sans-serif; 
+	color: #b7b7b7; 
+	padding-right: 5px;
+}
+
+/* input buttons */
+.radInpButtonCss,
+.radInpButtonCss_Inox a
+{
+    position: relative; top: 2px;
+}
+
+.radInpButtonCss_Inox img
+{
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    -moz-opacity: 1; opacity: 1;
+    border: 0;
+}
+
+.radInpButtonCss_Inox a:hover img
+{
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    -moz-opacity: 0.5; 
+    opacity: 0.5;
+}
+
+.radSpinUpCss_Inox a,
+.radSpinDownCss_Inox a
+{
+	/**/
+}
+
+.radSpinUpCss_Inox a img,
+.radSpinDownCss_Inox a img
+{
+	width: 7px; height: 4px;
+	border: 0;
+	position: relative;
+	top: -4px;
+	margin: 0 1px;
+}
+
+.radSpinUpCss_Inox a:hover img,
+.radSpinDownCss_Inox a:hover img
+{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	opacity: .5; -moz-opacity: .5;
+}
+/* end of input buttons */

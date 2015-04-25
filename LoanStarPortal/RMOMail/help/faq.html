@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<meta HTTP-EQUIV="Content-Type" Content="text-html; charset=iso8859-1"> 
+	<link rel="stylesheet" href="help_styles.css" type="text/css">
+</head>
+
+<body>
+<br>
+<p class="wmh_header" align="center">WebMail F.A.Q.</p>
+<p class="wmh_reg">
+	1. <a href="#1">How to start? Where is Setup.exe?</a><br>
+	<br>
+	2. <a href="#2">License key doesn't work. Why?</a><br>
+	<br>
+	3. <a href="#3">Administration settings disappeared. Why?</a><br>
+	<br>
+	4. <a href="#4">Error while attaching files to new message. Please advice.</a><br>
+	<br>
+	5. <a href="#5">I can't see embedded graphics while viewing HTML-formatted email message. Any suggestions?</a><br>
+	<br>
+</p>
+
+<p class="wmh_reg">
+	<a name="1" class="wmh_txt"><b>1. How to start? Where is Setup.exe?</b></a><br>
+	<br>
+	MailBee WebMail .NET is an ASP.NET web application and its installation is a sequence of common for any ASP.NET application steps.
+	<br>
+	See "<a href="installation_instructions.html">Installation instructions</a>".<br>
+	<br>
+</p>
+<p class="wmh_reg">
+	<a name="2" class="wmh_txt"><b>2. License key doesn't work. Why?</b></a><br>
+	<br>
+	License key must be entered in "License Key" field of "WebMail Settings" dialog in "Administration console".
+	To log in Administration console, navigate to http://where_webmail_is_installed/mailadm.aspx and use
+	"mailadm"/"12345" settings as default username and password (if you haven't changed password earlier).<br>
+	<br>
+</p>
+<p class="wmh_reg">
+	<a name="3" class="wmh_txt"><b>3. Administration settings disappeared / are not saved. Why?</b></a><br>
+		   <br>
+		Common reason of settings not being saved is <b>ASPNET</b> (ASP.NET Machine Account) or <b>NETWORK SERVICE</b> account has
+		insufficient permissions to the <b>data</b> folder. Please complete the steps below to grant the appropriate permissions:
+		<br>
+		<ul>
+			<li>using Windows Explorer, navigate to the folder which contains the <b>data</b> folder;</li>
+			<li>in context menu, choose <b>"Properties"</b> of the <b>data</b> folder and <b>"Security"</b> tab;</li>
+			<li>add <b>ASP.NET Machine Account (ASPNET)</b> and <b>NETWORK SERVICE</b> into the list;</li>
+			<li>tick <b>"Allow full control"</b> checkboxes for both added accounts to grant permissions and press <b>"OK"</b>.</li>
+		</ul>
+	For Windows 2003 Server with IIS 6, the ASP.NET user account can differ from <b>ASPNET</b> or <b>NETWORK SERVICE</b>.
+	To determine right user account under Windows 2003 Server, follow the steps below:
+	<br>
+	<ul>
+		<li>Run <b>Internet Information Services Manager</b>;</li>
+		<li>In <b>&lt;SERVER_NAME&gt;/Web Sites/&lt;WEB_SITE_NAME&gt;/</b>, look for the WebMail application directory and
+			  choose its properties (click <b>"Properties"</b> in context menu);</li>
+		<li>In <b>"Virtual Directory"</b> tab, memorize the <b>"Application name"</b> value (it's the name of application pool you need);</li>
+		<li>In <b>&lt;SERVER_NAME&gt;/Application Pools/</b>, look for the application pool which name you memorized and choose its properties;</li>
+		<li>In <b>"Identity"</b> tab, you can see the system account name which is the ASP.NET user account you need.</li>
+	</ul>
+	<br>		
+</p>
+
+<p class="wmh_reg">
+	<a name="4" class="wmh_txt"><b>4. Error while attaching files to new message. Please advice.</b></a><br>
+	<br>
+	Common problem with attachments is insufficient permissions for attachments folder which is located in
+	   the <b>data</b> folder. To resolve the issue, please refer to the <a href="#3">previous topic</a>.<br>
+	<br>
+</p>
+
+<p class="wmh_reg">
+	<a name="5" class="wmh_txt"><b>5. I can't see embedded graphics while viewing HTML-formatted email message. Any suggestions?</b></a><br>
+	<br>
+	See <a href="#4">Answer #4</a><br>
+	<br>
+</p>
+
+<br>
+<hr>
+<p class="wmh_reg" align="center">
+If you have any questions don't hesitate to email to <a href="mailto:support@afterlogic.com">support@afterlogic.com</a><br>
+Or visit our support web page at <a href="http://www.afterlogic.com/support" target="_blank">http://www.afterlogic.com/support</a><br>
+or web forum at <a href="http://www.afterlogic.com/forum" target="_blank">http://www.afterlogic.com/forum</a>
+</p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+#main { width:745px; margin:0 auto; text-align:left;}
+
+#header { background:url(images/tall.gif) left repeat-y #fff;}
+
+#middle { background:url(images/tall.gif) left repeat-y #fff;}
+
+#footer { height:95px; background:url(images/bottom_bg.gif) top left no-repeat;}
+
+.column1, .column2, .column3, .indent_column, .col1, .col2, .col3, .ind_col {float:left;}
+.container {width:100%;}
+
+/* ============================= index ===========================*/
+
+#index .column1 {width:187px;}
+#index .column2 {width:351px;}
+#index .column3 {width:169px;}
+
+/* ============================= index-1 ===========================*/
+
+#index_1 .column1 {width:538px;}
+#index_1 .column2 {width:169px;}
+
+/* ============================= index-2 ===========================*/

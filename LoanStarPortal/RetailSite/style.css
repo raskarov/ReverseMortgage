@@ -1,0 +1,121 @@
+/* CSS Document */
+
+* {
+	margin:0; padding:0;
+	font-size:100%;
+}
+
+body{
+	background:#e9e9ce url(images/body_bg.gif) top repeat-x;
+	text-align:center;
+}
+
+img {vertical-align:top;}
+a img { border:0;}
+
+ul { list-style:none;}
+
+.left { float:left;}
+.right {float:right;}
+.clear  { clear:both;}
+
+
+html, input, textarea
+	{
+		font-family:arial;
+		font-size:0.688em;
+		line-height:1.273em;
+		color:#666a67;
+	}
+
+input, select { vertical-align:middle; font-weight:normal;}
+
+a {color:#629d08;}
+a:hover{text-decoration:none;}
+.green {color:#629d08;}
+p {padding-top:14px;}
+.pad1 p {padding-top:16px;}
+
+/* ============================= main layout ====================== */
+
+.more {background:url(images/more_bg.gif) no-repeat 0 5px; padding-left:12px; color:#B9C0C7; text-decoration:none;}
+.more:hover {text-decoration:underline;}
+
+h1 {background:url(images/logo_MainStreetLoans.gif) top left no-repeat; text-indent:-10000px; height:71px; width:400px; line-height:1.25em; font-size:0.75em;}
+h2 {color:#62ac00; font-size:1.385em; margin-bottom:21px;}
+h3 {font-size:1.182em; line-height:1.231em; color:#62ac00;}
+.box1 h3 {padding:9px 10px 6px 11px;}
+.box2 h3 {background:url(images/box2_h3_bg.gif) top repeat-x; padding:6px 0 8px 12px; color:#fff; margin-bottom:7px;}
+.box3 h3 {background:url(images/title_bg.gif) no-repeat 0 0; padding-left:25px; margin-bottom:15px;}
+.form_box h3 {color:#fff; margin-bottom:21px;}
+h4 {background:#69756c; color:#fff; padding:4px 0 4px 11px; font-size:1.182em; line-height:1.231em; margin-bottom:20px;}
+
+li { background:url(images/header_list_bg.gif) no-repeat 0 8px; padding-left:13px;}
+li a {color:#859088; text-decoration:none; line-height:2em;}
+li a:hover {text-decoration:underline;}
+
+.list2 {margin:15px 0 11px 7px;}
+.list2 li {background:url(images/list2_bg.gif) no-repeat 0 5px; padding-left:23px;}
+.list2 li a { font-weight:bold; line-height:2.273em;}
+
+.list3 li { padding:0; background:none;}
+.list3 li a { color:#3b4f1f; font-weight:bold; line-height:2.273em; text-decoration:underline; font-weight:normal;}
+.list3 li a:hover {text-decoration:none;}
+
+.box1 li, .box2 li {background:none; border-bottom:1px solid #e3e4d3; padding:4px 15px 3px 13px;}
+.box1 li a, .box2 li a {color:#859088; line-height:1.545em;}
+
+.imgindent {margin:0 13px 0 0; float:left;}
+.imgindent2 {margin:0 20px 0 0; float:left;}
+
+/* ============================= header ====================== */
+
+#header .bg { background:url(images/top_bg.gif) top left no-repeat; width:100%;}
+#header .indent { padding:48px 17px 0 20px;}
+#header .left {width:340px;}
+#header .right {padding:13px 45px 33px 0;}
+
+#header .right li { background:url(images/header_list_bg.gif) no-repeat 0 5px;}
+#header .right li a {color:#859088; line-height:1.455em;}
+#header .imgindent {margin:0 6px 0 0; float:left;}
+
+.menu {margin-top:5px; background:#69756c; padding:7px 0 7px 0;}
+.menu li {float:left;background:none; padding:0;}
+.menu li a {display:block; background:url(images/menu_bg.gif) right repeat-y; text-align:center; padding:3px 19px 1px 22px; text-transform:uppercase; color:#f5f6f5; font-weight:bold;}
+.last {background:none !important; border:none !important;}
+.taright {text-align:right;}
+/* ============================= middle ====================== */
+
+#middle .indent {padding:11px 18px 11px 20px;}
+
+.column_pad {padding-right:18px;}
+
+.pad1 {font-size:1.182em; line-height:1.231em; padding:12px 0 28px 0;}
+.box1 {background:#f4f5eb; border-top:5px solid #d8d9b9; width:100%}
+.box2 {background:#f3f4ec; width:100%;}
+.box3 {padding:23px 0 28px 11px;}
+.rowi {height:25px;}
+.form_box {background:url(images/form_box.gif) top left no-repeat; color:#3b4f1f; margin-top:15px;}
+.form_box .pad { padding:11px 10px 26px 13px;}
+.sub {padding:12px 0 0 0;}
+.vote {background:url(images/vote.gif) top left no-repeat; color:#5d6961; text-decoration:none; font-weight:bold; padding:4px 17px 5px 17px; display:block; float:left; font-size:1.182em;}
+.vote:hover {text-decoration:underline;}
+.view {color:#3b4f1f; font-size:0.909em; display:block; float:left; padding:9px 0 0 10px;}
+.column3 .box3 {padding:20px 42px 16px 11px;}
+.line {border-bottom:1px solid #dddede; padding-bottom:23px;}
+.grey_bg {background:#69756c; text-align:right; padding:4px 15px 6px 0;}
+.grey_bg a {color:#fff; font-weight:bold;}
+.content {padding:0 20px 0 0;}
+/* ============================= footer ====================== */
+
+#footer .indent {padding:35px 0 0 18px;  font-weight:bold; color:#859088;}
+#footer a {color:#649226;}
+
+/* ============================= index-1 =========================== */
+
+#index_1 .form_box { color:#3b4f1f; margin:0;}
+#index_1 .form_box .pad {padding:11px 10px 27px 13px;}
+#index_1 .box3 {padding:17px 15px 35px 11px;}
+#index_1 .box3 h3 {background:none; padding:0;}
+
+/* ============================= index-2 =========================== */

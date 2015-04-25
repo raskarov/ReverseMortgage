@@ -1,0 +1,62 @@
+﻿/* r.a.d.calendat timepicker Business skin */
+
+.radTimeTableCss_Business caption
+{
+    display: none;
+}
+
+.radTimeTableCss_Business 
+{
+	cursor: default;
+	background: #fffff2;
+	font: normal 12px Arial, Verdana, Sans-serif;
+	border: solid 1px #146ea6;
+	border-top: 0;
+	filter: progid:DXImageTransform.Microsoft.dropShadow(Color=c7c7a9,offX=2,offY=2,positive=true);
+	border-collapse: collapse;
+}
+
+.radTimeTableCss_Business td
+{
+	padding: 0px;
+	border: solid 1px #dadaa2;
+}
+
+.radHeaderCss_Business
+{
+	color: white;
+	background: #2898e1 url(Img/CommonBg.gif) repeat-x;
+	height: 29px;
+}
+
+.radTimeTableCss_Business a
+{
+	display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: hand;
+	cursor: pointer;
+	padding: 5px;
+}
+
+.radItemCss_Business a,
+.radAlternatingItemCss_Business a
+{
+	color:#7f7f7f;
+	background: #f9f8e0; 
+}
+
+
+.radTimeOverCss_Business a
+{	
+	color: #146ea6;
+	background-color: #fffff2;
+}
+
+.radFooterCss_Business
+{
+	color: #666;
+	background: white url(Img/calendarWrapperBg.gif) left bottom repeat-x;
+	padding-left: 8px !important;
+	height: 18px;
+}

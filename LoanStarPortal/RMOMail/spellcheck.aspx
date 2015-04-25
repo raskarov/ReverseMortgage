@@ -1,0 +1,1 @@
+<%@ Page Language="C#" AutoEventWireup="True" CodeBehind="spellcheck.aspx.cs" Inherits="WebMailPro.spellcheck" validateRequest="false"%>

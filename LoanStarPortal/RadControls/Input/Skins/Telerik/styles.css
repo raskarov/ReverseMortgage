@@ -1,0 +1,169 @@
+.radHoverCss_Telerik
+{
+	border: 0px;
+	background-image: url(Img/over.gif);
+	background-repeat: no-repeat;
+	_background-attachment: fixed;
+	height: 21px;
+	width: 179px;
+	color: #000000;
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	padding-top: 3px;
+	background-color: transparent;
+	vertical-align: middle;
+}
+.radEnabledCss_Telerik
+{
+	border: 0px;
+	background-image: url(Img/default.gif);
+	background-repeat: no-repeat;
+	_background-attachment: fixed;
+	height: 21px;
+	width: 179px;
+	color: #666666;
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	padding-top: 3px;
+	background-color: transparent;
+	vertical-align: middle;
+}
+.radDisabledCss_Telerik
+{
+	border: 0px;
+	background-image: url(Img/default.gif);
+	background-repeat: no-repeat;
+	_background-attachment: fixed;
+	height: 21px;
+	width: 179px;
+	color: Gray;
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	padding-top: 3px;
+	background-color: transparent;
+	vertical-align: middle;
+}
+
+.radEmptyMessageCss_Telerik
+{
+	border: 0px;
+	background-image: url(Img/default.gif);
+	background-repeat: no-repeat;
+	_background-attachment: fixed;
+	height: 21px;
+	width: 179px;
+	color: #666666;
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	padding-top: 3px; 
+	background-color: transparent; 
+	letter-spacing: 2px;
+	vertical-align: middle;
+}
+
+.radFocusedCss_Telerik
+{
+	border: 0px;
+	background-image: url(Img/focus.gif);
+	background-repeat: no-repeat;
+	_background-attachment: fixed;
+	height: 21px;
+	width: 179px;
+	color: #000000;
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	padding-top: 3px;
+	background-color: transparent;
+	vertical-align: middle;
+}
+
+.radNegativeCss_Telerik
+{
+	border: 0px;
+	background-image: url(Img/default.gif);
+	background-repeat: no-repeat;
+	_background-attachment: fixed;
+	height: 21px;
+	width: 179px;
+	color: #ad808d;
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	padding-top: 3px;
+	background-color: transparent;
+}
+
+.radInvalidCss_Telerik
+{
+	border: 0px;
+	background-image: url(Img/error.gif);
+	background-repeat: no-repeat;
+	_background-attachment: fixed;
+	height: 21px;
+	width: 179px;
+	color: red;
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	padding-top: 3px;
+	background-color: transparent;
+	vertical-align: middle;
+}
+
+.radLabelCss_Telerik
+{
+	font-family: Arial, Verdana, Tahoma, Sans-Serif;
+	color: #b7b7b7; 
+	padding-right: 5px;
+	font-size: 10px;
+}
+
+/* input buttons */
+.radInpButtonCss,
+.radInpButtonCss_Telerik a
+{
+    position: relative; top: 2px;
+}
+
+.radInpButtonCss_Telerik img
+{
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    -moz-opacity: 1; opacity: 1;
+    border: 0;
+}
+
+.radInpButtonCss_Telerik a:hover img
+{
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    -moz-opacity: 0.5; 
+    opacity: 0.5;
+}
+
+.radSpinUpCss_Telerik a,
+.radSpinDownCss_Telerik a
+{
+	/**/
+}
+
+.radSpinUpCss_Telerik a img,
+.radSpinDownCss_Telerik a img
+{
+	width: 7px; height: 4px;
+	border: 0;
+	position: relative;
+	top: -4px;
+	margin: 0 1px;
+}
+
+.radSpinUpCss_Telerik a:hover img,
+.radSpinDownCss_Telerik a:hover img
+{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	opacity: .5; -moz-opacity: .5;
+}
+/* end of input buttons */

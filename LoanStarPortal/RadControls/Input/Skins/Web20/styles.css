@@ -1,0 +1,87 @@
+﻿.radHoverCss_Web20
+{
+	font: normal 18px  Arial, Verdana, Sans-Serif;
+	background: white;
+	border: solid 1px #a5bedf;
+	border-bottom-width: 2px;
+	color: black;
+}
+.radEnabledCss_Web20
+{
+	font: normal 18px  Arial, Verdana, Sans-Serif;
+	color: black;
+	border: solid 1px #6788be;
+	border-bottom-width: 2px;
+	background: white;
+}
+.radDisabledCss_Web20
+{
+	font: normal 18px  Arial, Verdana, Sans-Serif;
+	color: black;
+	border: solid 1px #6788be;
+	border-bottom-width: 2px;
+	background: white;
+}
+
+.radEmptyMessageCss_Web20
+{
+	font: normal 18px  Arial, Verdana, Sans-Serif;
+	color: black;
+	border: solid 1px #6788be;
+	border-bottom-width: 2px;
+	background: white;
+}
+
+.radFocusedCss_Web20
+{
+	font: normal 18px  Arial, Verdana, Sans-Serif;
+	color: black;
+	border: solid 1px #6788be;
+	border-bottom-width: 2px;
+	background: white;
+}
+
+/* input buttons */
+.radInpButtonCss,
+.radInpButtonCss_Web20 a
+{
+    position: relative; top: 2px;
+}
+
+.radInpButtonCss_Web20 img
+{
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    -moz-opacity: 1; opacity: 1;
+    border: 0;
+}
+
+.radInpButtonCss_Web20 a:hover img
+{
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    -moz-opacity: 0.5; 
+    opacity: 0.5;
+}
+
+.radSpinUpCss_Web20 a,
+.radSpinDownCss_Web20 a
+{
+	/**/
+}
+
+.radSpinUpCss_Web20 a img,
+.radSpinDownCss_Web20 a img
+{
+	width: 7px; height: 4px;
+	border: 0;
+	position: relative;
+	top: -4px;
+	margin: 0 1px;
+}
+
+.radSpinUpCss_Web20 a:hover img,
+.radSpinDownCss_Web20 a:hover img
+{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	opacity: .5; -moz-opacity: .5;
+}
+/* end of input buttons */

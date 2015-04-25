@@ -1,0 +1,1404 @@
+[13:30:36.73] [INFO] Assembly version: 4.0.2.114.
+[13:30:36.73] [INFO] Will resolve host "smtp.gmail.com".
+[13:30:36.87] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[13:30:36.87] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[13:30:36.93] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[13:30:36.94] [INFO] Will create TLS/SSL credentials.
+[13:30:36.95] [INFO] TLS/SSL credentials created.
+[13:30:36.95] [INFO] Will start TLS/SSL negotiation sequence.
+[13:30:37.05] [INFO] TLS/SSL negotiation completed.
+[13:30:37.06] [RECV] 220 mx.google.com ESMTP d6sm1504680fga.2\r\n
+[13:30:37.07] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[13:30:37.08] [INFO] Will send Hello command (HELO or EHLO).
+[13:30:37.09] [SEND] EHLO gmail.com\r\n
+[13:30:37.13] [RECV] 250-mx.google.com at your service, [193.37.156.146]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[13:30:37.14] [INFO] SMTP Hello completed.
+[13:30:37.14] [INFO] Will login as "bpattersen123".
+[13:30:37.15] [INFO] Will try SASL LOGIN authentication method.
+[13:30:37.15] [SEND] AUTH LOGIN\r\n
+[13:30:37.20] [RECV] 334 VXNlcm5hbWU6\r\n
+[13:30:37.20] [SEND] ********\r\n
+[13:30:37.25] [RECV] 334 UGFzc3dvcmQ6\r\n
+[13:30:37.25] [SEND] ********\r\n
+[13:30:37.81] [RECV] 235 2.7.0 Accepted\r\n
+[13:30:37.81] [INFO] Logged in as "bpattersen123".
+[13:30:37.82] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[13:30:37.83] [INFO] Will submit sender and recipients.
+[13:30:37.83] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[13:30:37.83] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[13:30:37.88] [RECV] 250 2.1.0 OK d6sm1504680fga.2\r\n
+[13:30:37.88] [RECV] 250 2.1.5 OK d6sm1504680fga.2\r\n
+[13:30:37.88] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[13:30:37.88] [SEND] DATA\r\n
+[13:30:44.86] [RECV] 354  Go ahead d6sm1504680fga.2\r\n
+[13:30:44.86] [SEND] [Data chunk of 717 bytes sent.]
+[13:30:44.86] [SEND] \r\n.\r\n
+[13:30:45.57] [RECV] 250 2.0.0 OK 1237375855 d6sm1504680fga.2\r\n
+[13:30:45.57] [INFO] Message successfully submitted to SMTP server.
+[13:30:45.59] [SEND] QUIT\r\n
+[13:30:45.64] [RECV] 221 2.0.0 closing connection d6sm1504680fga.2\r\n
+[13:30:45.64] [INFO] Will disconnect from host "smtp.gmail.com".
+[13:30:45.66] [INFO] Disconnected from host "smtp.gmail.com".
+[15:41:30.75] [INFO] Assembly version: 4.0.2.114.
+[15:41:30.75] [INFO] Will resolve host "smtp.gmail.com".
+[15:41:30.81] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 209.85.129.109, 209.85.129.111.
+[15:41:30.81] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[15:41:30.87] [INFO] Socket connected to IP address 209.85.129.109 on port 465.
+[15:41:30.88] [INFO] Will create TLS/SSL credentials.
+[15:41:30.88] [INFO] TLS/SSL credentials created.
+[15:41:30.89] [INFO] Will start TLS/SSL negotiation sequence.
+[15:41:30.99] [INFO] TLS/SSL negotiation completed.
+[15:41:31.00] [RECV] 220 mx.google.com ESMTP 21sm242406fkx.19\r\n
+[15:41:31.00] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[15:41:31.01] [INFO] Will send Hello command (HELO or EHLO).
+[15:41:31.02] [SEND] EHLO gmail.com\r\n
+[15:41:31.06] [RECV] 250-mx.google.com at your service, [193.37.156.146]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[15:41:31.07] [INFO] SMTP Hello completed.
+[15:41:31.07] [INFO] Will login as "bpattersen123".
+[15:41:31.08] [INFO] Will try SASL LOGIN authentication method.
+[15:41:31.08] [SEND] AUTH LOGIN\r\n
+[15:41:31.13] [RECV] 334 VXNlcm5hbWU6\r\n
+[15:41:31.14] [SEND] ********\r\n
+[15:41:31.18] [RECV] 334 UGFzc3dvcmQ6\r\n
+[15:41:31.18] [SEND] ********\r\n
+[15:41:31.63] [RECV] 235 2.7.0 Accepted\r\n
+[15:41:31.63] [INFO] Logged in as "bpattersen123".
+[15:41:31.63] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[15:41:31.65] [INFO] Will submit sender and recipients.
+[15:41:31.65] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[15:41:31.65] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[15:41:31.70] [RECV] 250 2.1.0 OK 21sm242406fkx.19\r\n
+[15:41:31.70] [RECV] 250 2.1.5 OK 21sm242406fkx.19\r\n
+[15:41:31.70] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[15:41:31.71] [SEND] DATA\r\n
+[15:41:32.10] [RECV] 354  Go ahead 21sm242406fkx.19\r\n
+[15:41:32.10] [SEND] [Data chunk of 755 bytes sent.]
+[15:41:32.11] [SEND] \r\n.\r\n
+[15:41:32.60] [RECV] 250 2.0.0 OK 1237383703 21sm242406fkx.19\r\n
+[15:41:32.60] [INFO] Message successfully submitted to SMTP server.
+[15:41:32.61] [SEND] QUIT\r\n
+[15:41:32.65] [RECV] 221 2.0.0 closing connection 21sm242406fkx.19\r\n
+[15:41:32.66] [INFO] Will disconnect from host "smtp.gmail.com".
+[15:41:32.67] [INFO] Disconnected from host "smtp.gmail.com".
+[17:49:33.00] [INFO] Assembly version: 4.0.2.114.
+[17:49:33.00] [INFO] Will resolve host "".
+[17:49:33.05] [INFO] Host "" resolved to IP address(es) 192.168.1.48.
+[17:49:33.06] [INFO] Will connect to host "" on port 110.
+[17:49:34.10] [INFO] Error: Socket connection has been refused by remote host. InnerException message follows: No connection could be made because the target machine actively refused it 192.168.1.48:110
+[19:06:16.79] [INFO] Assembly version: 4.0.2.114.
+[19:06:16.79] [INFO] Will resolve host "smtp.gmail.com".
+[19:06:16.87] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[19:06:16.87] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[19:06:16.95] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[19:06:16.96] [INFO] Will create TLS/SSL credentials.
+[19:06:16.96] [INFO] TLS/SSL credentials created.
+[19:06:16.97] [INFO] Will start TLS/SSL negotiation sequence.
+[19:06:17.13] [INFO] TLS/SSL negotiation completed.
+[19:06:17.15] [RECV] 220 mx.google.com ESMTP 12sm866820fgg.2\r\n
+[19:06:17.15] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[19:06:17.17] [INFO] Will send Hello command (HELO or EHLO).
+[19:06:17.17] [SEND] EHLO gmail.com\r\n
+[19:06:17.25] [RECV] 250-mx.google.com at your service, [95.133.135.119]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[19:06:17.26] [INFO] SMTP Hello completed.
+[19:06:17.26] [INFO] Will login as "bpattersen123".
+[19:06:17.27] [INFO] Will try SASL LOGIN authentication method.
+[19:06:17.27] [SEND] AUTH LOGIN\r\n
+[19:06:17.34] [RECV] 334 VXNlcm5hbWU6\r\n
+[19:06:17.35] [SEND] ********\r\n
+[19:06:17.42] [RECV] 334 UGFzc3dvcmQ6\r\n
+[19:06:17.43] [SEND] ********\r\n
+[19:06:17.86] [RECV] 235 2.7.0 Accepted\r\n
+[19:06:17.86] [INFO] Logged in as "bpattersen123".
+[19:06:17.86] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[19:06:17.88] [INFO] Will submit sender and recipients.
+[19:06:17.88] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[19:06:17.88] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[19:06:17.97] [RECV] 250 2.1.0 OK 12sm866820fgg.2\r\n
+[19:06:17.97] [RECV] 250 2.1.5 OK 12sm866820fgg.2\r\n
+[19:06:17.97] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[19:06:17.98] [SEND] DATA\r\n
+[19:06:19.10] [RECV] 354  Go ahead 12sm866820fgg.2\r\n
+[19:06:19.10] [SEND] [Data chunk of 741 bytes sent.]
+[19:06:19.11] [SEND] \r\n.\r\n
+[19:06:20.42] [RECV] 250 2.0.0 OK 1237482395 12sm866820fgg.2\r\n
+[19:06:20.42] [INFO] Message successfully submitted to SMTP server.
+[19:06:20.43] [SEND] QUIT\r\n
+[19:06:20.50] [RECV] 221 2.0.0 closing connection 12sm866820fgg.2\r\n
+[19:06:20.51] [INFO] Will disconnect from host "smtp.gmail.com".
+[19:06:20.52] [INFO] Disconnected from host "smtp.gmail.com".
+[13:57:30.27] [INFO] Assembly version: 4.0.2.114.
+[13:57:30.27] [INFO] Will resolve host "smtp.gmail.com".
+[13:57:30.34] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.109, 72.14.221.111.
+[13:57:30.34] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[13:57:30.42] [INFO] Socket connected to IP address 72.14.221.109 on port 465.
+[13:57:30.44] [INFO] Will create TLS/SSL credentials.
+[13:57:30.44] [INFO] TLS/SSL credentials created.
+[13:57:30.44] [INFO] Will start TLS/SSL negotiation sequence.
+[13:57:30.59] [INFO] TLS/SSL negotiation completed.
+[13:57:30.61] [RECV] 220 mx.google.com ESMTP 12sm1786108fgg.2\r\n
+[13:57:30.62] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[13:57:30.64] [INFO] Will send Hello command (HELO or EHLO).
+[13:57:30.64] [SEND] EHLO gmail.com\r\n
+[13:57:30.72] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[13:57:30.72] [INFO] SMTP Hello completed.
+[13:57:30.72] [INFO] Will login as "bpattersen123".
+[13:57:30.73] [INFO] Will try SASL LOGIN authentication method.
+[13:57:30.73] [SEND] AUTH LOGIN\r\n
+[13:57:30.80] [RECV] 334 VXNlcm5hbWU6\r\n
+[13:57:30.81] [SEND] ********\r\n
+[13:57:30.87] [RECV] 334 UGFzc3dvcmQ6\r\n
+[13:57:30.89] [SEND] ********\r\n
+[13:57:31.48] [RECV] 235 2.7.0 Accepted\r\n
+[13:57:31.48] [INFO] Logged in as "bpattersen123".
+[13:57:31.48] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[13:57:31.50] [INFO] Will submit sender and recipients.
+[13:57:31.50] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[13:57:31.50] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[13:57:31.58] [RECV] 250 2.1.0 OK 12sm1786108fgg.2\r\n
+[13:57:31.58] [RECV] 250 2.1.5 OK 12sm1786108fgg.2\r\n
+[13:57:31.58] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[13:57:31.58] [SEND] DATA\r\n
+[13:57:32.01] [RECV] 354  Go ahead 12sm1786108fgg.2\r\n
+[13:57:32.01] [SEND] [Data chunk of 711 bytes sent.]
+[13:57:32.01] [SEND] \r\n.\r\n
+[13:57:32.89] [RECV] 250 2.0.0 OK 1237550268 12sm1786108fgg.2\r\n
+[13:57:32.90] [INFO] Message successfully submitted to SMTP server.
+[13:57:32.90] [SEND] QUIT\r\n
+[13:57:32.98] [RECV] 221 2.0.0 closing connection 12sm1786108fgg.2\r\n
+[13:57:32.98] [INFO] Will disconnect from host "smtp.gmail.com".
+[13:57:33.00] [INFO] Disconnected from host "smtp.gmail.com".
+[17:10:48.63] [INFO] Assembly version: 4.0.2.114.
+[17:10:48.63] [INFO] Will resolve host "smtp.gmail.com".
+[17:10:48.72] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.109, 72.14.221.111.
+[17:10:48.73] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[17:10:48.82] [INFO] Socket connected to IP address 72.14.221.109 on port 465.
+[17:10:48.83] [INFO] Will create TLS/SSL credentials.
+[17:10:48.83] [INFO] TLS/SSL credentials created.
+[17:10:48.83] [INFO] Will start TLS/SSL negotiation sequence.
+[17:10:49.00] [INFO] TLS/SSL negotiation completed.
+[17:10:49.01] [RECV] 220 mx.google.com ESMTP e20sm1084137fga.19\r\n
+[17:10:49.02] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[17:10:49.03] [INFO] Will send Hello command (HELO or EHLO).
+[17:10:49.04] [SEND] EHLO gmail.com\r\n
+[17:10:49.11] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[17:10:49.12] [INFO] SMTP Hello completed.
+[17:10:49.13] [INFO] Will login as "bpattersen123".
+[17:10:49.13] [INFO] Will try SASL LOGIN authentication method.
+[17:10:49.14] [SEND] AUTH LOGIN\r\n
+[17:10:49.21] [RECV] 334 VXNlcm5hbWU6\r\n
+[17:10:49.22] [SEND] ********\r\n
+[17:10:49.29] [RECV] 334 UGFzc3dvcmQ6\r\n
+[17:10:49.30] [SEND] ********\r\n
+[17:10:49.73] [RECV] 235 2.7.0 Accepted\r\n
+[17:10:49.74] [INFO] Logged in as "bpattersen123".
+[17:10:49.74] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[17:10:49.75] [INFO] Will submit sender and recipients.
+[17:10:49.76] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[17:10:49.76] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[17:10:49.83] [RECV] 250 2.1.0 OK e20sm1084137fga.19\r\n
+[17:10:49.83] [RECV] 250 2.1.5 OK e20sm1084137fga.19\r\n
+[17:10:49.84] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[17:10:49.84] [SEND] DATA\r\n
+[17:10:50.52] [RECV] 354  Go ahead e20sm1084137fga.19\r\n
+[17:10:50.53] [SEND] [Data chunk of 719 bytes sent.]
+[17:10:50.53] [SEND] \r\n.\r\n
+[17:10:51.36] [RECV] 250 2.0.0 OK 1237561868 e20sm1084137fga.19\r\n
+[17:10:51.37] [INFO] Message successfully submitted to SMTP server.
+[17:10:51.38] [SEND] QUIT\r\n
+[17:10:51.46] [RECV] 221 2.0.0 closing connection e20sm1084137fga.19\r\n
+[17:10:51.46] [INFO] Will disconnect from host "smtp.gmail.com".
+[17:10:51.48] [INFO] Disconnected from host "smtp.gmail.com".
+[17:33:28.84] [INFO] Assembly version: 4.0.2.114.
+[17:33:28.84] [INFO] Will resolve host "smtp.gmail.com".
+[17:33:28.92] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.109, 72.14.221.111.
+[17:33:28.92] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[17:33:29.01] [INFO] Socket connected to IP address 72.14.221.109 on port 465.
+[17:33:29.01] [INFO] Will create TLS/SSL credentials.
+[17:33:29.02] [INFO] TLS/SSL credentials created.
+[17:33:29.02] [INFO] Will start TLS/SSL negotiation sequence.
+[17:33:29.18] [INFO] TLS/SSL negotiation completed.
+[17:33:29.20] [RECV] 220 mx.google.com ESMTP 4sm3314745fgg.20\r\n
+[17:33:29.20] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[17:33:29.22] [INFO] Will send Hello command (HELO or EHLO).
+[17:33:29.22] [SEND] EHLO gmail.com\r\n
+[17:33:29.29] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[17:33:29.30] [INFO] SMTP Hello completed.
+[17:33:29.31] [INFO] Will login as "bpattersen123".
+[17:33:29.31] [INFO] Will try SASL LOGIN authentication method.
+[17:33:29.31] [SEND] AUTH LOGIN\r\n
+[17:33:29.39] [RECV] 334 VXNlcm5hbWU6\r\n
+[17:33:29.39] [SEND] ********\r\n
+[17:33:29.46] [RECV] 334 UGFzc3dvcmQ6\r\n
+[17:33:29.46] [SEND] ********\r\n
+[17:33:29.84] [RECV] 235 2.7.0 Accepted\r\n
+[17:33:29.84] [INFO] Logged in as "bpattersen123".
+[17:33:29.85] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[17:33:29.86] [INFO] Will submit sender and recipients.
+[17:33:29.86] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[17:33:29.86] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[17:33:29.94] [RECV] 250 2.1.0 OK 4sm3314745fgg.20\r\n
+[17:33:29.94] [RECV] 250 2.1.5 OK 4sm3314745fgg.20\r\n
+[17:33:29.94] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[17:33:29.94] [SEND] DATA\r\n
+[17:33:30.28] [RECV] 354  Go ahead 4sm3314745fgg.20\r\n
+[17:33:30.28] [SEND] [Data chunk of 753 bytes sent.]
+[17:33:30.29] [SEND] \r\n.\r\n
+[17:33:30.71] [RECV] 250 2.0.0 OK 1237563227 4sm3314745fgg.20\r\n
+[17:33:30.71] [INFO] Message successfully submitted to SMTP server.
+[17:33:30.71] [SEND] QUIT\r\n
+[17:33:30.79] [RECV] 221 2.0.0 closing connection 4sm3314745fgg.20\r\n
+[17:33:30.79] [INFO] Will disconnect from host "smtp.gmail.com".
+[17:33:30.80] [INFO] Disconnected from host "smtp.gmail.com".
+[17:36:33.36] [INFO] Assembly version: 4.0.2.114.
+[17:36:33.36] [INFO] Will resolve host "smtp.gmail.com".
+[17:36:33.40] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[17:36:33.41] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[17:36:33.48] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[17:36:33.48] [INFO] Will create TLS/SSL credentials.
+[17:36:33.48] [INFO] TLS/SSL credentials created.
+[17:36:33.48] [INFO] Will start TLS/SSL negotiation sequence.
+[17:36:33.64] [INFO] TLS/SSL negotiation completed.
+[17:36:33.64] [RECV] 220 mx.google.com ESMTP 4sm3284424fgg.15\r\n
+[17:36:33.64] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[17:36:33.64] [INFO] Will send Hello command (HELO or EHLO).
+[17:36:33.65] [SEND] EHLO gmail.com\r\n
+[17:36:33.72] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[17:36:33.72] [INFO] SMTP Hello completed.
+[17:36:33.72] [INFO] Will login as "bpattersen123".
+[17:36:33.72] [INFO] Will try SASL LOGIN authentication method.
+[17:36:33.73] [SEND] AUTH LOGIN\r\n
+[17:36:33.80] [RECV] 334 VXNlcm5hbWU6\r\n
+[17:36:33.80] [SEND] ********\r\n
+[17:36:33.87] [RECV] 334 UGFzc3dvcmQ6\r\n
+[17:36:33.87] [SEND] ********\r\n
+[17:36:34.28] [RECV] 235 2.7.0 Accepted\r\n
+[17:36:34.28] [INFO] Logged in as "bpattersen123".
+[17:36:34.28] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[17:36:34.29] [INFO] Will submit sender and recipients.
+[17:36:34.29] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[17:36:34.29] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[17:36:34.36] [RECV] 250 2.1.0 OK 4sm3284424fgg.15\r\n
+[17:36:34.36] [RECV] 250 2.1.5 OK 4sm3284424fgg.15\r\n
+[17:36:34.37] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[17:36:34.37] [SEND] DATA\r\n
+[17:36:34.58] [RECV] 354  Go ahead 4sm3284424fgg.15\r\n
+[17:36:34.58] [SEND] [Data chunk of 716 bytes sent.]
+[17:36:34.59] [SEND] \r\n.\r\n
+[17:36:35.44] [RECV] 250 2.0.0 OK 1237563412 4sm3284424fgg.15\r\n
+[17:36:35.44] [INFO] Message successfully submitted to SMTP server.
+[17:36:35.45] [SEND] QUIT\r\n
+[17:36:35.52] [RECV] 221 2.0.0 closing connection 4sm3284424fgg.15\r\n
+[17:36:35.52] [INFO] Will disconnect from host "smtp.gmail.com".
+[17:36:35.52] [INFO] Disconnected from host "smtp.gmail.com".
+[17:42:38.90] [INFO] Assembly version: 4.0.2.114.
+[17:42:38.90] [INFO] Will resolve host "smtp.gmail.com".
+[17:42:38.98] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[17:42:38.98] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[17:42:39.07] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[17:42:39.07] [INFO] Will create TLS/SSL credentials.
+[17:42:39.08] [INFO] TLS/SSL credentials created.
+[17:42:39.08] [INFO] Will start TLS/SSL negotiation sequence.
+[17:42:39.24] [INFO] TLS/SSL negotiation completed.
+[17:42:39.25] [RECV] 220 mx.google.com ESMTP 4sm3329205fgg.10\r\n
+[17:42:39.25] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[17:42:39.26] [INFO] Will send Hello command (HELO or EHLO).
+[17:42:39.27] [SEND] EHLO gmail.com\r\n
+[17:42:39.34] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[17:42:39.35] [INFO] SMTP Hello completed.
+[17:42:39.35] [INFO] Will login as "bpattersen123".
+[17:42:39.36] [INFO] Will try SASL LOGIN authentication method.
+[17:42:39.36] [SEND] AUTH LOGIN\r\n
+[17:42:39.44] [RECV] 334 VXNlcm5hbWU6\r\n
+[17:42:39.44] [SEND] ********\r\n
+[17:42:39.51] [RECV] 334 UGFzc3dvcmQ6\r\n
+[17:42:39.51] [SEND] ********\r\n
+[17:42:39.93] [RECV] 235 2.7.0 Accepted\r\n
+[17:42:39.93] [INFO] Logged in as "bpattersen123".
+[17:42:39.93] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[17:42:39.95] [INFO] Will submit sender and recipients.
+[17:42:39.95] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[17:42:39.95] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[17:42:40.02] [RECV] 250 2.1.0 OK 4sm3329205fgg.10\r\n
+[17:42:40.03] [RECV] 250 2.1.5 OK 4sm3329205fgg.10\r\n
+[17:42:40.03] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[17:42:40.03] [SEND] DATA\r\n
+[17:42:40.24] [RECV] 354  Go ahead 4sm3329205fgg.10\r\n
+[17:42:40.25] [SEND] [Data chunk of 749 bytes sent.]
+[17:42:40.25] [SEND] \r\n.\r\n
+[17:42:40.68] [RECV] 250 2.0.0 OK 1237563777 4sm3329205fgg.10\r\n
+[17:42:40.68] [INFO] Message successfully submitted to SMTP server.
+[17:42:40.69] [SEND] QUIT\r\n
+[17:42:40.76] [RECV] 221 2.0.0 closing connection 4sm3329205fgg.10\r\n
+[17:42:40.76] [INFO] Will disconnect from host "smtp.gmail.com".
+[17:42:40.78] [INFO] Disconnected from host "smtp.gmail.com".
+[17:49:13.71] [INFO] Assembly version: 4.0.2.114.
+[17:49:13.71] [INFO] Will resolve host "smtp.gmail.com".
+[17:49:13.79] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.109, 72.14.221.111.
+[17:49:13.79] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[17:49:13.88] [INFO] Socket connected to IP address 72.14.221.109 on port 465.
+[17:49:13.88] [INFO] Will create TLS/SSL credentials.
+[17:49:13.89] [INFO] TLS/SSL credentials created.
+[17:49:13.90] [INFO] Will start TLS/SSL negotiation sequence.
+[17:49:14.06] [INFO] TLS/SSL negotiation completed.
+[17:49:14.08] [RECV] 220 mx.google.com ESMTP e20sm1131656fga.19\r\n
+[17:49:14.08] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[17:49:14.10] [INFO] Will send Hello command (HELO or EHLO).
+[17:49:14.11] [SEND] EHLO gmail.com\r\n
+[17:49:14.18] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[17:49:14.18] [INFO] SMTP Hello completed.
+[17:49:14.19] [INFO] Will login as "bpattersen123".
+[17:49:14.19] [INFO] Will try SASL LOGIN authentication method.
+[17:49:14.20] [SEND] AUTH LOGIN\r\n
+[17:49:14.27] [RECV] 334 VXNlcm5hbWU6\r\n
+[17:49:14.28] [SEND] ********\r\n
+[17:49:14.35] [RECV] 334 UGFzc3dvcmQ6\r\n
+[17:49:14.35] [SEND] ********\r\n
+[17:49:14.79] [RECV] 235 2.7.0 Accepted\r\n
+[17:49:14.79] [INFO] Logged in as "bpattersen123".
+[17:49:14.79] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[17:49:14.81] [INFO] Will submit sender and recipients.
+[17:49:14.81] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[17:49:14.81] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[17:49:14.88] [RECV] 250 2.1.0 OK e20sm1131656fga.19\r\n
+[17:49:14.88] [RECV] 250 2.1.5 OK e20sm1131656fga.19\r\n
+[17:49:14.88] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[17:49:14.89] [SEND] DATA\r\n
+[17:49:15.19] [RECV] 354  Go ahead e20sm1131656fga.19\r\n
+[17:49:15.20] [SEND] [Data chunk of 740 bytes sent.]
+[17:49:15.20] [SEND] \r\n.\r\n
+[17:49:15.59] [RECV] 250 2.0.0 OK 1237564172 e20sm1131656fga.19\r\n
+[17:49:15.59] [INFO] Message successfully submitted to SMTP server.
+[17:49:15.60] [SEND] QUIT\r\n
+[17:49:15.67] [RECV] 221 2.0.0 closing connection e20sm1131656fga.19\r\n
+[17:49:15.67] [INFO] Will disconnect from host "smtp.gmail.com".
+[17:49:15.69] [INFO] Disconnected from host "smtp.gmail.com".
+[17:57:26.88] [INFO] Assembly version: 4.0.2.114.
+[17:57:26.88] [INFO] Will resolve host "smtp.gmail.com".
+[17:57:26.96] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[17:57:26.96] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[17:57:27.05] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[17:57:27.06] [INFO] Will create TLS/SSL credentials.
+[17:57:27.06] [INFO] TLS/SSL credentials created.
+[17:57:27.07] [INFO] Will start TLS/SSL negotiation sequence.
+[17:57:27.22] [INFO] TLS/SSL negotiation completed.
+[17:57:27.24] [RECV] 220 mx.google.com ESMTP 12sm2170361fgg.12\r\n
+[17:57:27.24] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[17:57:27.25] [INFO] Will send Hello command (HELO or EHLO).
+[17:57:27.26] [SEND] EHLO gmail.com\r\n
+[17:57:27.33] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[17:57:27.33] [INFO] SMTP Hello completed.
+[17:57:27.33] [INFO] Will login as "bpattersen123".
+[17:57:27.34] [INFO] Will try SASL LOGIN authentication method.
+[17:57:27.34] [SEND] AUTH LOGIN\r\n
+[17:57:27.42] [RECV] 334 VXNlcm5hbWU6\r\n
+[17:57:27.42] [SEND] ********\r\n
+[17:57:27.49] [RECV] 334 UGFzc3dvcmQ6\r\n
+[17:57:27.49] [SEND] ********\r\n
+[17:57:28.00] [RECV] 235 2.7.0 Accepted\r\n
+[17:57:28.00] [INFO] Logged in as "bpattersen123".
+[17:57:28.00] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[17:57:28.02] [INFO] Will submit sender and recipients.
+[17:57:28.02] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[17:57:28.02] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[17:57:28.09] [RECV] 250 2.1.0 OK 12sm2170361fgg.12\r\n
+[17:57:28.09] [RECV] 250 2.1.5 OK 12sm2170361fgg.12\r\n
+[17:57:28.10] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[17:57:28.10] [SEND] DATA\r\n
+[17:57:28.32] [RECV] 354  Go ahead 12sm2170361fgg.12\r\n
+[17:57:28.32] [SEND] [Data chunk of 725 bytes sent.]
+[17:57:28.32] [SEND] \r\n.\r\n
+[17:57:28.79] [RECV] 250 2.0.0 OK 1237564666 12sm2170361fgg.12\r\n
+[17:57:28.79] [INFO] Message successfully submitted to SMTP server.
+[17:57:28.80] [SEND] QUIT\r\n
+[17:57:28.87] [RECV] 221 2.0.0 closing connection 12sm2170361fgg.12\r\n
+[17:57:28.87] [INFO] Will disconnect from host "smtp.gmail.com".
+[17:57:28.89] [INFO] Disconnected from host "smtp.gmail.com".
+[17:58:42.66] [INFO] Assembly version: 4.0.2.114.
+[17:58:42.66] [INFO] Will resolve host "smtp.gmail.com".
+[17:58:42.67] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[17:58:42.67] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[17:58:42.74] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[17:58:42.74] [INFO] Will create TLS/SSL credentials.
+[17:58:42.75] [INFO] TLS/SSL credentials created.
+[17:58:42.75] [INFO] Will start TLS/SSL negotiation sequence.
+[17:58:42.90] [INFO] TLS/SSL negotiation completed.
+[17:58:42.91] [RECV] 220 mx.google.com ESMTP e20sm1140741fga.29\r\n
+[17:58:42.91] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[17:58:42.91] [INFO] Will send Hello command (HELO or EHLO).
+[17:58:42.91] [SEND] EHLO gmail.com\r\n
+[17:58:42.98] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[17:58:42.99] [INFO] SMTP Hello completed.
+[17:58:42.99] [INFO] Will login as "bpattersen123".
+[17:58:42.99] [INFO] Will try SASL LOGIN authentication method.
+[17:58:42.99] [SEND] AUTH LOGIN\r\n
+[17:58:43.06] [RECV] 334 VXNlcm5hbWU6\r\n
+[17:58:43.07] [SEND] ********\r\n
+[17:58:43.14] [RECV] 334 UGFzc3dvcmQ6\r\n
+[17:58:43.14] [SEND] ********\r\n
+[17:58:43.54] [RECV] 235 2.7.0 Accepted\r\n
+[17:58:43.54] [INFO] Logged in as "bpattersen123".
+[17:58:43.54] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[17:58:43.55] [INFO] Will submit sender and recipients.
+[17:58:43.55] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[17:58:43.55] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[17:58:43.62] [RECV] 250 2.1.0 OK e20sm1140741fga.29\r\n
+[17:58:43.62] [RECV] 250 2.1.5 OK e20sm1140741fga.29\r\n
+[17:58:43.62] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[17:58:43.63] [SEND] DATA\r\n
+[17:58:43.84] [RECV] 354  Go ahead e20sm1140741fga.29\r\n
+[17:58:43.84] [SEND] [Data chunk of 729 bytes sent.]
+[17:58:43.85] [SEND] \r\n.\r\n
+[17:58:44.28] [RECV] 250 2.0.0 OK 1237564741 e20sm1140741fga.29\r\n
+[17:58:44.28] [INFO] Message successfully submitted to SMTP server.
+[17:58:44.28] [SEND] QUIT\r\n
+[17:58:44.35] [RECV] 221 2.0.0 closing connection e20sm1140741fga.29\r\n
+[17:58:44.35] [INFO] Will disconnect from host "smtp.gmail.com".
+[17:58:44.36] [INFO] Disconnected from host "smtp.gmail.com".
+[18:01:24.86] [INFO] Assembly version: 4.0.2.114.
+[18:01:24.86] [INFO] Will resolve host "smtp.gmail.com".
+[18:01:24.90] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.109, 72.14.221.111.
+[18:01:24.90] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[18:01:24.98] [INFO] Socket connected to IP address 72.14.221.109 on port 465.
+[18:01:24.98] [INFO] Will create TLS/SSL credentials.
+[18:01:24.98] [INFO] TLS/SSL credentials created.
+[18:01:24.98] [INFO] Will start TLS/SSL negotiation sequence.
+[18:01:25.17] [INFO] TLS/SSL negotiation completed.
+[18:01:25.17] [RECV] 220 mx.google.com ESMTP l12sm3028988fgb.16\r\n
+[18:01:25.17] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[18:01:25.17] [INFO] Will send Hello command (HELO or EHLO).
+[18:01:25.18] [SEND] EHLO gmail.com\r\n
+[18:01:25.25] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[18:01:25.25] [INFO] SMTP Hello completed.
+[18:01:25.25] [INFO] Will login as "bpattersen123".
+[18:01:25.25] [INFO] Will try SASL LOGIN authentication method.
+[18:01:25.26] [SEND] AUTH LOGIN\r\n
+[18:01:25.33] [RECV] 334 VXNlcm5hbWU6\r\n
+[18:01:25.33] [SEND] ********\r\n
+[18:01:25.40] [RECV] 334 UGFzc3dvcmQ6\r\n
+[18:01:25.40] [SEND] ********\r\n
+[18:01:25.87] [RECV] 235 2.7.0 Accepted\r\n
+[18:01:25.87] [INFO] Logged in as "bpattersen123".
+[18:01:25.87] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[18:01:25.88] [INFO] Will submit sender and recipients.
+[18:01:25.88] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[18:01:25.88] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[18:01:25.95] [RECV] 250 2.1.0 OK l12sm3028988fgb.16\r\n
+[18:01:25.96] [RECV] 250 2.1.5 OK l12sm3028988fgb.16\r\n
+[18:01:25.96] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[18:01:25.96] [SEND] DATA\r\n
+[18:01:26.18] [RECV] 354  Go ahead l12sm3028988fgb.16\r\n
+[18:01:26.18] [SEND] [Data chunk of 719 bytes sent.]
+[18:01:26.18] [SEND] \r\n.\r\n
+[18:01:26.94] [RECV] 250 2.0.0 OK 1237564904 l12sm3028988fgb.16\r\n
+[18:01:26.94] [INFO] Message successfully submitted to SMTP server.
+[18:01:26.94] [SEND] QUIT\r\n
+[18:01:27.01] [RECV] 221 2.0.0 closing connection l12sm3028988fgb.16\r\n
+[18:01:27.01] [INFO] Will disconnect from host "smtp.gmail.com".
+[18:01:27.02] [INFO] Disconnected from host "smtp.gmail.com".
+[18:05:24.49] [INFO] Assembly version: 4.0.2.114.
+[18:05:24.49] [INFO] Will resolve host "smtp.gmail.com".
+[18:05:24.53] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.109, 72.14.221.111.
+[18:05:24.53] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[18:05:24.61] [INFO] Socket connected to IP address 72.14.221.109 on port 465.
+[18:05:24.62] [INFO] Will create TLS/SSL credentials.
+[18:05:24.63] [INFO] TLS/SSL credentials created.
+[18:05:24.63] [INFO] Will start TLS/SSL negotiation sequence.
+[18:05:24.79] [INFO] TLS/SSL negotiation completed.
+[18:05:24.80] [RECV] 220 mx.google.com ESMTP e11sm3025260fga.5\r\n
+[18:05:24.81] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[18:05:24.82] [INFO] Will send Hello command (HELO or EHLO).
+[18:05:24.83] [SEND] EHLO gmail.com\r\n
+[18:05:24.90] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[18:05:24.91] [INFO] SMTP Hello completed.
+[18:05:24.91] [INFO] Will login as "bpattersen123".
+[18:05:24.92] [INFO] Will try SASL LOGIN authentication method.
+[18:05:24.92] [SEND] AUTH LOGIN\r\n
+[18:05:24.99] [RECV] 334 VXNlcm5hbWU6\r\n
+[18:05:25.00] [SEND] ********\r\n
+[18:05:25.07] [RECV] 334 UGFzc3dvcmQ6\r\n
+[18:05:25.07] [SEND] ********\r\n
+[18:05:25.46] [RECV] 235 2.7.0 Accepted\r\n
+[18:05:25.47] [INFO] Logged in as "bpattersen123".
+[18:05:25.47] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[18:05:25.48] [INFO] Will submit sender and recipients.
+[18:05:25.48] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[18:05:25.49] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[18:05:25.56] [RECV] 250 2.1.0 OK e11sm3025260fga.5\r\n
+[18:05:25.56] [RECV] 250 2.1.5 OK e11sm3025260fga.5\r\n
+[18:05:25.56] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[18:05:25.56] [SEND] DATA\r\n
+[18:05:25.83] [RECV] 354  Go ahead e11sm3025260fga.5\r\n
+[18:05:25.84] [SEND] [Data chunk of 711 bytes sent.]
+[18:05:25.84] [SEND] \r\n.\r\n
+[18:05:26.28] [RECV] 250 2.0.0 OK 1237565143 e11sm3025260fga.5\r\n
+[18:05:26.28] [INFO] Message successfully submitted to SMTP server.
+[18:05:26.29] [SEND] QUIT\r\n
+[18:05:26.36] [RECV] 221 2.0.0 closing connection e11sm3025260fga.5\r\n
+[18:05:26.36] [INFO] Will disconnect from host "smtp.gmail.com".
+[18:05:26.37] [INFO] Disconnected from host "smtp.gmail.com".
+[18:24:33.23] [INFO] Assembly version: 4.0.2.114.
+[18:24:33.23] [INFO] Will resolve host "smtp.gmail.com".
+[18:24:33.31] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.109, 72.14.221.111.
+[18:24:33.31] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[18:24:33.40] [INFO] Socket connected to IP address 72.14.221.109 on port 465.
+[18:24:33.41] [INFO] Will create TLS/SSL credentials.
+[18:24:33.41] [INFO] TLS/SSL credentials created.
+[18:24:33.41] [INFO] Will start TLS/SSL negotiation sequence.
+[18:24:33.57] [INFO] TLS/SSL negotiation completed.
+[18:24:33.58] [RECV] 220 mx.google.com ESMTP e11sm3088249fga.25\r\n
+[18:24:33.59] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[18:24:33.60] [INFO] Will send Hello command (HELO or EHLO).
+[18:24:33.60] [SEND] EHLO gmail.com\r\n
+[18:24:33.67] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[18:24:33.68] [INFO] SMTP Hello completed.
+[18:24:33.69] [INFO] Will login as "bpattersen123".
+[18:24:33.70] [INFO] Will try SASL LOGIN authentication method.
+[18:24:33.70] [SEND] AUTH LOGIN\r\n
+[18:24:33.77] [RECV] 334 VXNlcm5hbWU6\r\n
+[18:24:33.78] [SEND] ********\r\n
+[18:24:33.84] [RECV] 334 UGFzc3dvcmQ6\r\n
+[18:24:33.85] [SEND] ********\r\n
+[18:24:34.27] [RECV] 235 2.7.0 Accepted\r\n
+[18:24:34.28] [INFO] Logged in as "bpattersen123".
+[18:24:34.28] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[18:24:34.29] [INFO] Will submit sender and recipients.
+[18:24:34.30] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[18:24:34.30] [SEND] RCPT TO:<olegr@gmail.com>\r\n
+[18:24:34.37] [RECV] 250 2.1.0 OK e11sm3088249fga.25\r\n
+[18:24:34.37] [RECV] 250 2.1.5 OK e11sm3088249fga.25\r\n
+[18:24:34.38] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[18:24:34.38] [SEND] DATA\r\n
+[18:24:34.63] [RECV] 354  Go ahead e11sm3088249fga.25\r\n
+[18:24:34.64] [SEND] [Data chunk of 709 bytes sent.]
+[18:24:34.64] [SEND] \r\n.\r\n
+[18:24:35.08] [RECV] 250 2.0.0 OK 1237566292 e11sm3088249fga.25\r\n
+[18:24:35.09] [INFO] Message successfully submitted to SMTP server.
+[18:24:35.10] [SEND] QUIT\r\n
+[18:24:35.17] [RECV] 221 2.0.0 closing connection e11sm3088249fga.25\r\n
+[18:24:35.17] [INFO] Will disconnect from host "smtp.gmail.com".
+[18:24:35.19] [INFO] Disconnected from host "smtp.gmail.com".
+[18:36:21.03] [INFO] Assembly version: 4.0.2.114.
+[18:36:21.03] [INFO] Will resolve host "smtp.gmail.com".
+[18:36:21.11] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[18:36:21.11] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[18:36:21.20] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[18:36:21.21] [INFO] Will create TLS/SSL credentials.
+[18:36:21.21] [INFO] TLS/SSL credentials created.
+[18:36:21.21] [INFO] Will start TLS/SSL negotiation sequence.
+[18:36:21.37] [INFO] TLS/SSL negotiation completed.
+[18:36:21.39] [RECV] 220 mx.google.com ESMTP 4sm1191007fge.28\r\n
+[18:36:21.39] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[18:36:21.41] [INFO] Will send Hello command (HELO or EHLO).
+[18:36:21.42] [SEND] EHLO gmail.com\r\n
+[18:36:21.49] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[18:36:21.50] [INFO] SMTP Hello completed.
+[18:36:21.50] [INFO] Will login as "bpattersen123".
+[18:36:21.51] [INFO] Will try SASL LOGIN authentication method.
+[18:36:21.51] [SEND] AUTH LOGIN\r\n
+[18:36:21.58] [RECV] 334 VXNlcm5hbWU6\r\n
+[18:36:21.59] [SEND] ********\r\n
+[18:36:21.66] [RECV] 334 UGFzc3dvcmQ6\r\n
+[18:36:21.66] [SEND] ********\r\n
+[18:36:22.07] [RECV] 235 2.7.0 Accepted\r\n
+[18:36:22.07] [INFO] Logged in as "bpattersen123".
+[18:36:22.08] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[18:36:22.09] [INFO] Will submit sender and recipients.
+[18:36:22.09] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[18:36:22.09] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[18:36:22.16] [RECV] 250 2.1.0 OK 4sm1191007fge.28\r\n
+[18:36:22.17] [RECV] 250 2.1.5 OK 4sm1191007fge.28\r\n
+[18:36:22.17] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[18:36:22.17] [SEND] DATA\r\n
+[18:36:22.39] [RECV] 354  Go ahead 4sm1191007fge.28\r\n
+[18:36:22.39] [SEND] [Data chunk of 737 bytes sent.]
+[18:36:22.39] [SEND] \r\n.\r\n
+[18:36:22.99] [RECV] 250 2.0.0 OK 1237567000 4sm1191007fge.28\r\n
+[18:36:22.99] [INFO] Message successfully submitted to SMTP server.
+[18:36:23.00] [SEND] QUIT\r\n
+[18:36:23.07] [RECV] 221 2.0.0 closing connection 4sm1191007fge.28\r\n
+[18:36:23.08] [INFO] Will disconnect from host "smtp.gmail.com".
+[18:36:23.09] [INFO] Disconnected from host "smtp.gmail.com".
+[19:22:46.00] [INFO] Assembly version: 4.0.2.114.
+[19:22:46.00] [INFO] Will resolve host "smtp.gmail.com".
+[19:22:46.08] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[19:22:46.08] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[19:22:46.17] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[19:22:46.17] [INFO] Will create TLS/SSL credentials.
+[19:22:46.17] [INFO] TLS/SSL credentials created.
+[19:22:46.18] [INFO] Will start TLS/SSL negotiation sequence.
+[19:22:46.33] [INFO] TLS/SSL negotiation completed.
+[19:22:46.34] [RECV] 220 mx.google.com ESMTP l19sm1273887fgb.11\r\n
+[19:22:46.35] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[19:22:46.36] [INFO] Will send Hello command (HELO or EHLO).
+[19:22:46.36] [SEND] EHLO gmail.com\r\n
+[19:22:46.43] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[19:22:46.44] [INFO] SMTP Hello completed.
+[19:22:46.45] [INFO] Will login as "bpattersen123".
+[19:22:46.45] [INFO] Will try SASL LOGIN authentication method.
+[19:22:46.46] [SEND] AUTH LOGIN\r\n
+[19:22:46.53] [RECV] 334 VXNlcm5hbWU6\r\n
+[19:22:46.53] [SEND] ********\r\n
+[19:22:46.60] [RECV] 334 UGFzc3dvcmQ6\r\n
+[19:22:46.60] [SEND] ********\r\n
+[19:22:47.06] [RECV] 235 2.7.0 Accepted\r\n
+[19:22:47.07] [INFO] Logged in as "bpattersen123".
+[19:22:47.07] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[19:22:47.08] [INFO] Will submit sender and recipients.
+[19:22:47.08] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[19:22:47.09] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[19:22:47.15] [RECV] 250 2.1.0 OK l19sm1273887fgb.11\r\n
+[19:22:47.16] [RECV] 250 2.1.5 OK l19sm1273887fgb.11\r\n
+[19:22:47.16] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[19:22:47.16] [SEND] DATA\r\n
+[19:22:48.08] [RECV] 354  Go ahead l19sm1273887fgb.11\r\n
+[19:22:48.08] [SEND] [Data chunk of 726 bytes sent.]
+[19:22:48.09] [SEND] \r\n.\r\n
+[19:22:48.62] [RECV] 250 2.0.0 OK 1237569786 l19sm1273887fgb.11\r\n
+[19:22:48.62] [INFO] Message successfully submitted to SMTP server.
+[19:22:48.62] [SEND] QUIT\r\n
+[19:22:48.69] [RECV] 221 2.0.0 closing connection l19sm1273887fgb.11\r\n
+[19:22:48.70] [INFO] Will disconnect from host "smtp.gmail.com".
+[19:22:48.71] [INFO] Disconnected from host "smtp.gmail.com".
+[19:38:21.79] [INFO] Assembly version: 4.0.2.114.
+[19:38:21.79] [INFO] Will resolve host "smtp.gmail.com".
+[19:38:21.84] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.109, 72.14.221.111.
+[19:38:21.84] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[19:38:21.91] [INFO] Socket connected to IP address 72.14.221.109 on port 465.
+[19:38:21.91] [INFO] Will create TLS/SSL credentials.
+[19:38:21.91] [INFO] TLS/SSL credentials created.
+[19:38:21.92] [INFO] Will start TLS/SSL negotiation sequence.
+[19:38:22.07] [INFO] TLS/SSL negotiation completed.
+[19:38:22.08] [RECV] 220 mx.google.com ESMTP e20sm1255464fga.19\r\n
+[19:38:22.08] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[19:38:22.08] [INFO] Will send Hello command (HELO or EHLO).
+[19:38:22.08] [SEND] EHLO gmail.com\r\n
+[19:38:22.16] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[19:38:22.16] [INFO] SMTP Hello completed.
+[19:38:22.16] [INFO] Will login as "bpattersen123".
+[19:38:22.16] [INFO] Will try SASL LOGIN authentication method.
+[19:38:22.16] [SEND] AUTH LOGIN\r\n
+[19:38:22.23] [RECV] 334 VXNlcm5hbWU6\r\n
+[19:38:22.24] [SEND] ********\r\n
+[19:38:22.31] [RECV] 334 UGFzc3dvcmQ6\r\n
+[19:38:22.31] [SEND] ********\r\n
+[19:38:22.73] [RECV] 235 2.7.0 Accepted\r\n
+[19:38:22.74] [INFO] Logged in as "bpattersen123".
+[19:38:22.74] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[19:38:22.74] [INFO] Will submit sender and recipients.
+[19:38:22.74] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[19:38:22.75] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[19:38:22.82] [RECV] 250 2.1.0 OK e20sm1255464fga.19\r\n
+[19:38:22.82] [RECV] 250 2.1.5 OK e20sm1255464fga.19\r\n
+[19:38:22.82] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[19:38:22.82] [SEND] DATA\r\n
+[19:38:23.07] [RECV] 354  Go ahead e20sm1255464fga.19\r\n
+[19:38:23.08] [SEND] [Data chunk of 714 bytes sent.]
+[19:38:23.08] [SEND] \r\n.\r\n
+[19:38:23.48] [RECV] 250 2.0.0 OK 1237570721 e20sm1255464fga.19\r\n
+[19:38:23.48] [INFO] Message successfully submitted to SMTP server.
+[19:38:23.48] [SEND] QUIT\r\n
+[19:38:23.56] [RECV] 221 2.0.0 closing connection e20sm1255464fga.19\r\n
+[19:38:23.56] [INFO] Will disconnect from host "smtp.gmail.com".
+[19:38:23.56] [INFO] Disconnected from host "smtp.gmail.com".
+[19:39:32.40] [INFO] Assembly version: 4.0.2.114.
+[19:39:32.40] [INFO] Will resolve host "smtp.gmail.com".
+[19:39:32.41] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.109, 72.14.221.111.
+[19:39:32.41] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[19:39:32.48] [INFO] Socket connected to IP address 72.14.221.109 on port 465.
+[19:39:32.48] [INFO] Will create TLS/SSL credentials.
+[19:39:32.48] [INFO] TLS/SSL credentials created.
+[19:39:32.49] [INFO] Will start TLS/SSL negotiation sequence.
+[19:39:32.64] [INFO] TLS/SSL negotiation completed.
+[19:39:32.64] [RECV] 220 mx.google.com ESMTP l19sm1289609fgb.21\r\n
+[19:39:32.65] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[19:39:32.65] [INFO] Will send Hello command (HELO or EHLO).
+[19:39:32.65] [SEND] EHLO gmail.com\r\n
+[19:39:32.72] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[19:39:32.72] [INFO] SMTP Hello completed.
+[19:39:32.73] [INFO] Will login as "bpattersen123".
+[19:39:32.73] [INFO] Will try SASL LOGIN authentication method.
+[19:39:32.73] [SEND] AUTH LOGIN\r\n
+[19:39:32.80] [RECV] 334 VXNlcm5hbWU6\r\n
+[19:39:32.80] [SEND] ********\r\n
+[19:39:32.87] [RECV] 334 UGFzc3dvcmQ6\r\n
+[19:39:32.88] [SEND] ********\r\n
+[19:39:33.27] [RECV] 235 2.7.0 Accepted\r\n
+[19:39:33.28] [INFO] Logged in as "bpattersen123".
+[19:39:33.28] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[19:39:33.28] [INFO] Will submit sender and recipients.
+[19:39:33.28] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[19:39:33.28] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[19:39:33.35] [RECV] 250 2.1.0 OK l19sm1289609fgb.21\r\n
+[19:39:33.36] [RECV] 250 2.1.5 OK l19sm1289609fgb.21\r\n
+[19:39:33.36] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[19:39:33.36] [SEND] DATA\r\n
+[19:39:33.58] [RECV] 354  Go ahead l19sm1289609fgb.21\r\n
+[19:39:33.58] [SEND] [Data chunk of 714 bytes sent.]
+[19:39:33.58] [SEND] \r\n.\r\n
+[19:39:33.98] [RECV] 250 2.0.0 OK 1237570792 l19sm1289609fgb.21\r\n
+[19:39:33.98] [INFO] Message successfully submitted to SMTP server.
+[19:39:33.99] [SEND] QUIT\r\n
+[19:39:34.06] [RECV] 221 2.0.0 closing connection l19sm1289609fgb.21\r\n
+[19:39:34.06] [INFO] Will disconnect from host "smtp.gmail.com".
+[19:39:34.06] [INFO] Disconnected from host "smtp.gmail.com".
+[19:44:40.27] [INFO] Assembly version: 4.0.2.114.
+[19:44:40.27] [INFO] Will resolve host "smtp.gmail.com".
+[19:44:40.36] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[19:44:40.36] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[19:44:40.45] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[19:44:40.46] [INFO] Will create TLS/SSL credentials.
+[19:44:40.46] [INFO] TLS/SSL credentials created.
+[19:44:40.46] [INFO] Will start TLS/SSL negotiation sequence.
+[19:44:40.62] [INFO] TLS/SSL negotiation completed.
+[19:44:40.63] [RECV] 220 mx.google.com ESMTP 4sm1251218fge.8\r\n
+[19:44:40.64] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[19:44:40.65] [INFO] Will send Hello command (HELO or EHLO).
+[19:44:40.65] [SEND] EHLO gmail.com\r\n
+[19:44:40.72] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[19:44:40.73] [INFO] SMTP Hello completed.
+[19:44:40.73] [INFO] Will login as "bpattersen123".
+[19:44:40.74] [INFO] Will try SASL LOGIN authentication method.
+[19:44:40.74] [SEND] AUTH LOGIN\r\n
+[19:44:40.82] [RECV] 334 VXNlcm5hbWU6\r\n
+[19:44:40.82] [SEND] ********\r\n
+[19:44:40.89] [RECV] 334 UGFzc3dvcmQ6\r\n
+[19:44:40.90] [SEND] ********\r\n
+[19:44:41.32] [RECV] 235 2.7.0 Accepted\r\n
+[19:44:41.32] [INFO] Logged in as "bpattersen123".
+[19:44:41.32] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[19:44:41.34] [INFO] Will submit sender and recipients.
+[19:44:41.35] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[19:44:41.35] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[19:44:41.42] [RECV] 250 2.1.0 OK 4sm1251218fge.8\r\n
+[19:44:41.42] [RECV] 250 2.1.5 OK 4sm1251218fge.8\r\n
+[19:44:41.42] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[19:44:41.42] [SEND] DATA\r\n
+[19:44:41.66] [RECV] 354  Go ahead 4sm1251218fge.8\r\n
+[19:44:41.66] [SEND] [Data chunk of 714 bytes sent.]
+[19:44:41.67] [SEND] \r\n.\r\n
+[19:44:42.13] [RECV] 250 2.0.0 OK 1237571100 4sm1251218fge.8\r\n
+[19:44:42.13] [INFO] Message successfully submitted to SMTP server.
+[19:44:42.13] [SEND] QUIT\r\n
+[19:44:42.20] [RECV] 221 2.0.0 closing connection 4sm1251218fge.8\r\n
+[19:44:42.21] [INFO] Will disconnect from host "smtp.gmail.com".
+[19:44:42.22] [INFO] Disconnected from host "smtp.gmail.com".
+[19:57:19.80] [INFO] Assembly version: 4.0.2.114.
+[19:57:19.80] [INFO] Will resolve host "smtp.gmail.com".
+[19:57:19.89] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.109, 72.14.221.111.
+[19:57:19.89] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[19:57:19.97] [INFO] Socket connected to IP address 72.14.221.109 on port 465.
+[19:57:19.98] [INFO] Will create TLS/SSL credentials.
+[19:57:19.98] [INFO] TLS/SSL credentials created.
+[19:57:19.99] [INFO] Will start TLS/SSL negotiation sequence.
+[19:57:20.14] [INFO] TLS/SSL negotiation completed.
+[19:57:20.15] [RECV] 220 mx.google.com ESMTP l19sm1296351fgb.26\r\n
+[19:57:20.16] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[19:57:20.17] [INFO] Will send Hello command (HELO or EHLO).
+[19:57:20.17] [SEND] EHLO gmail.com\r\n
+[19:57:20.24] [RECV] 250-mx.google.com at your service, [95.133.58.27]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[19:57:20.25] [INFO] SMTP Hello completed.
+[19:57:20.25] [INFO] Will login as "bpattersen123".
+[19:57:20.26] [INFO] Will try SASL LOGIN authentication method.
+[19:57:20.26] [SEND] AUTH LOGIN\r\n
+[19:57:20.33] [RECV] 334 VXNlcm5hbWU6\r\n
+[19:57:20.34] [SEND] ********\r\n
+[19:57:20.41] [RECV] 334 UGFzc3dvcmQ6\r\n
+[19:57:20.42] [SEND] ********\r\n
+[19:57:20.90] [RECV] 235 2.7.0 Accepted\r\n
+[19:57:20.91] [INFO] Logged in as "bpattersen123".
+[19:57:20.91] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[19:57:20.92] [INFO] Will submit sender and recipients.
+[19:57:20.93] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[19:57:20.93] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[19:57:21.00] [RECV] 250 2.1.0 OK l19sm1296351fgb.26\r\n
+[19:57:21.00] [RECV] 250 2.1.5 OK l19sm1296351fgb.26\r\n
+[19:57:21.01] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[19:57:21.01] [SEND] DATA\r\n
+[19:57:21.29] [RECV] 354  Go ahead l19sm1296351fgb.26\r\n
+[19:57:21.30] [SEND] [Data chunk of 727 bytes sent.]
+[19:57:21.30] [SEND] \r\n.\r\n
+[19:57:21.78] [RECV] 250 2.0.0 OK 1237571860 l19sm1296351fgb.26\r\n
+[19:57:21.79] [INFO] Message successfully submitted to SMTP server.
+[19:57:21.79] [SEND] QUIT\r\n
+[19:57:21.87] [RECV] 221 2.0.0 closing connection l19sm1296351fgb.26\r\n
+[19:57:21.87] [INFO] Will disconnect from host "smtp.gmail.com".
+[19:57:21.88] [INFO] Disconnected from host "smtp.gmail.com".
+[08:53:30.76] [INFO] Assembly version: 4.0.2.114.
+[08:53:30.76] [INFO] Will resolve host "smtp.gmail.com".
+[08:53:30.85] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.109, 72.14.221.111.
+[08:53:30.85] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[08:53:30.93] [INFO] Socket connected to IP address 72.14.221.109 on port 465.
+[08:53:30.95] [INFO] Will create TLS/SSL credentials.
+[08:53:30.95] [INFO] TLS/SSL credentials created.
+[08:53:30.95] [INFO] Will start TLS/SSL negotiation sequence.
+[08:53:31.13] [INFO] TLS/SSL negotiation completed.
+[08:53:31.15] [RECV] 220 mx.google.com ESMTP l19sm558627fgb.21\r\n
+[08:53:31.15] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[08:53:31.17] [INFO] Will send Hello command (HELO or EHLO).
+[08:53:31.17] [SEND] EHLO gmail.com\r\n
+[08:53:31.24] [RECV] 250-mx.google.com at your service, [95.133.26.95]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[08:53:31.26] [INFO] SMTP Hello completed.
+[08:53:31.26] [INFO] Will login as "bpattersen123".
+[08:53:31.26] [INFO] Will try SASL LOGIN authentication method.
+[08:53:31.26] [SEND] AUTH LOGIN\r\n
+[08:53:31.34] [RECV] 334 VXNlcm5hbWU6\r\n
+[08:53:31.34] [SEND] ********\r\n
+[08:53:31.42] [RECV] 334 UGFzc3dvcmQ6\r\n
+[08:53:31.42] [SEND] ********\r\n
+[08:53:31.76] [RECV] 235 2.7.0 Accepted\r\n
+[08:53:31.76] [INFO] Logged in as "bpattersen123".
+[08:53:31.76] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[08:53:31.77] [INFO] Will submit sender and recipients.
+[08:53:31.77] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[08:53:31.77] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[08:53:31.85] [RECV] 250 2.1.0 OK l19sm558627fgb.21\r\n
+[08:53:31.85] [RECV] 250 2.1.5 OK l19sm558627fgb.21\r\n
+[08:53:31.85] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[08:53:31.85] [SEND] DATA\r\n
+[08:53:32.21] [RECV] 354  Go ahead l19sm558627fgb.21\r\n
+[08:53:32.21] [SEND] [Data chunk of 759 bytes sent.]
+[08:53:32.21] [SEND] \r\n.\r\n
+[08:53:32.77] [RECV] 250 2.0.0 OK 1237618432 l19sm558627fgb.21\r\n
+[08:53:32.77] [INFO] Message successfully submitted to SMTP server.
+[08:53:32.77] [SEND] QUIT\r\n
+[08:53:32.85] [RECV] 221 2.0.0 closing connection l19sm558627fgb.21\r\n
+[08:53:32.85] [INFO] Will disconnect from host "smtp.gmail.com".
+[08:53:32.87] [INFO] Disconnected from host "smtp.gmail.com".
+[16:10:19.34] [INFO] Assembly version: 4.0.2.114.
+[16:10:19.34] [INFO] Will resolve host "smtp.gmail.com".
+[16:10:19.44] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[16:10:19.44] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[16:10:22.57] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[16:10:22.58] [INFO] Will create TLS/SSL credentials.
+[16:10:22.58] [INFO] TLS/SSL credentials created.
+[16:10:22.58] [INFO] Will start TLS/SSL negotiation sequence.
+[16:10:22.84] [INFO] TLS/SSL negotiation completed.
+[16:10:22.85] [RECV] 220 mx.google.com ESMTP 4sm812198fgg.0\r\n
+[16:10:22.85] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[16:10:22.86] [INFO] Will send Hello command (HELO or EHLO).
+[16:10:22.87] [SEND] EHLO gmail.com\r\n
+[16:10:22.98] [RECV] 250-mx.google.com at your service, [92.113.189.121]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[16:10:22.99] [INFO] SMTP Hello completed.
+[16:10:23.00] [INFO] Will login as "bpattersen123".
+[16:10:23.00] [INFO] Will try SASL LOGIN authentication method.
+[16:10:23.01] [SEND] AUTH LOGIN\r\n
+[16:10:23.13] [RECV] 334 VXNlcm5hbWU6\r\n
+[16:10:23.13] [SEND] ********\r\n
+[16:10:23.25] [RECV] 334 UGFzc3dvcmQ6\r\n
+[16:10:23.25] [SEND] ********\r\n
+[16:10:23.67] [RECV] 235 2.7.0 Accepted\r\n
+[16:10:23.67] [INFO] Logged in as "bpattersen123".
+[16:10:23.67] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[16:10:23.68] [INFO] Will submit sender and recipients.
+[16:10:23.69] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[16:10:23.69] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[16:10:23.81] [RECV] 250 2.1.0 OK 4sm812198fgg.0\r\n
+[16:10:23.81] [RECV] 250 2.1.5 OK 4sm812198fgg.0\r\n
+[16:10:23.81] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[16:10:23.81] [SEND] DATA\r\n
+[16:10:24.38] [RECV] 354  Go ahead 4sm812198fgg.0\r\n
+[16:10:24.39] [SEND] [Data chunk of 705 bytes sent.]
+[16:10:24.39] [SEND] \r\n.\r\n
+[16:10:25.07] [RECV] 250 2.0.0 OK 1237644644 4sm812198fgg.0\r\n
+[16:10:25.07] [INFO] Message successfully submitted to SMTP server.
+[16:10:25.07] [SEND] QUIT\r\n
+[16:10:25.19] [RECV] 221 2.0.0 closing connection 4sm812198fgg.0\r\n
+[16:10:25.19] [INFO] Will disconnect from host "smtp.gmail.com".
+[16:10:25.21] [INFO] Disconnected from host "smtp.gmail.com".
+[16:12:58.13] [INFO] Assembly version: 4.0.2.114.
+[16:12:58.13] [INFO] Will resolve host "smtp.gmail.com".
+[16:12:58.18] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[16:12:58.19] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[16:12:58.30] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[16:12:58.30] [INFO] Will create TLS/SSL credentials.
+[16:12:58.30] [INFO] TLS/SSL credentials created.
+[16:12:58.30] [INFO] Will start TLS/SSL negotiation sequence.
+[16:12:58.54] [INFO] TLS/SSL negotiation completed.
+[16:12:58.55] [RECV] 220 mx.google.com ESMTP e20sm809743fga.29\r\n
+[16:12:58.55] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[16:12:58.55] [INFO] Will send Hello command (HELO or EHLO).
+[16:12:58.55] [SEND] EHLO gmail.com\r\n
+[16:12:58.66] [RECV] 250-mx.google.com at your service, [92.113.189.121]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[16:12:58.67] [INFO] SMTP Hello completed.
+[16:12:58.67] [INFO] Will login as "bpattersen123".
+[16:12:58.67] [INFO] Will try SASL LOGIN authentication method.
+[16:12:58.67] [SEND] AUTH LOGIN\r\n
+[16:12:58.79] [RECV] 334 VXNlcm5hbWU6\r\n
+[16:12:58.79] [SEND] ********\r\n
+[16:12:58.90] [RECV] 334 UGFzc3dvcmQ6\r\n
+[16:12:58.91] [SEND] ********\r\n
+[16:12:59.25] [RECV] 235 2.7.0 Accepted\r\n
+[16:12:59.26] [INFO] Logged in as "bpattersen123".
+[16:12:59.26] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[16:12:59.26] [INFO] Will submit sender and recipients.
+[16:12:59.26] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[16:12:59.27] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[16:12:59.38] [RECV] 250 2.1.0 OK e20sm809743fga.29\r\n
+[16:12:59.38] [RECV] 250 2.1.5 OK e20sm809743fga.29\r\n
+[16:12:59.38] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[16:12:59.39] [SEND] DATA\r\n
+[16:12:59.64] [RECV] 354  Go ahead e20sm809743fga.29\r\n
+[16:12:59.65] [SEND] [Data chunk of 741 bytes sent.]
+[16:12:59.65] [SEND] \r\n.\r\n
+[16:13:00.19] [RECV] 250 2.0.0 OK 1237644799 e20sm809743fga.29\r\n
+[16:13:00.19] [INFO] Message successfully submitted to SMTP server.
+[16:13:00.19] [SEND] QUIT\r\n
+[16:13:00.30] [RECV] 221 2.0.0 closing connection e20sm809743fga.29\r\n
+[16:13:00.30] [INFO] Will disconnect from host "smtp.gmail.com".
+[16:13:00.31] [INFO] Disconnected from host "smtp.gmail.com".
+[13:05:16.85] [INFO] Assembly version: 4.0.2.114.
+[13:05:16.85] [INFO] Will resolve host "".
+[13:05:16.96] [INFO] Host "" resolved to IP address(es) 192.168.1.48.
+[13:05:16.96] [INFO] Will connect to host "" on port 110.
+[13:05:18.01] [INFO] Error: Socket connection has been refused by remote host. InnerException message follows: No connection could be made because the target machine actively refused it 192.168.1.48:110
+[16:04:39.94] [INFO] Assembly version: 4.0.2.114.
+[16:04:39.94] [INFO] Will resolve host "smtp.gmail.com".
+[16:04:40.11] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[16:04:40.11] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[16:04:40.19] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[16:04:40.20] [INFO] Will create TLS/SSL credentials.
+[16:04:40.21] [INFO] TLS/SSL credentials created.
+[16:04:40.21] [INFO] Will start TLS/SSL negotiation sequence.
+[16:04:40.37] [INFO] TLS/SSL negotiation completed.
+[16:04:40.38] [RECV] 220 mx.google.com ESMTP d4sm1863750fga.8\r\n
+[16:04:40.39] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[16:04:40.40] [INFO] Will send Hello command (HELO or EHLO).
+[16:04:40.41] [SEND] EHLO gmail.com\r\n
+[16:04:40.48] [RECV] 250-mx.google.com at your service, [95.133.19.231]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[16:04:40.49] [INFO] SMTP Hello completed.
+[16:04:40.50] [INFO] Will login as "bpattersen123@gmail.com".
+[16:04:40.50] [INFO] Will try SASL LOGIN authentication method.
+[16:04:40.51] [SEND] AUTH LOGIN\r\n
+[16:04:40.58] [RECV] 334 VXNlcm5hbWU6\r\n
+[16:04:40.59] [SEND] ********\r\n
+[16:04:40.66] [RECV] 334 UGFzc3dvcmQ6\r\n
+[16:04:40.66] [SEND] ********\r\n
+[16:04:41.00] [RECV] 235 2.7.0 Accepted\r\n
+[16:04:41.00] [INFO] Logged in as "bpattersen123@gmail.com".
+[16:04:41.01] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[16:04:41.02] [INFO] Will submit sender and recipients.
+[16:04:41.02] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[16:04:41.02] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[16:04:41.10] [RECV] 250 2.1.0 OK d4sm1863750fga.8\r\n
+[16:04:41.10] [RECV] 250 2.1.5 OK d4sm1863750fga.8\r\n
+[16:04:41.10] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[16:04:41.10] [SEND] DATA\r\n
+[16:04:41.78] [RECV] 354  Go ahead d4sm1863750fga.8\r\n
+[16:04:41.78] [SEND] [Data chunk of 725 bytes sent.]
+[16:04:41.78] [SEND] \r\n.\r\n
+[16:04:42.90] [RECV] 250 2.0.0 OK 1238162716 d4sm1863750fga.8\r\n
+[16:04:42.91] [INFO] Message successfully submitted to SMTP server.
+[16:04:42.91] [SEND] QUIT\r\n
+[16:04:42.99] [RECV] 221 2.0.0 closing connection d4sm1863750fga.8\r\n
+[16:04:42.99] [INFO] Will disconnect from host "smtp.gmail.com".
+[16:04:43.00] [INFO] Disconnected from host "smtp.gmail.com".
+[16:06:14.09] [INFO] Assembly version: 4.0.2.114.
+[16:06:14.09] [INFO] Will resolve host "smtp.gmail.com".
+[16:06:14.09] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[16:06:14.09] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[16:06:14.17] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[16:06:14.17] [INFO] Will create TLS/SSL credentials.
+[16:06:14.17] [INFO] TLS/SSL credentials created.
+[16:06:14.17] [INFO] Will start TLS/SSL negotiation sequence.
+[16:06:14.33] [INFO] TLS/SSL negotiation completed.
+[16:06:14.35] [RECV] 220 mx.google.com ESMTP e11sm1851800fga.15\r\n
+[16:06:14.35] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[16:06:14.35] [INFO] Will send Hello command (HELO or EHLO).
+[16:06:14.35] [SEND] EHLO gmail.com\r\n
+[16:06:14.43] [RECV] 250-mx.google.com at your service, [95.133.19.231]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[16:06:14.43] [INFO] SMTP Hello completed.
+[16:06:14.43] [INFO] Will login as "bpattersen123@gmail.com".
+[16:06:14.43] [INFO] Will try SASL LOGIN authentication method.
+[16:06:14.43] [SEND] AUTH LOGIN\r\n
+[16:06:14.51] [RECV] 334 VXNlcm5hbWU6\r\n
+[16:06:14.51] [SEND] ********\r\n
+[16:06:14.58] [RECV] 334 UGFzc3dvcmQ6\r\n
+[16:06:14.59] [SEND] ********\r\n
+[16:06:14.98] [RECV] 235 2.7.0 Accepted\r\n
+[16:06:14.98] [INFO] Logged in as "bpattersen123@gmail.com".
+[16:06:14.99] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[16:06:14.99] [INFO] Will submit sender and recipients.
+[16:06:14.99] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[16:06:14.99] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[16:06:15.07] [RECV] 250 2.1.0 OK e11sm1851800fga.15\r\n
+[16:06:15.07] [RECV] 250 2.1.5 OK e11sm1851800fga.15\r\n
+[16:06:15.07] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[16:06:15.07] [SEND] DATA\r\n
+[16:06:15.30] [RECV] 354  Go ahead e11sm1851800fga.15\r\n
+[16:06:15.30] [SEND] [Data chunk of 735 bytes sent.]
+[16:06:15.30] [SEND] \r\n.\r\n
+[16:06:16.03] [RECV] 250 2.0.0 OK 1238162809 e11sm1851800fga.15\r\n
+[16:06:16.03] [INFO] Message successfully submitted to SMTP server.
+[16:06:16.03] [SEND] QUIT\r\n
+[16:06:16.12] [RECV] 221 2.0.0 closing connection e11sm1851800fga.15\r\n
+[16:06:16.12] [INFO] Will disconnect from host "smtp.gmail.com".
+[16:06:16.12] [INFO] Disconnected from host "smtp.gmail.com".
+[16:33:17.35] [INFO] Assembly version: 4.0.2.114.
+[16:33:17.35] [INFO] Will resolve host "smtp.gmail.com".
+[16:33:17.43] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[16:33:17.43] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[16:33:17.51] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[16:33:17.52] [INFO] Will create TLS/SSL credentials.
+[16:33:17.52] [INFO] TLS/SSL credentials created.
+[16:33:17.53] [INFO] Will start TLS/SSL negotiation sequence.
+[16:33:17.69] [INFO] TLS/SSL negotiation completed.
+[16:33:17.70] [RECV] 220 mx.google.com ESMTP d4sm1899042fga.13\r\n
+[16:33:17.71] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[16:33:17.72] [INFO] Will send Hello command (HELO or EHLO).
+[16:33:17.73] [SEND] EHLO gmail.com\r\n
+[16:33:17.80] [RECV] 250-mx.google.com at your service, [95.133.19.231]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[16:33:17.81] [INFO] SMTP Hello completed.
+[16:33:17.82] [INFO] Will login as "bpattersen123@gmail.com".
+[16:33:17.82] [INFO] Will try SASL LOGIN authentication method.
+[16:33:17.83] [SEND] AUTH LOGIN\r\n
+[16:33:17.90] [RECV] 334 VXNlcm5hbWU6\r\n
+[16:33:17.91] [SEND] ********\r\n
+[16:33:17.98] [RECV] 334 UGFzc3dvcmQ6\r\n
+[16:33:17.98] [SEND] ********\r\n
+[16:33:18.31] [RECV] 235 2.7.0 Accepted\r\n
+[16:33:18.31] [INFO] Logged in as "bpattersen123@gmail.com".
+[16:33:18.32] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[16:33:18.33] [INFO] Will submit sender and recipients.
+[16:33:18.33] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[16:33:18.34] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[16:33:18.41] [RECV] 250 2.1.0 OK d4sm1899042fga.13\r\n
+[16:33:18.41] [RECV] 250 2.1.5 OK d4sm1899042fga.13\r\n
+[16:33:18.41] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[16:33:18.42] [SEND] DATA\r\n
+[16:33:18.77] [RECV] 354  Go ahead d4sm1899042fga.13\r\n
+[16:33:18.77] [SEND] [Data chunk of 728 bytes sent.]
+[16:33:18.77] [SEND] \r\n.\r\n
+[16:33:19.27] [RECV] 250 2.0.0 OK 1238164432 d4sm1899042fga.13\r\n
+[16:33:19.27] [INFO] Message successfully submitted to SMTP server.
+[16:33:19.28] [SEND] QUIT\r\n
+[16:33:19.35] [RECV] 221 2.0.0 closing connection d4sm1899042fga.13\r\n
+[16:33:19.35] [INFO] Will disconnect from host "smtp.gmail.com".
+[16:33:19.37] [INFO] Disconnected from host "smtp.gmail.com".
+[16:43:15.03] [INFO] Assembly version: 4.0.2.114.
+[16:43:15.03] [INFO] Will resolve host "smtp.gmail.com".
+[16:43:15.12] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.109, 72.14.221.111.
+[16:43:15.12] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[16:43:15.20] [INFO] Socket connected to IP address 72.14.221.109 on port 465.
+[16:43:15.21] [INFO] Will create TLS/SSL credentials.
+[16:43:15.21] [INFO] TLS/SSL credentials created.
+[16:43:15.21] [INFO] Will start TLS/SSL negotiation sequence.
+[16:43:15.38] [INFO] TLS/SSL negotiation completed.
+[16:43:15.39] [RECV] 220 mx.google.com ESMTP 4sm347277fgg.25\r\n
+[16:43:15.39] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[16:43:15.41] [INFO] Will send Hello command (HELO or EHLO).
+[16:43:15.42] [SEND] EHLO gmail.com\r\n
+[16:43:15.49] [RECV] 250-mx.google.com at your service, [95.133.19.231]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[16:43:15.50] [INFO] SMTP Hello completed.
+[16:43:15.50] [INFO] Will login as "bpattersen123@gmail.com".
+[16:43:15.51] [INFO] Will try SASL LOGIN authentication method.
+[16:43:15.51] [SEND] AUTH LOGIN\r\n
+[16:43:15.59] [RECV] 334 VXNlcm5hbWU6\r\n
+[16:43:15.59] [SEND] ********\r\n
+[16:43:15.67] [RECV] 334 UGFzc3dvcmQ6\r\n
+[16:43:15.67] [SEND] ********\r\n
+[16:43:15.98] [RECV] 235 2.7.0 Accepted\r\n
+[16:43:15.98] [INFO] Logged in as "bpattersen123@gmail.com".
+[16:43:15.98] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[16:43:16.00] [INFO] Will submit sender and recipients.
+[16:43:16.00] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[16:43:16.00] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[16:43:16.07] [RECV] 250 2.1.0 OK 4sm347277fgg.25\r\n
+[16:43:16.08] [RECV] 250 2.1.5 OK 4sm347277fgg.25\r\n
+[16:43:16.08] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[16:43:16.08] [SEND] DATA\r\n
+[16:43:16.30] [RECV] 354  Go ahead 4sm347277fgg.25\r\n
+[16:43:16.30] [SEND] [Data chunk of 727 bytes sent.]
+[16:43:16.31] [SEND] \r\n.\r\n
+[16:43:16.93] [RECV] 250 2.0.0 OK 1238165030 4sm347277fgg.25\r\n
+[16:43:16.93] [INFO] Message successfully submitted to SMTP server.
+[16:43:16.94] [SEND] QUIT\r\n
+[16:43:17.01] [RECV] 221 2.0.0 closing connection 4sm347277fgg.25\r\n
+[16:43:17.02] [INFO] Will disconnect from host "smtp.gmail.com".
+[16:43:17.03] [INFO] Disconnected from host "smtp.gmail.com".
+[16:50:47.49] [INFO] Assembly version: 4.0.2.114.
+[16:50:47.49] [INFO] Will resolve host "smtp.gmail.com".
+[16:50:47.54] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[16:50:47.54] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[16:50:47.61] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[16:50:47.61] [INFO] Will create TLS/SSL credentials.
+[16:50:47.61] [INFO] TLS/SSL credentials created.
+[16:50:47.62] [INFO] Will start TLS/SSL negotiation sequence.
+[16:50:47.77] [INFO] TLS/SSL negotiation completed.
+[16:50:47.78] [RECV] 220 mx.google.com ESMTP 3sm1908551fge.9\r\n
+[16:50:47.78] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[16:50:47.78] [INFO] Will send Hello command (HELO or EHLO).
+[16:50:47.78] [SEND] EHLO gmail.com\r\n
+[16:50:47.85] [RECV] 250-mx.google.com at your service, [95.133.19.231]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[16:50:47.86] [INFO] SMTP Hello completed.
+[16:50:47.86] [INFO] Will login as "bpattersen123@gmail.com".
+[16:50:47.86] [INFO] Will try SASL LOGIN authentication method.
+[16:50:47.86] [SEND] AUTH LOGIN\r\n
+[16:50:47.93] [RECV] 334 VXNlcm5hbWU6\r\n
+[16:50:47.94] [SEND] ********\r\n
+[16:50:48.01] [RECV] 334 UGFzc3dvcmQ6\r\n
+[16:50:48.01] [SEND] ********\r\n
+[16:50:48.42] [RECV] 235 2.7.0 Accepted\r\n
+[16:50:48.42] [INFO] Logged in as "bpattersen123@gmail.com".
+[16:50:48.42] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[16:50:48.42] [INFO] Will submit sender and recipients.
+[16:50:48.42] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[16:50:48.43] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[16:50:48.50] [RECV] 250 2.1.0 OK 3sm1908551fge.9\r\n
+[16:50:48.50] [RECV] 250 2.1.5 OK 3sm1908551fge.9\r\n
+[16:50:48.50] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[16:50:48.51] [SEND] DATA\r\n
+[16:50:48.94] [RECV] 354  Go ahead 3sm1908551fge.9\r\n
+[16:50:48.94] [SEND] [Data chunk of 727 bytes sent.]
+[16:50:48.95] [SEND] \r\n.\r\n
+[16:50:49.48] [RECV] 250 2.0.0 OK 1238165483 3sm1908551fge.9\r\n
+[16:50:49.48] [INFO] Message successfully submitted to SMTP server.
+[16:50:49.49] [SEND] QUIT\r\n
+[16:50:49.56] [RECV] 221 2.0.0 closing connection 3sm1908551fge.9\r\n
+[16:50:49.56] [INFO] Will disconnect from host "smtp.gmail.com".
+[16:50:49.57] [INFO] Disconnected from host "smtp.gmail.com".
+[17:00:20.88] [INFO] Assembly version: 4.0.2.114.
+[17:00:20.88] [INFO] Will resolve host "smtp.gmail.com".
+[17:00:20.96] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.109, 72.14.221.111.
+[17:00:20.96] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[17:00:21.05] [INFO] Socket connected to IP address 72.14.221.109 on port 465.
+[17:00:21.05] [INFO] Will create TLS/SSL credentials.
+[17:00:21.06] [INFO] TLS/SSL credentials created.
+[17:00:21.06] [INFO] Will start TLS/SSL negotiation sequence.
+[17:00:21.22] [INFO] TLS/SSL negotiation completed.
+[17:00:21.23] [RECV] 220 mx.google.com ESMTP 4sm362280fgg.10\r\n
+[17:00:21.24] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[17:00:21.25] [INFO] Will send Hello command (HELO or EHLO).
+[17:00:21.25] [SEND] EHLO gmail.com\r\n
+[17:00:21.33] [RECV] 250-mx.google.com at your service, [95.133.19.231]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[17:00:21.33] [INFO] SMTP Hello completed.
+[17:00:21.33] [INFO] Will login as "bpattersen123@gmail.com".
+[17:00:21.34] [INFO] Will try SASL LOGIN authentication method.
+[17:00:21.34] [SEND] AUTH LOGIN\r\n
+[17:00:21.41] [RECV] 334 VXNlcm5hbWU6\r\n
+[17:00:21.42] [SEND] ********\r\n
+[17:00:21.49] [RECV] 334 UGFzc3dvcmQ6\r\n
+[17:00:21.49] [SEND] ********\r\n
+[17:00:21.81] [RECV] 235 2.7.0 Accepted\r\n
+[17:00:21.81] [INFO] Logged in as "bpattersen123@gmail.com".
+[17:00:21.81] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[17:00:21.82] [INFO] Will submit sender and recipients.
+[17:00:21.82] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[17:00:21.82] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[17:00:21.90] [RECV] 250 2.1.0 OK 4sm362280fgg.10\r\n
+[17:00:21.90] [RECV] 250 2.1.5 OK 4sm362280fgg.10\r\n
+[17:00:21.90] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[17:00:21.90] [SEND] DATA\r\n
+[17:00:22.12] [RECV] 354  Go ahead 4sm362280fgg.10\r\n
+[17:00:22.13] [SEND] [Data chunk of 727 bytes sent.]
+[17:00:22.13] [SEND] \r\n.\r\n
+[17:00:22.59] [RECV] 250 2.0.0 OK 1238166056 4sm362280fgg.10\r\n
+[17:00:22.60] [INFO] Message successfully submitted to SMTP server.
+[17:00:22.60] [SEND] QUIT\r\n
+[17:00:22.67] [RECV] 221 2.0.0 closing connection 4sm362280fgg.10\r\n
+[17:00:22.67] [INFO] Will disconnect from host "smtp.gmail.com".
+[17:00:22.68] [INFO] Disconnected from host "smtp.gmail.com".
+[17:04:00.43] [INFO] Assembly version: 4.0.2.114.
+[17:04:00.43] [INFO] Will resolve host "smtp.gmail.com".
+[17:04:00.47] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[17:04:00.47] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[17:04:00.54] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[17:04:00.55] [INFO] Will create TLS/SSL credentials.
+[17:04:00.55] [INFO] TLS/SSL credentials created.
+[17:04:00.55] [INFO] Will start TLS/SSL negotiation sequence.
+[17:04:00.71] [INFO] TLS/SSL negotiation completed.
+[17:04:00.71] [RECV] 220 mx.google.com ESMTP 4sm381817fgg.0\r\n
+[17:04:00.71] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[17:04:00.71] [INFO] Will send Hello command (HELO or EHLO).
+[17:04:00.71] [SEND] EHLO gmail.com\r\n
+[17:04:00.79] [RECV] 250-mx.google.com at your service, [95.133.19.231]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[17:04:00.79] [INFO] SMTP Hello completed.
+[17:04:00.79] [INFO] Will login as "bpattersen123@gmail.com".
+[17:04:00.79] [INFO] Will try SASL LOGIN authentication method.
+[17:04:00.79] [SEND] AUTH LOGIN\r\n
+[17:04:00.87] [RECV] 334 VXNlcm5hbWU6\r\n
+[17:04:00.87] [SEND] ********\r\n
+[17:04:00.94] [RECV] 334 UGFzc3dvcmQ6\r\n
+[17:04:00.94] [SEND] ********\r\n
+[17:04:01.53] [RECV] 235 2.7.0 Accepted\r\n
+[17:04:01.53] [INFO] Logged in as "bpattersen123@gmail.com".
+[17:04:01.53] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[17:04:01.53] [INFO] Will submit sender and recipients.
+[17:04:01.53] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[17:04:01.54] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[17:04:01.61] [RECV] 250 2.1.0 OK 4sm381817fgg.0\r\n
+[17:04:01.61] [RECV] 250 2.1.5 OK 4sm381817fgg.0\r\n
+[17:04:01.61] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[17:04:01.61] [SEND] DATA\r\n
+[17:04:01.84] [RECV] 354  Go ahead 4sm381817fgg.0\r\n
+[17:04:01.84] [SEND] [Data chunk of 729 bytes sent.]
+[17:04:01.84] [SEND] \r\n.\r\n
+[17:04:02.42] [RECV] 250 2.0.0 OK 1238166276 4sm381817fgg.0\r\n
+[17:04:02.42] [INFO] Message successfully submitted to SMTP server.
+[17:04:02.42] [SEND] QUIT\r\n
+[17:04:02.50] [RECV] 221 2.0.0 closing connection 4sm381817fgg.0\r\n
+[17:04:02.50] [INFO] Will disconnect from host "smtp.gmail.com".
+[17:04:02.50] [INFO] Disconnected from host "smtp.gmail.com".
+[13:19:35.00] [INFO] Assembly version: 4.0.2.114.
+[13:19:35.00] [INFO] Will resolve host "smtp.gmail.com".
+[13:19:35.19] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[13:19:35.19] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[13:19:35.30] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[13:19:35.31] [INFO] Will create TLS/SSL credentials.
+[13:19:35.31] [INFO] TLS/SSL credentials created.
+[13:19:35.31] [INFO] Will start TLS/SSL negotiation sequence.
+[13:19:35.50] [INFO] TLS/SSL negotiation completed.
+[13:19:35.51] [RECV] 220 mx.google.com ESMTP e11sm4023964fga.5\r\n
+[13:19:35.53] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[13:19:35.55] [INFO] Will send Hello command (HELO or EHLO).
+[13:19:35.55] [SEND] EHLO gmail.com\r\n
+[13:19:35.64] [RECV] 250-mx.google.com at your service, [92.113.163.128]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[13:19:35.64] [INFO] SMTP Hello completed.
+[13:19:35.64] [INFO] Will login as "bpattersen123@gmail.com".
+[13:19:35.65] [INFO] Will try SASL LOGIN authentication method.
+[13:19:35.65] [SEND] AUTH LOGIN\r\n
+[13:19:35.75] [RECV] 334 VXNlcm5hbWU6\r\n
+[13:19:35.75] [SEND] ********\r\n
+[13:19:35.84] [RECV] 334 UGFzc3dvcmQ6\r\n
+[13:19:35.84] [SEND] ********\r\n
+[13:19:36.33] [RECV] 235 2.7.0 Accepted\r\n
+[13:19:36.34] [INFO] Logged in as "bpattersen123@gmail.com".
+[13:19:36.34] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[13:19:36.36] [INFO] Will submit sender and recipients.
+[13:19:36.36] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[13:19:36.36] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[13:19:36.45] [RECV] 250 2.1.0 OK e11sm4023964fga.5\r\n
+[13:19:36.45] [RECV] 250 2.1.5 OK e11sm4023964fga.5\r\n
+[13:19:36.45] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[13:19:36.45] [SEND] DATA\r\n
+[13:19:37.71] [RECV] 354  Go ahead e11sm4023964fga.5\r\n
+[13:19:37.73] [SEND] [Data chunk of 753 bytes sent.]
+[13:19:37.73] [SEND] \r\n.\r\n
+[13:19:38.93] [RECV] 250 2.0.0 OK 1238321978 e11sm4023964fga.5\r\n
+[13:19:38.93] [INFO] Message successfully submitted to SMTP server.
+[13:19:38.95] [SEND] QUIT\r\n
+[13:19:39.04] [RECV] 221 2.0.0 closing connection e11sm4023964fga.5\r\n
+[13:19:39.04] [INFO] Will disconnect from host "smtp.gmail.com".
+[13:19:39.06] [INFO] Disconnected from host "smtp.gmail.com".
+[13:57:28.36] [INFO] Assembly version: 4.0.2.114.
+[13:57:28.34] [INFO] Will resolve host "smtp.gmail.com".
+[13:57:28.45] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[13:57:28.47] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[13:57:28.56] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[13:57:28.58] [INFO] Will create TLS/SSL credentials.
+[13:57:28.58] [INFO] TLS/SSL credentials created.
+[13:57:28.58] [INFO] Will start TLS/SSL negotiation sequence.
+[13:57:28.76] [INFO] TLS/SSL negotiation completed.
+[13:57:28.78] [RECV] 220 mx.google.com ESMTP 12sm2514959fgg.7\r\n
+[13:57:28.78] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[13:57:28.80] [INFO] Will send Hello command (HELO or EHLO).
+[13:57:28.80] [SEND] EHLO gmail.com\r\n
+[13:57:28.89] [RECV] 250-mx.google.com at your service, [92.113.163.128]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[13:57:28.89] [INFO] SMTP Hello completed.
+[13:57:28.90] [INFO] Will login as "bpattersen123@gmail.com".
+[13:57:28.90] [INFO] Will try SASL LOGIN authentication method.
+[13:57:28.90] [SEND] AUTH LOGIN\r\n
+[13:57:29.00] [RECV] 334 VXNlcm5hbWU6\r\n
+[13:57:29.00] [SEND] ********\r\n
+[13:57:29.09] [RECV] 334 UGFzc3dvcmQ6\r\n
+[13:57:29.09] [SEND] ********\r\n
+[13:57:29.40] [RECV] 235 2.7.0 Accepted\r\n
+[13:57:29.40] [INFO] Logged in as "bpattersen123@gmail.com".
+[13:57:29.40] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[13:57:29.42] [INFO] Will submit sender and recipients.
+[13:57:29.42] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[13:57:29.43] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[13:57:29.51] [RECV] 250 2.1.0 OK 12sm2514959fgg.7\r\n
+[13:57:29.51] [RECV] 250 2.1.5 OK 12sm2514959fgg.7\r\n
+[13:57:29.51] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[13:57:29.53] [SEND] DATA\r\n
+[13:57:29.89] [RECV] 354  Go ahead 12sm2514959fgg.7\r\n
+[13:57:29.89] [SEND] [Data chunk of 753 bytes sent.]
+[13:57:29.89] [SEND] \r\n.\r\n
+[13:57:30.84] [RECV] 250 2.0.0 OK 1238324250 12sm2514959fgg.7\r\n
+[13:57:30.84] [INFO] Message successfully submitted to SMTP server.
+[13:57:30.84] [SEND] QUIT\r\n
+[13:57:30.93] [RECV] 221 2.0.0 closing connection 12sm2514959fgg.7\r\n
+[13:57:30.93] [INFO] Will disconnect from host "smtp.gmail.com".
+[13:57:30.95] [INFO] Disconnected from host "smtp.gmail.com".
+[13:58:07.76] [INFO] Assembly version: 4.0.2.114.
+[13:58:07.76] [INFO] Will resolve host "smtp.gmail.com".
+[13:58:07.76] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[13:58:07.77] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[13:58:07.85] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[13:58:07.85] [INFO] Will create TLS/SSL credentials.
+[13:58:07.85] [INFO] TLS/SSL credentials created.
+[13:58:07.87] [INFO] Will start TLS/SSL negotiation sequence.
+[13:58:08.05] [INFO] TLS/SSL negotiation completed.
+[13:58:08.09] [RECV] 220 mx.google.com ESMTP 4sm2507170fge.8\r\n
+[13:58:08.09] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[13:58:08.09] [INFO] Will send Hello command (HELO or EHLO).
+[13:58:08.09] [SEND] EHLO gmail.com\r\n
+[13:58:08.18] [RECV] 250-mx.google.com at your service, [92.113.163.128]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[13:58:08.18] [INFO] SMTP Hello completed.
+[13:58:08.18] [INFO] Will login as "bpattersen123@gmail.com".
+[13:58:08.18] [INFO] Will try SASL LOGIN authentication method.
+[13:58:08.18] [SEND] AUTH LOGIN\r\n
+[13:58:08.27] [RECV] 334 VXNlcm5hbWU6\r\n
+[13:58:08.27] [SEND] ********\r\n
+[13:58:08.37] [RECV] 334 UGFzc3dvcmQ6\r\n
+[13:58:08.37] [SEND] ********\r\n
+[13:58:08.65] [RECV] 235 2.7.0 Accepted\r\n
+[13:58:08.65] [INFO] Logged in as "bpattersen123@gmail.com".
+[13:58:08.66] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[13:58:08.66] [INFO] Will submit sender and recipients.
+[13:58:08.66] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[13:58:08.66] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[13:58:08.76] [RECV] 250 2.1.0 OK 4sm2507170fge.8\r\n
+[13:58:08.76] [RECV] 250 2.1.5 OK 4sm2507170fge.8\r\n
+[13:58:08.76] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[13:58:08.76] [SEND] DATA\r\n
+[13:58:08.99] [RECV] 354  Go ahead 4sm2507170fge.8\r\n
+[13:58:08.99] [SEND] [Data chunk of 733 bytes sent.]
+[13:58:08.99] [SEND] \r\n.\r\n
+[13:58:09.47] [RECV] 250 2.0.0 OK 1238324289 4sm2507170fge.8\r\n
+[13:58:09.47] [INFO] Message successfully submitted to SMTP server.
+[13:58:09.47] [SEND] QUIT\r\n
+[13:58:09.57] [RECV] 221 2.0.0 closing connection 4sm2507170fge.8\r\n
+[13:58:09.57] [INFO] Will disconnect from host "smtp.gmail.com".
+[13:58:09.57] [INFO] Disconnected from host "smtp.gmail.com".
+[14:03:57.32] [INFO] Assembly version: 4.0.2.114.
+[14:03:57.32] [INFO] Will resolve host "smtp.gmail.com".
+[14:03:57.43] [INFO] Host "smtp.gmail.com" resolved to IP address(es) 72.14.221.111, 72.14.221.109.
+[14:03:57.43] [INFO] Will connect to host "smtp.gmail.com" on port 465.
+[14:03:57.52] [INFO] Socket connected to IP address 72.14.221.111 on port 465.
+[14:03:57.54] [INFO] Will create TLS/SSL credentials.
+[14:03:57.54] [INFO] TLS/SSL credentials created.
+[14:03:57.54] [INFO] Will start TLS/SSL negotiation sequence.
+[14:03:57.72] [INFO] TLS/SSL negotiation completed.
+[14:03:57.74] [RECV] 220 mx.google.com ESMTP d4sm4078529fga.8\r\n
+[14:03:57.74] [INFO] Connected to mail service at host "smtp.gmail.com" on port 465 and ready.
+[14:03:57.75] [INFO] Will send Hello command (HELO or EHLO).
+[14:03:57.77] [SEND] EHLO gmail.com\r\n
+[14:03:57.85] [RECV] 250-mx.google.com at your service, [92.113.163.128]\r\n250-SIZE 35651584\r\n250-8BITMIME\r\n250-AUTH LOGIN PLAIN\r\n250-ENHANCEDSTATUSCODES\r\n250 PIPELINING\r\n
+[14:03:57.86] [INFO] SMTP Hello completed.
+[14:03:57.86] [INFO] Will login as "bpattersen123@gmail.com".
+[14:03:57.88] [INFO] Will try SASL LOGIN authentication method.
+[14:03:57.88] [SEND] AUTH LOGIN\r\n
+[14:03:57.96] [RECV] 334 VXNlcm5hbWU6\r\n
+[14:03:57.97] [SEND] ********\r\n
+[14:03:58.07] [RECV] 334 UGFzc3dvcmQ6\r\n
+[14:03:58.07] [SEND] ********\r\n
+[14:03:58.38] [RECV] 235 2.7.0 Accepted\r\n
+[14:03:58.38] [INFO] Logged in as "bpattersen123@gmail.com".
+[14:03:58.38] [INFO] Will send mail message to SMTP server "smtp.gmail.com".
+[14:03:58.39] [INFO] Will submit sender and recipients.
+[14:03:58.39] [SEND] MAIL FROM:<bpattersen123@gmail.com>\r\n
+[14:03:58.39] [SEND] RCPT TO:<olegr78@gmail.com>\r\n
+[14:03:58.49] [RECV] 250 2.1.0 OK d4sm4078529fga.8\r\n
+[14:03:58.49] [RECV] 250 2.1.5 OK d4sm4078529fga.8\r\n
+[14:03:58.49] [INFO] Sender and recipients accepted by SMTP server. Will send message data now.
+[14:03:58.49] [SEND] DATA\r\n
+[14:03:58.88] [RECV] 354  Go ahead d4sm4078529fga.8\r\n
+[14:03:58.88] [SEND] [Data chunk of 753 bytes sent.]
+[14:03:58.88] [SEND] \r\n.\r\n
+[14:03:59.38] [RECV] 250 2.0.0 OK 1238324639 d4sm4078529fga.8\r\n
+[14:03:59.38] [INFO] Message successfully submitted to SMTP server.
+[14:03:59.39] [SEND] QUIT\r\n
+[14:03:59.47] [RECV] 221 2.0.0 closing connection d4sm4078529fga.8\r\n
+[14:03:59.47] [INFO] Will disconnect from host "smtp.gmail.com".
+[14:03:59.49] [INFO] Disconnected from host "smtp.gmail.com".

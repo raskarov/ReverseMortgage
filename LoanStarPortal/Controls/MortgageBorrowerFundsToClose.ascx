@@ -1,0 +1,2 @@
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MortgageBorrowerFundsToClose.ascx.cs" Inherits="LoanStarPortal.Controls.MortgageBorrowerFundsToClose" %>
+<asp:PlaceHolder ID="ph" runat="server"></asp:PlaceHolder>

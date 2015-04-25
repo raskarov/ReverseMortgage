@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta HTTP-EQUIV="Content-Type" Content="text-html; charset=iso8859-1">
+	<link rel="stylesheet" href="help_styles.css" type="text/css">
+</head>
+
+<body>
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="90%" class="wmh_reg">
+<tr>
+	<td align="center" class="wmh_header">WebMail Installation Instructions</td>
+<tr>
+	<td>
+	<br>
+	<ol>
+		<li>
+			Unzip contents of <b>webmailpro_net.zip</b> file into temporary location 
+			(for example, C:\Temp). The following directories will be created 
+			in that location: <b>web</b>, <b>data</b>.
+		</li>
+		<br><br>
+
+		<li>
+			Move <b>web</b> folder with all their contents to the location where you want 
+			to have WebMail installed (for example, <b>C:\Inetpub\wwwroot</b>).
+			<br><br>
+			To the moment, you should have <b>C:\Inetpub\wwwroot\web</b> folder with 
+			WebMail's scripts and subfolders inside. If you wish, you can rename 
+			<b>web</b> to another name, such as <b>mailbee</b>, <b>webmail</b> or whatever.
+		</li>
+		<br><br>
+
+		<li>
+			Create a virtual directory in IIS Manager. It can have any name 
+			(for example, <b>webmail</b>, and should point to physical location of 
+			WebMail's scripts (e.g. <b>C:\Inetpub\wwwroot\web</b> if installed into default location).
+			<br><br>
+			Now you can access this virtual directory as <b>http://your_server_name/webmail</b>.
+		</li>
+		<br><br>
+
+		<li>
+			Move the data folder from C:\Temp to location where WebMail will save its settings, 
+			store temporary files and folders (for example, C:\WebMail).
+			<br><br>
+			Now you should have <b>C:\WebMail\data</b> folder.
+			<br><br>
+			<b>Please note that data folder MUST have "Full Control" permissions for ASPNET (ASP.NET Machine Account) and NETWORK SERVICE accounts</b>. 
+			Otherwise, WebMail will not be able to create and delete temporary files/directories and save its configuration.
+		</li>
+		<br><br>
+
+		<li>
+			Open <b>Web.config</b> file in <b>C:\Inetpub\wwwroot\web</b> (or wherever you placed <b>web</b> folder), 
+			and set SettingsPath key to the physical path of data folder. For example:
+			<b>
+				<br>&lt;appSettings&gt;
+    		<br>&nbsp;&nbsp;&nbsp;&lt;add key="dataFolderPath" value="C:\WebMail\data"/&gt;
+				<br>&lt;/appSettings&gt;
+			</b>
+		</li>
+		<br><br>
+
+		<li>
+			Open <b>http://your_server_name/webmail/mailadm.aspx</b> page in your browser.
+		</li>
+		<br><br>
+
+		<li>
+			Use "mailadm" as <b>Login</b> name and "12345" as <b>Password</b>. It is strongly 
+			recommended to change this password in the future.
+		</li>
+		<br><br>
+
+		<li>
+							Now you can edit the following settings:<br>
+							<br>
+							<ul>
+								<li>
+								Database Settings 
+								<li>
+								Users Management
+								<li>
+								WebMail Settings
+								<li>
+								Interface Settings
+								<li>
+								Login Settings
+								<li>
+								Debug Settings
+								</li>
+							</ul>
+							<br>
+		</li>
+		<br>
+
+		<li>
+						Select "Database Settings".
+						Choose database type you wish to use: <b>MS SQL Server</b>, 
+						<b>MySQL Server</b> or <b>MS Access</b>. To use MS SQL Server or MySQL 
+						Server database, fill "SQL Login", "SQL Password" and "Database Name" 
+						fields. If you wish to connect through DSN, you need to fill "Data Source" 
+						field. Otherwise, to connect through TCP/IP, fill "Host" field.
+
+						<p>If the MySQL or MSSQL are used, you should click Save button and then Create Tables button.
+							<br>
+							<br>
+		</li>
+		<br>
+
+		<li>
+			Now installation is complete. WebMail is ready to use.
+			<br><br>
+			Start using it from <b>http://your_server_name/webmail/default.aspx</b>.
+		</li>
+		<br><br>
+
+	</ol>
+	<br>
+	<hr>
+	</td>
+</tr>
+<tr>
+	<td align="center">
+If you have any questions don't hesitate to email to <a href="mailto:support@afterlogic.com">support@afterlogic.com</a><br>
+Or visit our support web page at <a href="http://www.afterlogic.com/support" target="_blank">http://www.afterlogic.com/support</a><br>
+or web forum at <a href="http://www.afterlogic.com/forum" target="_blank">http://www.afterlogic.com/forum</a>
+	</td>
+</tr>
+</table>
+
+
+</body>
+</html>

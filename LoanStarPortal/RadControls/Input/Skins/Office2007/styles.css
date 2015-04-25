@@ -1,0 +1,118 @@
+/* r.a.d.input DEFAULT skin - Last Update April 22, 2007 */
+
+.radHoverCss_Office2007,
+.radEnabledCss_Office2007,
+.radDisabledCss_Office2007,
+.radEmptyMessageCss_Office2007,
+.radFocusedCss_Office2007,
+.radNegativeCss_Office2007,
+.radInvalidCss_Office2007
+{
+	font: normal 12px  Arial, Verdana, Sans-Serif;
+	background: white;
+	width: 179px;
+	vertical-align: middle;
+}
+
+.radHoverCss_Office2007
+{
+	border: solid 1px #38577e;
+	color: #38577e;
+}
+
+.radEnabledCss_Office2007
+{
+	color: #7f9db9;
+	border: solid 1px #7f9db9;
+}
+
+.radEmptyMessageCss_Office2007
+{
+	color: #7f9db9;
+	border: solid 1px #7f9db9;
+}
+
+.radFocusedCss_Office2007
+{
+	color: #7f9db9;
+	border: solid 1px #7f9db9;
+}
+
+.radInvalidCss_Office2007, 
+.radNegativeCss_Office2007, 
+.radDisabledCss_Office2007
+{	
+	color: #dcaa78;
+	border: solid 1px #dcaa78;
+}
+
+.radLabelCss_Office2007
+{
+	color: #000000; 
+	padding-right: 5px; 
+	font-size: 11px;	
+}
+
+/* input buttons */
+.radInpButtonCss,
+.radInpButtonCss_Office2007 a
+{
+    position: relative; top: 2px;
+}
+
+.radInpButtonCss_Office2007 img
+{
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    -moz-opacity: 1; opacity: 1;
+    border: 0;
+}
+
+.radInpButtonCss_Office2007 a:hover img
+{
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    -moz-opacity: 0.5; 
+    opacity: 0.5;
+}
+
+.radSpinUpCss_Office2007 a,
+.radSpinDownCss_Office2007 a
+{
+	/**/
+}
+
+.radSpinUpCss_Office2007 a img,
+.radSpinDownCss_Office2007 a img
+{
+	width: 7px; height: 4px;
+	border: 0;
+	position: relative;
+	top: -4px;
+	margin: 0 1px;
+}
+
+.radSpinUpCss_Office2007 a:hover img,
+.radSpinDownCss_Office2007 a:hover img
+{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	opacity: .5; -moz-opacity: .5;
+}
+/* end of input buttons */
+
+.radHint_Office2007 
+{
+	background: infobackground;
+	margin-top: 5px;
+	border: 1px solid black;
+	text-align: left;
+	overflow: auto;
+}
+
+.radHint_Office2007 a,
+.radHint_Office2007 a:visited,
+.radHint_Office2007 a:hover
+{	
+	margin: 2px;
+	color: black;
+	text-decoration: none;
+	font-size: small;
+}

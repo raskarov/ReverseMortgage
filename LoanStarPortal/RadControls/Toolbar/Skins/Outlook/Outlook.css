@@ -1,0 +1,333 @@
+/* Microsoft Office 2003 Toolbar Skin Stylesheet */
+
+body
+{
+	/**/
+}
+/* normal button */
+.outlook_radbutton_normal 
+{	
+	height: 22px !important;
+	width: 22px !important;
+	padding: 1px;
+}
+
+.outlook_radbutton_hover
+{
+	background-image: url(Img/btnHoverBg.gif);
+	background-repeat: repeat-x;
+	background-color: #FFCF8E;	
+	border: solid 1px #000080;
+	cursor: default;
+	height: 22px !important;
+	width: 22px !important;
+}
+
+.outlook_radbutton_disabled
+{
+	background-color: transparent;
+	border: none;
+	filter: progid:DXImageTransform.Microsoft.Alpha(style=1,opacity=40,finishOpacity=100,startX=100,finishX=100,startY=100,finishY=100);/* IE */
+	-moz-opacity: .40;/* Mozilla */
+	cursor: no-drop;
+	height: 24px !important;
+	width: 24px !important;
+}
+.outlook_radbutton_mousedown
+{
+	background-image: url(Img/btnMouseDown.gif);
+	background-repeat: repeat-x;
+	background-color: #ffd38e;
+	border: solid 1px #000080;
+	cursor: default;
+	height: 22px !important;
+	width: 22px !important;
+}
+/* end normal button */
+
+/* toggle button */
+.outlook_radtbutton_normal 
+{
+	background-color: transparent;
+	border: none;
+	cursor: default;
+	height: 22px !important;
+	width: 22px !important;
+	padding: 1px;
+}
+
+.outlook_radtbutton_hover
+{
+	background-image: url(Img/btnHoverBg.gif);
+	background-repeat: repeat-x;
+	background-color: #FFCF8E;	
+	border: solid 1px #000080;
+	cursor: default;
+	height: 22px !important;
+	width: 22px !important;
+}
+
+.outlook_radtbutton_toggled, .outlook_radtbutton_hover_toggled
+{
+	background-image: url(Img/btnMouseDown.gif);
+	background-repeat: repeat-x;
+	background-color: #FFCF8E;
+	border: solid 1px #000080;
+	cursor: default;
+	height: 22px !important;
+	width: 22px !important;
+}
+
+.outlook_radtbutton_disabled
+{
+	background-color: transparent;
+	border: none;
+	cursor: default;
+}
+
+.outlook_radtbutton_mousedown
+{
+	background-image: url(Img/btnMouseDown.gif);
+	background-repeat: repeat-x;
+	background-color: #FFCF8E;
+	border: solid 1px #000080;
+	cursor: default;
+	height: 22px !important;
+	width: 22px !important;
+}
+/* end toggle button */
+
+/* horizontal toobar */
+.outlook_radtoolbar_horizontal
+{
+	background-image: url(Img/toolbarBgH.gif);
+	background-color: #ddecfe;
+	background-repeat: repeat-x;
+	font-size: 10pt;
+	font-family: Verdana;
+	border-collapse: collapse;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+/* end horizontal toobar */
+
+/* vertical toobar */
+.outlook_radtoolbar_vertical
+{
+	background:#8FC1EB url(img/toolbarBgV.gif) repeat-x;
+	font-size: 10pt;
+	font-family: Verdana;
+	border-collapse: collapse;
+	border-bottom:1px solid #E7F0FB;
+	padding-left: 1px;
+	padding-right: 1px;
+}	
+/* end vertical toobar */
+
+/* horizonatal toolbar grips */
+/* left */
+.outlook_radtoolbar_left
+{
+	background-image: url(Img/toolbarLeft.gif);
+	background-repeat: no-repeat;
+	width: 6px;
+}
+/* right */
+.outlook_radtoolbar_right
+{
+	background-image: url(Img/toolbarRight.gif);
+	background-repeat: no-repeat;
+	width: 8px;
+}
+/* end horizonatal toolbar grips */
+
+/* vertical toolbar grips */
+/* top */
+.outlook_radtoolbar_top
+{
+	/*background-image: url(Img/toolbarLeftV.gif);
+	background-repeat: no-repeat;
+	height: 8px;*/
+}
+/* bottom */
+.outlook_radtoolbar_bot
+{
+	/*background-image: url(Img/toolbarRightV.gif);
+	background-repeat: no-repeat;
+	height:0px;*/
+}
+/* end vertical toolbar grips */
+/* separators */
+/* horizontal */
+.outlook_radseparator_h
+{
+	background-image: url(Img/separator_h.gif);
+	background-color: transparent;
+	background-repeat: repeat-y;
+	width: 2px;
+	height: 20px;
+	margin-left:2px;
+	margin-right:1px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+/* vertical */
+.outlook_radseparator_v
+{
+	background-image: url(Img/separator_v.gif);
+	background-repeat: repeat-x;
+	height: 2px;
+	font-size: 2px;
+	width: 22px;
+	margin-left: 1px;
+	margin-right: 1px;
+}
+/* end separators */
+
+/* margins fix */
+.outlook_radbutton_normal IMG, .outlook_radbutton_normal SPAN, .outlook_radbutton_hover SPAN
+{
+	margin-top: 0px;
+}
+.outlook_radbutton_hover IMG, .outlook_radtbutton_hover IMG
+{
+	margin-top: 0px;
+}
+.outlook_radtbutton_mousedown IMG, .outlook_radtbutton_mousedown SPAN, .outlook_radtbutton_toggled IMG, .outlook_radtbutton_hover_toggled IMG
+{
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.outlook_radtbutton_normal IMG, .outlook_radtbutton_normal SPAN, .outlook_radtbutton_hover SPAN
+{
+	margin-top: 0px;
+}
+.outlook_radbutton_mousedown IMG, .outlook_radbutton_mousedown SPAN
+{
+	margin-top: 0px;
+	margin-left: 0px;
+}
+.outlook_radbutton_disabled IMG
+{
+	margin-top: 1px;
+}
+
+/* buttons with text and images */
+/* normal */
+.outlook_radbutton_text_normal, .outlook_radtbutton_text_normal
+{
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 11px;
+	color: #4d4d4d;
+	height: 22px !important;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+/* hover */
+.outlook_radbutton_text_hover, .outlook_radtbutton_text_hover
+{
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 11px;
+	color: #000;
+	cursor: default;
+	border: solid 1px #000080;
+	background-image: url(Img/btnHoverBg.gif);
+	background-repeat: repeat-x;
+	background-color: #FFCF8E;
+	height: 22px !important;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+/* mousedown */
+.outlook_radbutton_text_mousedown, .outlook_radtbutton_text_mousedown, .outlook_radtbutton_text_toggled, .outlook_radtbutton_text_hover_toggled
+{
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 11px;
+	color: #000;
+	cursor: default;
+	border: solid 1px #000080;
+	background-image: url(Img/btnMouseDown.gif);
+	background-repeat: repeat-x;
+	background-color: #FFCF8E;
+	height: 22px !important;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.outlook_radtbutton_text_disabled
+{
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 11px;
+	cursor: default;
+	height: 22px !important;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.outlook_radtbutton_text_disabled SPAN, .outlook_radtbutton_text_disabled IMG
+{
+	margin-left: 1px;
+	margin-right: 1px;
+}
+/* button text */
+.outlook_radbutton_text_normal SPAN, .outlook_radbutton_text_hover SPAN, .outlook_radbutton_text_mousedown SPAN, .outlook_radtbutton_text_normal SPAN, .outlook_radtbutton_text_hover SPAN, .outlook_radtbutton_text_mousedown SPAN, .outlook_radtbutton_text_toggled SPAN, .outlook_radtbutton_text_hover_toggled SPAN, .outlook_radtbutton_text_disabled SPAN
+{
+	display: inline-block;
+	margin-top: 2px;
+	float: left;
+}
+.outlook_radbutton_text_normal IMG, .outlook_radbutton_text_hover IMG, .outlook_radbutton_text_mousedown IMG, .outlook_radtbutton_text_normal IMG, .outlook_radtbutton_text_hover IMG, .outlook_radtbutton_text_mousedown IMG, .outlook_radtbutton_text_toggled IMG, .outlook_radtbutton_text_hover_toggled IMG, .outlook_radtbutton_text_disabled IMG
+{
+	margin-top: 2px;
+	float: left;
+}
+.outlook_radtbutton_text_disabled, .outlook_radbutton_text_disabled
+{
+	filter: progid:DXImageTransform.Microsoft.Alpha(style=1,opacity=40,finishOpacity=100,startX=100,finishX=100,startY=100,finishY=100);/* IE */
+}
+.outlook_radtbutton_text_disabled
+{
+	margin-right: 3px;
+	margin-left: -1px;
+}
+.outlook_radtbutton_text_disabled IMG
+{
+	margin-left: 2px;
+}
+.outlook_radtbutton_text_disabled SPAN
+{
+	margin-left: -1px;
+}
+/* button with text and image */
+
+.outlook_radbutton_text_disabled, .outlook_radtbutton_text_disabled
+{
+	overflow: hidden;
+	height: 20px !important;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+	-moz-opacity: 0.4;
+	opacity: 0.4;
+}
+
+.outlook_radbutton_text_disabled span, .outlook_radtbutton_text_disabled
+{
+	color: #808080;
+	cursor: no-drop;
+	font: normal 11px Arial, Verdana, Sans-Serif;
+	color: #000;
+}
+
+.outlook_radbutton_text_disabled
+{
+	padding-top: 2px;
+	_padding-top: 6px;
+	overflow: hidden !important;
+	height: 18px !important;
+}

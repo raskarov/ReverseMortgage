@@ -1,0 +1,111 @@
+﻿.radHoverCss_WebBlue
+{
+	font: normal 11px Arial, Verdana, Tahoma, Sans-Serif;
+	color: #00000;
+	/*border: solid 1px #899aa2;*/
+	background: white;
+}
+.radEnabledCss_WebBlue
+{
+	font: normal 11px Arial, Verdana, Tahoma, Sans-Serif;
+	color: #000000;
+	/*border: solid 1px #afbec5;*/
+	background: #ffffff;
+}
+.radDisabledCss_WebBlue
+{
+	font: normal 11px Arial, Verdana, Tahoma, Sans-Serif;
+	color: #e7e9eb;
+	border: solid 1px #afbec5;
+	background: #f7f8f9;
+}
+
+.radEmptyMessageCss_WebBlue
+{
+	font: normal 11px Arial, Verdana, Tahoma, Sans-Serif;
+	color: #99ccff;
+	border: solid 1px #899aa2;
+	background: white;
+}
+
+
+.radFocusedCss_WebBlue
+{
+	font: normal 11px Arial, Verdana, Tahoma, Sans-Serif;
+	color: #000000;
+	/*border: solid 1px #899aa2;*/
+	background: #ffffff;
+}
+
+.radNegativeCss_WebBlue
+{
+	font: normal 11px Arial, Verdana, Tahoma, Sans-Serif;
+	color: #003399;
+	border: solid 1px #afbec5;
+	background: #f7f8f9;
+}
+
+.radInvalidCss_WebBlue
+{
+	font: normal 11px Arial, Verdana, Tahoma, Sans-Serif;
+	color: #003399;
+	border: solid 1px #afbec5;
+	background: #eaf0f1;
+}
+
+.radLabelCss_WebBlue
+{
+	font: normal 10px Verdana, Arial, Sans-serif; 
+	color: #afbec5; 
+	padding-right: 5px;
+}
+
+/* input buttons */
+.radInpButtonCss,
+.radInpButtonCss_WebBlue a
+{
+    position: relative; top: 2px;
+}
+
+.radInpButtonCss_WebBlue img
+{
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    -moz-opacity: 1; opacity: 1;
+    border: 0;
+}
+
+.radInpButtonCss_WebBlue a:hover img
+{
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    -moz-opacity: 0.5; 
+    opacity: 0.5;
+}
+
+.radSpinUpCss_WebBlue a,
+.radSpinDownCss_WebBlue a
+{
+	/**/
+}
+
+.radSpinUpCss_WebBlue a img,
+.radSpinDownCss_WebBlue a img
+{
+	width: 7px; height: 4px;
+	border: 0;
+	position: relative;
+	top: -4px;
+	margin: 0 1px;
+}
+
+.radSpinUpCss_WebBlue a:hover img,
+.radSpinDownCss_WebBlue a:hover img
+{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	opacity: .5; -moz-opacity: .5;
+}
+/* end of input buttons */
+
+
+
+
+

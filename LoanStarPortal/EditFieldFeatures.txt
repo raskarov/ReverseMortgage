@@ -1,0 +1,174 @@
+GetContentPseudoTabGroup!!! - new 
+UpdateFieldInfo
+ChangeDisplayOrder
+ChangeFieldLocation
+
+
+1. Change Id in grid - add groupItemId+
+   File changed ->ManageFields.ascx
+2. Details form
+ 2.1.Add edit possibility for Label,Location,Dispaly,Order
+	MortgageProfileField.cs
+	style.css for admin part
+ 2.2.Add document mapping info. 
+	GetDocMappingByFieldId - sp
+	FieldDetails.ascx
+Files changed:
+GetFieldsInfo - sp
+       
+
+USE [LoanStar]
+GO
+/****** Object:  UserDefinedFunction [dbo].[udfGetDisplayOrder]    Script Date: 04/06/2008 16:58:03 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER FUNCTION [dbo].[udfGetDisplayOrder]
+(
+	@contentPrimitiveId int
+	,@pseudoTabGroupId   int
+)
+RETURNS int
+AS
+BEGIN
+DECLARE @order int
+DECLARE @cnt int
+	SELECT @order = DisplayOrder FROM ContentPseudoTabGroupItem WHERE ContentPrimitiveId=@contentPrimitiveId AND pseudoTabGroupId=@pseudoTabGroupId
+	IF @order IS NULL
+		RETURN 0
+	IF @order = 0
+		RETURN 0
+	SELECT @cnt=COUNT(*)+1 FROM ContentPseudoTabGroupItem 
+	WHERE pseudoTabGroupId=@pseudoTabGroupId AND DisplayOrder>0
+	AND DisplayOrder<@order
+
+	RETURN @cnt
+END
+
+USE [LoanStar]
+GO
+/****** Object:  StoredProcedure [dbo].[ChangeDisplayOrder]    Script Date: 04/06/2008 17:03:36 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[ChangeDisplayOrder]
+	@fieldId		int
+	,@groupId		int
+	,@displayOrder	int
+AS
+DECLARE @cpId   int
+DECLARE @ord	int
+DECLARE @table TABLE
+(
+	PseudoTabGroupId	int
+	,ContentprimitiveId int
+	,DisplayOrder		int
+	,ord				int identity(1,1)
+)
+
+	SELECT @cpId = ptgi.ContentPrimitiveId 
+	FROM ContentPseudoTabGroupItem ptgi
+	INNER JOIN ContentPrimitive cp ON cp.Id=ptgi.ContentPrimitiveId
+	INNER JOIN MortgageProfileField mpf ON mpf.Id=cp.MpfId
+	WHERE mpf.Id=@fieldId AND ptgi.PseudoTabGroupId=@groupId
+
+	IF @cpId IS NOT NULL BEGIN
+		
+		UPDATE ContentPseudoTabGroupItem
+		SET DisplayOrder=@displayOrder
+		WHERE ContentPrimitiveId=@cpId AND PseudoTabGroupId=@groupId
+
+		IF @displayOrder>0 BEGIN
+			SET @ord=dbo.udfGetDisplayOrder(@cpId,@groupId)
+			IF @displayOrder = @ord BEGIN
+				RETURN 1
+			END		
+			INSERT @table
+			SELECT TOP (@DisplayOrder-1) *
+			FROM ContentPseudoTabGroupItem 
+			WHERE PseudoTabGroupId=@groupId AND NOT (PseudoTabGroupId=@groupId AND ContentPrimitiveId=@cpId)
+			AND DisplayOrder>0
+			ORDER BY DisplayOrder
+			INSERT @table
+			SELECT * FROM ContentPseudoTabGroupItem  
+			WHERE PseudoTabGroupId=@groupId AND ContentPrimitiveId=@cpId
+			INSERT @table
+			SELECT * FROM ContentPseudoTabGroupItem  
+			WHERE PseudoTabGroupId=@groupId AND ContentPrimitiveId NOT IN (SELECT ContentPrimitiveId FROM @table) 
+			AND DisplayOrder>0
+			ORDER BY DisplayOrder
+			UPDATE gi 
+			SET gi.DisplayOrder=t.ord
+			FROM ContentPseudoTabGroupItem gi
+			INNER JOIN @table t ON gi.PseudoTabGroupId=t.PseudoTabGroupId AND gi.ContentPrimitiveId=t.ContentPrimitiveId
+			RETURN 1
+		END
+		RETURN 1
+	END
+	RETURN -1
+USE [LoanStar]
+GO
+/****** Object:  StoredProcedure [dbo].[GetFieldDetails]    Script Date: 04/06/2008 17:03:52 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[GetFieldDetails]
+	@id		int
+AS
+	SELECT mpf.Id,mpf.PropertyName,mpf.[Description],mpf.Calculated,mpf.UsedInRules,mpf.TableName
+	,fg.Name AS GroupName
+	,ISNULL(cc.Name,'-') AS ControlName
+	,ISNULL(t2.TabLevel2Name,'-')+'/'+ISNULL(t.Header,'-')+'/'+ISNULL(pt.Header,'-') AS Location
+	,dbo.udfGetDisplayOrder(cp.Id,pti.PseudoTabGroupId) AS DisplayOrder
+	,ISNULL(t2.Id,0) AS Tab1Id
+	,ISNULL(t.Id,0) AS Tab2Id
+	,ISNULL(pt.Id,0) AS PseudoTabId
+	,ISNULL(pti.PseudoTabGroupId,0) AS groupId
+	,ISNULL(ps.Name,'') As StatusName
+	FROM MortgageProfileField mpf
+	INNER JOIN FieldGroup fg ON fg.Id=mpf.FieldGroupId
+	LEFT OUTER JOIN ContentPrimitive cp ON cp.Mpfid=mpf.Id
+	LEFT OUTER JOIN ContentControlType cc ON cc.Id=cp.ControlTypeId
+	LEFT OUTER JOIN ContentPseudoTabGroupItem ptgi ON ptgi.ContentPrimitiveId=cp.Id
+	LEFT OUTER JOIN ContentPseudoTabGroup ptg ON ptg.Id=ptgi.PseudoTabGroupId
+	LEFT OUTER JOIN ContentPseudoTabItem pti ON pti.PseudoTabGroupId=ptg.Id
+	LEFT OUTER JOIN ContentPseudoTab pt ON pt.Id=pti.PseudoTabId
+	LEFT OUTER JOIN ContentTabItem ti ON ti.PseudoTabId=pt.Id
+	LEFT OUTER JOIN ContentTab t ON t.Id=ti.TabId
+	LEFT OUTER JOIN ContentTabLevel2 t2 ON t2.Id=t.TabLevel2Id
+	LEFT OUTER JOIN RequiredField rf ON rf.FieldId=@id AND rf.CompanyId=1
+	LEFT OUTER JOIN ProfileStatus ps ON ps.Id=rf.StatusId
+	WHERE mpf.Id=@Id
+	
+	SELECT DISTINCT RuleId FROM RuleUnit WHERE FieldId=@Id
+	exec dbo.GetVisibiltyInfoForField @Id
+	exec dbo.GetDocMappingByFieldId @Id
+	
+	USE [LoanStar]
+GO
+/****** Object:  StoredProcedure [dbo].[UpdateFieldInfo]    Script Date: 04/06/2008 17:04:46 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[UpdateFieldInfo]
+	@Id				int
+	,@groupId		int
+	,@description	varchar(256)
+	,@displayOrder	int
+AS
+DECLARE @res int
+	UPDATE MortgageProfileField SET Description=@description WHERE Id=@id
+	SET @res = @@ROWCOUNT
+	exec dbo.ChangeDisplayOrder @Id,@groupId,@displayOrder	
+	SELECT @res
+	
+CREATE PROCEDURE [dbo].[GetContentPseudoTabGroup]
+AS
+	SELECT g.Id,g.Header,ROW_NUMBER ( ) OVER (ORDER BY g.Id ASC) AS Row 
+	,pti.PseudoTabId 
+	FROM ContentPseudoTabGroup g
+	INNER JOIN ContentPseudoTabItem pti ON pti.PseudoTabGroupId = g.Id and pti.DisplayOrder>0

@@ -1,0 +1,487 @@
+/* border style definition */
+.RadSplitter_Default,
+.RadSplitter_Default .resizeBar,
+.RadSplitter_Default .slideContainerResize,
+.RadSplitter_Default .slideContainerResizeHorizontal,
+.RadSplitter_Default .resizeBarOver,
+.RadSplitter_Default .slideContainerResizeOver,
+.RadSplitter_Default .slideContainerResizeOverHorizontal,
+.RadSplitter_Default .resizeBarInactive,
+.RadSplitter_Default .resizeBarHorizontal,
+.RadSplitter_Default .resizeBarOverHorizontal,
+.RadSplitter_Default .resizeBarInactiveHorizontal,
+.RadSplitter_Default .pane, 
+.RadSplitter_Default .paneHorizontal
+{
+	border:none;
+	border:0px;
+}
+
+.RadSplitter_Default
+{
+	border-collapse: collapse;
+	border-bottom: 0px; /* half the size of the border, but at least 1px */
+}
+
+.RadSplitter_Default .pane, 
+.RadSplitter_Default .paneHorizontal 
+{
+	padding: 0px;
+	text-align:left;
+}
+
+.RadSplitter_Default .resizeBar,
+.RadSplitter_Default .slideContainerResize,
+.RadSplitter_Default .slideContainerResizeHorizontal,
+.RadSplitter_Default .resizeBarOver,
+.RadSplitter_Default .slideContainerResizeOver,
+.RadSplitter_Default .slideContainerResizeOverHorizontal,
+.RadSplitter_Default .resizeBarInactive,
+.RadSplitter_Default .resizeBarHorizontal,
+.RadSplitter_Default .resizeBarOverHorizontal,
+.RadSplitter_Default .resizeBarInactiveHorizontal
+{
+	padding: 0px;
+	background:#f7f7f7;
+	font-size:1px;
+	text-align:center;
+}
+
+
+.RadSplitter_Default .resizeBar,
+.RadSplitter_Default .resizeBarOver,
+.RadSplitter_Default .resizeBarInactive,
+.RadSplitter_Default .slideContainerResize,
+.RadSplitter_Default .slideContainerResizeOver
+{
+	width:4px;	
+}
+
+.RadSplitter_Default .resizeBarHorizontal,
+.RadSplitter_Default .resizeBarOverHorizontal,
+.RadSplitter_Default .resizeBarInactiveHorizontal,
+.RadSplitter_Default .slideContainerResizeHorizontal,
+.RadSplitter_Default .slideContainerResizeOverHorizontal
+{
+	height:4px;
+}
+
+
+.RadSplitter_Default .resizeBarInactiveHorizontal.first
+{
+	border-top: 0px;
+}
+
+
+.RadSplitter_Default .resizeBarOver, 
+.RadSplitter_Default .resizeBarOverHorizontal,
+.RadSplitter_Default .slideContainerResizeOver,
+.RadSplitter_Default .slideContainerResizeOverHorizontal
+{
+	background:#fff;
+}
+
+/********************* Helper Bar ******************************/
+.RadSplitter_Default .helperBarDrag, 
+.RadSplitter_Default .helperBarDragHorizontal,
+.RadSplitter_Default .helperBarSlideDrag,
+.RadSplitter_Default .helperBarSlideDragHorizontal
+
+{
+	font-size:1px;
+	background-color:#ccc;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60); 
+	opacity: 0.6;
+}
+
+/* resize bar onerror */
+.RadSplitter_Default .helperBarError, 
+.RadSplitter_Default .helperBarSlideError,
+.RadSplitter_Default .helperBarErrorHorizontal
+{
+	font-size:1px;
+	background-color: #f60;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60); 
+	opacity: 0.6;
+}
+
+/********************* Colapse Bar *****************************/
+
+.RadSplitter_Default .collapseBar
+{	
+	/*background: url(Img/splitbarBg.gif);*/
+}
+
+.RadSplitter_Default .collapseBarHorizontal
+{	
+	/*background: url(Img/splitbarBgVertical.gif);*/
+}
+
+.RadSplitter_Default .collapseBarOver, 
+.RadSplitter_Default .collapseBarOverHorizontal
+{
+	background: white;
+}
+
+.RadSplitter_Default .collapseBarError, 
+.RadSplitter_Default .collapseBarErrorHorizontal
+{
+	background-color:red;
+}
+
+
+/***********************************************/
+/*             SLIDE                           */
+/***********************************************/
+
+/************************************************
+	sliding zone 
+*/
+.RadSplitter_Default .slideZone
+{
+	background: white;
+}
+
+/************************************************ 
+	pane tabs 
+*/
+.RadSplitter_Default .tabsContainer 
+{
+	/*background: white url(Img/slideZoneBg.gif) repeat-y;*/
+	color: #333;
+}
+
+.RadSplitter_Default .paneTabContainer,
+.RadSplitter_Default .paneTabContainerHorizontal,
+.RadSplitter_Default .paneTabContainerExpanded,
+.RadSplitter_Default .paneTabContainerExpandedHorizontal,
+.RadSplitter_Default .paneTabContainerDocked,
+.RadSplitter_Default .paneTabContainerDockedHorizontal
+{
+	overflow:hidden;
+	cursor:default;
+	text-align:center;
+	font-size:1px;
+	border: 0px;
+	border-left: 0px;
+	border-top: 0px;
+	border-right:0px;
+	color: #999;
+	padding: 6px 0px;
+	width:21px;
+	height:auto;
+}
+
+.RadSplitter_Default .paneTabContainerExpanded
+{
+	background: white;
+	border-right:0px;
+	color: #333;
+}
+
+.RadSplitter_Default .paneTabContainerDocked
+{
+	/*background: white url(Img/slideZoneDockedTab.gif) repeat-y;*/
+	border-right: 0px;
+	color: #000;
+}
+
+.RadSplitter_Default .paneTabText
+{
+	writing-mode: tb-rl;
+	font:10px Verdana, Arial, Helvetica;
+	white-space:nowrap;
+	margin:2px;
+}
+
+.RadSplitter_Default .paneTabIcon
+{
+	margin:2px;
+}
+
+
+/***** tabs on right position *******/
+
+.RadSplitter_Default .tabsContainer .right
+{
+	/*background: url(Img/slideZoneBgRight.gif) repeat-y top right;*/
+}
+
+
+.RadSplitter_Default .right .paneTabContainer,
+.RadSplitter_Default .right .paneTabContainerExpanded,
+.RadSplitter_Default .right .paneTabContainerDocked
+{
+	border-left: 0px;
+	border-right: 0px;
+}
+
+
+.RadSplitter_Default .right .paneTabContainerExpanded
+{
+	border-left: 0px;
+}
+
+.RadSplitter_Default .right .paneTabContainerDocked
+{
+	border-left: 0px;
+}
+
+/***** tabs on top position *******/
+
+.RadSplitter_Default .tabsContainer .top
+{
+	/*background: url(Img/slideZoneBgTop.gif) repeat-x top;*/
+}
+
+
+.RadSplitter_Default .top .paneTabContainer,
+.RadSplitter_Default .top .paneTabContainerExpanded,
+.RadSplitter_Default .top .paneTabContainerDocked
+{
+	border-right: 0px;
+	border-top: 0px;
+	border-left: 0px;
+	border-bottom:0px;
+	float:left;
+	padding: 0px 6px;
+	width:auto;
+}
+
+
+.RadSplitter_Default .top .paneTabContainerExpanded
+{
+	border-right: 0px;
+}
+
+.RadSplitter_Default .top .paneTabContainerDocked
+{
+	/*background: white url(Img/slideZoneDockedTabHorizontal.gif) repeat-x top;*/
+	border-right: 0px;
+}
+
+.RadSplitter_Default .top .paneTabText
+{
+	writing-mode: lr-tb;/* default */
+}
+
+/***** tabs on bottom position *******/
+
+.RadSplitter_Default .tabsContainer .bottom
+{
+	/*background: url(Img/slideZoneBgBottom.gif) repeat-x bottom;*/
+}
+
+.RadSplitter_Default .bottom .paneTabContainer,
+.RadSplitter_Default .bottom .paneTabContainerExpanded,
+.RadSplitter_Default .bottom .paneTabContainerDocked
+{
+	border-right: 0px;
+	border-left: 0px;
+	float:left;
+	padding: 0px 6px;
+	width:auto;
+}
+
+
+.RadSplitter_Default .bottom .paneTabContainerExpanded
+{
+	border-right: 0px;
+}
+
+.RadSplitter_Default .bottom .paneTabContainerDocked
+{
+	/*background: white url(Img/slideZoneDockedTabHorizontal.gif) repeat-x bottom;*/
+	border-right: 0px;
+}
+
+.RadSplitter_Default .bottom .paneTabText
+{
+	writing-mode: lr-tb;/* default */
+}
+
+/*****  -- End tabs on bottom position *******/
+
+/************************************************ 
+	slide/dock containers 
+*/
+.RadSplitter_Default .slideContainer 
+{
+	border: 0px;
+	border-collapse:collapse;
+}
+
+.RadSplitter_Default .slideContainerDocked
+{
+	
+}
+
+.RadSplitter_Default .slideHeader, 
+.RadSplitter_Default .slideHeaderDocked
+{
+	background-color:#f7f7f7;
+	/*background: url(Img/slideHeader.gif) repeat-x;*/
+	
+}
+
+.RadSplitter_Default .slideContainerResize,
+.RadSplitter_Default .slideContainerResizeHorizontal
+{ 
+     background:#f7f7f7 none;
+}
+
+.RadSplitter_Default .slideContainerResizeOver,
+.RadSplitter_Default .slideContainerResizeOverHorizontal
+{
+	background:#fff none;
+}
+
+.RadSplitter_Default .slideContainerResize,
+.RadSplitter_Default .slideContainerResizeOver
+{
+	border-top:0px;
+	border-bottom:0px;
+}
+
+.RadSplitter_Default .slideContainerResizeHorizontal,
+.RadSplitter_Default .slideContainerResizeOverHorizontal
+{
+	border-left:0px;
+	border-right:0px;
+}
+
+.RadSplitter_Default .slideHeaderIcon
+{
+	margin: 1px 3px;
+	border:0px;
+} 
+
+.RadSplitter_Default .slideHeaderIconOver
+{
+	margin: 0px 2px;
+	border:1px solid #c3c3c3;
+	cursor: hand;
+	cursor: pointer;
+} 
+
+.RadSplitter_Default .slideTitle, 
+.RadSplitter_Default .slideTitleDocked 
+{
+	font:11px Verdana;
+	color: #333;
+	white-space:nowrap;
+	margin-left:5px;
+	margin-right:5px;
+	text-align:left;
+	line-height: 25px;
+}
+
+.RadSplitter_Default .slideTitleContainer
+{
+	background-color:#f7f7f7;
+	/*background: url(Img/slideHeader.gif) repeat-x;*/
+}
+
+.RadSplitter_Default .slideContent, 
+.RadSplitter_Default .slideContentDocked
+{
+	font:10px Verdana;
+	color:black;
+	background-color:white;
+	padding:5px;
+	text-align:left;
+}
+
+.RadSplitter_Default .helperBarSlideDrag,
+.RadSplitter_Default .slideContainerResize,
+.RadSplitter_Default .slideContainerResizeOver
+{
+	cursor:w-resize;
+}
+
+.RadSplitter_Default .helperBarSlideDragHorizontal,
+.RadSplitter_Default .slideContainerResizeHorizontal,
+.RadSplitter_Default .slideContainerResizeOverHorizontal
+{
+	cursor:n-resize;
+}
+
+/*****************************************************************************/
+/* these below are not skin/border size specific. Shared between all skins */
+/*****************************************************************************/
+.nested,
+.nestedHorizontal 
+{
+	border-width: 0px;
+}
+
+/************ nested vertical ****************/
+.nested .pane, 
+.nested .resizeBar,
+.nested .resizeBarOver,
+.nested .resizeBarInactive  
+{
+	border-top: 0px;
+	border-bottom: 0px;
+}
+
+.nested .pane.firstItem,
+.nested .resizeBar.firstItem,
+.nested .resizeBarOver.firstItem,
+.nested .resizeBarInactive.firstItem
+{
+	border-left: 0px;
+}
+
+.nested .pane.lastItem, 
+.nested .resizeBar.lastItem,
+.nested .resizeBarOver.lastItem,
+.nested .resizeBarInactive.lastItem
+{
+	border-right: 0px;
+}
+
+.nested .pane.firstItem.lastItem, 
+.nested .resizeBar.firstItem.lastItem,
+.nested .resizeBarOver.firstItem.lastItem,
+.nested .resizeBarInactive.firstItem.lastItem
+{
+	border-left: 0px;
+	border-right: 0px;
+}
+
+/************ nested horizontal ****************/
+
+.nestedHorizontal .paneHorizontal, 
+.nestedHorizontal .resizeBarHorizontal,
+.nestedHorizontal .resizeBarOverHorizontal,
+.nestedHorizontal .resizeBarInactiveHorizontal
+{
+	border-left: 0px;
+	border-right: 0px;
+}
+
+.nestedHorizontal .paneHorizontal.firstItem,
+.nestedHorizontal .resizeBarHorizontal.firstItem,
+.nestedHorizontal .resizeBarOverHorizontal.firstItem,
+.nestedHorizontal .resizeBarInactiveHorizontal.firstItem
+{
+	border-top: 0px;
+}
+
+.nestedHorizontal .paneHorizontal.lastItem, 
+.nestedHorizontal .resizeBarHorizontal.lastItem,
+.nestedHorizontal .resizeBarOverHorizontal.lastItem,
+.nestedHorizontal .resizeBarInactiveHorizontal.lastItem
+{
+	border-bottom: 0px;
+}
+
+.nestedHorizontal .paneHorizontal.firstItem.lastItem, 
+.nestedHorizontal .resizeBarHorizontal.firstItem.lastItem,
+.nestedHorizontal .resizeBarOverHorizontal.firstItem.lastItem,
+.nestedHorizontal .resizeBarInactiveHorizontal.firstItem.lastItem
+{
+	border-top: 0px;
+	border-bottom: 0px;
+}
