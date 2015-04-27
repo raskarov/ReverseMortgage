@@ -57,15 +57,19 @@
     <CodeAnalysisRules>-Microsoft.Design#CA1012;-Microsoft.Design#CA2210;-Microsoft.Design#CA1040;-Microsoft.Design#CA1005;-Microsoft.Design#CA1020;-Microsoft.Design#CA1021;-Microsoft.Design#CA1010;-Microsoft.Design#CA1011;-Microsoft.Design#CA1009;-Microsoft.Design#CA1050;-Microsoft.Design#CA1026;-Microsoft.Design#CA1019;-Microsoft.Design#CA1031;-Microsoft.Design#CA1047;-Microsoft.Design#CA1000;-Microsoft.Design#CA1048;-Microsoft.Design#CA1051;-Microsoft.Design#CA1002;-Microsoft.Design#CA1061;-Microsoft.Design#CA1006;-Microsoft.Design#CA1046;-Microsoft.Design#CA1045;-Microsoft.Design#CA1038;-Microsoft.Design#CA1008;-Microsoft.Design#CA1028;-Microsoft.Design#CA1004;-Microsoft.Design#CA1035;-Microsoft.Design#CA1063;-Microsoft.Design#CA1032;-Microsoft.Design#CA1023;-Microsoft.Design#CA1033;-Microsoft.Design#CA1039;-Microsoft.Design#CA1016;-Microsoft.Design#CA1014;-Microsoft.Design#CA1017;-Microsoft.Design#CA1018;-Microsoft.Design#CA1027;-Microsoft.Design#CA1059;-Microsoft.Design#CA1060;-Microsoft.Design#CA1034;-Microsoft.Design#CA1013;-Microsoft.Design#CA1036;-Microsoft.Design#CA1044;-Microsoft.Design#CA1041;-Microsoft.Design#CA1025;-Microsoft.Design#CA1052;-Microsoft.Design#CA1053;-Microsoft.Design#CA1057;-Microsoft.Design#CA1058;-Microsoft.Design#CA1001;-Microsoft.Design#CA1049;-Microsoft.Design#CA1054;-Microsoft.Design#CA1056;-Microsoft.Design#CA1055;-Microsoft.Design#CA1030;-Microsoft.Design#CA1003;-Microsoft.Design#CA1007;-Microsoft.Design#CA1043;-Microsoft.Design#CA1024;-Microsoft.Design#CA1062;-Microsoft.Globalization#CA1301;-Microsoft.Globalization#CA1302;-Microsoft.Globalization#CA1303;-Microsoft.Globalization#CA1306;-Microsoft.Globalization#CA1304;-Microsoft.Globalization#CA1305;-Microsoft.Globalization#CA1300;-Microsoft.Interoperability#CA1403;-Microsoft.Interoperability#CA1406;-Microsoft.Interoperability#CA1413;-Microsoft.Interoperability#CA1402;-Microsoft.Interoperability#CA1407;-Microsoft.Interoperability#CA1404;-Microsoft.Interoperability#CA1410;-Microsoft.Interoperability#CA1411;-Microsoft.Interoperability#CA1405;-Microsoft.Interoperability#CA1409;-Microsoft.Interoperability#CA1415;-Microsoft.Interoperability#CA1408;-Microsoft.Interoperability#CA1414;-Microsoft.Interoperability#CA1412;-Microsoft.Interoperability#CA1400;-Microsoft.Interoperability#CA1401;-Microsoft.Maintainability#CA1502;-Microsoft.Maintainability#CA1501;-Microsoft.Maintainability#CA1500;-Microsoft.Mobility#CA1600;-Microsoft.Mobility#CA1601;-Microsoft.Naming#CA1718;-Microsoft.Naming#CA1720;-Microsoft.Naming#CA1700;-Microsoft.Naming#CA1712;-Microsoft.Naming#CA1713;-Microsoft.Naming#CA1709;-Microsoft.Naming#CA1708;-Microsoft.Naming#CA1715;-Microsoft.Naming#CA1710;-Microsoft.Naming#CA1707;-Microsoft.Naming#CA1722;-Microsoft.Naming#CA1711;-Microsoft.Naming#CA1716;-Microsoft.Naming#CA1705;-Microsoft.Naming#CA1725;-Microsoft.Naming#CA1719;-Microsoft.Naming#CA1721;-Microsoft.Naming#CA1706;-Microsoft.Naming#CA1724;-Microsoft.Naming#CA1726;-Microsoft.Performance#CA1807;-Microsoft.Performance#CA1805;-Microsoft.Performance#CA1822;-Microsoft.Portability#CA1901;-Microsoft.Portability#CA1900;-Microsoft.Reliability#CA2000;-Microsoft.Reliability#CA2002;-Microsoft.Reliability#CA2003;-Microsoft.Reliability#CA2004;-Microsoft.Reliability#CA2006;-Microsoft.Usage#CA2209;-Microsoft.Usage#CA2236;-Microsoft.Usage#CA2227;-Microsoft.Usage#CA2213;-Microsoft.Usage#CA2216;-Microsoft.Usage#CA2215;-Microsoft.Usage#CA2214;-Microsoft.Usage#CA2222;-Microsoft.Usage#CA2202;-Microsoft.Usage#CA1806;-Microsoft.Usage#CA2217;-Microsoft.Usage#CA2212;-Microsoft.Usage#CA2219;-Microsoft.Usage#CA2201;-Microsoft.Usage#CA2228;-Microsoft.Usage#CA2221;-Microsoft.Usage#CA2220;-Microsoft.Usage#CA2240;-Microsoft.Usage#CA2229;-Microsoft.Usage#CA2238;-Microsoft.Usage#CA2207;-Microsoft.Usage#CA2208;-Microsoft.Usage#CA2235;-Microsoft.Usage#CA2237;-Microsoft.Usage#CA2232;-Microsoft.Usage#CA2223;-Microsoft.Usage#CA2211;-Microsoft.Usage#CA2233;-Microsoft.Usage#CA2225;-Microsoft.Usage#CA2226;-Microsoft.Usage#CA2231;-Microsoft.Usage#CA2224;-Microsoft.Usage#CA2218;-Microsoft.Usage#CA2234;-Microsoft.Usage#CA2241;-Microsoft.Usage#CA2239;-Microsoft.Usage#CA2200;-Microsoft.Usage#CA1801;-Microsoft.Usage#CA2205;-Microsoft.Usage#CA2230</CodeAnalysisRules>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxControlToolkit, Version=1.0.10201.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL" />
+    <Reference Include="AjaxControlToolkit, Version=1.0.10201.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\Libs\dll\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="AntiXssLibrary">
       <HintPath>..\packages\AntiXSS.4.3.0\lib\net40\AntiXssLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Aspose.Pdf, Version=3.5.8.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Aspose\Aspose.Pdf\bin\net2.0\Aspose.Pdf.dll</HintPath>
+      <HintPath>..\Libs\dll\Aspose.Pdf.dll</HintPath>
     </Reference>
-    <Reference Include="Aspose.Words, Version=4.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL" />
+    <Reference Include="Aspose.Words, Version=4.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\Libs\dll\Aspose.Words.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="HtmlSanitizationLibrary">
@@ -75,7 +79,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>RMOMail\bin\LitJson.dll</HintPath>
     </Reference>
-    <Reference Include="LumiSoft.Net, Version=2.0.2672.26768, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="LumiSoft.Net, Version=2.0.2672.26768, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Libs\dll\LumiSoft.Net.dll</HintPath>
+    </Reference>
     <Reference Include="MailBee.NET, Version=4.0.2.114, Culture=neutral, PublicKeyToken=cd85b70fb26f9fc1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>RMOMail\bin\MailBee.NET.dll</HintPath>
@@ -88,26 +94,62 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>RMOMail\bin\NetSpell.SpellChecker.dll</HintPath>
     </Reference>
-    <Reference Include="RadAjax.Net2, Version=1.8.1.0, Culture=neutral, PublicKeyToken=3f7b438d1c762d0b, processorArchitecture=MSIL" />
+    <Reference Include="RadAjax.Net2, Version=1.8.1.0, Culture=neutral, PublicKeyToken=3f7b438d1c762d0b, processorArchitecture=MSIL">
+      <HintPath>..\Libs\dll\RadAjax.Net2.dll</HintPath>
+    </Reference>
     <Reference Include="RadCalendar.Net2, Version=2.2.1.0, Culture=neutral, PublicKeyToken=a1432cd341173140, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\RadControls\RadCalendar.Net2.dll</HintPath>
     </Reference>
-    <Reference Include="RadComboBox.Net2, Version=2.8.1.0, Culture=neutral, PublicKeyToken=175e9829b585f1f6, processorArchitecture=MSIL" />
-    <Reference Include="RadEditor.Net2, Version=7.1.1.0, Culture=neutral, PublicKeyToken=852c9eb6525c1b53, processorArchitecture=MSIL" />
+    <Reference Include="RadChart.Net2">
+      <HintPath>..\Libs\dll\RadChart.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadComboBox.Net2, Version=2.8.1.0, Culture=neutral, PublicKeyToken=175e9829b585f1f6, processorArchitecture=MSIL">
+      <HintPath>..\Libs\dll\RadCombobox.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadDock.Net2">
+      <HintPath>..\Libs\dll\RadDock.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadEditor.Net2, Version=7.1.1.0, Culture=neutral, PublicKeyToken=852c9eb6525c1b53, processorArchitecture=MSIL">
+      <HintPath>..\Libs\dll\RadEditor.Net2.dll</HintPath>
+    </Reference>
     <Reference Include="RadGrid.Net2, Version=4.6.2.0, Culture=neutral, PublicKeyToken=ec87bc2939ec45df, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\RadControls\RadGrid.Net2.dll</HintPath>
     </Reference>
-    <Reference Include="RadInput.Net2, Version=2.1.1.0, Culture=neutral, PublicKeyToken=a1432cd341173140, processorArchitecture=MSIL" />
-    <Reference Include="RadMenu.Net2, Version=4.4.1.0, Culture=neutral, PublicKeyToken=bbe59a8ad3533e68, processorArchitecture=MSIL" />
-    <Reference Include="RadPanelbar.Net2, Version=4.3.1.0, Culture=neutral, PublicKeyToken=e0d16f6f4c7e05de, processorArchitecture=MSIL" />
-    <Reference Include="RadSplitter.Net2, Version=1.3.1.0, Culture=neutral, PublicKeyToken=b4e93c26a31a21f0, processorArchitecture=MSIL" />
-    <Reference Include="RadTabStrip.Net2, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a87324b017ca21ce, processorArchitecture=MSIL" />
-    <Reference Include="RadToolbar.Net2, Version=1.5.1.0, Culture=neutral, PublicKeyToken=58e92726eb339b98, processorArchitecture=MSIL" />
-    <Reference Include="RadTreeView.Net2, Version=6.2.1.0, Culture=neutral, PublicKeyToken=dbd98e0feff9f06b, processorArchitecture=MSIL" />
-    <Reference Include="RadUpload.Net2, Version=2.3.1.0, Culture=neutral, PublicKeyToken=b4e93c26a31a21f0, processorArchitecture=MSIL" />
-    <Reference Include="RadWindow.Net2, Version=1.9.1.0, Culture=neutral, PublicKeyToken=a3055f084732468e, processorArchitecture=MSIL" />
+    <Reference Include="RadInput.Net2, Version=2.1.1.0, Culture=neutral, PublicKeyToken=a1432cd341173140, processorArchitecture=MSIL">
+      <HintPath>..\Libs\dll\RadInput.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadMenu.Net2, Version=4.4.1.0, Culture=neutral, PublicKeyToken=bbe59a8ad3533e68, processorArchitecture=MSIL">
+      <HintPath>..\Libs\dll\RadMenu.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadPanelbar.Net2, Version=4.3.1.0, Culture=neutral, PublicKeyToken=e0d16f6f4c7e05de, processorArchitecture=MSIL">
+      <HintPath>..\Libs\dll\RadPanelbar.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadRotator.Net2">
+      <HintPath>..\Libs\dll\RadRotator.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadSpell.NET2">
+      <HintPath>..\Libs\dll\RadSpell.NET2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadSplitter.Net2, Version=1.3.1.0, Culture=neutral, PublicKeyToken=b4e93c26a31a21f0, processorArchitecture=MSIL">
+      <HintPath>..\Libs\dll\RadSplitter.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadTabStrip.Net2, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a87324b017ca21ce, processorArchitecture=MSIL">
+      <HintPath>..\Libs\dll\RadTabStrip.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadToolbar.Net2, Version=1.5.1.0, Culture=neutral, PublicKeyToken=58e92726eb339b98, processorArchitecture=MSIL">
+      <HintPath>..\Libs\dll\RadToolbar.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadTreeView.Net2, Version=6.2.1.0, Culture=neutral, PublicKeyToken=dbd98e0feff9f06b, processorArchitecture=MSIL">
+      <HintPath>..\Libs\dll\RadTreeView.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadUpload.Net2, Version=2.3.1.0, Culture=neutral, PublicKeyToken=b4e93c26a31a21f0, processorArchitecture=MSIL">
+      <HintPath>..\Libs\dll\RadUpload.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="RadWindow.Net2, Version=1.9.1.0, Culture=neutral, PublicKeyToken=a3055f084732468e, processorArchitecture=MSIL">
+      <HintPath>..\Libs\dll\RadWindow.Net2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -125,7 +167,7 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="ZMathReverse, Version=1.1.0.0, Culture=neutral, PublicKeyToken=244a242b8fa2d4bb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Desktop\ZMathReverse.dll</HintPath>
+      <HintPath>..\Libs\dll\ZMathReverse.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -7205,7 +7247,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

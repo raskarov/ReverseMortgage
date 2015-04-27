@@ -8,6 +8,7 @@ function ClearFilter( ){
 }
 
 </script>
+</style>
 <table width="100%" border="0" cellspacing="0" cellpadding="5">
 	<tr>
 	    <td valign="top" class="cssGridCtl">
@@ -59,14 +60,17 @@ function ClearFilter( ){
         </td>
     </tr>
     <tr>
-        <td>      
+        <td>  
+            	    </td>
+    </tr>
+</table>    
             <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">                        	            
             <ContentTemplate>          
-            <radG:RadGrid ID="G" runat="server" AllowPaging="False" AllowSorting="True" AutoGenerateColumns="false" BorderStyle="Solid" BorderWidth="1px" Skin="WebBlue" Width="100%" OnItemCommand="G_ItemCommand" OnItemDataBound="G_ItemDataBound" OnSortCommand="G_SortCommand" OnPageIndexChanged="G_PageIndexChanged" >
+            <radG:RadGrid ID="G" runat="server" AllowPaging="False" AllowSorting="True" AutoGenerateColumns="false" Width="100%" BorderStyle="Solid" BorderWidth="1px" Skin="WebBlue" OnItemCommand="G_ItemCommand" OnItemDataBound="G_ItemDataBound" OnSortCommand="G_SortCommand" OnPageIndexChanged="G_PageIndexChanged" >
                 <ClientSettings>
                     <Resizing AllowColumnResize="True" EnableRealTimeResize="True"/>
                 </ClientSettings>
-                <MasterTableView AllowNaturalSort="False" >
+                <MasterTableView AllowNaturalSort="False" Width="100%" >
                     <Columns>
                         <radG:GridTemplateColumn UniqueName="TemplateColumn" HeaderText="Company" SortExpression="company" >
                             <ItemTemplate>
@@ -98,9 +102,7 @@ function ClearFilter( ){
                     <asp:AsyncPostBackTrigger ControlID="cbArchived" EventName="CheckedChanged" />
                 </Triggers>            
             </asp:UpdatePanel>            
-	    </td>
-    </tr>
-</table>
+
 <div style="margin-bottom:50px"></div>
 
 

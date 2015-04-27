@@ -124,7 +124,7 @@ namespace LoanStarPortal.Administration.Controls
                     CurrentUser.OriginatorId = companyid;
                     CurrentUser.OriginatorName = c.Name;
                     CurrentPage.StoreObject(c, Constants.COMPANYOBJECT);
-                    Response.Redirect(ResolveUrl("~/" + Constants.ADMINPAGENAME));
+                    Response.Redirect(ResolveUrl("~/" + Constants.ADMINPAGENAME), true);
                     break;
                 default:
                     return;

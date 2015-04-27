@@ -19,9 +19,10 @@ namespace LoanStarPortal.Administration.Controls
 
         protected void lbLogout_Click(object sender, EventArgs e)
         {
+            
             CurrentUser.OriginatorId = CurrentUser.CompanyId;
             CurrentUser.OriginatorName = CurrentUser.CompanyName;
-            Response.Redirect(Page.Request.RawUrl);
+            Response.Redirect("default.aspx", true);
         }
     }
 }
