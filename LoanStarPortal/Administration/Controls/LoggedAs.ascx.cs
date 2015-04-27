@@ -22,7 +22,7 @@ namespace LoanStarPortal.Administration.Controls
             
             CurrentUser.OriginatorId = CurrentUser.CompanyId;
             CurrentUser.OriginatorName = CurrentUser.CompanyName;
-            Response.Redirect("default.aspx", true);
+            Response.Redirect(String.Format(@"http://{0}/{1}?j={2}", Request.Url.Authority, CurrentUser.GetDefaultPage(), Guid.NewGuid().ToString()));
         }
     }
 }

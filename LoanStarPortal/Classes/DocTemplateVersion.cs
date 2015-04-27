@@ -674,12 +674,19 @@ namespace LoanStar.Common
 
         private static void HandleMergeWithCheckBox(object sender, MergeFieldEventArgs e)
         {
-            if (e!=null && e.FieldValue!=null && e.FieldValue.GetType() != typeof(Boolean))
-                return;
+            try
+            {
+                if (e != null && e.FieldValue != null && e.FieldValue.GetType() != typeof(Boolean))
+                    return;
 
-            DocumentBuilder docBuilder = new DocumentBuilder(e.Document);
-            docBuilder.MoveToMergeField(e.FieldName);
-            docBuilder.InsertCheckBox(e.DocumentFieldName, (Boolean)e.FieldValue, 0);
+                DocumentBuilder docBuilder = new DocumentBuilder(e.Document);
+                docBuilder.MoveToMergeField(e.FieldName);
+                docBuilder.InsertCheckBox(e.DocumentFieldName, (Boolean)e.FieldValue, 0);
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
         #endregion
 
