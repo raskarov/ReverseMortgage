@@ -1,4 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RulesTree.ascx.cs" Inherits="LoanStarPortal.Administration.Controls.RulesTree" %>
+
 <%@ Register Assembly="RadSplitter.Net2" Namespace="Telerik.WebControls" TagPrefix="radspl" %>
 <%@ Register Assembly="RadTreeView.Net2" Namespace="Telerik.WebControls" TagPrefix="radT" %>
 <%@ Register Assembly="RadTabStrip.Net2" Namespace="Telerik.WebControls" TagPrefix="radTS" %>
@@ -9,196 +10,214 @@
 <%@ Register Assembly="RadGrid.Net2" Namespace="Telerik.WebControls" TagPrefix="radG" %>
 
 <script language="javascript" type="text/javascript">
-<!--
-function ExpandCollapseTree(o){
-    var t = window['<%=rtvRule.ClientID %>'];
-    var v=o.getAttribute('val')==0;    
-    var i;
-    for(i=0; i<t.AllNodes.length; i++){
-        if(v)
-            t.AllNodes[i].Expand();
-        else            
-            t.AllNodes[i].Collapse();
+    function ExpandCollapseTree(o) {
+        var t = window['<%=rtvRule.ClientID %>'];
+        var v=o.getAttribute('val')==0;    
+        var i;
+        for(i=0; i<t.AllNodes.length; i++){
+            if(v)
+                t.AllNodes[i].Expand();
+            else            
+                t.AllNodes[i].Collapse();
+        }
+        var newv = '0';
+        var txt = 'Expand all';    
+        if(v){
+            newv = 1 ;
+            txt = 'Collapse all';
+        }    
+        o.setAttribute('val',newv);
+        o.setAttribute('value',txt);
     }
-    var newv = '0';
-    var txt = 'Expand all';    
-    if(v){
-        newv = 1 ;
-        txt = 'Collapse all';
-    }    
-    o.setAttribute('val',newv);
-    o.setAttribute('value',txt);
-}
-function SetVisibility(o,t1,t2){
-    var vis=o.checked?'none':'block';
-    var o=document.getElementById(t1);
-    if(o!=null){
-        o.style.display=vis;
-    }
-    o=document.getElementById(t2);
-    if(o!=null){
-        o.style.display=vis;
-    }
-}
-function CheckDelete(node,itemText){
-    if (itemText.toLowerCase()=='delete'){
-        return confirm('Are you sure you want to delete this rule?');
-    }
-    return true;
-}
-function CheckAll(o,d){
-    var e = d.getElementsByTagName('input');
-    for (var i=0; i<e.length; i++){
-        if (e[i].type=='checkbox'){
-            if(!e[i].parentElement.disabled){
-                e[i].checked=o.checked;
-            }            
+
+    function SetVisibility(o,t1,t2) {
+        var vis=o.checked?'none':'block';
+        var o=document.getElementById(t1);
+        if(o!=null){
+            o.style.display=vis;
+        }
+        o=document.getElementById(t2);
+        if(o!=null){
+            o.style.display=vis;
         }
     }
-}
-function CheckField(o,o1,d){
-    var e=d.getElementsByTagName('input');
-    var cnt1=0;
-    var cnt2=0;
-    for (var i=0; i<e.length; i++){
-        if ((e[i].type=='checkbox')&&(e[i].id!=o1.id)){
-            cnt1 += e[i].checked?1:0;
-            cnt2++;
+
+    function CheckDelete(node,itemText) {
+        if (itemText.toLowerCase()=='delete'){
+            return confirm('Are you sure you want to delete this rule?');
         }
-    } 
-    if (o.checked){
-        o1.checked = cnt1==cnt2;
-    }else{
-        o1.checked = false;
+        return true;
     }
-}
-function RaddpValuePopup(){
-    <%= dpValue.ClientID %>.ShowPopup();
-}
-function RuleTabSelected(sender, eventArgs){
-    var tab = eventArgs.Tab
-    var o=document.getElementById('<%=currentruletab.ClientID %>');
-    if (o!=null){
-        o.value=tab.Index;
-    }    
-}
-function SetTabIndex(index){
-    var o=document.getElementById('<%=currentruletab.ClientID %>'); 
-    if (o!=null){
-        o.value=index;
-    }    
-}
-function CheckItems(status,o1,o2,o3,o4,o5){
-        if(status)
+
+    function CheckAll(o,d) {
+        var e = d.getElementsByTagName('input');
+        for (var i=0; i<e.length; i++){
+            if (e[i].type=='checkbox'){
+                if(!e[i].parentElement.disabled){
+                    e[i].checked=o.checked;
+                }            
+            }
+        }
+    }
+
+    function CheckField(o,o1,d) {
+        var e=d.getElementsByTagName('input');
+        var cnt1=0;
+        var cnt2=0;
+        for (var i=0; i<e.length; i++){
+            if ((e[i].type=='checkbox')&&(e[i].id!=o1.id)){
+                cnt1 += e[i].checked?1:0;
+                cnt2++;
+            }
+        } 
+        if (o.checked){
+            o1.checked = cnt1==cnt2;
+        }else{
+            o1.checked = false;
+        }
+    }
+
+    function RaddpValuePopup() {
+        <%= dpValue.ClientID %>.ShowPopup();
+    }
+
+    function RuleTabSelected(sender, eventArgs) {
+        var tab = eventArgs.Tab
+        var o=document.getElementById('<%=currentruletab.ClientID %>');
+        if (o!=null){
+            o.value=tab.Index;
+        }    
+    }
+
+    function SetTabIndex(index) {
+        var o = document.getElementById('<%=currentruletab.ClientID %>'); 
+        if (o!=null){
+            o.value=index;
+        }    
+    }
+
+    function CheckItems(status,o1,o2,o3,o4,o5) {
+        if (status)
             document.getElementById(o1).removeAttribute('disabled');
         else
             document.getElementById(o1).setAttribute('disabled','true');
 
-    SetDisabled(document.getElementById(o2),status);
-    SetDisabled(document.getElementById(o3),status);
-    SetDisabled(document.getElementById(o4),status);
-    SetDisabled(document.getElementById(o5),status);    
-    if (status){
-        document.getElementById(o1).focus();
-    }
-}
-function SetDisabled(o,status){
-    var p = o.parentElement;
-    if(status)
-    {
-        o.removeAttribute('disabled');
-        p.removeAttribute('disabled');
-    }
-    else
-    {
-        o.setAttribute('disabled','true');
-        p.setAttribute('disabled','true');
-    }
-}
-function SetSelect(status,o1){
-    SetDisabled(o1,status);
-}
-function RadDatadpValuePopup(){
-    <%= rdpData.ClientID %>.ShowPopup();
-}
-var clp=null;
-var cuc="<%=divloading.ClientID %>";
-    function RequestStart(args){
-    centerElementOnScreen(document.getElementById(cuc),-50,-100);
-    clp=RadAjaxNamespace.LoadingPanels["<%= AjaxLoadingPanel1.ClientID %>"];
-    clp.Show(cuc);
-}
-function OnResponceEnd(){
-    clp.Hide(cuc);
-}
-function centerElementOnScreen(element,dx,dy){
-     var scrollTop = document.body.scrollTop;
-     var scrollLeft = document.body.scrollLeft;
-     var viewPortHeight = document.body.clientHeight;
-     var viewPortWidth = document.body.clientWidth;
-     if (document.compatMode == "CSS1Compat"){
-        viewPortHeight = document.documentElement.clientHeight;
-        viewPortWidth = document.documentElement.clientWidth;
-        scrollTop = document.documentElement.scrollTop;
-        scrollLeft = document.documentElement.scrollLeft;
-     }
-     var topOffset = Math.ceil(viewPortHeight/2 - element.offsetHeight/2);
-     var leftOffset = Math.ceil(viewPortWidth/2 - element.offsetWidth/2);
-     var top = scrollTop + topOffset - 40+dy;
-     var left = scrollLeft + leftOffset - 70+dx;
-     element.style.position = "absolute";
-     element.style.top = top + "px";
-     element.style.left = left + "px";
- }
- function SetTabsStyle(s){
-    var ar = s.split(',');
-    var ts = <%= tabsRuleEdit.ClientID %>;
-    if(ts){
-        if(ar[0]!='0'){
-            var on=ar[0]=='1';
-            for (var i=1; i<ts.Tabs.length; i++){
-                var tb =ts.Tabs[i];
-                if(on)  ts.Tabs[i].Enable();
-                else ts.Tabs[i].Disable();
-            }
-        }else{
-            for(var k=1;k<ar.length;k++){
-                if(ar[k]!='0'){
-                    var s = ts.Tabs[k].ID;
-                    var en=ar[k]=='1'
-                    var o = document.getElementById(ts.Tabs[k].ID);
-                    if(o!=null) o.style.color=en?'':'gray';
-                }
-            }
-        }    
-    }
- }
-function UpdateContent(tabs){
-    SetTabsStyle(tabs);
-    ScrollToSelectedNode();
-}
-function Dbg(){
-    ScrollToSelectedNode();
-}
-function ScrollToSelectedNode(){
-    var selectedNode = ctl07_rtvRule.SelectedNode; 
-    if (selectedNode != null){  
-        var o = document.getElementById(selectedNode.ClientID);
-        var t = document.getElementById(ctl07_rtvRule.ClientID);
-        var p = document.getElementById('RAD_SPLITTER_PANE_CONTENT_'+'<%=LeftPane.ClientID %>');
-        var trh=document.getElementById('trCat').offsetHeight;
-        var d = trh+o.offsetTop-p.clientHeight;
-        if(d>0){
-            d+=trh;
-            p.scrollTop=d;
+        SetDisabled(document.getElementById(o2),status);
+        SetDisabled(document.getElementById(o3),status);
+        SetDisabled(document.getElementById(o4),status);
+        SetDisabled(document.getElementById(o5),status);    
+        if (status){
+            document.getElementById(o1).focus();
         }
     }
-}
-function DropTest(source, dest, events){
-    if(dest==null) return false;
-    return !(source.Parent==dest);
-}
--->
+
+    function SetDisabled(o,status) {
+        var p = o.parentElement;
+        if(status)
+        {
+            o.removeAttribute('disabled');
+            p.removeAttribute('disabled');
+        }
+        else
+        {
+            o.setAttribute('disabled','true');
+            p.setAttribute('disabled','true');
+        }
+    }
+
+    function SetSelect(status,o1) {
+        SetDisabled(o1,status);
+    }
+
+    function RadDatadpValuePopup(){
+        <%= rdpData.ClientID %>.ShowPopup();
+    }
+
+    var clp=null;
+    var cuc="<%=divloading.ClientID %>";
+
+    function RequestStart(args){
+        centerElementOnScreen(document.getElementById(cuc),-50,-100);
+        clp=RadAjaxNamespace.LoadingPanels["<%= AjaxLoadingPanel1.ClientID %>"];
+        clp.Show(cuc);
+    }
+
+    function OnResponceEnd(){
+        clp.Hide(cuc);
+    }
+
+    function centerElementOnScreen(element,dx,dy){
+         var scrollTop = document.body.scrollTop;
+         var scrollLeft = document.body.scrollLeft;
+         var viewPortHeight = document.body.clientHeight;
+         var viewPortWidth = document.body.clientWidth;
+         if (document.compatMode == "CSS1Compat"){
+            viewPortHeight = document.documentElement.clientHeight;
+            viewPortWidth = document.documentElement.clientWidth;
+            scrollTop = document.documentElement.scrollTop;
+            scrollLeft = document.documentElement.scrollLeft;
+         }
+         var topOffset = Math.ceil(viewPortHeight/2 - element.offsetHeight/2);
+         var leftOffset = Math.ceil(viewPortWidth/2 - element.offsetWidth/2);
+         var top = scrollTop + topOffset - 40+dy;
+         var left = scrollLeft + leftOffset - 70+dx;
+         element.style.position = "absolute";
+         element.style.top = top + "px";
+         element.style.left = left + "px";
+    }
+
+    function SetTabsStyle(s) {
+        var ar = s.split(',');
+        var ts = <%= tabsRuleEdit.ClientID %>;
+        if (ts) {
+            if(ar[0]!='0'){
+                var on=ar[0]=='1';
+                for (var i=1; i<ts.Tabs.length; i++){
+                    var tb =ts.Tabs[i];
+                    if(on)  ts.Tabs[i].Enable();
+                    else ts.Tabs[i].Disable();
+                }
+            }else{
+                for(var k=1;k<ar.length;k++){
+                    if(ar[k]!='0'){
+                        var s = ts.Tabs[k].ID;
+                        var en=ar[k]=='1'
+                        var o = document.getElementById(ts.Tabs[k].ID);
+                        if(o!=null) o.style.color=en?'':'gray';
+                    }
+                }
+            }    
+        }
+    }
+
+    function UpdateContent(tabs) {
+        SetTabsStyle(tabs);
+        ScrollToSelectedNode();
+    }
+
+    function Dbg() {
+        ScrollToSelectedNode();
+    }
+
+    function ScrollToSelectedNode() {
+        var selectedNode = ctl07_rtvRule.SelectedNode; 
+        if (selectedNode != null){  
+            var o = document.getElementById(selectedNode.ClientID);
+            var t = document.getElementById(ctl07_rtvRule.ClientID);
+            var p = document.getElementById('RAD_SPLITTER_PANE_CONTENT_'+'<%=LeftPane.ClientID %>');
+            var trh=document.getElementById('trCat').offsetHeight;
+            var d = trh+o.offsetTop-p.clientHeight;
+            if(d>0){
+                d+=trh;
+                p.scrollTop=d;
+            }
+        }
+    }
+
+    function DropTest(source, dest, events){
+        if (dest==null) return false;
+        return !(source.Parent == dest);
+    }
 </script>
 <table cellpadding="0" cellspacing="0" border="0" style="width:100%;height:600px">
     <tr>
@@ -709,42 +728,43 @@ function DropTest(source, dest, events){
                                                     <td>
                                                         <div style="border:solid 1px black;background-color:#E7F0FB;padding:3px">
                                                             <asp:Panel ID="pnlDocument" runat="server" Width="100%">
-                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                                <tr>
-                                                                    <td style="width:110px;padding-right:3px" align="right">
-                                                                        <asp:Label ID="Label49" runat="server" Text="Select document:" SkinID="AdminLabel"></asp:Label>
-                                                                    </td>
-                                                                    <td style="width:400px">
-                                                                        <asp:DropDownList ID="ddlSelectDoc" Width="95%" runat="server"></asp:DropDownList>
-                                                                        &nbsp;<asp:Label ID="lblSelectDocErr" runat="server" ForeColor="Red"  Text=""></asp:Label>
-                                                                    </td>
-                                                                    <td>&nbsp;</td>
-                                                                </tr>
-                                                                <tr>            
-                                                                    <td style="width:110px">&nbsp;</td>                                                        
-                                                                    <td colspan="2">
-                                                                        <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
-                                                                            <tr>                                                                                
-                                                                                <td style="width:150px" align="left">
-                                                                                    <asp:CheckBox ID="cbAppPackage" runat="server" Text="Application Package" />
-                                                                                </td>
-                                                                                <td style="width:120px">
-                                                                                    <asp:CheckBox ID="cbClosPackage" runat="server" Text="Closing Package" />
-                                                                                </td>
-                                                                                <td style="width:110px">
-                                                                                    <asp:CheckBox ID="cbMiscPackage" runat="server" Text="Misc. Package" />
-                                                                                </td>
-                                                                                <td valign="bottom"><asp:Label ID="lblPackageErr" runat="server" Text="" ForeColor="Red"></asp:Label></td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td style="width:110px">&nbsp;</td>
-                                                                    <td style="padding-left:325px"><asp:Button ID="btnSaveDocument" runat="server" CausesValidation="false" Text="Save" SkinID="AdminButton" OnClick="btnSaveDocument_Click" /></td>
-                                                                    <td>&nbsp;</td>                                                                    
-                                                                </tr>                                                                
-                                                            </table>
+                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                    <tr>
+                                                                        <td style="width:110px;padding-right:3px" align="right">
+                                                                            <asp:Label ID="Label49" runat="server" Text="Select document:" SkinID="AdminLabel"></asp:Label>
+                                                                        </td>
+                                                                        <td style="width:400px">
+                                                                            <asp:HiddenField ID="hdnSelectDoc" runat="server" />
+                                                                            <asp:DropDownList ID="ddlSelectDoc" Width="95%" runat="server" AutoPostBack="true" EnableViewState="true" OnSelectedIndexChanged="ddlSelectDoc_SelectedIndexChanged" />
+                                                                            &nbsp;<asp:Label ID="lblSelectDocErr" runat="server" ForeColor="Red" Text=""></asp:Label>
+                                                                        </td>
+                                                                        <td>&nbsp;</td>
+                                                                    </tr>
+                                                                    <tr>            
+                                                                        <td style="width:110px">&nbsp;</td>                                                        
+                                                                        <td colspan="2">
+                                                                            <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                                                                                <tr>                                                                                
+                                                                                    <td style="width:150px" align="left">
+                                                                                        <asp:CheckBox ID="cbAppPackage" runat="server" Text="Application Package" />
+                                                                                    </td>
+                                                                                    <td style="width:120px">
+                                                                                        <asp:CheckBox ID="cbClosPackage" runat="server" Text="Closing Package" />
+                                                                                    </td>
+                                                                                    <td style="width:110px">
+                                                                                        <asp:CheckBox ID="cbMiscPackage" runat="server" Text="Misc. Package" />
+                                                                                    </td>
+                                                                                    <td valign="bottom"><asp:Label ID="lblPackageErr" runat="server" Text="" ForeColor="Red"></asp:Label></td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width:110px">&nbsp;</td>
+                                                                        <td style="padding-left:325px"><asp:Button ID="btnSaveDocument" runat="server" CausesValidation="false" Text="Save" SkinID="AdminButton" OnClick="btnSaveDocument_Click" /></td>
+                                                                        <td>&nbsp;</td>                                                                    
+                                                                    </tr>                                                                
+                                                                </table>
                                                             </asp:Panel>
                                                         </div>                                                        
                                                     </td>
@@ -756,7 +776,7 @@ function DropTest(source, dest, events){
                                                         <td>
                                                             <div style="border:solid 1px black;background-color:#E7F0FB;padding:3px">
                                                             <asp:Panel ID="pnlDocumentGrid" runat="server" Width="100%">
-                                                                <asp:GridView ID="gDocuments" runat="server" AutoGenerateColumns="False" AllowPaging="true" DataKeyNames="Id" GridLines="None" OnRowDataBound="G_ItemDataBound" EmptyDataText="No records to display" ForeColor="#333333" OnRowCommand="gDocuments_ItemCommand" OnPageIndexChanged="G_PageIndexChanged" OnPageIndexChanging="G_PageIndexChanging"  EnableViewState="False" SkinID="TotalGrid" >
+                                                                <asp:GridView ID="gDocuments" runat="server" AutoGenerateColumns="False" AllowPaging="true" DataKeyNames="Id" GridLines="None" OnRowDataBound="G_ItemDataBound" EmptyDataText="No records to display" ForeColor="#333333" OnRowCommand="gDocuments_ItemCommand" OnPageIndexChanged="G_PageIndexChanged" OnPageIndexChanging="G_PageIndexChanging" EnableViewState="True" SkinID="TotalGrid" >
                                                                 <Columns>
                                                                     <asp:TemplateField HeaderText="Document Name">
                                                                         <ItemTemplate>                                                                                            
@@ -795,8 +815,8 @@ function DropTest(source, dest, events){
                                                                     </asp:TemplateField>
                                                                     <asp:TemplateField HeaderText="Action">
                                                                         <ItemTemplate>
-                                                                            <asp:ImageButton  id="btnEdit" ImageUrl="~/images/btn_grd_edit.gif" CommandName="editdocument" AlternateText="Edit document" Runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"Id") %>' />                                                                
-                                                                            <asp:ImageButton  id="btnDelete" ImageUrl="~/images/btn_grd_delete.gif" CommandName="deleteobject" AlternateText="Delete item" Runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"Id") %>'/>
+                                                                            <asp:ImageButton id="btnEdit" ImageUrl="~/images/btn_grd_edit.gif" CausesValidation="false" CommandName="editdocument" AlternateText="Edit document" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"Id") %>' />
+                                                                            <asp:ImageButton id="btnDelete" ImageUrl="~/images/btn_grd_delete.gif" CausesValidation="false" CommandName="deleteobject" AlternateText="Delete item" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"Id") %>'/>
                                                                         </ItemTemplate> 
                                                                         <HeaderStyle HorizontalAlign="Center" Width="40px"/>
                                                                         <ItemStyle HorizontalAlign="Center" />
@@ -1204,10 +1224,20 @@ function DropTest(source, dest, events){
                 <radA:AjaxUpdatedControl ControlID="gCheckList" />
             </UpdatedControls>
         </radA:AjaxSetting>
-           <radA:AjaxSetting AjaxControlID="btnSaveDocument">
+        <radA:AjaxSetting AjaxControlID="btnSaveDocument">
             <UpdatedControls>
                 <radA:AjaxUpdatedControl ControlID="pnlDocument" />
                 <radA:AjaxUpdatedControl ControlID="pnlDocumentGrid" />
+            </UpdatedControls>
+        </radA:AjaxSetting>
+        <radA:AjaxSetting AjaxControlID="btnEdit">
+            <UpdatedControls>
+                <radA:AjaxUpdatedControl ControlID="btnEdit" />
+            </UpdatedControls>
+        </radA:AjaxSetting>
+        <radA:AjaxSetting AjaxControlID="ddlSelectDoc">
+            <UpdatedControls>
+                <radA:AjaxUpdatedControl ControlID="ddlSelectDoc" />
             </UpdatedControls>
         </radA:AjaxSetting>
         <radA:AjaxSetting AjaxControlID="pnlDocumentGrid">
@@ -1235,6 +1265,7 @@ function DropTest(source, dest, events){
         </radA:AjaxSetting>
     </AjaxSettings>    
 </rada:RadAjaxManager>
+
 <radA:AjaxLoadingPanel ID="AjaxLoadingPanel1" runat="server" Height="75px" Width="75px" style="position:absolute;" IsSticky="false" InitialDelayTime="1000" MinDisplayTime="1000">
     <asp:Image ID="Image2" runat="server" AlternateText="Loading..." ImageUrl="~/RadControls/Ajax/Skins/Default/Loading.gif" BorderStyle="Solid" BorderWidth="1px"/>
  </radA:AjaxLoadingPanel>

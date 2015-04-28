@@ -765,6 +765,12 @@ namespace LoanStarPortal.Administration.Controls
             {
                 BindDocumentDictionaries();
             }
+
+            if (controlName.EndsWith(":ddlSelectDoc"))
+            {
+                BindDocumentDictionaries();
+            }
+
             if (CheckForGridCommand(controlName))
             {
                 return;
@@ -1260,7 +1266,7 @@ namespace LoanStarPortal.Administration.Controls
             item.UpdatedControls.Add(new AjaxUpdatedControl(controlId, ""));
             if (rtvRule.ID == controlId)
             {
-                RadAjaxManager1.ResponseScripts.Add(String.Format(JSUPDATECONTENT,GetTabsState()));
+                RadAjaxManager1.ResponseScripts.Add(String.Format(JSUPDATECONTENT, GetTabsState()));
             }
         }
         private void RemoveFromCache()
@@ -2919,10 +2925,16 @@ namespace LoanStarPortal.Administration.Controls
         {
             gDocuments.DataSource = null;
             gDocuments.DataBind();
+
+            gDocuments.RowCommand -= new GridViewCommandEventHandler(gDocuments_ItemCommand);
+            gDocuments.RowCommand += new GridViewCommandEventHandler(gDocuments_ItemCommand);
             gDocuments.PageIndex = GetPageIndex("gDocuments");
             gDocuments.DataSource = CurrentEditNode.DvDocuments;
-            gDocuments.DataBind(); 
+            gDocuments.DataBind();
+
+           
         }
+
         protected void gDocuments_ItemCommand(object source, GridViewCommandEventArgs e)
         {
             string cmd = e.CommandName.ToLower();
@@ -2934,6 +2946,7 @@ namespace LoanStarPortal.Administration.Controls
                     BindDocumentDictionaries();
                     RuleDocument rd = new RuleDocument(id);
                     ddlSelectDoc.SelectedValue = rd.DocumentTemplateId.ToString();
+                    hdnSelectDoc.Value = rd.DocumentTemplateId.ToString();
                     cbAppPackage.Checked = rd.IsAppPackage;
                     cbClosPackage.Checked = rd.IsClosingPackage;
                     cbMiscPackage.Checked = rd.IsMiscPackage;
@@ -2955,11 +2968,12 @@ namespace LoanStarPortal.Administration.Controls
                     return;
             }
         }
+        
         protected void btnSaveDocument_Click(object sender, EventArgs e)
         {
             if(ValidateDocument())
             {
-                if(CurrentEditNode.AddDocument(CurrentDocumentId,int.Parse(ddlSelectDoc.SelectedValue),cbAppPackage.Checked,cbClosPackage.Checked,cbMiscPackage.Checked))
+                if (CurrentEditNode.AddDocument(CurrentDocumentId, int.Parse(hdnSelectDoc.Value), cbAppPackage.Checked, cbClosPackage.Checked, cbMiscPackage.Checked))
                 {
                     SetTabStyle(TABDOCUMENTSID, CurrentEditNode.DvDocuments.Count == 0);
                     AddControlToUpdate(pnlDocumentGrid.ID, 18);
@@ -2973,7 +2987,7 @@ namespace LoanStarPortal.Administration.Controls
         {
             bool res = true;
             lblSelectDocErr.Text = String.Empty;
-            if(int.Parse(ddlSelectDoc.SelectedValue)==0)
+            if (hdnSelectDoc.Value == "" || (hdnSelectDoc.Value != "" && int.Parse(hdnSelectDoc.Value) == 0))
             {
                 res = false;
                 lblSelectDocErr.Text = FIELDNEEDEDMESSAGE;
@@ -3000,7 +3014,7 @@ namespace LoanStarPortal.Administration.Controls
                     {
                         imgButton.Enabled = false;
                         imgButton = (ImageButton)e.Row.FindControl(GRIDEDITBUTTONID);
-                        if(imgButton!=null)
+                        if (imgButton != null)
                         {
                             imgButton.Enabled = false;
                         }
@@ -3010,6 +3024,13 @@ namespace LoanStarPortal.Administration.Controls
                         imgButton.Attributes.Add(ONCLICKATTRIBUTE, JSDELETECONFIRM);
                     }
                     
+                }
+
+                imgButton = (ImageButton)e.Row.FindControl(GRIDEDITBUTTONID);
+                if (imgButton != null)
+                {
+                    imgButton.Enabled = true;
+                    imgButton.Attributes.Add(ONCLICKATTRIBUTE, JSDELETECONFIRM);
                 }
             }
         }
@@ -3040,9 +3061,13 @@ namespace LoanStarPortal.Administration.Controls
             return res;
         }
 
+        protected void ddlSelectDoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            hdnSelectDoc.Value = ddlSelectDoc.SelectedValue;
+        }
+
         #endregion
-
-
+        
         #endregion
 
 
