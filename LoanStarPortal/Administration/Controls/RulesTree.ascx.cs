@@ -3030,7 +3030,6 @@ namespace LoanStarPortal.Administration.Controls
                 if (imgButton != null)
                 {
                     imgButton.Enabled = true;
-                    imgButton.Attributes.Add(ONCLICKATTRIBUTE, JSDELETECONFIRM);
                 }
             }
         }

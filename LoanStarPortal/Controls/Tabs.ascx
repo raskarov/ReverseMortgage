@@ -11,6 +11,6 @@
         <radts:Tab Text="Loan Info" Value="Info" ID="tabLoanInfo" runat="server"></radts:Tab>
         <radts:Tab Text="Calculator" Value="Calculator" ID="tabCalculator" runat="server"></radts:Tab>
         <radts:Tab Text="Checklists" Value="Checklists" ID="tabChecklists" runat="server"></radts:Tab> 
-        <radts:Tab Text="Follow-up" Value="Conditions" ID="tabConditions" runat="server"></radts:Tab> 
+        <radts:Tab Text="Conditions" Value="Conditions" ID="tabConditions" runat="server"></radts:Tab> 
     </Tabs>
 </radTS:RadTabStrip>

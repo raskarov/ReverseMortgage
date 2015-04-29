@@ -36,18 +36,33 @@
                                 <HeaderStyle Width="20px" />
                             </RowIndicatorColumn>
                         <Columns>
-                            <radG:GridTemplateColumn HeaderText="Type" UniqueName="Status" HeaderStyle-Width="40px">
+                            <%--<radG:GridTemplateColumn HeaderText="Type" UniqueName="Status" HeaderStyle-Width="40px">
                                 <ItemTemplate>
                                     <img src='Images/status_<%# DataBinder.Eval(Container.DataItem, "Status") %>.gif' alt='<%# DataBinder.Eval(Container.DataItem, "Status") %>'/>
                                 </ItemTemplate>
-                            </radG:GridTemplateColumn>
-                            <radG:GridTemplateColumn HeaderText="Doc" UniqueName="Doc" HeaderStyle-Width="40px">
+                            </radG:GridTemplateColumn>--%>
+                            <%--<radG:GridTemplateColumn HeaderText="Doc" UniqueName="Doc" HeaderStyle-Width="40px">
                                 <ItemTemplate>
                                     <asp:Image ID="imgDoc" runat="server" />
                                 </ItemTemplate>
-                            </radG:GridTemplateColumn>
+                            </radG:GridTemplateColumn>--%>
                             <radg:GridBoundColumn HeaderText="SID" DataField="SID" UniqueName="SID" Display= "False"></radg:GridBoundColumn>
                             <radG:GridButtonColumn UniqueName="TitleColumn" HeaderText="Title" CommandName="LoadItem" DataTextField="Title" ItemStyle-Width="85%"></radG:GridButtonColumn>
+                            <radG:GridTemplateColumn HeaderText="Authority Level" UniqueName="AuthorityLevel" HeaderStyle-Width="40px">
+                                <ItemTemplate>
+                                    <span><%# DataBinder.Eval(Container.DataItem, "AuthorityLevel") %></span>
+                                </ItemTemplate>
+                            </radG:GridTemplateColumn>
+                            <radG:GridTemplateColumn HeaderText="Frequency" UniqueName="Frequency" HeaderStyle-Width="40px">
+                                <ItemTemplate>
+                                    <span></span>
+                                </ItemTemplate>
+                            </radG:GridTemplateColumn>
+                            <radG:GridTemplateColumn HeaderText="Next Follow Up Date" UniqueName="NextFollowUpDate" HeaderStyle-Width="40px">
+                                <ItemTemplate>
+                                    <span></span>
+                                </ItemTemplate>
+                            </radG:GridTemplateColumn>
                             <radG:GridTemplateColumn UniqueName="TemplateColumn" ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="60px">
                                 <ItemTemplate>
                                     <div style="vertical-align:top;">

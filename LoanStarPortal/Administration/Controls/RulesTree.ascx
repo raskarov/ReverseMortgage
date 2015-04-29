@@ -1263,6 +1263,12 @@
                 <radA:AjaxUpdatedControl ControlID="pnlEditRule" />
             </UpdatedControls>
         </radA:AjaxSetting>
+        <radA:AjaxSetting AjaxControlID="gDocuments">
+            <UpdatedControls>
+                <radA:AjaxUpdatedControl ControlID="gDocuments" />
+                <radA:AjaxUpdatedControl ControlID="pnlDocument" />
+            </UpdatedControls>
+        </radA:AjaxSetting>
     </AjaxSettings>    
 </rada:RadAjaxManager>
 

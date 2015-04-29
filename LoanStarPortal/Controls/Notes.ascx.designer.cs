@@ -40,15 +40,6 @@ namespace LoanStarPortal.Controls {
         protected global::System.Web.UI.WebControls.DropDownList ddlDisplayLevel;
         
         /// <summary>
-        /// RadSplitBar3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.WebControls.RadSplitBar RadSplitBar3;
-        
-        /// <summary>
         /// MiddlePane control.
         /// </summary>
         /// <remarks>
@@ -56,33 +47,6 @@ namespace LoanStarPortal.Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.WebControls.RadPane MiddlePane;
-        
-        /// <summary>
-        /// divQuickNote control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divQuickNote;
-        
-        /// <summary>
-        /// btnCreate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCreate;
-        
-        /// <summary>
-        /// tbNote control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbNote;
         
         /// <summary>
         /// panelMessageBoard control.
@@ -94,22 +58,49 @@ namespace LoanStarPortal.Controls {
         protected global::Telerik.WebControls.RadPanelbar panelMessageBoard;
         
         /// <summary>
-        /// RadSplitBar1 control.
+        /// FormPane control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.WebControls.RadSplitBar RadSplitBar1;
+        protected global::Telerik.WebControls.RadPane FormPane;
         
         /// <summary>
-        /// BottomPane control.
+        /// divQuickNote control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.WebControls.RadPane BottomPane;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divQuickNote;
+        
+        /// <summary>
+        /// tbNote control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbNote;
+        
+        /// <summary>
+        /// btnCreate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCreate;
+        
+        /// <summary>
+        /// FullBottomPane control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.WebControls.RadPane FullBottomPane;
         
         /// <summary>
         /// chbEvents control.

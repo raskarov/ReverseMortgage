@@ -56,10 +56,10 @@ function SetProceedButtonState(i){
                         </td>
                         <td>
                             <asp:CheckBox ID="cb" runat="server" Visible="true" AutoPostBack="true" OnCheckedChanged="CheckBox_CheckedChanged"/>
-                            <asp:RadioButton ID="rbYes" runat="server" Text="Yes" AutoPostBack="false" Visible="true"/>
-                            <asp:RadioButton ID="rbNo" runat="server" Text="No" AutoPostBack="false" Visible="true"/>
-                            <asp:RadioButton ID="rbDontknow" runat="server" Text="Don't know" AutoPostBack="false" Visible="true"/>
-                            <asp:RadioButton ID="rbToFollow" runat="server" Text="To follow" AutoPostBack="false" Visible="true"/>
+                            <asp:RadioButton ID="rbYes" runat="server" Text="Yes" AutoPostBack="true" Visible="true"/>
+                            <asp:RadioButton ID="rbNo" runat="server" Text="No" AutoPostBack="true" Visible="true"/>
+                            <asp:RadioButton ID="rbDontknow" runat="server" Text="Don't know" AutoPostBack="true" Visible="true"/>
+                            <asp:RadioButton ID="rbToFollow" runat="server" Text="To follow" AutoPostBack="true" Visible="true"/>
                         </td>
                     </tr>            
                 </AlternatingItemTemplate>
@@ -70,10 +70,10 @@ function SetProceedButtonState(i){
                         </td>
                         <td>
                             <asp:CheckBox ID="cb" runat="server" AutoPostBack="true" Visible="true" OnCheckedChanged="CheckBox_CheckedChanged"/>
-                            <asp:RadioButton ID="rbYes" runat="server" Text="Yes" AutoPostBack="false" />
-                            <asp:RadioButton ID="rbNo" runat="server" Text="No" AutoPostBack="false" />
-                            <asp:RadioButton ID="rbDontknow" runat="server" Text="Don't know" AutoPostBack="false" />
-                            <asp:RadioButton ID="rbToFollow" runat="server" Text="To follow" AutoPostBack="false"  />
+                            <asp:RadioButton ID="rbYes" runat="server" Text="Yes" AutoPostBack="true" />
+                            <asp:RadioButton ID="rbNo" runat="server" Text="No" AutoPostBack="true" />
+                            <asp:RadioButton ID="rbDontknow" runat="server" Text="Don't know" AutoPostBack="true" />
+                            <asp:RadioButton ID="rbToFollow" runat="server" Text="To follow" AutoPostBack="true"  />
                         </td>
                     </tr>
                 </ItemTemplate>
