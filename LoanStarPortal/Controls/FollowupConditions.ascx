@@ -55,12 +55,12 @@
                             </radG:GridTemplateColumn>
                             <radG:GridTemplateColumn HeaderText="Frequency" UniqueName="Frequency" HeaderStyle-Width="40px">
                                 <ItemTemplate>
-                                    <span></span>
+                                    <span><%# DataBinder.Eval(Container.DataItem, "RecurrenceID") %></span>
                                 </ItemTemplate>
                             </radG:GridTemplateColumn>
                             <radG:GridTemplateColumn HeaderText="Next Follow Up Date" UniqueName="NextFollowUpDate" HeaderStyle-Width="40px">
                                 <ItemTemplate>
-                                    <span></span>
+                                    <span><%# DataBinder.Eval(Container.DataItem, "ScheduleDate") %></span>
                                 </ItemTemplate>
                             </radG:GridTemplateColumn>
                             <radG:GridTemplateColumn UniqueName="TemplateColumn" ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="60px">
