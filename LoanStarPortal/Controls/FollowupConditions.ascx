@@ -3,6 +3,7 @@
 <%@ Register Assembly="RadGrid.Net2" Namespace="Telerik.WebControls" TagPrefix="radG" %>
 <%@ Register Assembly="RadCalendar.Net2" Namespace="Telerik.WebControls" TagPrefix="radCln" %>
 <%@ Register Src="EmailAdd.ascx" TagName="EmailAdd" TagPrefix="uc1" %>
+
 <radspl:RadSplitter ID="RadSplitter2" runat="server" Height="100%" Orientation="Horizontal" Width="100%" BorderWidth="0" BorderStyle="None" Skin="Default">
     <radspl:radpane id="TopPane" runat="server" Height="29px" Scrolling="None">
         <div class="paneTitle">
@@ -13,6 +14,7 @@
             </table>
         </div>
     </radspl:radpane>  
+
     <radspl:radsplitbar id="RadSplitBar3" runat="server" CollapseMode="None" EnableResize="false" Visible="false"/>
         <radspl:radpane id="MiddlePane" runat="server" scrolling="Y" >
             <asp:Panel ID="PanelTasks" runat="server">
@@ -210,3 +212,24 @@
         </radspl:radpane>
 </radspl:RadSplitter>    
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#Tabs_CtrlTasks1_FollowupConditions1_gridConditions_ctl01').contextMenu({
+            selector: 'tr',
+            callback: function (key, options) {
+                if (key=="Advance")
+                {
+                    AjaxNS.ARWO(new WebForm_PostBackOptions("Tabs$CtrlTasks1$FollowupConditions1$btnSubmitCond", "", true, "condition_val", "", false, false), 'RadAjaxManager1', event);
+                    return false;
+                }
+            },
+            items: {
+                "Advance": { name: "Advance to the next follow-up date" },
+                "Offschedule": { name: "Add an off-schedule follow-up date" },
+                "Frequency": { name: "Change the follow-up frequency" },
+                "Completed": { name: "Change status to completed" }
+            }
+        });
+    });
+
+</script>

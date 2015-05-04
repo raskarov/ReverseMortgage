@@ -300,7 +300,7 @@ namespace LoanStarPortal.Controls
                     imgPath = ResolveUrl("~/Images/imailunread.gif");
                     break;
             }
-            newItem.Text = String.Format("<span style='float:right;'>{3}</span><img src='{0}' border='0' />&nbsp;{1}&nbsp;&nbsp;<b>{2}</b>", imgPath, MesType, Title, Date);
+            newItem.Text = String.Format("<span style='float:right;'>{3}</span>&nbsp;&nbsp;<b>{2}</b>", imgPath, MesType, Title, Date);
 
             RadPanelItem ci = new RadPanelItem();
             //Panel panelGeneral = new Panel();

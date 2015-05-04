@@ -25,7 +25,7 @@
                         <ItemTemplate>
                             <asp:Label runat="server" ID="lblDescription" EnableViewState="false" Text='<%# GetTypeName(Container.DataItem) %>'></asp:Label>
                         </ItemTemplate>
-                        <ItemStyle Width ="15%"/>
+                        <ItemStyle Width ="40%"/>
                     </asp:TemplateField>    
                     <asp:TemplateField HeaderText="Provider">
                         <ItemTemplate>
@@ -34,7 +34,7 @@
                             <asp:DropDownList ID="ddlProvidere" runat="server" AutoPostBack="true" Visible="false" Width="110px" OnSelectedIndexChanged="Providere_SelectedIndexChanged" ></asp:DropDownList>
                             <asp:TextBox ID="tbProvidere" runat="server" Visible="false" Width="110px" MaxLength="100"></asp:TextBox><asp:RequiredFieldValidator ID="rftbProvidere" ControlToValidate="tbProvidere" ErrorMessage="*" Visible="false" runat="server"></asp:RequiredFieldValidator>
                         </ItemTemplate>
-                        <ItemStyle Width ="70%"/>
+                        <ItemStyle Width ="50%"/>
                         <HeaderStyle HorizontalAlign="Left"  />
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Amount" ItemStyle-HorizontalAlign="Right" HeaderStyle-HorizontalAlign="Right">

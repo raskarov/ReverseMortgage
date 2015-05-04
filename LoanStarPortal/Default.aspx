@@ -35,8 +35,11 @@
 <link href="RadControls/Editor/Skins/Web20/Dialogs.css" rel="stylesheet" type="text/css" />
 <link href="RadControls/Editor/Skins/Web20/Controls.css" rel="stylesheet" type="text/css" />
 <link href="RadControls/Editor/Skins/Web20/Main.css" rel="stylesheet" type="text/css" />
+<link href="scripts/jquery.contextMenu.css" rel="Stylesheet" type="text/css" />
 <script type="text/javascript" src="scripts/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="script.js" language="javascript"></script>
+<script type="text/javascript" src="scripts/jquery.contextMenu.js"></script>
+<script type="text/javascript" src="scripts/jquery.ui.position.js"></script>
 </head>  
 <body style="height:100%;margin:0;" scroll="no">    
 <form id="form1" runat="server" style="height:100%" name="form1" enctype='multipart/form-data'>
@@ -144,7 +147,10 @@ function ShowHelp(){
             </radspl:radpane>                        
             <radspl:radsplitbar id="RadSplitBar1" runat="server" CollapseMode="Forward"/>                    
             <radspl:radpane id="CenterPane" runat="server" MinWidth="530">
-                <asp:Panel id="CenterPanel" runat="server" Height="100%"></asp:Panel>
+                <asp:Panel id="CenterPanel" runat="server" Height="100%">
+
+
+                </asp:Panel>
             </radspl:radpane>
             <radspl:radsplitbar id="RadSplitBar2" runat="server" collapsemode="Backward" Width="10px"/>
             <radspl:radpane id="RightPane" runat="server" Width="300" MinWidth="100" MaxWidth="300">

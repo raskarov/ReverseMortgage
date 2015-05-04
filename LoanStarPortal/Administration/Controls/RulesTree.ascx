@@ -1235,6 +1235,11 @@
                 <radA:AjaxUpdatedControl ControlID="btnEdit" />
             </UpdatedControls>
         </radA:AjaxSetting>
+        <radA:AjaxSetting AjaxControlID="btnDelete">
+            <UpdatedControls>
+                <radA:AjaxUpdatedControl ControlID="btnDelete" />
+            </UpdatedControls>
+        </radA:AjaxSetting>
         <radA:AjaxSetting AjaxControlID="ddlSelectDoc">
             <UpdatedControls>
                 <radA:AjaxUpdatedControl ControlID="ddlSelectDoc" />

@@ -333,7 +333,7 @@ namespace LoanStarPortal.Controls
                 case NOCHANGE:
                     break;
                 case NEXTWORKDATE:
-                    lblNextWorkDate.Text = ((DateTime)cond_.ScheduleDate).ToString("d"); ;
+                    lblNextWorkDate.Text = ((DateTime)cond_.ScheduleDate).ToString("d");
                     break;
                 case RESET:
                     lblNextWorkDate.Text = "";
@@ -377,6 +377,7 @@ namespace LoanStarPortal.Controls
         {
             int opt = NOCHANGE;
             Condition cond_ = new Condition(ConditionID);
+
             if (String.Compare(ddlRecurrence.SelectedValue, "0") != 0 && rdpStartDate.SelectedDate != null)
             {
                 if (cond_.RecurrenceID > 0 || cond_.ScheduleDate != null)
@@ -792,6 +793,13 @@ namespace LoanStarPortal.Controls
             btnPrintDE.Visible = chkProperty.Checked;
             Condition.UpdatePropertyApproved(ConditionID, chkProperty.Checked);
             BuildUnderwriterUI();
+        }
+        protected void SetStatusToCompleted(int _conditionId)
+        {
+            ConditionID = _conditionId;
+            Condition cond_ = new Condition(ConditionID);
+            cond_.Completed = true;
+            cond_.Save();
         }
         #endregion
     }
