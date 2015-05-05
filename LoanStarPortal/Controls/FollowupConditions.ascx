@@ -48,21 +48,23 @@
                                     <asp:Image ID="imgDoc" runat="server" />
                                 </ItemTemplate>
                             </radG:GridTemplateColumn>--%>
-                            <radg:GridBoundColumn HeaderText="SID" DataField="SID" UniqueName="SID" Display= "False"></radg:GridBoundColumn>
+                            <radg:GridBoundColumn HeaderText="SID" DataField="SID" UniqueName="SID" Display= "False">
+                            </radg:GridBoundColumn>
                             <radG:GridButtonColumn UniqueName="TitleColumn" HeaderText="Title" CommandName="LoadItem" DataTextField="Title" ItemStyle-Width="85%"></radG:GridButtonColumn>
                             <radG:GridTemplateColumn HeaderText="Authority Level" UniqueName="AuthorityLevel" HeaderStyle-Width="40px">
                                 <ItemTemplate>
-                                    <span><%# DataBinder.Eval(Container.DataItem, "AuthorityLevel") %></span>
+                                    <input type="hidden" class="row_id" value="<%# DataBinder.Eval(Container.DataItem, "ID") %>" />
+                                    <span><%# DataBinder.Eval(Container.DataItem, "AuthorityLevelName") %></span>
                                 </ItemTemplate>
                             </radG:GridTemplateColumn>
                             <radG:GridTemplateColumn HeaderText="Frequency" UniqueName="Frequency" HeaderStyle-Width="40px">
                                 <ItemTemplate>
-                                    <span><%# DataBinder.Eval(Container.DataItem, "RecurrenceID") %></span>
+                                    <span><%# DataBinder.Eval(Container.DataItem, "RecurrenceName") %></span>
                                 </ItemTemplate>
                             </radG:GridTemplateColumn>
                             <radG:GridTemplateColumn HeaderText="Next Follow Up Date" UniqueName="NextFollowUpDate" HeaderStyle-Width="40px">
                                 <ItemTemplate>
-                                    <span><%# DataBinder.Eval(Container.DataItem, "ScheduleDate") %></span>
+                                    <span><%# DataBinder.Eval(Container.DataItem, "NextFollowUpDate") %></span>
                                 </ItemTemplate>
                             </radG:GridTemplateColumn>
                             <radG:GridTemplateColumn UniqueName="TemplateColumn" ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="60px">
@@ -212,21 +214,166 @@
         </radspl:radpane>
 </radspl:RadSplitter>    
 
+<div class="dialog">
+
+</div>
+
 <script type="text/javascript">
     $(document).ready(function () {
         $('#Tabs_CtrlTasks1_FollowupConditions1_gridConditions_ctl01').contextMenu({
             selector: 'tr',
             callback: function (key, options) {
-                if (key=="Advance")
-                {
-                    AjaxNS.ARWO(new WebForm_PostBackOptions("Tabs$CtrlTasks1$FollowupConditions1$btnSubmitCond", "", true, "condition_val", "", false, false), 'RadAjaxManager1', event);
+                var id = $(this).find(".row_id").val();
+                if (key == "Advance") {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Handlers/Advance.ashx",
+                        data: JSON.stringify({ id: id }),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (msg) {
+                            location.reload();
+                        },
+                        error: function () {
+                            alert("Error");
+                        }
+                    });
+
+                    return false;
+                }
+                else if (key == "Offschedule") {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Handlers/Offschedule.ashx",
+                        data: JSON.stringify({ id: id }),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (msg) {
+                            alert(msg);
+                        },
+                        error: function () {
+                            alert("Error");
+                        }
+                    });
+
+                    return false;
+                }
+                else if (key == "Frequency-Everyday") {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Handlers/FrequencyEveryday.ashx",
+                        data: JSON.stringify({ id: id }),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (msg) {
+                            location.reload();
+                        },
+                        error: function () {
+                            alert("Error");
+                        }
+                    });
+
+                    return false;
+                }
+                else if (key == "Frequency-EveryOtherDay") {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Handlers/FrequencyEveryOtherDay.ashx",
+                        data: JSON.stringify({ id: id }),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (msg) {
+                            location.reload();
+                        },
+                        error: function () {
+                            alert("Error");
+                        }
+                    });
+
+                    return false;
+                }
+                else if (key == "Frequency-OnceWeek") {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Handlers/FrequencyOnceWeek.ashx",
+                        data: JSON.stringify({ id: id }),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (msg) {
+                            location.reload();
+                        },
+                        error: function () {
+                            alert("Error");
+                        }
+                    });
+
+                    return false;
+                }
+                else if (key == "Frequency-EveryOtherWeek") {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Handlers/FrequencyEveryOtherWeek.ashx",
+                        data: JSON.stringify({ id: id }),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (msg) {
+                            location.reload();
+                        },
+                        error: function () {
+                            alert("Error");
+                        }
+                    });
+
+                    return false;
+                }
+                else if (key == "Frequency-OnceMonth") {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Handlers/FrequencyOnceMonth.ashx",
+                        data: JSON.stringify({ id: id }),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (msg) {
+                            location.reload();
+                        },
+                        error: function () {
+                            alert("Error");
+                        }
+                    });
+
+                    return false;
+                }
+                else if (key == "Completed") {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Handlers/Completed.ashx",
+                        data: JSON.stringify({ id: id }),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (msg) {
+                            location.reload();
+                        },
+                        error: function () {
+                            alert("Error");
+                        }
+                    });
+
                     return false;
                 }
             },
             items: {
                 "Advance": { name: "Advance to the next follow-up date" },
                 "Offschedule": { name: "Add an off-schedule follow-up date" },
-                "Frequency": { name: "Change the follow-up frequency" },
+                "Frequency": {
+                    name: "Change the follow-up frequency",
+                    items: {
+                        "Frequency-Everyday": { name: "Everyday" },
+                        "Frequency-EveryOtherDay": { name: "Every other day" },
+                        "Frequency-OnceWeek": { name: "Once a week" },
+                        "Frequency-EveryOtherWeek": { name: "Every other week" },
+                        "Frequency-OnceMonth": { name: "Once a month" }
+                    }
+                },
                 "Completed": { name: "Change status to completed" }
             }
         });

@@ -1173,8 +1173,32 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Classes\GlobalAdmin.cs" />
+    <Compile Include="Handlers\Advance.ashx.cs">
+      <DependentUpon>Advance.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Completed.ashx.cs">
+      <DependentUpon>Completed.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\FrequencyEveryday.ashx.cs">
+      <DependentUpon>FrequencyEveryday.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\FrequencyEveryOtherDay.ashx.cs">
+      <DependentUpon>FrequencyEveryOtherDay.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\FrequencyEveryOtherWeek.ashx.cs">
+      <DependentUpon>FrequencyEveryOtherWeek.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\FrequencyOnceMonth.ashx.cs">
+      <DependentUpon>FrequencyOnceMonth.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\FrequencyOnceWeek.ashx.cs">
+      <DependentUpon>FrequencyOnceWeek.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handlers\LogOut.ashx.cs">
       <DependentUpon>LogOut.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Offschedule.ashx.cs">
+      <DependentUpon>Offschedule.ashx</DependentUpon>
     </Compile>
     <Compile Include="HtmlAttributeEncodingNot.cs" />
     <Compile Include="Login.aspx.cs">
@@ -6969,6 +6993,14 @@
     <Content Include="RMOMail\_functions.js" />
     <Content Include="Handlers\LogOut.ashx" />
     <Content Include="packages.config" />
+    <Content Include="Handlers\Advance.ashx" />
+    <Content Include="Handlers\Offschedule.ashx" />
+    <Content Include="Handlers\Completed.ashx" />
+    <Content Include="Handlers\FrequencyEveryday.ashx" />
+    <Content Include="Handlers\FrequencyEveryOtherDay.ashx" />
+    <Content Include="Handlers\FrequencyOnceWeek.ashx" />
+    <Content Include="Handlers\FrequencyEveryOtherWeek.ashx" />
+    <Content Include="Handlers\FrequencyOnceMonth.ashx" />
     <None Include="Properties\PublishProfiles\LoanStarPortal - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\LoanStarPortal - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
@@ -7250,7 +7282,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

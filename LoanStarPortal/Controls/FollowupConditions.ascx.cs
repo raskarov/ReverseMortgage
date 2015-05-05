@@ -3,6 +3,7 @@ using System.Data;
 using System.Web.UI.WebControls;
 using LoanStar.Common;
 using Telerik.WebControls;
+using System.Web.Services;
 
 namespace LoanStarPortal.Controls
 {
@@ -319,10 +320,10 @@ namespace LoanStarPortal.Controls
             switch (opt)
             {
                 case INIT:
-                    if (cond_.RecurrenceID > 0 && cond_.ScheduleDate != null)
+                    if (cond_.RecurrenceID > 0 && cond_.ScheduleDate != null && cond_.NextFollowUpDate != null)
                     {
                         rdpStartDate.SelectedDate = cond_.ScheduleDate;
-                        lblNextWorkDate.Text = ((DateTime)cond_.ScheduleDate).ToString("d");
+                        lblNextWorkDate.Text = ((DateTime)cond_.NextFollowUpDate).ToString("d");
                     }
                     else
                     {
@@ -333,7 +334,7 @@ namespace LoanStarPortal.Controls
                 case NOCHANGE:
                     break;
                 case NEXTWORKDATE:
-                    lblNextWorkDate.Text = ((DateTime)cond_.ScheduleDate).ToString("d");
+                    lblNextWorkDate.Text = ((DateTime)cond_.NextFollowUpDate).ToString("d");
                     break;
                 case RESET:
                     lblNextWorkDate.Text = "";
@@ -802,5 +803,11 @@ namespace LoanStarPortal.Controls
             cond_.Save();
         }
         #endregion
+
+        [WebMethod]
+        public static string AdvanceEvent()
+        {
+            return DateTime.Now.ToString();
+        }
     }
 }

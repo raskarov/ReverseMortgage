@@ -154,6 +154,29 @@ namespace LoanStar.Common
                     return Convert.ToDateTime(dataRow["ScheduleDate"]); 
             }
         }
+
+        public DateTime? NextFollowUpDate
+        {
+            set
+            {
+                if(value == null)
+                {
+                    dataRow["NextFollowUpDate"] = DBNull.Value;
+                }
+                else
+                {
+                    dataRow["NextFollowUpDate"] = value;
+                }
+            }
+            get
+            {
+                if (dataRow["NextFollowUpDate"] == DBNull.Value)
+                    return null; 
+                else
+                    return Convert.ToDateTime(dataRow["NextFollowUpDate"]); 
+            }
+        }
+
         public int RecurrenceID
         {
             set { dataRow["RecurrenceID"] = value; }
