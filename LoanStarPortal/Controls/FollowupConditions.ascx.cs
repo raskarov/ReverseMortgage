@@ -666,6 +666,12 @@ namespace LoanStarPortal.Controls
             ConditionID = 0;
         }
         #endregion
+        protected void RefreshPage_Click(object sender, EventArgs e)
+        {
+            //LoadCondition();
+            MortgageDataChanged();
+            RebindGrid();
+        }
 
         protected void btnSubmitCond_Click(object sender, EventArgs e)
         {
@@ -802,6 +808,7 @@ namespace LoanStarPortal.Controls
             cond_.Completed = true;
             cond_.Save();
         }
+
         #endregion
 
         [WebMethod]

@@ -146,7 +146,10 @@
                         </tr>
                         <tr>
                             <td></td>
-                            <td align="right"><asp:Button ID="btnSubmitFollow" runat="server" Text="Save  Schedule" ValidationGroup="follow_val" OnClick="btnSubmitFollow_Click" /></td>
+                            <td align="right">
+                                <asp:Button ID="btnSubmitFollow" runat="server" Text="Save  Schedule" ValidationGroup="follow_val" OnClick="btnSubmitFollow_Click" />
+                                <asp:Button ID="btnRefresh" runat="server" Text="Refresh" OnClick="RefreshPage_Click" Visible="false" />
+                            </td>
                         </tr>
                     </table>
                 </td>
@@ -212,7 +215,7 @@
             </table>
         </asp:Panel>
         </radspl:radpane>
-</radspl:RadSplitter>    
+</radspl:RadSplitter>  
 
 <div class="dialog">
 
@@ -232,7 +235,8 @@
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
                         success: function (msg) {
-                            location.reload();
+                            AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
+                            return false;
                         },
                         error: function () {
                             alert("Error");
@@ -266,7 +270,8 @@
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
                         success: function (msg) {
-                            location.reload();
+                            AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
+                            return false;
                         },
                         error: function () {
                             alert("Error");
@@ -283,7 +288,8 @@
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
                         success: function (msg) {
-                            location.reload();
+                            AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
+                            return false;
                         },
                         error: function () {
                             alert("Error");
@@ -300,7 +306,8 @@
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
                         success: function (msg) {
-                            location.reload();
+                            AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
+                            return false;
                         },
                         error: function () {
                             alert("Error");
@@ -317,7 +324,8 @@
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
                         success: function (msg) {
-                            location.reload();
+                            AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
+                            return false;
                         },
                         error: function () {
                             alert("Error");
@@ -334,7 +342,8 @@
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
                         success: function (msg) {
-                            location.reload();
+                            AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
+                            return false;
                         },
                         error: function () {
                             alert("Error");
@@ -351,7 +360,8 @@
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
                         success: function (msg) {
-                            location.reload();
+                            AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
+                            return false;
                         },
                         error: function () {
                             alert("Error");
