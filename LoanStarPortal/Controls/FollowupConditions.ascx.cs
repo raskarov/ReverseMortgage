@@ -678,6 +678,9 @@ namespace LoanStarPortal.Controls
         #endregion
         protected void RefreshPage_Click(object sender, EventArgs e)
         {
+            ClearFollowupControls();
+            BindRecurrence();
+
             int id = Convert.ToInt32(conditionActiveID.Value);
             ConditionID = id;
             LoadCondition();

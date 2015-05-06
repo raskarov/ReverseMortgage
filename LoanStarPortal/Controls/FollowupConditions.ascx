@@ -239,6 +239,11 @@
                 $(item).parent().css("background-color", "coral");
                 $(item).parent().siblings('td').css("background-color", "coral");
             }
+
+            if ($(item).val() != "True" && $(diffDays).val() != "-1") {
+                $(item).parent().css("background-color", "deepskyblue");
+                $(item).parent().siblings('td').css("background-color", "deepskyblue");
+            }
         });
 
         $('#Tabs_CtrlTasks1_FollowupConditions1_gridConditions_ctl01').contextMenu({
