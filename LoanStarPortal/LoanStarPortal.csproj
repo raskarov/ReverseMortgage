@@ -1197,9 +1197,6 @@
     <Compile Include="Handlers\LogOut.ashx.cs">
       <DependentUpon>LogOut.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Handlers\Offschedule.ashx.cs">
-      <DependentUpon>Offschedule.ashx</DependentUpon>
-    </Compile>
     <Compile Include="HtmlAttributeEncodingNot.cs" />
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -6994,7 +6991,6 @@
     <Content Include="Handlers\LogOut.ashx" />
     <Content Include="packages.config" />
     <Content Include="Handlers\Advance.ashx" />
-    <Content Include="Handlers\Offschedule.ashx" />
     <Content Include="Handlers\Completed.ashx" />
     <Content Include="Handlers\FrequencyEveryday.ashx" />
     <Content Include="Handlers\FrequencyEveryOtherDay.ashx" />
@@ -7282,7 +7278,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

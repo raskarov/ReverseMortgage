@@ -54,6 +54,8 @@
                             <radG:GridTemplateColumn HeaderText="Authority Level" UniqueName="AuthorityLevel" HeaderStyle-Width="40px">
                                 <ItemTemplate>
                                     <input type="hidden" class="row_id" value="<%# DataBinder.Eval(Container.DataItem, "ID") %>" />
+                                    <input type="hidden" class="row_completed" value="<%# DataBinder.Eval(Container.DataItem, "Completed") %>" />
+                                    <input type="hidden" class="row_diffdays" value="<%# DataBinder.Eval(Container.DataItem, "DiffDays") %>" />
                                     <span><%# DataBinder.Eval(Container.DataItem, "AuthorityLevelName") %></span>
                                 </ItemTemplate>
                             </radG:GridTemplateColumn>
@@ -149,6 +151,7 @@
                             <td align="right">
                                 <asp:Button ID="btnSubmitFollow" runat="server" Text="Save  Schedule" ValidationGroup="follow_val" OnClick="btnSubmitFollow_Click" />
                                 <asp:Button ID="btnRefresh" runat="server" Text="Refresh" OnClick="RefreshPage_Click" Visible="false" />
+                                <asp:HiddenField ID="conditionActiveID" ClientIDMode="Static" Value="0" runat="server" />
                             </td>
                         </tr>
                     </table>
@@ -223,10 +226,28 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
+        var hdnCompleteds = $(".row_completed");
+        $.each(hdnCompleteds, function (index, item) {
+            var diffDays = $(item).parent().find(".row_diffdays");
+
+            if ($(item).val() == 'True') {
+                $(item).parent().css("background-color", "white");
+                $(item).parent().siblings('td').css("background-color", "white");
+            }
+
+            if ($(diffDays).val() == "-1") {
+                $(item).parent().css("background-color", "coral");
+                $(item).parent().siblings('td').css("background-color", "coral");
+            }
+        });
+
         $('#Tabs_CtrlTasks1_FollowupConditions1_gridConditions_ctl01').contextMenu({
             selector: 'tr',
             callback: function (key, options) {
                 var id = $(this).find(".row_id").val();
+
+                $("#conditionActiveID").val(id);
+
                 if (key == "Advance") {
                     $.ajax({
                         type: "POST",
@@ -237,23 +258,6 @@
                         success: function (msg) {
                             AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
                             return false;
-                        },
-                        error: function () {
-                            alert("Error");
-                        }
-                    });
-
-                    return false;
-                }
-                else if (key == "Offschedule") {
-                    $.ajax({
-                        type: "POST",
-                        url: "/Handlers/Offschedule.ashx",
-                        data: JSON.stringify({ id: id }),
-                        contentType: "application/json; charset=utf-8",
-                        dataType: "json",
-                        success: function (msg) {
-                            alert(msg);
                         },
                         error: function () {
                             alert("Error");
@@ -373,7 +377,6 @@
             },
             items: {
                 "Advance": { name: "Advance to the next follow-up date" },
-                "Offschedule": { name: "Add an off-schedule follow-up date" },
                 "Frequency": {
                     name: "Change the follow-up frequency",
                     items: {

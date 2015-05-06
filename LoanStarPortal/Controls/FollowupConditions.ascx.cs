@@ -334,7 +334,14 @@ namespace LoanStarPortal.Controls
                 case NOCHANGE:
                     break;
                 case NEXTWORKDATE:
-                    lblNextWorkDate.Text = ((DateTime)cond_.NextFollowUpDate).ToString("d");
+                    if (cond_.RecurrenceID > 0 && cond_.NextFollowUpDate != null)
+                    {
+                        lblNextWorkDate.Text = ((DateTime)cond_.NextFollowUpDate).ToString("d");
+                    }
+                    else
+                    {
+                        lblNextWorkDate.Text = "";
+                    }
                     break;
                 case RESET:
                     lblNextWorkDate.Text = "";
@@ -413,6 +420,7 @@ namespace LoanStarPortal.Controls
                             break;
                         default:
                             cond_.ScheduleDate = rdpStartDate.SelectedDate;
+                            cond_.NextFollowUpDate = rdpStartDate.SelectedDate;
                             break;
                     }
                 }
@@ -424,6 +432,8 @@ namespace LoanStarPortal.Controls
                         ClearFollowUpDetails();
                     ClearFollowupControls();
                 }
+
+                opt = INIT;
             }
             else if (ddlAction.SelectedValue == "3")
             {
@@ -668,7 +678,10 @@ namespace LoanStarPortal.Controls
         #endregion
         protected void RefreshPage_Click(object sender, EventArgs e)
         {
-            //LoadCondition();
+            int id = Convert.ToInt32(conditionActiveID.Value);
+            ConditionID = id;
+            LoadCondition();
+
             MortgageDataChanged();
             RebindGrid();
         }
