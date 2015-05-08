@@ -36,10 +36,14 @@
 <link href="RadControls/Editor/Skins/Web20/Controls.css" rel="stylesheet" type="text/css" />
 <link href="RadControls/Editor/Skins/Web20/Main.css" rel="stylesheet" type="text/css" />
 <link href="scripts/jquery.contextMenu.css" rel="Stylesheet" type="text/css" />
+<link href="scripts/jquery-ui.min.css" rel="Stylesheet" type="text/css" />
+<link href="scripts/jquery-ui.structure.min.css" rel="Stylesheet" type="text/css" />
+<link href="scripts/jquery-ui.theme.min.css" rel="Stylesheet" type="text/css" />
 <script type="text/javascript" src="scripts/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="script.js" language="javascript"></script>
 <script type="text/javascript" src="scripts/jquery.contextMenu.js"></script>
 <script type="text/javascript" src="scripts/jquery.ui.position.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
 </head>  
 <body style="height:100%;margin:0;" scroll="no">    
 <form id="form1" runat="server" style="height:100%" name="form1" enctype='multipart/form-data'>
@@ -85,8 +89,8 @@ function ResizePane(displayMode)
     }
 } 
 function ShowHelp(){
-    var url = '<%=HelpUrl %>';
-    window.open(url);
+<%--    var url = '<%=HelpUrl %>';
+    window.open(url);--%>
 }
 </script>
 
