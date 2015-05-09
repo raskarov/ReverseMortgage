@@ -36,7 +36,7 @@
                             OnPageIndexChanged="gridConditions_PageIndexChanged">
                             <MasterTableView DataKeyNames="ID">
                                 <DetailTables>
-                                    <radG:GridTableView DataKeyNames="ID" Name="Description" width="100%" ShowHeader="False">
+                                    <radG:GridTableView DataKeyNames="ID" Name="Description" DataSourceID="" width="100%" ShowHeader="False">
                                         <Columns>
                                             <radG:GridBoundColumn DataField="Description"></radG:GridBoundColumn>
                                         </Columns>

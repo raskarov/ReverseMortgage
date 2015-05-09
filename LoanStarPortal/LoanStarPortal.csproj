@@ -78,6 +78,7 @@
     <Reference Include="LitJson, Version=0.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>RMOMail\bin\LitJson.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="LumiSoft.Net, Version=2.0.2672.26768, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\Libs\dll\LumiSoft.Net.dll</HintPath>
@@ -4993,10 +4994,6 @@
     <Content Include="RetailSite\style.css" />
     <Content Include="RMOMail\advanced_data_help.aspx" />
     <Content Include="RMOMail\basewebmail.aspx" />
-    <Content Include="RMOMail\bin\LitJson.dll" />
-    <Content Include="RMOMail\bin\MailBee.NET.dll" />
-    <Content Include="RMOMail\bin\MySql.Data.dll" />
-    <Content Include="RMOMail\bin\NetSpell.SpellChecker.dll" />
     <Content Include="RMOMail\calendar.aspx" />
     <Content Include="RMOMail\calendar\inc.calendar-settings.js" />
     <Content Include="RMOMail\calendar\lib.js" />
@@ -5351,7 +5348,6 @@
     <Content Include="RMOMail\MailAdm\mailadm_user_management.ascx" />
     <Content Include="RMOMail\MailAdm\mailadm_webmail_settings.ascx" />
     <Content Include="RMOMail\msgprint.aspx" />
-    <Content Include="RMOMail\obj\WebMailPro.csproj.FileListAbsolute.txt" />
     <Content Include="RMOMail\screen.account-properties.js" />
     <Content Include="RMOMail\screen.accounts-settings.js" />
     <Content Include="RMOMail\screen.common-settings.js" />
@@ -7017,9 +7013,11 @@
     <Content Include="Handlers\FrequencyOnceWeek.ashx" />
     <Content Include="Handlers\FrequencyEveryOtherWeek.ashx" />
     <Content Include="Handlers\FrequencyOnceMonth.ashx" />
+    <None Include="Properties\PublishProfiles\FTP.pubxml" />
     <None Include="Properties\PublishProfiles\LoanStarPortal - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\LoanStarPortal - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
+    <None Include="Properties\PublishProfiles\Web Deploy.pubxml" />
     <None Include="RadControls\Treeview\Skins\ExampleSkins\Arrows\3DBlue\Thumbs.db" />
     <None Include="RadControls\Treeview\Skins\ExampleSkins\Arrows\3DClassic\Thumbs.db" />
     <None Include="RadControls\Treeview\Skins\ExampleSkins\Arrows\3DGreen\Thumbs.db" />
@@ -7298,7 +7296,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
