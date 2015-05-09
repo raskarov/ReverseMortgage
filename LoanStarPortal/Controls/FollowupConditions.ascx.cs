@@ -107,7 +107,7 @@ namespace LoanStarPortal.Controls
             {
                 bool res = true;
                 Object o = Session["activefollowuptab"];
-                if(o!=null)
+                if (o != null)
                 {
                     try
                     {
@@ -240,9 +240,7 @@ namespace LoanStarPortal.Controls
             BindAuthLevel();
             BindRecurrence();
             rdpStartDate.SelectedDate = DateTime.Now;
-            gridConditions1.Rebind();
-            gridConditions2.Rebind();
-            gridConditions3.Rebind();
+            gridConditions.Rebind();
         }
 
         private static string GetEventTitle(string str)
@@ -353,14 +351,8 @@ namespace LoanStarPortal.Controls
         }
         protected void RebindGrid()
         {
-            gridConditions1.DataSource = null;
-            gridConditions1.Rebind();
-
-            gridConditions2.DataSource = null;
-            gridConditions2.Rebind();
-
-            gridConditions3.DataSource = null;
-            gridConditions3.Rebind();
+            gridConditions.DataSource = null;
+            gridConditions.Rebind();
         }
         protected int SaveCondition()
         {
@@ -489,37 +481,16 @@ namespace LoanStarPortal.Controls
         }
         private void BindFirstItem()
         {
-            if (gridConditions1.MasterTableView.Items.Count > 0)
+            if (gridConditions.MasterTableView.Items.Count > 0)
             {
                 int id;
-                int.TryParse(gridConditions1.MasterTableView.DataKeyValues[0]["ID"].ToString(), out id);
+                int.TryParse(gridConditions.MasterTableView.DataKeyValues[0]["ID"].ToString(), out id);
                 if (id > 0)
                 {
                     ConditionID = id;
+                    LoadCondition();
                 }
             }
-
-            if (gridConditions2.MasterTableView.Items.Count > 0)
-            {
-                int id;
-                int.TryParse(gridConditions2.MasterTableView.DataKeyValues[0]["ID"].ToString(), out id);
-                if (id > 0)
-                {
-                    ConditionID = id;
-                }
-            }
-
-            if (gridConditions3.MasterTableView.Items.Count > 0)
-            {
-                int id;
-                int.TryParse(gridConditions3.MasterTableView.DataKeyValues[0]["ID"].ToString(), out id);
-                if (id > 0)
-                {
-                    ConditionID = id;
-                }
-            }
-
-            LoadCondition();
         }
         protected void ClearFollowUpDetails()
         {
@@ -565,9 +536,7 @@ namespace LoanStarPortal.Controls
                         ReloadMessageBoard(ConditionID);
                     }
                 }
-                gridConditions1.Rebind();
-                gridConditions2.Rebind();
-                gridConditions3.Rebind();
+                gridConditions.Rebind();
             }
         }
         private bool CheckClosingEmail()
@@ -595,23 +564,15 @@ namespace LoanStarPortal.Controls
             BindData();
         }
         #region Grid
-        protected void gridConditions1_NeedDataSource(object source, GridNeedDataSourceEventArgs e)
+        protected void gridConditions_NeedDataSource(object source, GridNeedDataSourceEventArgs e)
         {
-            gridConditions1.DataSource = Condition.GetConditionsList(MortgageID, 1);
+            gridConditions.DataSource = Condition.GetConditionsList(MortgageID);
         }
-        protected void gridConditions2_NeedDataSource(object source, GridNeedDataSourceEventArgs e)
-        {
-            gridConditions2.DataSource = Condition.GetConditionsList(MortgageID, 2);
-        }
-        protected void gridConditions3_NeedDataSource(object source, GridNeedDataSourceEventArgs e)
-        {
-            gridConditions3.DataSource = Condition.GetConditionsList(MortgageID, 3);
-        }
-        protected void gridConditions1_PreRender(object sender, EventArgs e)
+        protected void gridConditions_PreRender(object sender, EventArgs e)
         {
             if (ConditionID > 0)
             {
-                foreach (GridDataItem item in gridConditions1.Items)
+                foreach (GridDataItem item in gridConditions.Items)
                 {
                     int id = Convert.ToInt32(item.OwnerTableView.DataKeyValues[item.ItemIndex]["ID"].ToString());
                     if (ConditionID == id)
@@ -621,40 +582,12 @@ namespace LoanStarPortal.Controls
                 }
             }
         }
-        protected void gridConditions2_PreRender(object sender, EventArgs e)
-        {
-            if (ConditionID > 0)
-            {
-                foreach (GridDataItem item in gridConditions2.Items)
-                {
-                    int id = Convert.ToInt32(item.OwnerTableView.DataKeyValues[item.ItemIndex]["ID"].ToString());
-                    if (ConditionID == id)
-                    {
-                        item.Selected = true;
-                    }
-                }
-            }
-        }
-        protected void gridConditions3_PreRender(object sender, EventArgs e)
-        {
-            if (ConditionID > 0)
-            {
-                foreach (GridDataItem item in gridConditions3.Items)
-                {
-                    int id = Convert.ToInt32(item.OwnerTableView.DataKeyValues[item.ItemIndex]["ID"].ToString());
-                    if (ConditionID == id)
-                    {
-                        item.Selected = true;
-                    }
-                }
-            }
-        }
-        protected void gridConditions1_ItemCommand(object source, GridCommandEventArgs e)
+        protected void gridConditions_ItemCommand(object source, GridCommandEventArgs e)
         {
             if (e.CommandName == "LoadItem")
             {
                 ClearConditionFields();
-                int id = Convert.ToInt32(gridConditions1.MasterTableView.DataKeyValues[e.Item.ItemIndex]["ID"]);
+                int id = Convert.ToInt32(gridConditions.MasterTableView.DataKeyValues[e.Item.ItemIndex]["ID"]);
                 ConditionID = id;
                 LoadCondition();
                 if (btnShowNotes.Text == "Condition notes")
@@ -665,14 +598,12 @@ namespace LoanStarPortal.Controls
                 {
                     ReloadMessageBoard(ConditionID);
                 }
-                gridConditions1.SelectedIndexes.Clear();
-                gridConditions1.SelectedIndexes.Add(e.Item.ItemIndex);
-
-                panel_dialog.Visible = true;
+                gridConditions.SelectedIndexes.Clear();
+                gridConditions.SelectedIndexes.Add(e.Item.ItemIndex);
             }
             else if (e.CommandName == "CreateEmail")
             {
-                int id = Convert.ToInt32(gridConditions1.MasterTableView.DataKeyValues[e.Item.ItemIndex]["ID"].ToString());
+                int id = Convert.ToInt32(gridConditions.MasterTableView.DataKeyValues[e.Item.ItemIndex]["ID"].ToString());
                 ConditionID = id;
                 LoadCondition();
                 if (btnShowNotes.Text == "Condition notes")
@@ -689,109 +620,11 @@ namespace LoanStarPortal.Controls
             {
                 ClearConditionFields();
                 ClearFollowupControls();
-                int id = Convert.ToInt32(gridConditions1.MasterTableView.DataKeyValues[e.Item.ItemIndex]["ID"].ToString());
+                int id = Convert.ToInt32(gridConditions.MasterTableView.DataKeyValues[e.Item.ItemIndex]["ID"].ToString());
                 ConditionID = id;
                 LoadCondition();
-                gridConditions1.SelectedIndexes.Clear();
-                gridConditions1.SelectedIndexes.Add(e.Item.ItemIndex);
-                tbNote.Focus();
-                if (!CurrentPage.ClientScript.IsClientScriptBlockRegistered("focus"))
-                    CurrentPage.ClientScript.RegisterClientScriptBlock(GetType(), "focus",
-                    "<script language='javascript' type='text/javascript'>SetFocus('" + tbNote.ClientID + "');</script>");
-            }
-        }
-        protected void gridConditions2_ItemCommand(object source, GridCommandEventArgs e)
-        {
-            if (e.CommandName == "LoadItem")
-            {
-                ClearConditionFields();
-                int id = Convert.ToInt32(gridConditions2.MasterTableView.DataKeyValues[e.Item.ItemIndex]["ID"]);
-                ConditionID = id;
-                LoadCondition();
-                if (btnShowNotes.Text == "Condition notes")
-                {
-                    ReloadMessageBoard(-1);
-                }
-                else
-                {
-                    ReloadMessageBoard(ConditionID);
-                }
-                gridConditions1.SelectedIndexes.Clear();
-                gridConditions1.SelectedIndexes.Add(e.Item.ItemIndex);
-            }
-            else if (e.CommandName == "CreateEmail")
-            {
-                int id = Convert.ToInt32(gridConditions2.MasterTableView.DataKeyValues[e.Item.ItemIndex]["ID"].ToString());
-                ConditionID = id;
-                LoadCondition();
-                if (btnShowNotes.Text == "Condition notes")
-                {
-                    ReloadMessageBoard(-1);
-                }
-                else
-                {
-                    ReloadMessageBoard(ConditionID);
-                }
-                ShowEmail(true);
-            }
-            else if (e.CommandName == "CreateNote")
-            {
-                ClearConditionFields();
-                ClearFollowupControls();
-                int id = Convert.ToInt32(gridConditions2.MasterTableView.DataKeyValues[e.Item.ItemIndex]["ID"].ToString());
-                ConditionID = id;
-                LoadCondition();
-                gridConditions1.SelectedIndexes.Clear();
-                gridConditions1.SelectedIndexes.Add(e.Item.ItemIndex);
-                tbNote.Focus();
-                if (!CurrentPage.ClientScript.IsClientScriptBlockRegistered("focus"))
-                    CurrentPage.ClientScript.RegisterClientScriptBlock(GetType(), "focus",
-                    "<script language='javascript' type='text/javascript'>SetFocus('" + tbNote.ClientID + "');</script>");
-            }
-        }
-        protected void gridConditions3_ItemCommand(object source, GridCommandEventArgs e)
-        {
-            if (e.CommandName == "LoadItem")
-            {
-                ClearConditionFields();
-                int id = Convert.ToInt32(gridConditions3.MasterTableView.DataKeyValues[e.Item.ItemIndex]["ID"]);
-                ConditionID = id;
-                LoadCondition();
-                if (btnShowNotes.Text == "Condition notes")
-                {
-                    ReloadMessageBoard(-1);
-                }
-                else
-                {
-                    ReloadMessageBoard(ConditionID);
-                }
-                gridConditions1.SelectedIndexes.Clear();
-                gridConditions1.SelectedIndexes.Add(e.Item.ItemIndex);
-            }
-            else if (e.CommandName == "CreateEmail")
-            {
-                int id = Convert.ToInt32(gridConditions3.MasterTableView.DataKeyValues[e.Item.ItemIndex]["ID"].ToString());
-                ConditionID = id;
-                LoadCondition();
-                if (btnShowNotes.Text == "Condition notes")
-                {
-                    ReloadMessageBoard(-1);
-                }
-                else
-                {
-                    ReloadMessageBoard(ConditionID);
-                }
-                ShowEmail(true);
-            }
-            else if (e.CommandName == "CreateNote")
-            {
-                ClearConditionFields();
-                ClearFollowupControls();
-                int id = Convert.ToInt32(gridConditions3.MasterTableView.DataKeyValues[e.Item.ItemIndex]["ID"].ToString());
-                ConditionID = id;
-                LoadCondition();
-                gridConditions1.SelectedIndexes.Clear();
-                gridConditions1.SelectedIndexes.Add(e.Item.ItemIndex);
+                gridConditions.SelectedIndexes.Clear();
+                gridConditions.SelectedIndexes.Add(e.Item.ItemIndex);
                 tbNote.Focus();
                 if (!CurrentPage.ClientScript.IsClientScriptBlockRegistered("focus"))
                     CurrentPage.ClientScript.RegisterClientScriptBlock(GetType(), "focus",
@@ -854,11 +687,6 @@ namespace LoanStarPortal.Controls
 
             MortgageDataChanged();
             RebindGrid();
-        }
-
-        protected void btnHideDialog_Click(object sender, EventArgs e)
-        {
-            panel_dialog.Visible = false;
         }
 
         protected void btnSubmitCond_Click(object sender, EventArgs e)
@@ -975,7 +803,6 @@ namespace LoanStarPortal.Controls
             SetNoteButtonsState();
             ReloadMessageBoard(-1);
             ClearConditionFields();
-
             panel_dialog.Visible = true;
         }
 
@@ -1006,5 +833,11 @@ namespace LoanStarPortal.Controls
         {
             return DateTime.Now.ToString();
         }
+
+        protected void btnHideDialog_Click(object sender, EventArgs e)
+        {
+            panel_dialog.Visible = false;
+        }
+
     }
 }

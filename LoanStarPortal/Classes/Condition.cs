@@ -274,9 +274,9 @@ namespace LoanStar.Common
             return db.GetDataView("GetConditionsQuickList", MortgageID);
         }
 
-        public static DataView GetConditionsList(int MortgageID, int type)
+        public static DataView GetConditionsList(int MortgageID)
         {
-            return db.GetDataView("GetConditionsList", MortgageID, type);
+            return db.GetDataView("GetConditionsList", MortgageID);
         }
 
         public static DataView GetStatusList()

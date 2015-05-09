@@ -67,31 +67,13 @@ namespace LoanStarPortal.Controls {
         protected global::System.Web.UI.WebControls.Panel PanelTasks;
         
         /// <summary>
-        /// gridConditions1 control.
+        /// gridConditions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.WebControls.RadGrid gridConditions1;
-        
-        /// <summary>
-        /// gridConditions2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.WebControls.RadGrid gridConditions2;
-        
-        /// <summary>
-        /// gridConditions3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.WebControls.RadGrid gridConditions3;
+        protected global::Telerik.WebControls.RadGrid gridConditions;
         
         /// <summary>
         /// btnAddCondition control.
