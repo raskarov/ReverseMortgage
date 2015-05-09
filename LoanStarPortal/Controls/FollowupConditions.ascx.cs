@@ -610,6 +610,7 @@ namespace LoanStarPortal.Controls
                 }
                 gridConditions.SelectedIndexes.Clear();
                 gridConditions.SelectedIndexes.Add(e.Item.ItemIndex);
+                panel_dialog.Visible = true;
             }
             else if (e.CommandName == "CreateEmail")
             {
