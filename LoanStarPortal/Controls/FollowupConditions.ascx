@@ -25,56 +25,65 @@
             <table cellpadding="0" cellspacing="0" style="width: 100%">
                 <tr>
                     <td valign="top" width="100%" bordercolorlight="#000000">
-                        <div>
-                            <radG:RadGrid ID="gridConditions" Skin="Default" runat="server" AutoGenerateColumns="False" EnableAJAX="False" GridLines="Vertical"
-                                AllowPaging="True" PageSize="30" Width="99%"
-                                OnNeedDataSource="gridConditions_NeedDataSource"
-                                OnItemCommand="gridConditions_ItemCommand"
-                                OnItemDataBound="gridConditions_ItemDataBound"
-                                OnPreRender="gridConditions_PreRender"
-                                OnPageIndexChanged="gridConditions_PageIndexChanged">
-                                <MasterTableView DataKeyNames="ID">
-                                    <NoRecordsTemplate>No items</NoRecordsTemplate>
-                                    <ExpandCollapseColumn Visible="False">
-                                        <HeaderStyle Width="19px" />
-                                    </ExpandCollapseColumn>
-                                    <RowIndicatorColumn Visible="False">
-                                        <HeaderStyle Width="20px" />
-                                    </RowIndicatorColumn>
-                                    <Columns>
-                                        <radG:GridBoundColumn HeaderText="SID" DataField="SID" UniqueName="SID" Display="False">
-                                        </radG:GridBoundColumn>
-                                        <radG:GridButtonColumn UniqueName="TitleColumn" HeaderText="Title" CommandName="LoadItem" DataTextField="Title" ItemStyle-CssClass="tdLinkToEdit" ItemStyle-Width="50%"></radG:GridButtonColumn>
-                                        <radG:GridTemplateColumn HeaderText="Authority Level" UniqueName="AuthorityLevel" HeaderStyle-Width="40px">
-                                            <ItemTemplate>
-                                                <input type="hidden" class="row_id" value="<%# DataBinder.Eval(Container.DataItem, "ID") %>" />
-                                                <input type="hidden" class="row_completed" value="<%# DataBinder.Eval(Container.DataItem, "Completed") %>" />
-                                                <input type="hidden" class="row_diffdays" value="<%# DataBinder.Eval(Container.DataItem, "DiffDays") %>" />
-                                                <span><%# DataBinder.Eval(Container.DataItem, "AuthorityLevelName") %></span>
-                                            </ItemTemplate>
-                                        </radG:GridTemplateColumn>
-                                        <radG:GridTemplateColumn HeaderText="Frequency" UniqueName="Frequency" HeaderStyle-Width="40px">
-                                            <ItemTemplate>
-                                                <span><%# DataBinder.Eval(Container.DataItem, "RecurrenceName") %></span>
-                                            </ItemTemplate>
-                                        </radG:GridTemplateColumn>
-                                        <radG:GridTemplateColumn HeaderText="Next Follow Up Date" UniqueName="NextFollowUpDate" HeaderStyle-Width="40px">
-                                            <ItemTemplate>
-                                                <span><%# DataBinder.Eval(Container.DataItem, "NextFollowUpDate") %></span>
-                                            </ItemTemplate>
-                                        </radG:GridTemplateColumn>
-                                        <radG:GridTemplateColumn UniqueName="TemplateColumn" ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="60px">
-                                                <ItemTemplate>
-                                                    <div style="vertical-align:top;">
-                                                    <asp:ImageButton ID="ibtnEmail" runat="server" ImageUrl="~/Images/Add_Email.gif" BorderWidth="0" ImageAlign="Bottom" CommandName="CreateEmail"/>&nbsp;&nbsp;/&nbsp;&nbsp;<asp:ImageButton ID="ibtnNote" runat="server" ImageUrl="~/Images/Add-Note.gif" BorderWidth="0" ImageAlign="Bottom" CommandName="CreateNote"/></div>
-                                                </ItemTemplate>
-                                            </radG:GridTemplateColumn>
-                                    </Columns>
-                                </MasterTableView>
-                                <PagerStyle Mode="NumericPages" />
-                                <ClientSettings EnablePostBackOnRowClick="false"></ClientSettings>
-                            </radG:RadGrid>
-                        </div>
+                        <radG:RadGrid ID="gridConditions" Skin="Default" runat="server" AutoGenerateColumns="False" EnableAJAX="False" GridLines="Vertical"
+                            AllowPaging="True" PageSize="30" Width="99%"
+                            ShowGroupPanel="true"
+                            OnDetailTableDataBind="gridConditions_DetailTableDataBind"
+                            OnNeedDataSource="gridConditions_NeedDataSource"
+                            OnItemCommand="gridConditions_ItemCommand"
+                            OnItemDataBound="gridConditions_ItemDataBound"
+                            OnPreRender="gridConditions_PreRender"
+                            OnPageIndexChanged="gridConditions_PageIndexChanged">
+                            <MasterTableView DataKeyNames="ID">
+                                <DetailTables>
+                                    <radG:GridTableView DataKeyNames="ID" Name="Description" width="100%" ShowHeader="False">
+                                        <Columns>
+                                            <radG:GridBoundColumn DataField="Description"></radG:GridBoundColumn>
+                                        </Columns>
+                                    </radG:GridTableView>
+                                </DetailTables>
+                                <NoRecordsTemplate>No items</NoRecordsTemplate>
+                                <ExpandCollapseColumn Visible="False">
+                                    <HeaderStyle Width="19px" />
+                                </ExpandCollapseColumn>
+                                <RowIndicatorColumn Visible="False">
+                                    <HeaderStyle Width="20px" />
+                                </RowIndicatorColumn>
+                                <Columns>
+                                    <radG:GridBoundColumn HeaderText="SID" DataField="SID" UniqueName="SID" Display="False">
+                                    </radG:GridBoundColumn>
+                                    <radG:GridButtonColumn UniqueName="TitleColumn" HeaderText="Title" CommandName="LoadItem" DataTextField="Title" ItemStyle-CssClass="tdLinkToEdit" ItemStyle-Width="50%"></radG:GridButtonColumn>
+                                    <radG:GridTemplateColumn HeaderText="Authority Level" UniqueName="AuthorityLevel" HeaderStyle-Width="40px">
+                                        <ItemTemplate>
+                                            <input type="hidden" class="row_id" value="<%# DataBinder.Eval(Container.DataItem, "ID") %>" />
+                                            <input type="hidden" class="row_completed" value="<%# DataBinder.Eval(Container.DataItem, "Completed") %>" />
+                                            <input type="hidden" class="row_diffdays" value="<%# DataBinder.Eval(Container.DataItem, "DiffDays") %>" />
+                                            <span><%# DataBinder.Eval(Container.DataItem, "AuthorityLevelName") %></span>
+                                        </ItemTemplate>
+                                    </radG:GridTemplateColumn>
+                                    <radG:GridTemplateColumn HeaderText="Frequency" UniqueName="Frequency" HeaderStyle-Width="40px">
+                                        <ItemTemplate>
+                                            <span><%# DataBinder.Eval(Container.DataItem, "RecurrenceName") %></span>
+                                        </ItemTemplate>
+                                    </radG:GridTemplateColumn>
+                                    <radG:GridTemplateColumn HeaderText="Next Follow Up Date" UniqueName="NextFollowUpDate" HeaderStyle-Width="40px">
+                                        <ItemTemplate>
+                                            <span><%# DataBinder.Eval(Container.DataItem, "NextFollowUpDate") %></span>
+                                        </ItemTemplate>
+                                    </radG:GridTemplateColumn>
+                                    <radG:GridTemplateColumn UniqueName="TemplateColumn" ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="60px">
+                                        <ItemTemplate>
+                                            <div style="vertical-align: top;">
+                                                <asp:ImageButton ID="ibtnEmail" runat="server" ImageUrl="~/Images/Add_Email.gif" BorderWidth="0" ImageAlign="Bottom" CommandName="CreateEmail" />&nbsp;&nbsp;/&nbsp;&nbsp;<asp:ImageButton ID="ibtnNote" runat="server" ImageUrl="~/Images/Add-Note.gif" BorderWidth="0" ImageAlign="Bottom" CommandName="CreateNote" />
+                                            </div>
+                                        </ItemTemplate>
+                                    </radG:GridTemplateColumn>
+                                </Columns>
+                            </MasterTableView>
+                            <PagerStyle Mode="NumericPages" />
+                            <ClientSettings EnablePostBackOnRowClick="false"></ClientSettings>
+                        </radG:RadGrid>
+
                         <br />
                         <br />
                         &nbsp;<asp:LinkButton ID="btnAddCondition" runat="server" Text="Add Condition/Task" CssClass="AddCondition" OnClick="btnAddCondition_Click"></asp:LinkButton>

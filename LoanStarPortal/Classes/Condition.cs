@@ -29,6 +29,7 @@ namespace LoanStar.Common
 
         #region fields
         private readonly DataRow dataRow;
+        public DataView Data { get; set; }
         #endregion
 
         #region  properties
@@ -226,6 +227,7 @@ namespace LoanStar.Common
         {
             ID = id;
             DataTable dt = db.GetDataTable("GetConditionByID", ID);
+            Data = dt.DefaultView;
             if (dt.Rows.Count > 0)
             {
                 dataRow = dt.Rows[0];

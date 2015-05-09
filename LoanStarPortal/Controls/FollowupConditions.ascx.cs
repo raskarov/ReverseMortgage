@@ -568,6 +568,16 @@ namespace LoanStarPortal.Controls
         {
             gridConditions.DataSource = Condition.GetConditionsList(MortgageID);
         }
+
+        protected void gridConditions_DetailTableDataBind(object source,
+            GridDetailTableDataBindEventArgs e)
+        {
+            GridDataItem dataItem = (GridDataItem)e.DetailTableView.ParentItem;
+            var conditionId = (Int32)dataItem.GetDataKeyValue("ID");
+            var condition = new Condition(conditionId);
+            e.DetailTableView.DataSource = condition.Data;
+        }
+
         protected void gridConditions_PreRender(object sender, EventArgs e)
         {
             if (ConditionID > 0)
@@ -615,6 +625,7 @@ namespace LoanStarPortal.Controls
                     ReloadMessageBoard(ConditionID);
                 }
                 ShowEmail(true);
+                panel_dialog.Visible = true;
             }
             else if (e.CommandName == "CreateNote")
             {
@@ -629,6 +640,7 @@ namespace LoanStarPortal.Controls
                 if (!CurrentPage.ClientScript.IsClientScriptBlockRegistered("focus"))
                     CurrentPage.ClientScript.RegisterClientScriptBlock(GetType(), "focus",
                     "<script language='javascript' type='text/javascript'>SetFocus('" + tbNote.ClientID + "');</script>");
+                panel_dialog.Visible = true;
             }
         }
         protected void gridConditions_ItemDataBound(object sender, GridItemEventArgs e)
