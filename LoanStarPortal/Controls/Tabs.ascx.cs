@@ -15,7 +15,7 @@ namespace LoanStarPortal.Controls
         //private const int TABCHECKLISTSID = 4;
         //private const int TABCONDITIONSID = 5;
         //private const int TABCALENDARID = 2;
-        private const int TABCALCULATORID = TABLOANINFOID+1;
+        private const int TABCALCULATORID = TABLOANINFOID + 1;
         private const int TABCHECKLISTSID = TABLOANINFOID + 2;
         private const int TABCONDITIONSID = TABLOANINFOID + 3;
 
@@ -35,13 +35,13 @@ namespace LoanStarPortal.Controls
             {
                 Object o = Session[Constants.CURRENTBOTTOMTABID];
                 int res = TABLOANINFOID;
-                if (o!= null)
+                if (o != null)
                 {
                     try
                     {
                         res = int.Parse(o.ToString());
                     }
-                    catch{}
+                    catch { }
                 }
                 return res;
             }
@@ -72,12 +72,12 @@ namespace LoanStarPortal.Controls
                 bool isManagedLeadCreated = false;
                 bool isNewLoanCreated = false;
                 o = Session[Constants.NEWMORTGAGECREATED];
-                if(o!=null)
+                if (o != null)
                 {
                     isNewLoanCreated = true;
                     isManagedLeadCreated = mp.CurProfileStatusID == MortgageProfile.MANAGEDLEADSTATUSID;
                 }
-                if(isNewLoanCreated)
+                if (isNewLoanCreated)
                 {
                     if (isManagedLeadCreated && !((Default)CurrentPage).appList.IsManagedLeadSelected)
                     {
@@ -111,7 +111,7 @@ namespace LoanStarPortal.Controls
                     CurrentPage.MessageBoardShowOnlyNotes = false;
             }
             o = Session[Constants.GOTOPAYOFFS];
-            if(o!=null)
+            if (o != null)
             {
                 CurrentTab = TABLOANINFOID;
             }
@@ -119,12 +119,12 @@ namespace LoanStarPortal.Controls
             {
                 case TABLOANINFOID:
                     MortgageTab mt = LoadControl(Constants.FECONTROLSLOCATION + "MortgageTab.ascx") as MortgageTab;
-                    if(mt!=null)
+                    if (mt != null)
                     {
                         mt.ID = "CtrlMortgageProfiles1";
                         ViewState["LoadedControl"] = Constants.FECONTROLSLOCATION + "MortgageTab.ascx";
                         currentControl = mt;
-                        mt.OnActionTriggered+=ActionTriggered;
+                        mt.OnActionTriggered += ActionTriggered;
                         mt.OnUpdateNeeded += UpdateTabs;
                         UpdateDocPane();
                     }
@@ -167,15 +167,15 @@ namespace LoanStarPortal.Controls
         private void SetAddNoteScript()
         {
             Notes notes = ((Default)Page).notes;
-            if(notes!=null)
+            if (notes != null)
             {
-                string script = String.Format("<script language=\"javascript\" type=\"text/javascript\">HideShowNoteDiv('{0}',{1});</script>", notes.DivQuickNoteId, CurrentTab == TABCHECKLISTSID?1:0);
+                string script = String.Format("<script language=\"javascript\" type=\"text/javascript\">HideShowNoteDiv('{0}',{1});</script>", notes.DivQuickNoteId, CurrentTab == TABCHECKLISTSID ? 1 : 0);
                 CurrentPage.ClientScript.RegisterStartupScript(GetType(), "InitAddNote", script);
             }
         }
-        public void ActionTriggered(MortgageProfile mp_,int actionMask)
+        public void ActionTriggered(MortgageProfile mp_, int actionMask)
         {
-            if ((actionMask&RuleTree.CONDITIONBIT)!=0)
+            if ((actionMask & RuleTree.CONDITIONBIT) != 0)
             {
                 Conditions cond = ((Default)Page).cond;
                 if (cond != null)
@@ -244,19 +244,19 @@ namespace LoanStarPortal.Controls
             {
                 LoadControls();
             }
-           switch (CurrentTab)
+            switch (CurrentTab)
             {
                 case TABLOANINFOID:
-                    RadMultiPage1.PageViews[TABLOANINFOID-1].Controls.Add(currentControl);
+                    RadMultiPage1.PageViews[TABLOANINFOID - 1].Controls.Add(currentControl);
                     break;
                 case TABCALCULATORID:
-                    RadMultiPage1.PageViews[TABCALCULATORID-1].Controls.Add(currentControl);
+                    RadMultiPage1.PageViews[TABCALCULATORID - 1].Controls.Add(currentControl);
                     break;
                 case TABCHECKLISTSID:
-                    RadMultiPage1.PageViews[TABCHECKLISTSID-1].Controls.Add(currentControl);
+                    RadMultiPage1.PageViews[TABCHECKLISTSID - 1].Controls.Add(currentControl);
                     break;
                 case TABCONDITIONSID:
-                    RadMultiPage1.PageViews[TABCONDITIONSID-1].Controls.Add(currentControl);
+                    RadMultiPage1.PageViews[TABCONDITIONSID - 1].Controls.Add(currentControl);
                     break;
             }
         }
@@ -277,7 +277,7 @@ namespace LoanStarPortal.Controls
         public void SetTabColor()
         {
             mp = CurrentPage.GetMortgage(MortgageProfileID);
-            if (mp.DayToWorkUpdateNeeded||mp.CampaignUpdateNeeded)
+            if (mp.DayToWorkUpdateNeeded || mp.CampaignUpdateNeeded)
             {
                 CurrentPage.CenterLeftPanelUpdateNeeded = true;
                 tabConditions.Attributes.Add("style", "color:Red");
@@ -313,7 +313,7 @@ namespace LoanStarPortal.Controls
         private void UpdateTabs()
         {
             SetTabColor();
-            ((Default) CurrentPage).appList.RepopulateMortgageList();
+            ((Default)CurrentPage).appList.RepopulateMortgageList();
             if (OnUpdateNeeded != null)
             {
                 OnUpdateNeeded();
@@ -329,11 +329,7 @@ namespace LoanStarPortal.Controls
         protected void Page_Load(object sender, EventArgs e)
         {
             currentControl = null;
-            if (ViewState["LoadedControl"] == null)
-            {
-                LoadControls();
-            }
-            else
+            if (Request.Form.Count > 0)
             {
                 Control ctrl = Page.FindControl(Request.Form["__EVENTARGUMENT"]);
                 if (ctrl != null && ctrl.GetType() == typeof(Tab))
@@ -361,8 +357,13 @@ namespace LoanStarPortal.Controls
                     FillTab();
                 }
             }
+            else if (ViewState["LoadedControl"] == null)
+            {
+                LoadControls();
+            }
+
             ActivateTab(CurrentTab - 1);
-            SetTabColor(); 
+            SetTabColor();
         }
         #endregion
     }

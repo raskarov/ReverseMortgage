@@ -238,15 +238,6 @@ namespace LoanStarPortal.Controls {
         protected global::System.Web.UI.WebControls.Button btnSatisfy;
         
         /// <summary>
-        /// btnSubmitCond control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmitCond;
-        
-        /// <summary>
         /// ddlRecurrence control.
         /// </summary>
         /// <remarks>

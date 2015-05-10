@@ -175,7 +175,6 @@ namespace LoanStarPortal.Controls
             SetSatisfiedControls(false);
             tbCondTitle.Enabled = true;
             tbCondDesc.Enabled = true;
-            btnSubmitCond.Enabled = true;
         }
         protected void ClearFollowupControls()
         {
@@ -193,9 +192,8 @@ namespace LoanStarPortal.Controls
             bool allow = CanEditCondition(AuthorityLevel);
             tbCondTitle.ReadOnly = !allow;
             tbCondDesc.ReadOnly = !allow;
-            btnSubmitCond.Visible = allow;
             btnSatisfy.Visible = allow;
-            if (String.Compare(btnSatisfy.Text, "Satisfied", true) == 0)
+            if (String.Compare(btnSatisfy.Text, "Satisfied", StringComparison.OrdinalIgnoreCase) == 0)
                 btnSatisfy.Enabled = false;
             else
                 btnSatisfy.Enabled = allow;
@@ -566,16 +564,20 @@ namespace LoanStarPortal.Controls
         #region Grid
         protected void gridConditions_NeedDataSource(object source, GridNeedDataSourceEventArgs e)
         {
-            gridConditions.DataSource = Condition.GetConditionsList(MortgageID);
+            if (!e.IsFromDetailTable)
+            {
+                gridConditions.DataSource = Condition.GetConditionsList(MortgageID);
+            }
         }
 
         protected void gridConditions_DetailTableDataBind(object source,
             GridDetailTableDataBindEventArgs e)
         {
             GridDataItem dataItem = (GridDataItem)e.DetailTableView.ParentItem;
-            var conditionId = (Int32)dataItem.GetDataKeyValue("ID");
-            var condition = new Condition(conditionId);
-            e.DetailTableView.DataSource = condition.Data;
+            var conditionId = (Int32) dataItem.GetDataKeyValue("ID");
+                var condition = new Condition(conditionId);
+                e.DetailTableView.DataSource = condition.Data;
+            
         }
 
         protected void gridConditions_PreRender(object sender, EventArgs e)
@@ -702,17 +704,6 @@ namespace LoanStarPortal.Controls
             RebindGrid();
         }
 
-        protected void btnSubmitCond_Click(object sender, EventArgs e)
-        {
-            ConditionID = SaveCondition();
-            btnShowNotes.Enabled = ConditionID > 0;
-            ddlAuthLevel.Visible = false;
-            lblAuthLevel.Visible = !ddlAuthLevel.Visible;
-            SetNoteTable();
-            SetNoteButtonsState();
-            MortgageDataChanged();
-            RebindGrid();
-        }
         protected void btnSatisfy_Click(object sender, EventArgs e)
         {
             if (ConditionID > 0)
@@ -742,14 +733,16 @@ namespace LoanStarPortal.Controls
                 BuildUnderwriterUI();
             }
         }
-        protected void btnSubmitFollow_Click(object sender, EventArgs e)
+        protected void btnSave_Click(object sender, EventArgs e)
         {
-            if (ConditionID <= 0 && !String.IsNullOrEmpty(tbCondTitle.Text))
-            {
-                ConditionID = SaveCondition();
-            }
-            if (ConditionID > 0)
-                SaveFollowUpCondition();
+            ConditionID = SaveCondition();
+            btnShowNotes.Enabled = ConditionID > 0;
+            //ddlAuthLevel.Visible = false;
+            lblAuthLevel.Visible = !ddlAuthLevel.Visible;
+            SetNoteTable();
+            SetNoteButtonsState();
+            MortgageDataChanged();
+            SaveFollowUpCondition();
             Condition cond_ = new Condition(ConditionID);
             SetDates(cond_, NEXTWORKDATE);
             MortgageDataChanged();

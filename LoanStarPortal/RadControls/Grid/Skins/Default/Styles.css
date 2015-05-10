@@ -41,6 +41,7 @@ th.ResizeHeader_Default
 	border-bottom: solid 1px #bbb;
 	padding-left: 4px; /*more than items to compensate for item borders!*/
 	height: 22px;
+    min-width: 150px;
 }
 
 .GridHeader_Default a
