@@ -44,6 +44,10 @@ th.ResizeHeader_Default
     min-width: 150px;
 }
 
+th.GridHeader_Default:first-child {
+    min-width: 30px;
+}
+
 .GridHeader_Default a
 {
 	color: black;

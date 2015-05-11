@@ -32,7 +32,7 @@
                 OnPageIndexChanged="gridConditions_PageIndexChanged">
                 <MasterTableView DataKeyNames="ID">
                     <DetailTables>
-                        <radG:GridTableView DataKeyNames="ID" Name="Description" Width="100%" ShowHeader="False">
+                        <radG:GridTableView DataKeyNames="ID"  Name="Description" Width="100%" ShowHeader="False">                            
                             <Columns>
                                 <radG:GridBoundColumn DataField="Description"></radG:GridBoundColumn>
                             </Columns>
@@ -80,7 +80,7 @@
                     </Columns>
                 </MasterTableView>
                 <PagerStyle Mode="NumericPages" />
-                <%--<ClientSettings EnablePostBackOnRowClick="false"></ClientSettings>--%>
+                <ClientSettings EnablePostBackOnRowClick="false"></ClientSettings>
             </radG:RadGrid>
 
             <br />

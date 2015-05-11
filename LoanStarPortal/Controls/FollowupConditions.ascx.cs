@@ -564,20 +564,17 @@ namespace LoanStarPortal.Controls
         #region Grid
         protected void gridConditions_NeedDataSource(object source, GridNeedDataSourceEventArgs e)
         {
-            if (!e.IsFromDetailTable)
-            {
-                gridConditions.DataSource = Condition.GetConditionsList(MortgageID);
-            }
+            gridConditions.DataSource = Condition.GetConditionsList(MortgageID);
         }
 
         protected void gridConditions_DetailTableDataBind(object source,
             GridDetailTableDataBindEventArgs e)
         {
             GridDataItem dataItem = (GridDataItem)e.DetailTableView.ParentItem;
-            var conditionId = (Int32) dataItem.GetDataKeyValue("ID");
-                var condition = new Condition(conditionId);
-                e.DetailTableView.DataSource = condition.Data;
-            
+            ConditionID = (Int32)dataItem.GetDataKeyValue("ID");
+            LoadCondition();
+            e.DetailTableView.DataSource = cond.Data;
+
         }
 
         protected void gridConditions_PreRender(object sender, EventArgs e)
@@ -587,9 +584,40 @@ namespace LoanStarPortal.Controls
                 foreach (GridDataItem item in gridConditions.Items)
                 {
                     int id = Convert.ToInt32(item.OwnerTableView.DataKeyValues[item.ItemIndex]["ID"].ToString());
-                    if (ConditionID == id)
+                    if (ConditionID == id && item.OwnerTableView.Name != "Description")
                     {
                         item.Selected = true;
+                        if (item.Expanded)
+                        {
+                            item.Expanded = false;
+                        }
+                    }
+                    DataRowView row = (DataRowView)item.DataItem;
+
+                    if (row != null)
+                    {
+                        item.ForeColor = Convert.ToInt16(row["Days"]) >= 0
+                            ? System.Drawing.Color.Red
+                            : System.Drawing.Color.Black;
+
+                        Image img = (Image) item.FindControl("imgDoc");
+                        if (img != null)
+                        {
+                            if (String.Compare(row["Status"].ToString(), "Completed", true) == 0)
+                                img.ImageUrl = "~/Images/doc_icon.gif";
+                            else if (Convert.ToBoolean(row["Completed"].ToString()))
+                                img.ImageUrl = "~/Images/doc_icon.gif";
+                            else
+                                img.Visible = false;
+                        }
+                    }
+                    if (!hasEmail)
+                    {
+                        ImageButton btn = (ImageButton)item.FindControl("ibtnEmail");
+                        if (btn != null)
+                        {
+                            btn.Visible = false;
+                        }
                     }
                 }
             }
@@ -651,38 +679,7 @@ namespace LoanStarPortal.Controls
             if (e.Item.ItemType == GridItemType.Item || e.Item.ItemType == GridItemType.AlternatingItem)
             {
 
-                DataRowView row = (DataRowView)e.Item.DataItem;
-                GridDataItem item = e.Item as GridDataItem;
-                if (item != null)
-                {
-                    if (Convert.ToInt16(row["Days"]) >= 0)
-                    {
-                        item.ForeColor = System.Drawing.Color.Red;
-                    }
-                    else
-                    {
-                        //                        item.ForeColor = System.Drawing.Color.Transparent;
-                        item.ForeColor = System.Drawing.Color.Black;
-                    }
-                }
-                Image img = (Image)e.Item.FindControl("imgDoc");
-                if (img != null)
-                {
-                    if (String.Compare(row["Status"].ToString(), "Completed", true) == 0)
-                        img.ImageUrl = "~/Images/doc_icon.gif";
-                    else if (Convert.ToBoolean(row["Completed"].ToString()))
-                        img.ImageUrl = "~/Images/doc_icon.gif";
-                    else
-                        img.Visible = false;
-                }
-                if (!hasEmail)
-                {
-                    ImageButton btn = (ImageButton)e.Item.FindControl("ibtnEmail");
-                    if (btn != null)
-                    {
-                        btn.Visible = false;
-                    }
-                }
+
             }
         }
         protected void gridConditions_PageIndexChanged(object source, GridPageChangedEventArgs e)
@@ -747,6 +744,7 @@ namespace LoanStarPortal.Controls
             SetDates(cond_, NEXTWORKDATE);
             MortgageDataChanged();
             RebindGrid();
+            panel_dialog.Visible = false;
         }
         protected void btnShowNotes_Click(object sender, EventArgs e)
         {
