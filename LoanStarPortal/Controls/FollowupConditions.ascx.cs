@@ -587,10 +587,6 @@ namespace LoanStarPortal.Controls
                     if (ConditionID == id && item.OwnerTableView.Name != "Description")
                     {
                         item.Selected = true;
-                        if (item.Expanded)
-                        {
-                            item.Expanded = false;
-                        }
                     }
                     DataRowView row = (DataRowView)item.DataItem;
 
