@@ -5,7 +5,6 @@
 <%@ Register Assembly="RadPanelbar.Net2" Namespace="Telerik.WebControls" TagPrefix="radPnlB" %>
 <%@ Register Src="EmailAdd.ascx" TagName="EmailAdd" TagPrefix="uc1" %>
 
-<script type="text/javascript" src="scripts/users/FollowupConditions.js"></script>
 
 <radspl:RadSplitter ID="RadSplitter2" runat="server" Height="100%" Orientation="Horizontal" Width="100%" BorderWidth="0" BorderStyle="None" Skin="Default">
     <radspl:RadPane ID="TopPane" runat="server" Height="29px" Scrolling="None">
