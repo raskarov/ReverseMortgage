@@ -345,9 +345,9 @@ namespace LoanStarPortal.Controls
 
                     SaveEvent(Constants.EVENTTYPEIDCONDITIONCREATED, begining + "<b>" + GetEventTitle(scond.Title) + "</b> by " + CurrentUser.FirstName + " " + CurrentUser.LastName + " at " + DateTime.Now.ToString("f"));
                 }
-                scond.Save();
-                scond.NextFollowUpDate = rdpStartDate.SelectedDate;
+                scond.ScheduleDate = rdpStartDate.SelectedDate;
                 scond.RecurrenceID = ddlRecurrence.SelectedIndex;
+                scond.Save();
                 scond.SaveFollowUpDetails();
             }
             return scond.ID;
