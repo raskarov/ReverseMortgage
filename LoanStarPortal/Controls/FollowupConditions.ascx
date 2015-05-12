@@ -121,7 +121,7 @@
     </radspl:RadPane>
 </radspl:RadSplitter>
 
-<asp:Panel ID="panel_dialog" runat="server" Visible="false" CssClass="pnlDialog">
+<asp:Panel ID="panel_dialog" runat="server" Visible="false" CssClass="pnlConditionsDialog">
     <div class="paneGrid" style="width: 310px; height: 25px;">
         <b>Details</b>
         <asp:Button CssClass="rght" ID="btnHideDialog" runat="server" Text="X" OnClick="btnHideDialog_Click" />
@@ -203,7 +203,7 @@
 </asp:Panel>
 
 <style>
-    .pnlDialog {
+    .pnlConditionsDialog {
         z-index: 200;
         position: absolute;
         top: 70px;

@@ -968,7 +968,13 @@ function AjaxResponseEnd()
     var ds1 = (de.getTime()-ds.getTime())/1000;
     document.getElementById("LoadingDiv").style.visibility = 'hidden';
     RestoreErrors();
-    window.setTimeout('SetActiveElement()',500);
+    window.setTimeout('SetActiveElement()', 500);
+    var dialogPanel = $("#DialogPanel");
+    if (dialogPanel.html().trim().length) {
+        dialogPanel.parent().removeClass("left_hide");
+    } else {
+        dialogPanel.parent().addClass("left_hide");
+    }
 //      alert('Request start time: '+ds.toLocaleTimeString()+'\n'+'Server returned response: '+dr.toLocaleTimeString()+'\n'+'Response End: '+de.toLocaleTimeString()+'\n--------------------------------------------\n'+'Server side: ' + (dr.getTime() - ds.getTime())/1000 + '\n' + 'Client side: ' + (de.getTime() - dr.getTime())/1000 + '\n--------------------------------------------\n' + 'Total time: ' + ds1);
 }
 function GetActiveElement(){   

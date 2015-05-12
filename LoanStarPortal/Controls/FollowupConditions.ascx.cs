@@ -345,9 +345,9 @@ namespace LoanStarPortal.Controls
 
                     SaveEvent(Constants.EVENTTYPEIDCONDITIONCREATED, begining + "<b>" + GetEventTitle(scond.Title) + "</b> by " + CurrentUser.FirstName + " " + CurrentUser.LastName + " at " + DateTime.Now.ToString("f"));
                 }
-                scond.Save();
                 scond.NextFollowUpDate = rdpStartDate.SelectedDate;
                 scond.RecurrenceID = ddlRecurrence.SelectedIndex;
+                scond.Save();
                 scond.SaveFollowUpDetails();
             }
             return scond.ID;
@@ -628,7 +628,6 @@ namespace LoanStarPortal.Controls
         {
             ConditionID = SaveCondition();
             lblAuthLevel.Visible = !ddlAuthLevel.Visible;
-            MortgageDataChanged();
             Condition cond_ = new Condition(ConditionID);
             SetDates(cond_, NEXTWORKDATE);
             MortgageDataChanged();
