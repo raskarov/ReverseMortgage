@@ -128,10 +128,10 @@ function ShowHelp(){
         </radm:RadMenuItem>
         <radm:RadMenuItem Text="Loan" AccessKey="l" Value="Loan">
             <Items>
-                <radM:RadMenuItem AccessKey="n" Text="New borrower" Value="NewBorrower" Enabled="false"></radm:RadMenuItem>            
-                <radM:RadMenuItem AccessKey="m" Text="Message board" Value="Notes" Enabled="false"></radm:RadMenuItem>
-                <radm:RadMenuItem Text="Conditions" AccessKey="c" Value="Conditions" Enabled="false"></radm:RadMenuItem>
-                <radm:RadMenuItem Text="Documents" AccessKey="d" Value="Docs" Enabled="false"></radm:RadMenuItem>
+                <radM:RadMenuItem AccessKey="n" Text="New borrower" Value="NewBorrower"></radm:RadMenuItem>            
+                <radM:RadMenuItem AccessKey="m" Text="Message board" Value="Notes"></radm:RadMenuItem>
+                <radm:RadMenuItem Text="Conditions" AccessKey="c" Value="Conditions"></radm:RadMenuItem>
+                <radm:RadMenuItem Text="Documents" AccessKey="d" Value="Docs"></radm:RadMenuItem>
                 <radm:RadMenuItem Text="Field Changes" AccessKey="f" Value="FieldChanges" Enabled="false" Visible="false"></radm:RadMenuItem>
             </Items>
         </radm:RadMenuItem>        

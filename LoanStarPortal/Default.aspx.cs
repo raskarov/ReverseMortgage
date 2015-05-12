@@ -293,6 +293,7 @@ namespace LoanStarPortal
                 {
                     EmailLinkCliked();
                 }
+                ProcessRequest(Request["__EVENTARGUMENT"]);
             }
             if (Request["__EVENTTARGET"] == "Client")
             {
@@ -496,34 +497,21 @@ namespace LoanStarPortal
                     MortgageChanged(this, -1);
 
             }
-            else if (e.Item.Value == "Notes")
-            {
-                RemoveAjaxSetting(RadAjaxManager1, CenterPanel);
-                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, RightPanel, null);
-                RadAjaxManager1.AjaxSettings.AddAjaxSetting(RightPanel, CenterPanel, null);
-                RightPanel.Controls.Clear();
-                updateControlID = RightPanel.ID;
-                LoadUserControl(Constants.FECTLNOTES, RightPanel, RightLoadedControlName);
-            }
-            else if (e.Item.Value == "Conditions")
-            {
-                RemoveAjaxSetting(RadAjaxManager1, CenterPanel);
-                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, RightPanel, null);
-                RightPanel.Controls.Clear();
-                updateControlID = RightPanel.ID;
-                LoadUserControl(Constants.FECTLCONDITIONS, RightPanel, RightLoadedControlName);
-            }
-            else if (e.Item.Value == "Docs")
-            {
-                RemoveAjaxSetting(RadAjaxManager1, CenterPanel);
-                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, RightPanel, null);
-                RightPanel.Controls.Clear();
-                updateControlID = RightPanel.ID;
-                LoadUserControl(Constants.FECTLTABPACKAGE, RightPanel, RightLoadedControlName);
-            }
             else if (e.Item.Value == "Emails")
             {
                 LoadEmail();
+            }
+            else if (e.Item.Value == "Notes")
+            {
+                LoadNotes();
+            }
+            else if (e.Item.Value == "Conditions")
+            {
+                LoadConditions();
+            }
+            else if (e.Item.Value == "Docs")
+            {
+                LoadDocuments();
             }
             else if (e.Item.Value == "Calendar")
             {
@@ -639,6 +627,57 @@ namespace LoanStarPortal
             Session[Constants.CURRENTCALCULATORTABID] = Calculator.TABLEADCALC;
             Session[Constants.MESSAGEBOARDSHOWONLYNOTES] = false;
             LoadEmail();
+        }
+
+        private void ProcessRequest(String type)
+        {
+            CenterRightPanelUpdateNeeded = true;
+            Session[Constants.CURRENTTOPFIRSTTABID] = MortgageTab.TABBORROWERID;
+            Session[Constants.CURRENTTOPSECONDTABINDEX] = Constants.TOPSECONDTABINDEX;
+            Session[Constants.CURRENTBOTTOMTABID] = Tabs.TABLOANINFOID;
+            Session[Constants.CURRENTCALCULATORTABID] = Calculator.TABLEADCALC;
+            Session[Constants.MESSAGEBOARDSHOWONLYNOTES] = false;
+            if (MortgageId <= 0) return;
+            if (type == "notes")
+            {
+                LoadNotes();
+            }
+            else if (type == "conditions")
+            {
+                LoadConditions();
+            }
+            else if (type == "documents")
+            {
+                LoadDocuments();
+            }
+        }
+
+        private void LoadNotes()
+        {
+            RemoveAjaxSetting(RadAjaxManager1, CenterPanel);
+            RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, RightPanel, null);
+            RadAjaxManager1.AjaxSettings.AddAjaxSetting(RightPanel, CenterPanel, null);
+            RightPanel.Controls.Clear();
+            updateControlID = RightPanel.ID;
+            LoadUserControl(Constants.FECTLNOTES, RightPanel, RightLoadedControlName);
+        }
+
+        private void LoadConditions()
+        {
+            RemoveAjaxSetting(RadAjaxManager1, CenterPanel);
+            RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, RightPanel, null);
+            RightPanel.Controls.Clear();
+            updateControlID = RightPanel.ID;
+            LoadUserControl(Constants.FECTLCONDITIONS, RightPanel, RightLoadedControlName);
+        }
+
+        private void LoadDocuments()
+        {
+            RemoveAjaxSetting(RadAjaxManager1, CenterPanel);
+            RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, RightPanel, null);
+            RightPanel.Controls.Clear();
+            updateControlID = RightPanel.ID;
+            LoadUserControl(Constants.FECTLTABPACKAGE, RightPanel, RightLoadedControlName);
         }
 
         protected void RadAjaxManager1_ResolveUpdatedControls(object sender, UpdatedControlsEventArgs e)

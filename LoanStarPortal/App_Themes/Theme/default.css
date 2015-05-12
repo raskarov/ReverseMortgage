@@ -1362,3 +1362,14 @@ letter-spacing: 0px;
 {
 	color:Red;
 }
+
+/*Tab container overflow*/
+.tab_container {
+    overflow: hidden;
+}
+
+.header-link {
+    font-size: 16px;
+    padding: 0 10px;
+}
+
