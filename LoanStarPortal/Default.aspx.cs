@@ -652,7 +652,7 @@ namespace LoanStarPortal
             }
         }
 
-        private void LoadNotes()
+        public void LoadNotes()
         {
             RemoveAjaxSetting(RadAjaxManager1, CenterPanel);
             RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, RightPanel, null);
