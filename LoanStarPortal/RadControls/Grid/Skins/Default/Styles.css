@@ -254,3 +254,7 @@ td.GridHeader_Default input
 	height: 14px;
 	vertical-align:middle;
 }
+
+.tab_container {
+    overflow: hidden;
+}

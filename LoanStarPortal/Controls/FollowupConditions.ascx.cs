@@ -150,20 +150,7 @@ namespace LoanStarPortal.Controls
                 btnSatisfy.Text = "Satisfy";
             btnSatisfy.Enabled = (ConditionID > 0);
         }
-        private void SetShowNoteButton()
-        {
-            btnShowNotes.Text = "Condition notes";
-            SetNoteButtonsState();
-        }
-        private void SetNoteTable()
-        {
-            tblNotes.Visible = ConditionID > 0;
-        }
-        private void SetNoteButtonsState()
-        {
-            btnShowNotes.Enabled = ConditionID > 0;
-            btnSubmitNote.Enabled = ConditionID > 0;
-        }
+
         protected void ClearConditionFields()
         {
             tbCondTitle.Text = "";
@@ -171,7 +158,6 @@ namespace LoanStarPortal.Controls
             ddlRecurrence.ClearSelection();
             rdpStartDate.SelectedDate = DateTime.Now;
             lblNextWorkDate.Text = "";
-            tbNote.Text = "";
             SetSatisfiedControls(false);
             tbCondTitle.Enabled = true;
             tbCondDesc.Enabled = true;
@@ -182,11 +168,7 @@ namespace LoanStarPortal.Controls
             rdpStartDate.SelectedDate = null;
             lblNextWorkDate.Text = "";
         }
-        protected void ClearNotesFields()
-        {
-            ddlAction.ClearSelection();
-            tbNote.Text = "";
-        }
+
         protected void AllowSaveCondition(int AuthorityLevel)
         {
             bool allow = CanEditCondition(AuthorityLevel);
@@ -299,20 +281,8 @@ namespace LoanStarPortal.Controls
             SetDates(cond, INIT);
             chkCredit.Checked = cond.CreditApproved;
             chkProperty.Checked = cond.PropertyApproved;
-            PopulateAction(cond.Completed);
         }
-        private void PopulateAction(bool completed)
-        {
-            ddlAction.Items.Clear();
-            ddlAction.Items.Add(new ListItem("--Select one--", ""));
-            ddlAction.Items.Add(new ListItem("Generic condition/task note", "1"));
-            ddlAction.Items.Add(new ListItem("Not complete. Progress follow-up date", "2"));
-            ddlAction.Items.Add(new ListItem("Document collected/task complete", "3"));
-            if (completed)
-            {
-                ddlAction.Items.Add(new ListItem("Retract Collected Document", "4"));
-            }
-        }
+
         private void SetDates(Condition cond_, int opt)
         {
             switch (opt)
@@ -376,78 +346,13 @@ namespace LoanStarPortal.Controls
                     SaveEvent(Constants.EVENTTYPEIDCONDITIONCREATED, begining + "<b>" + GetEventTitle(scond.Title) + "</b> by " + CurrentUser.FirstName + " " + CurrentUser.LastName + " at " + DateTime.Now.ToString("f"));
                 }
                 scond.Save();
+                scond.NextFollowUpDate = rdpStartDate.SelectedDate;
+                scond.RecurrenceID = ddlRecurrence.SelectedIndex;
+                scond.SaveFollowUpDetails();
             }
             return scond.ID;
         }
-        protected void SaveFollowUpCondition()
-        {
-            int opt = NOCHANGE;
-            Condition cond_ = new Condition(ConditionID);
 
-            if (String.Compare(ddlRecurrence.SelectedValue, "0") != 0 && rdpStartDate.SelectedDate != null)
-            {
-                if (cond_.RecurrenceID > 0 || cond_.ScheduleDate != null)
-                    SaveEvent(Constants.EVENTTYPEIDFOLLOWUPCHANGED, "Follow-up schedule for \"" + cond_.Title + "\" was changed by " + CurrentUser.FirstName + " " + CurrentUser.LastName + " at " + DateTime.Now.ToString("f"));
-                else
-                    SaveEvent(Constants.EVENTTYPEIDFOLLOWUPCREATED, "Follow-up schedule for \"" + cond_.Title + "\" was created by " + CurrentUser.FirstName + " " + CurrentUser.LastName + " at " + DateTime.Now.ToString("f"));
-
-
-                if (String.Compare(ddlRecurrence.SelectedValue, "0") != 0)
-                    cond_.RecurrenceID = Convert.ToInt32(ddlRecurrence.SelectedValue);
-                else
-                    cond_.RecurrenceID = 6;
-
-                if (String.Compare(ddlRecurrence.SelectedValue, "0") != 0)
-                {
-                    switch (ddlAction.SelectedValue)
-                    {
-                        case "2":
-                            cond_.ScheduleDate = Holidays.GetWorkDate(GetNextSchedule((DateTime)cond_.ScheduleDate, cond_.RecurrenceID), CurrentUser.CompanyId);
-                            opt = NEXTWORKDATE;
-                            break;
-                        case "3":
-                            cond_.ScheduleDate = null;
-                            cond_.RecurrenceID = 0;
-                            cond_.Completed = true;
-                            cond_.Save();
-                            opt = RESET;
-                            break;
-                        case "4":
-                            cond_.Completed = false;
-                            cond_.Save();
-                            break;
-                        default:
-                            cond_.ScheduleDate = rdpStartDate.SelectedDate;
-                            cond_.NextFollowUpDate = rdpStartDate.SelectedDate;
-                            break;
-                    }
-                }
-                cond_.SaveFollowUpDetails();
-                if (cond_.Completed)
-                {
-                    SaveEvent(Constants.EVENTTYPEIDCONDITIONCOMPLETED, "Condition " + cond_.Title + " was completed by " + CurrentUser.FirstName + " " + CurrentUser.LastName + " at " + DateTime.Now.ToString("f"));
-                    if (cond_.RecurrenceID > 0 && cond_.ScheduleDate != null)
-                        ClearFollowUpDetails();
-                    ClearFollowupControls();
-                }
-
-                opt = INIT;
-            }
-            else if (ddlAction.SelectedValue == "3")
-            {
-                cond_.ScheduleDate = rdpStartDate.SelectedDate;
-                cond_.Completed = true;
-                cond_.Save();
-                opt = RESET;
-            }
-            else if (ddlAction.SelectedValue == "4")
-            {
-                cond_.Completed = false;
-                cond_.Save();
-            }
-            SetDates(cond_, opt);
-            PopulateAction(cond_.Completed);
-        }
         private void ReloadMessageBoard(int conditionId)
         {
             Notes notes = ((Default)Page).notes;
@@ -490,13 +395,12 @@ namespace LoanStarPortal.Controls
                 }
             }
         }
-        protected void ClearFollowUpDetails()
+        protected void ClearFollowUpDetails(Condition condition)
         {
-            Condition cond_ = new Condition(ConditionID);
-            cond_.RecurrenceID = 0;
-            cond_.ScheduleDate = null;
-            cond_.SaveFollowUpDetails();
-            SaveEvent(Constants.EVENTTYPEIDFOLLOWUPCHANGED, "Follow-up schedule for \"" + cond_.Title + "\" was changed by " + CurrentUser.FirstName + " " + CurrentUser.LastName + " at " + DateTime.Now.ToString("f"));
+            condition.RecurrenceID = 0;
+            condition.ScheduleDate = null;
+            condition.SaveFollowUpDetails();
+            SaveEvent(Constants.EVENTTYPEIDFOLLOWUPCHANGED, "Follow-up schedule for \"" + condition.Title + "\" was changed by " + CurrentUser.FirstName + " " + CurrentUser.LastName + " at " + DateTime.Now.ToString("f"));
         }
         protected void SaveEvent(int typeid, string description)
         {
@@ -517,7 +421,6 @@ namespace LoanStarPortal.Controls
                 BindData();
                 BindFirstItem();
                 ResetConditionFilter();
-                SetShowNoteButton();
                 BuildUnderwriterUI();
             }
             else
@@ -525,14 +428,7 @@ namespace LoanStarPortal.Controls
                 if (CheckClosingEmail())
                 {
                     ShowEmail(false);
-                    if (btnShowNotes.Text == "Condition notes")
-                    {
-                        ReloadMessageBoard(-1);
-                    }
-                    else
-                    {
-                        ReloadMessageBoard(ConditionID);
-                    }
+                    ReloadMessageBoard(ConditionID);
                 }
                 gridConditions.Rebind();
             }
@@ -583,8 +479,9 @@ namespace LoanStarPortal.Controls
             {
                 foreach (GridDataItem item in gridConditions.Items)
                 {
+                    if (item.OwnerTableView.Name == "Description") continue;
                     int id = Convert.ToInt32(item.OwnerTableView.DataKeyValues[item.ItemIndex]["ID"].ToString());
-                    if (ConditionID == id && item.OwnerTableView.Name != "Description")
+                    if (ConditionID == id)
                     {
                         item.Selected = true;
                     }
@@ -592,28 +489,42 @@ namespace LoanStarPortal.Controls
 
                     if (row != null)
                     {
-                        item.ForeColor = Convert.ToInt16(row["Days"]) >= 0
-                            ? System.Drawing.Color.Red
-                            : System.Drawing.Color.Black;
+                        var diffDays = row["DiffDays"].ToString();
+                        if (diffDays.Length > 0)
+                        {
+                            item.ForeColor = Convert.ToInt16(row["DiffDays"]) >= 0
+                                ? System.Drawing.Color.Red
+                                : System.Drawing.Color.Black;
+                        }
 
-                        Image img = (Image) item.FindControl("imgDoc");
+                        var isCompleted = Convert.ToBoolean(row["Completed"].ToString());
+
+                        if (isCompleted)
+                        {
+                            item.ForeColor = System.Drawing.Color.Gray;
+                        }
+
+                        Image img = (Image)item.FindControl("imgDoc");
                         if (img != null)
                         {
-                            if (String.Compare(row["Status"].ToString(), "Completed", true) == 0)
+                            if (
+                                String.Compare(row["Status"].ToString(), "Completed",
+                                    StringComparison.OrdinalIgnoreCase) == 0
+                                || isCompleted)
+                            {
                                 img.ImageUrl = "~/Images/doc_icon.gif";
-                            else if (Convert.ToBoolean(row["Completed"].ToString()))
-                                img.ImageUrl = "~/Images/doc_icon.gif";
+                            }
                             else
+                            {
                                 img.Visible = false;
+                            }
                         }
                     }
-                    if (!hasEmail)
+                    if (hasEmail) continue;
+                    ImageButton btn = (ImageButton)item.FindControl("ibtnEmail");
+                    if (btn != null)
                     {
-                        ImageButton btn = (ImageButton)item.FindControl("ibtnEmail");
-                        if (btn != null)
-                        {
-                            btn.Visible = false;
-                        }
+                        btn.Visible = false;
                     }
                 }
             }
@@ -626,14 +537,9 @@ namespace LoanStarPortal.Controls
                 int id = Convert.ToInt32(gridConditions.MasterTableView.DataKeyValues[e.Item.ItemIndex]["ID"]);
                 ConditionID = id;
                 LoadCondition();
-                if (btnShowNotes.Text == "Condition notes")
-                {
-                    ReloadMessageBoard(-1);
-                }
-                else
-                {
-                    ReloadMessageBoard(ConditionID);
-                }
+
+                ReloadMessageBoard(ConditionID);
+
                 gridConditions.SelectedIndexes.Clear();
                 gridConditions.SelectedIndexes.Add(e.Item.ItemIndex);
                 panel_dialog.Visible = true;
@@ -643,14 +549,9 @@ namespace LoanStarPortal.Controls
                 int id = Convert.ToInt32(gridConditions.MasterTableView.DataKeyValues[e.Item.ItemIndex]["ID"].ToString());
                 ConditionID = id;
                 LoadCondition();
-                if (btnShowNotes.Text == "Condition notes")
-                {
-                    ReloadMessageBoard(-1);
-                }
-                else
-                {
-                    ReloadMessageBoard(ConditionID);
-                }
+
+                ReloadMessageBoard(ConditionID);
+
                 ShowEmail(true);
                 panel_dialog.Visible = true;
             }
@@ -663,10 +564,7 @@ namespace LoanStarPortal.Controls
                 LoadCondition();
                 gridConditions.SelectedIndexes.Clear();
                 gridConditions.SelectedIndexes.Add(e.Item.ItemIndex);
-                tbNote.Focus();
-                if (!CurrentPage.ClientScript.IsClientScriptBlockRegistered("focus"))
-                    CurrentPage.ClientScript.RegisterClientScriptBlock(GetType(), "focus",
-                    "<script language='javascript' type='text/javascript'>SetFocus('" + tbNote.ClientID + "');</script>");
+
                 panel_dialog.Visible = true;
             }
         }
@@ -719,7 +617,7 @@ namespace LoanStarPortal.Controls
                 }
 
                 if (cond_.RecurrenceID > 0 && cond_.ScheduleDate != null)
-                    ClearFollowUpDetails();
+                    ClearFollowUpDetails(cond_);
                 SetSatisfiedControls(newStatusId == Constants.CONDITIONSTATUSSATISFIED);
                 MortgageDataChanged();
                 RebindGrid();
@@ -729,13 +627,8 @@ namespace LoanStarPortal.Controls
         protected void btnSave_Click(object sender, EventArgs e)
         {
             ConditionID = SaveCondition();
-            btnShowNotes.Enabled = ConditionID > 0;
-            //ddlAuthLevel.Visible = false;
             lblAuthLevel.Visible = !ddlAuthLevel.Visible;
-            SetNoteTable();
-            SetNoteButtonsState();
             MortgageDataChanged();
-            SaveFollowUpCondition();
             Condition cond_ = new Condition(ConditionID);
             SetDates(cond_, NEXTWORKDATE);
             MortgageDataChanged();
@@ -744,63 +637,16 @@ namespace LoanStarPortal.Controls
         }
         protected void btnShowNotes_Click(object sender, EventArgs e)
         {
-            if (btnShowNotes.Text == "Condition notes")
-            {
-                btnShowNotes.Text = "Remove filter";
-                ReloadMessageBoard(ConditionID);
-            }
-            else
-            {
-                btnShowNotes.Text = "Condition notes";
-                ReloadMessageBoard(-1);
-            }
+            ReloadMessageBoard(ConditionID);
         }
-        protected void btnSubmitNote_Click(object sender, EventArgs e)
-        {
-            if (ConditionID <= 0)
-            {
-                if (!String.IsNullOrEmpty(tbCondTitle.Text))
-                    ConditionID = SaveCondition();
-            }
-            if (ConditionID > 0)
-            {
-                Condition cond_ = new Condition(ConditionID);
-                if (String.Compare(cond_.Title, tbCondTitle.Text) != 0 || String.Compare(cond_.Description, tbCondDesc.Text) != 0)
-                {
-                    SaveCondition();
-                }
 
-                if (String.Compare(ddlRecurrence.SelectedValue, "0") != 0 &&
-                        (String.Compare(cond_.RecurrenceID.ToString(), ddlRecurrence.SelectedValue) != 0
-                            || cond_.ScheduleDate != rdpStartDate.SelectedDate)
-                            || !String.IsNullOrEmpty(ddlAction.SelectedValue))
-                {
-                    SaveFollowUpCondition();
-                }
-                MortgageDataChanged();
-                RebindGrid();
-                if (!String.IsNullOrEmpty(tbNote.Text.Trim()))
-                    Condition.SaveNote(ConditionID, MortgageID, tbNote.Text.Trim(), CurrentUser.Id);
-                if (btnShowNotes.Text == "Condition notes")
-                {
-                    ReloadMessageBoard(-1);
-                }
-                else
-                {
-                    ReloadMessageBoard(ConditionID);
-                }
-                BuildUnderwriterUI();
-                ClearNotesFields();
-            }
-        }
         protected void btnAddCondition_Click(object sender, EventArgs e)
         {
             ConditionID = -1;
             ddlAuthLevel.Visible = true;
             lblAuthLevel.Visible = !ddlAuthLevel.Visible;
             btnSatisfy.Enabled = false;
-            SetNoteTable();
-            SetNoteButtonsState();
+            
             ReloadMessageBoard(-1);
             ClearConditionFields();
             panel_dialog.Visible = true;

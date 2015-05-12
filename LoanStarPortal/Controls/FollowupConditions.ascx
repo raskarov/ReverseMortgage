@@ -21,70 +21,78 @@
     <radspl:RadSplitBar ID="RadSplitBar3" runat="server" CollapseMode="None" EnableResize="false" Visible="false" />
     <radspl:RadPane ID="MiddlePane" runat="server" Scrolling="Y">
         <asp:Panel ID="PanelTasks" runat="server">
-            <radG:RadGrid ID="gridConditions" Skin="Default" runat="server" AutoGenerateColumns="False" EnableAJAX="False" GridLines="Vertical"
-                AllowPaging="True" PageSize="30"
-                OnDetailTableDataBind="gridConditions_DetailTableDataBind"
-                OnNeedDataSource="gridConditions_NeedDataSource"
-                OnItemCommand="gridConditions_ItemCommand"
-                OnItemDataBound="gridConditions_ItemDataBound"
-                OnPreRender="gridConditions_PreRender"
-                OnPageIndexChanged="gridConditions_PageIndexChanged">
-                <MasterTableView DataKeyNames="ID">
-                    <DetailTables>
-                        <radG:GridTableView DataKeyNames="ID"  Name="Description" Width="100%" ShowHeader="False">                            
-                            <Columns>
-                                <radG:GridBoundColumn DataField="Description"></radG:GridBoundColumn>
-                            </Columns>
-                        </radG:GridTableView>
-                    </DetailTables>
+            <table cellpadding="0" cellspacing="0" style="width: 100%">
+                <tr>
+                    <td valign="top" width="100%" bordercolorlight="#000000">
 
-                    <NoRecordsTemplate>
-                        <h2>No items</h2>
-                    </NoRecordsTemplate>
-                    <%--<ExpandCollapseColumn Visible="False">
+                        <radG:RadGrid ID="gridConditions" Skin="Default" runat="server" AutoGenerateColumns="False" EnableAJAX="False" GridLines="Vertical"
+                            AllowPaging="True" PageSize="30"
+                            OnDetailTableDataBind="gridConditions_DetailTableDataBind"
+                            OnNeedDataSource="gridConditions_NeedDataSource"
+                            OnItemCommand="gridConditions_ItemCommand"
+                            OnItemDataBound="gridConditions_ItemDataBound"
+                            OnPreRender="gridConditions_PreRender"
+                            OnPageIndexChanged="gridConditions_PageIndexChanged">
+                            <MasterTableView DataKeyNames="ID">
+                                <DetailTables>
+                                    <radG:GridTableView DataKeyNames="ID" Name="Description" Width="100%" ShowHeader="False">
+                                        <Columns>
+                                            <radG:GridBoundColumn DataField="Description"></radG:GridBoundColumn>
+                                        </Columns>
+                                    </radG:GridTableView>
+                                </DetailTables>
+
+                                <NoRecordsTemplate>
+                                    <h2>No items</h2>
+                                </NoRecordsTemplate>
+                                <%--<ExpandCollapseColumn Visible="False">
                                     <HeaderStyle Width="19px" />
                                 </ExpandCollapseColumn>
                                 <RowIndicatorColumn Visible="False">
                                     <HeaderStyle Width="20px" />
                                 </RowIndicatorColumn>--%>
-                    <Columns>
-                        <radG:GridBoundColumn HeaderText="ID" DataField="ID" UniqueName="ID" Display="False">
-                        </radG:GridBoundColumn>
-                        <radG:GridButtonColumn UniqueName="TitleColumn" HeaderText="Title" CommandName="LoadItem" DataTextField="Title" ItemStyle-CssClass="tdLinkToEdit" ItemStyle-Width="50%"></radG:GridButtonColumn>
-                        <radG:GridTemplateColumn HeaderText="Authority Level" UniqueName="AuthorityLevel" DataField="AuthorityLevel" HeaderStyle-Width="40px" ItemStyle-Width="10%">
-                            <ItemTemplate>
-                                <input type="hidden" class="row_id" value="<%# DataBinder.Eval(Container.DataItem, "ID") %>" />
-                                <input type="hidden" class="row_completed" value="<%# DataBinder.Eval(Container.DataItem, "Completed") %>" />
-                                <input type="hidden" class="row_diffdays" value="<%# DataBinder.Eval(Container.DataItem, "DiffDays") %>" />
-                                <span><%# DataBinder.Eval(Container.DataItem, "AuthorityLevelName") %></span>
-                            </ItemTemplate>
-                        </radG:GridTemplateColumn>
-                        <radG:GridTemplateColumn HeaderText="Frequency" UniqueName="Frequency" DataField="RecurrenceName" HeaderStyle-Width="40px" ItemStyle-Width="10%">
-                            <ItemTemplate>
-                                <span><%# DataBinder.Eval(Container.DataItem, "RecurrenceName") %></span>
-                            </ItemTemplate>
-                        </radG:GridTemplateColumn>
-                        <radG:GridTemplateColumn HeaderText="Next Follow Up Date" UniqueName="NextFollowUpDate" HeaderStyle-Width="40px" ItemStyle-Width="10%">
-                            <ItemTemplate>
-                                <span><%# DataBinder.Eval(Container.DataItem, "NextFollowUpDate") %></span>
-                            </ItemTemplate>
-                        </radG:GridTemplateColumn>
-                        <radG:GridTemplateColumn UniqueName="TemplateColumn" ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="60px" ItemStyle-Width="10%">
-                            <ItemTemplate>
-                                <div style="vertical-align: top;">
-                                    <asp:ImageButton ID="ibtnEmail" runat="server" ImageUrl="~/Images/Add_Email.gif" BorderWidth="0" ImageAlign="Bottom" CommandName="CreateEmail" />&nbsp;&nbsp;/&nbsp;&nbsp;<asp:ImageButton ID="ibtnNote" runat="server" ImageUrl="~/Images/Add-Note.gif" BorderWidth="0" ImageAlign="Bottom" CommandName="CreateNote" />
-                                </div>
-                            </ItemTemplate>
-                        </radG:GridTemplateColumn>
-                    </Columns>
-                </MasterTableView>
-                <PagerStyle Mode="NumericPages" />
-                <ClientSettings EnablePostBackOnRowClick="false"></ClientSettings>
-            </radG:RadGrid>
+                                <Columns>
+                                    <radG:GridBoundColumn HeaderText="ID" DataField="ID" UniqueName="ID" Display="False">
+                                    </radG:GridBoundColumn>
+                                    <radG:GridButtonColumn UniqueName="TitleColumn" HeaderText="Title" CommandName="LoadItem" DataTextField="Title" ItemStyle-CssClass="tdLinkToEdit" ItemStyle-Width="50%">
+                                    </radG:GridButtonColumn>
+                                    <radG:GridTemplateColumn HeaderText="Authority Level" UniqueName="AuthorityLevel" DataField="AuthorityLevel" HeaderStyle-Width="40px">
+                                        <ItemTemplate>
+                                            <input type="hidden" class="row_id" value="<%# DataBinder.Eval(Container.DataItem, "ID") %>" />
+                                            <input type="hidden" class="row_completed" value="<%# DataBinder.Eval(Container.DataItem, "Completed") %>" />
+                                            <input type="hidden" class="row_diffdays" value="<%# DataBinder.Eval(Container.DataItem, "DiffDays") %>" />
+                                            <span><%# DataBinder.Eval(Container.DataItem, "AuthorityLevelName") %></span>
+                                        </ItemTemplate>
+                                    </radG:GridTemplateColumn>
+                                    <radG:GridTemplateColumn HeaderText="Frequency" UniqueName="Frequency" DataField="RecurrenceName" HeaderStyle-Width="40px">
+                                        <ItemTemplate>
+                                            <span><%# DataBinder.Eval(Container.DataItem, "RecurrenceName") %></span>
+                                        </ItemTemplate>
+                                    </radG:GridTemplateColumn>
+                                    <radG:GridTemplateColumn HeaderText="Next Follow Up Date" UniqueName="NextFollowUpDate" HeaderStyle-Width="40px">
+                                        <ItemTemplate>
+                                            <span><%# DataBinder.Eval(Container.DataItem, "NextFollowUpDate") %></span>
+                                        </ItemTemplate>
+                                    </radG:GridTemplateColumn>
+                                    <%--<radG:GridTemplateColumn UniqueName="TemplateColumn" ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="60px">
+                                        <ItemTemplate>
+                                            <div style="vertical-align: top;">
+                                                <asp:ImageButton ID="ibtnEmail" runat="server" ImageUrl="~/Images/Add_Email.gif" BorderWidth="0" ImageAlign="Bottom" CommandName="CreateEmail" />&nbsp;&nbsp;/&nbsp;&nbsp;<asp:ImageButton ID="ibtnNote" runat="server" ImageUrl="~/Images/Add-Note.gif" BorderWidth="0" ImageAlign="Bottom" CommandName="CreateNote" />
+                                            </div>
+                                        </ItemTemplate>
+                                    </radG:GridTemplateColumn>--%>
+                                </Columns>
+                            </MasterTableView>
+                            <PagerStyle Mode="NumericPages" />
+                            <ClientSettings EnablePostBackOnRowClick="false"></ClientSettings>
+                        </radG:RadGrid>
 
-            <br />
-            <br />
-            &nbsp;<asp:LinkButton ID="btnAddCondition" runat="server" Text="Add Condition/Task" CssClass="AddCondition" OnClick="btnAddCondition_Click"></asp:LinkButton>
+                        <br />
+                        <br />
+                        &nbsp;<asp:LinkButton ID="btnAddCondition" runat="server" Text="Add Condition/Task" CssClass="AddCondition" OnClick="btnAddCondition_Click"></asp:LinkButton>
+                    </td>
+                </tr>
+            </table>
 
         </asp:Panel>
         <asp:Panel ID="PanelEmailAdd" runat="server" Visible="False" Width="100%" Height="100%">
@@ -145,16 +153,6 @@
                                 <asp:Label ID="lblAuthLevel" runat="server" Font-Bold="true" />
                             </td>
                         </tr>
-                        <tr>
-                            <td colspan="2">
-                                <table border="0" cellpadding="0" cellspacing="5" style="width: 100%">
-                                    <tr>
-                                        <td align="right">
-                                            <asp:Button ID="btnSatisfy" runat="server" Text="Satisfy" OnClick="btnSatisfy_Click" /><%--&nbsp;&nbsp;<asp:Button ID="btnComplete" runat="server" Text="Complete" OnClick="btnComplete_Click" />--%></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
                     </table>
                 </td>
             </tr>
@@ -189,56 +187,16 @@
                                 <asp:Label runat="server" ID="lblNextWorkDate" Text=""></asp:Label></td>
                         </tr>
                         <tr>
-                            <td></td>
+                            <td>
+                                <asp:Button ID="btnSatisfy" runat="server" Text="Satisfy" OnClick="btnSatisfy_Click" /></td>
                             <td align="right">
                                 <asp:Button ID="btnSubmitFollow" runat="server" Text="Save" ValidationGroup="follow_val" OnClick="btnSave_Click" />
                                 <asp:Button ID="btnRefresh" runat="server" Text="Refresh" OnClick="RefreshPage_Click" Visible="false" />
                                 <asp:HiddenField ID="conditionActiveID" ClientIDMode="Static" Value="0" runat="server" />
                             </td>
                         </tr>
-                    </table>
-                </td>
-            </tr>
         </table>
-        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%" class="TasksHeader" runat="server" id="tblNotes">
-            <tr>
-                <td class="TasksHeader"><a href="#" onclick="HideShowDiv('TableNote');return false;" class="TasksHeader">
-                    <div style="width: 100%; cursor: hand;">Condition/Task Note</div>
-                </a></td>
-            </tr>
-            <tr>
-                <td>
-                    <table style="width: 100%" id="TableNote">
-                        <tr>
-                            <td colspan="2">
-                                <asp:TextBox ID="tbNote" runat="server" TextMode="MultiLine" Rows="5" Width="96%" CssClass="task"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="tbNote" ValidationGroup="val_note" SetFocusOnError="true"></asp:RequiredFieldValidator></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Select one:</td>
-                            <td>
-                                <asp:DropDownList ID="ddlAction" runat="server" Width="228px" CssClass="task">
-                                    <asp:ListItem Text="--Select one--" Value=""></asp:ListItem>
-                                    <asp:ListItem Text="Generic condition/task note" Value="1"></asp:ListItem>
-                                    <asp:ListItem Text="Not complete. Progress follow-up date" Value="2"></asp:ListItem>
-                                    <asp:ListItem Text="Document collected/task complete" Value="3"></asp:ListItem>
-                                    <asp:ListItem Text="Retract Collected Document" Value="4"></asp:ListItem>
-                                </asp:DropDownList><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="ddlAction" ValidationGroup="val_note" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <table border="0" cellpadding="0" cellspacing="5" style="width: 100%">
-                                    <tr>
-                                        <td>
-                                            <asp:Button ID="btnShowNotes" runat="server" Text="Show notes" OnClick="btnShowNotes_Click" /></td>
-                                        <td align="right">
-                                            <asp:Button ID="btnSubmitNote" runat="server" Text="Add Note" ValidationGroup="val_note" OnClick="btnSubmitNote_Click" /></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
+        </td>
             </tr>
         </table>
     </div>
