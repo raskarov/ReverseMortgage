@@ -320,7 +320,7 @@ namespace LoanStarPortal.Controls
         protected void RebindGrid()
         {
             gridConditions.DataSource = null;
-            gridConditions.Rebind();
+            gridConditions.DataBind();
         }
         protected int SaveCondition()
         {
@@ -475,8 +475,6 @@ namespace LoanStarPortal.Controls
 
         protected void gridConditions_PreRender(object sender, EventArgs e)
         {
-            if (ConditionID > 0)
-            {
                 foreach (GridDataItem item in gridConditions.Items)
                 {
                     if (item.OwnerTableView.Name == "Description") continue;
@@ -527,7 +525,6 @@ namespace LoanStarPortal.Controls
                         btn.Visible = false;
                     }
                 }
-            }
         }
         protected void gridConditions_ItemCommand(object source, GridCommandEventArgs e)
         {
