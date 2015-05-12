@@ -320,7 +320,7 @@ namespace LoanStarPortal.Controls
         protected void RebindGrid()
         {
             gridConditions.DataSource = null;
-            gridConditions.Rebind();
+            gridConditions.DataBind();
         }
         protected int SaveCondition()
         {
@@ -345,7 +345,7 @@ namespace LoanStarPortal.Controls
 
                     SaveEvent(Constants.EVENTTYPEIDCONDITIONCREATED, begining + "<b>" + GetEventTitle(scond.Title) + "</b> by " + CurrentUser.FirstName + " " + CurrentUser.LastName + " at " + DateTime.Now.ToString("f"));
                 }
-                scond.NextFollowUpDate = rdpStartDate.SelectedDate;
+                scond.ScheduleDate = rdpStartDate.SelectedDate;
                 scond.RecurrenceID = ddlRecurrence.SelectedIndex;
                 scond.Save();
                 scond.SaveFollowUpDetails();
@@ -475,8 +475,6 @@ namespace LoanStarPortal.Controls
 
         protected void gridConditions_PreRender(object sender, EventArgs e)
         {
-            if (ConditionID > 0)
-            {
                 foreach (GridDataItem item in gridConditions.Items)
                 {
                     if (item.OwnerTableView.Name == "Description") continue;
@@ -527,7 +525,6 @@ namespace LoanStarPortal.Controls
                         btn.Visible = false;
                     }
                 }
-            }
         }
         protected void gridConditions_ItemCommand(object source, GridCommandEventArgs e)
         {
@@ -628,6 +625,7 @@ namespace LoanStarPortal.Controls
         {
             ConditionID = SaveCondition();
             lblAuthLevel.Visible = !ddlAuthLevel.Visible;
+            MortgageDataChanged();
             Condition cond_ = new Condition(ConditionID);
             SetDates(cond_, NEXTWORKDATE);
             MortgageDataChanged();

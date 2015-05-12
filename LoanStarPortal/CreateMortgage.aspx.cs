@@ -123,8 +123,8 @@ namespace LoanStarPortal
                 if(controlName.EndsWith("ddlState"))
                 {
                     SelectedStateId = GetDdlSelectedValue(controlName.Replace(":", "$"));
-                    trState.Attributes.Add("style","display:block");
-                    trCounty.Attributes.Add("style", "display:block");
+                    trState.Attributes.Add("style","display:table-row");
+                    trCounty.Attributes.Add("style", "display:table-row");
                     BindCounty();
                 }
             }
