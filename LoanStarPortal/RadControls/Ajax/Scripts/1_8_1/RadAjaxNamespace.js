@@ -408,9 +408,9 @@ _1.HandleHistory(_47,_4f);
 _4b.open("POST",_1.UrlDecode(_4a.Url),true);
 try{
 _4b.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-//if(!_1.IsNetscape()){
-//_4b.setRequestHeader("Content-Length",_4f.length);
-//}
+if(!_1.IsNetscape()){
+_4b.setRequestHeader("Content-Length",_4f.length);
+}
 }
 catch(e){
 }

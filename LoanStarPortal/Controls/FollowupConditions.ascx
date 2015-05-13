@@ -4,6 +4,8 @@
 <%@ Register Assembly="RadCalendar.Net2" Namespace="Telerik.WebControls" TagPrefix="radCln" %>
 <%@ Register Assembly="RadPanelbar.Net2" Namespace="Telerik.WebControls" TagPrefix="radPnlB" %>
 <%@ Register Src="EmailAdd.ascx" TagName="EmailAdd" TagPrefix="uc1" %>
+
+
 <radspl:RadSplitter ID="RadSplitter2" runat="server" Height="100%" Orientation="Horizontal" Width="100%" BorderWidth="0" BorderStyle="None" Skin="Default">
     <radspl:RadPane ID="TopPane" runat="server" Height="29px" Scrolling="None">
         <div class="paneTitle">
@@ -58,7 +60,6 @@
                                         <ItemTemplate>
                                             <input type="hidden" class="row_id" value="<%# DataBinder.Eval(Container.DataItem, "ID") %>" />
                                             <input type="hidden" class="row_completed" value="<%# DataBinder.Eval(Container.DataItem, "Completed") %>" />
-                                            <input type="hidden" class="row_statusid" value="<%# DataBinder.Eval(Container.DataItem, "StatusId") %>" />
                                             <input type="hidden" class="row_diffdays" value="<%# DataBinder.Eval(Container.DataItem, "DiffDays") %>" />
                                             <span><%# DataBinder.Eval(Container.DataItem, "AuthorityLevelName") %></span>
                                         </ItemTemplate>
@@ -213,8 +214,3 @@
         float: right;
     }
 </style>
-<script type="text/javascript">
-    $(document).ready(function () {
-        BindContextMenu();
-    });
-</script>
