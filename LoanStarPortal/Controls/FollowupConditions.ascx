@@ -215,3 +215,9 @@
         float: right;
     }
 </style>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        BindContextMenu();
+    });
+</script>
