@@ -144,6 +144,16 @@ namespace LoanStarPortal
                 Session["CenterLoadedControlName"] = value;
             }
         }
+
+        /// <summary>
+        /// Name of control loaded into 
+        /// </summary>
+        private String DialogLoadedControlName
+        {
+            get { return Session["DialogLoadedControlName"] as String; }
+            set { Session["DialogLoadedControlName"] = value; }
+        }
+
         /// <summary>
         /// Name of control loaded into right pane
         /// </summary>
@@ -263,7 +273,7 @@ namespace LoanStarPortal
         protected void Page_Load(object sender, EventArgs e)
         {
             IsAjaxPostBackRaisen = false;
-            SetRuleEvaluationNeeded(true);              
+            SetRuleEvaluationNeeded(true);
             if (!String.IsNullOrEmpty(currenttab.Value))
             {
                 CurrentTabIndex = Convert.ToInt32(currenttab.Value);
@@ -276,14 +286,14 @@ namespace LoanStarPortal
             CheckIfPipeLineReloadNeeded();
             if (!IsPostBack)
             {
-                if(Session["EMailDisplayed"] == null)
+                if (Session["EMailDisplayed"] == null)
                     Session.Add("EMailDisplayed", false);
 
-                if (MortgageId > 0) 
+                if (MortgageId > 0)
                     Page.ClientScript.RegisterHiddenField("currentmortgageid", MortgageId.ToString());
             }
             EnableMenuItems((MortgageId > 0));
-            if(isReloadPipeLineNeeded)
+            if (isReloadPipeLineNeeded)
             {
                 appList.RepopulateMortgageList();
             }
@@ -313,7 +323,7 @@ namespace LoanStarPortal
             CenterRightPanelUpdateNeeded = false;
             if (Request.Form["__EVENTARGUMENT"] != null)
             {
-                if (Request.Form["__EVENTARGUMENT"].Contains("rmMortgage") )
+                if (Request.Form["__EVENTARGUMENT"].Contains("rmMortgage"))
                 {
                     RemoveAjaxSetting(RadAjaxManager1, CenterPanel);
                     RemoveAjaxSetting(LeftPanel, CenterPanel);
@@ -346,9 +356,11 @@ namespace LoanStarPortal
         }
         protected void Page_LoadComplete(object sender, EventArgs e)
         {
+
         }
         protected void Page_PreRenderComplete(object sender, EventArgs e)
         {
+
         }
         protected void Page_SaveStateComplete(object sender, EventArgs e)
         {
@@ -360,6 +372,7 @@ namespace LoanStarPortal
             RadAjaxManager1.AjaxSettings.AddAjaxSetting(RadAjaxManager1, CenterPanel, null);
             RadAjaxManager1.AjaxSettings.AddAjaxSetting(RadAjaxManager1, RadAjaxManager1, null);
             RadAjaxManager1.AjaxSettings.AddAjaxSetting(RadAjaxManager1, RightPanel, null);
+            RadAjaxManager1.AjaxSettings.AddAjaxSetting(RadAjaxManager1, DialogPanel, null);
         }
         public void RemoveAjaxSetting(Control ajaxControl, Control updatedControl)
         {
@@ -419,13 +432,13 @@ namespace LoanStarPortal
             }
             RadMenuItem RetailTools;
             RetailTools = rmMortgage.Items[RESOURCESMENUID].Items.FindItemByValue("RetailSite");
-            if (CurrentUser.IsRetailEnabled) 
+            if (CurrentUser.IsRetailEnabled)
             {
                 RetailTools.Enabled = true;
                 RetailTools.Visible = true;
             }
             RadMenuItem HelpItem = rmMortgage.Items[RESOURCESMENUID].Items.FindItemByValue("Help");
-            if(String.IsNullOrEmpty(AppSettings.HelpUrlPublic))
+            if (String.IsNullOrEmpty(AppSettings.HelpUrlPublic))
             {
                 HelpItem.Enabled = false;
                 HelpItem.Visible = false;
@@ -524,39 +537,38 @@ namespace LoanStarPortal
             else if (e.Item.Value == "Vendors")
             {
                 Session[Constants.VENDORVIEW] = Constants.VENDORVIEWGRID;
-                RemoveAjaxSetting(CenterPanel, RightPanel);
-                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, CenterPanel, null);
-                RemoveAjaxSetting(CenterPanel, RightPanel);
-                CenterPanel.Controls.Clear();
-                updateControlID = CenterPanel.ID;
-                LoadUserControl(Constants.FECTLVENDORSPUBLIC, CenterPanel, CenterLoadedControlName);
+                RemoveAjaxSetting(RadAjaxManager1, DialogPanel);
+                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, DialogPanel, null);
+                DialogPanel.Controls.Clear();
+                updateControlID = DialogPanel.ID;
+                LoadUserControl(Constants.FECTLVENDORSPUBLIC, DialogPanel, DialogLoadedControlName);
             }
             else if (e.Item.Value == "MyProfile")
             {
-                RemoveAjaxSetting(CenterPanel, RightPanel);
-                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, CenterPanel, null);
-                RemoveAjaxSetting(CenterPanel, RightPanel);
-                CenterPanel.Controls.Clear();
-                updateControlID = CenterPanel.ID;
-                LoadUserControl(Constants.FECTLMYPROFILE, CenterPanel, CenterLoadedControlName);
+                RemoveAjaxSetting(RadAjaxManager1, DialogPanel);
+                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, DialogPanel, null);
+                RemoveAjaxSetting(RadAjaxManager1, DialogPanel);
+                DialogPanel.Controls.Clear();
+                updateControlID = DialogPanel.ID;
+                LoadUserControl(Constants.FECTLMYPROFILE, DialogPanel, DialogLoadedControlName);
             }
             else if (e.Item.Value == "GFE")
             {
-                RemoveAjaxSetting(CenterPanel, RightPanel);
-                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, CenterPanel, null);
-                RemoveAjaxSetting(CenterPanel, RightPanel);
-                CenterPanel.Controls.Clear();
-                updateControlID = CenterPanel.ID;
-                LoadUserControl(Constants.FECTLGFE, CenterPanel, CenterLoadedControlName);
+                RemoveAjaxSetting(RadAjaxManager1, DialogPanel);
+                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, DialogPanel, null);
+                RemoveAjaxSetting(RadAjaxManager1, DialogPanel);
+                DialogPanel.Controls.Clear();
+                updateControlID = DialogPanel.ID;
+                LoadUserControl(Constants.FECTLGFE, DialogPanel, DialogLoadedControlName);
             }
             else if (e.Item.Value == "Reports")
             {
-                RemoveAjaxSetting(CenterPanel, RightPanel);
-                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, CenterPanel, null);
-                RemoveAjaxSetting(CenterPanel, RightPanel);
-                CenterPanel.Controls.Clear();
-                updateControlID = CenterPanel.ID;
-                LoadUserControl(Constants.FECTLREPORTS, CenterPanel, CenterLoadedControlName);
+                RemoveAjaxSetting(RadAjaxManager1, DialogPanel);
+                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, DialogPanel, null);
+                RemoveAjaxSetting(RadAjaxManager1, DialogPanel);
+                DialogPanel.Controls.Clear();
+                updateControlID = DialogPanel.ID;
+                LoadUserControl(Constants.FECTLREPORTS, DialogPanel, DialogLoadedControlName);
             }
             else if (e.Item.Value == "FieldChanges")
             {
@@ -578,12 +590,12 @@ namespace LoanStarPortal
             }
             else if (e.Item.Value == "Links")
             {
-                RemoveAjaxSetting(CenterPanel, RightPanel);
-                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, CenterPanel, null);
-                RemoveAjaxSetting(CenterPanel, RightPanel);
-                CenterPanel.Controls.Clear();
-                updateControlID = CenterPanel.ID;
-                LoadUserControl(Constants.FECTLLINKS, CenterPanel, CenterLoadedControlName);
+                RemoveAjaxSetting(RadAjaxManager1, DialogPanel);
+                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, DialogPanel, null);
+                RemoveAjaxSetting(RadAjaxManager1, DialogPanel);
+                DialogPanel.Controls.Clear();
+                updateControlID = DialogPanel.ID;
+                LoadUserControl(Constants.FECTLLINKS, DialogPanel, DialogLoadedControlName);
             }
             else if (e.Item.Value == "Help")
             {
@@ -609,14 +621,19 @@ namespace LoanStarPortal
                 Response.Redirect("~/" + Constants.PUBLICPAGENAME);
             }
         }
-        
+
+        protected void btnPanelDialogHide_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void LoadEmail()
         {
-            RemoveAjaxSetting(CenterPanel, RightPanel);
-            RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, CenterPanel, null);
-            CenterPanel.Controls.Clear();
-            updateControlID = CenterPanel.ID;
-            LoadUserControl(Constants.FECTLEMAILS, CenterPanel, CenterLoadedControlName);
+            RemoveAjaxSetting(RadAjaxManager1, DialogPanel);
+            RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, DialogPanel, null);
+            DialogPanel.Controls.Clear();
+            updateControlID = DialogPanel.ID;
+            LoadUserControl(Constants.FECTLEMAILS, DialogPanel, DialogLoadedControlName);
         }
         private void EmailLinkCliked()
         {
@@ -652,7 +669,7 @@ namespace LoanStarPortal
             }
         }
 
-        public void LoadNotes()
+        private void LoadNotes()
         {
             RemoveAjaxSetting(RadAjaxManager1, CenterPanel);
             RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, RightPanel, null);
@@ -689,7 +706,7 @@ namespace LoanStarPortal
             else
                 RemoveAjaxSetting(CenterPanel, RightPanel);
 
-            if(CenterLeftPanelUpdateNeeded)
+            if (CenterLeftPanelUpdateNeeded)
                 RadAjaxManager1.AjaxSettings.AddAjaxSetting(CenterPanel, LeftPanel, null);
             else
                 RemoveAjaxSetting(CenterPanel, LeftPanel);
@@ -709,9 +726,9 @@ namespace LoanStarPortal
         private void CheckIfPipeLineReloadNeeded()
         {
             Object o = Session[Constants.LASTPIPELINERELOADTIME];
-            if(o is DateTime)
+            if (o is DateTime)
             {
-                DateTime dt1 = (DateTime) o;
+                DateTime dt1 = (DateTime)o;
                 if (dt1.AddMinutes(AppSettings.RefreshPipeline) < DateTime.Now)
                 {
                     isReloadPipeLineNeeded = true;
