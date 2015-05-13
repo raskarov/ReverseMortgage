@@ -202,7 +202,6 @@
     <Content Include="scripts\jquery.contextMenu.css" />
     <Content Include="scripts\jquery.contextMenu.js" />
     <Content Include="scripts\jquery.ui.position.js" />
-    <Content Include="scripts\users\FollowupConditions.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -7260,6 +7259,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="RMOMail\Properties\" />
+    <Folder Include="scripts\users\" />
     <Folder Include="Storage\Baydocs\" />
     <Folder Include="Storage\LogoImage\" />
     <Folder Include="Storage\MailAttachments\" />
@@ -7296,7 +7296,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

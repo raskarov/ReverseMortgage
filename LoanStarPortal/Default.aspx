@@ -44,7 +44,6 @@
 <script type="text/javascript" src="scripts/jquery.contextMenu.js"></script>
 <script type="text/javascript" src="scripts/jquery.ui.position.js"></script>
 <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
-<script type="text/javascript" src="scripts/users/FollowupConditions.js"></script>
 </head>  
 <body style="height:100%;margin:0;" scroll="no">    
 <form id="form1" runat="server" style="height:100%" name="form1" enctype='multipart/form-data'>
@@ -97,7 +96,7 @@ function ShowHelp(){
 
 <div id="LoadingDiv" style="height:19px;">Processing...</div>
 <%--<iframe style="position:absolute; left:-200px;top:-200px;width:0px; height:0px;" src="CheckMail.aspx"></iframe>--%>
-   
+ 
 <radW:RadWindowManager ID="WindowManager" runat="server" Skin="WebBlue" Width="320px" Height="240px">
     <Windows>
         <radW:RadWindow ID="CreateMortgage1" NavigateUrl="CreateMortgage.aspx?par=mortgage" runat="server" Modal="True" Skin="WebBlue" Title="New mortgage" SkinsPath="~/RadControls/Window/Skins" Behavior="None" VisibleStatusbar="false" Height="450px" Width="350px" ReloadOnShow="true"/>

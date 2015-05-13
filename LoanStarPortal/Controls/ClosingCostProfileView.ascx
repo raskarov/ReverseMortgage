@@ -34,14 +34,14 @@
                             <asp:DropDownList ID="ddlProvidere" runat="server" AutoPostBack="true" Visible="false" Width="110px" OnSelectedIndexChanged="Providere_SelectedIndexChanged" ></asp:DropDownList>
                             <asp:TextBox ID="tbProvidere" runat="server" Visible="false" Width="110px" MaxLength="100"></asp:TextBox><asp:RequiredFieldValidator ID="rftbProvidere" ControlToValidate="tbProvidere" ErrorMessage="*" Visible="false" runat="server"></asp:RequiredFieldValidator>
                         </ItemTemplate>
-                        <ItemStyle Width ="50%"/>
+                        <ItemStyle Width ="30%"/>
                         <HeaderStyle HorizontalAlign="Left"  />
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Amount" ItemStyle-HorizontalAlign="Right" HeaderStyle-HorizontalAlign="Right">
                         <ItemTemplate>
                             <asp:Label runat="server" ID="lblAmount" EnableViewState="false" Text='<%# GetFinancedAmount(Container.DataItem)%>'></asp:Label>
                         </ItemTemplate>
-                        <ItemStyle Width ="10%" HorizontalAlign="Right"/>
+                        <ItemStyle Width ="20%" HorizontalAlign="Right"/>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Action">
                     <ItemTemplate>

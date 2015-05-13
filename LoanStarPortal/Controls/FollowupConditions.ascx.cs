@@ -4,6 +4,7 @@ using System.Web.UI.WebControls;
 using LoanStar.Common;
 using Telerik.WebControls;
 using System.Web.Services;
+using System.Web.UI;
 
 namespace LoanStarPortal.Controls
 {
@@ -411,7 +412,10 @@ namespace LoanStarPortal.Controls
         #region Event handlers
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
             if (!IsActive) return;
+
             hasEmail = CurrentUser.HasEmail;
             if (ViewState[FIRST_LOAD] == null)
             {
@@ -432,6 +436,10 @@ namespace LoanStarPortal.Controls
                 }
                 gridConditions.Rebind();
             }
+        }
+        protected override void OnPreRender(EventArgs e)
+        {
+            base.OnPreRender(e);
         }
         private bool CheckClosingEmail()
         {
@@ -495,7 +503,7 @@ namespace LoanStarPortal.Controls
                                 : System.Drawing.Color.Black;
                         }
 
-                        var isCompleted = Convert.ToBoolean(row["Completed"].ToString());
+                        var isCompleted = Convert.ToInt32(row["StatusId"].ToString())==1;
 
                         if (isCompleted)
                         {

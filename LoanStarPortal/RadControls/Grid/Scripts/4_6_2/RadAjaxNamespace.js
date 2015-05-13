@@ -394,9 +394,9 @@ _1.HandleHistory(_46,_4d);
 _49.open("POST",_1.UrlDecode(_48.Url),true);
 try{
 _49.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-if(!_1.IsNetscape()){
-_49.setRequestHeader("Content-Length",_4d.length);
-}
+//if(!_1.IsNetscape()){
+//_49.setRequestHeader("Content-Length",_4d.length);
+//}
 }
 catch(e){
 }
