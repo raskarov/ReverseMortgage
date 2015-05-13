@@ -94,6 +94,15 @@ namespace LoanStarPortal {
         protected global::Telerik.WebControls.RadMenu rmMortgage;
         
         /// <summary>
+        /// RightMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.WebControls.RadMenu RightMenu;
+        
+        /// <summary>
         /// RadSplitter2 control.
         /// </summary>
         /// <remarks>

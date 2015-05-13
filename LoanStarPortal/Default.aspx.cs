@@ -514,18 +514,6 @@ namespace LoanStarPortal
             {
                 LoadEmail();
             }
-            else if (e.Item.Value == "Notes")
-            {
-                LoadNotes();
-            }
-            else if (e.Item.Value == "Conditions")
-            {
-                LoadConditions();
-            }
-            else if (e.Item.Value == "Docs")
-            {
-                LoadDocuments();
-            }
             else if (e.Item.Value == "Calendar")
             {
                 RemoveAjaxSetting(CenterPanel, RightPanel);
@@ -554,12 +542,12 @@ namespace LoanStarPortal
             }
             else if (e.Item.Value == "GFE")
             {
-                RemoveAjaxSetting(RadAjaxManager1, DialogPanel);
-                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, DialogPanel, null);
-                RemoveAjaxSetting(RadAjaxManager1, DialogPanel);
-                DialogPanel.Controls.Clear();
-                updateControlID = DialogPanel.ID;
-                LoadUserControl(Constants.FECTLGFE, DialogPanel, DialogLoadedControlName);
+                RemoveAjaxSetting(CenterPanel, RightPanel);
+                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, CenterPanel, null);
+                RemoveAjaxSetting(CenterPanel, RightPanel);
+                CenterPanel.Controls.Clear();
+                updateControlID = CenterPanel.ID;
+                LoadUserControl(Constants.FECTLGFE, CenterPanel, CenterLoadedControlName);
             }
             else if (e.Item.Value == "Reports")
             {
@@ -627,6 +615,11 @@ namespace LoanStarPortal
             
         }
 
+        protected void RightMenu_ItemClick(object sender, RadMenuEventArgs e)
+        {
+            ProcessRequest(e.Item.Value);
+        }
+
         private void LoadEmail()
         {
             RemoveAjaxSetting(RadAjaxManager1, DialogPanel);
@@ -648,22 +641,16 @@ namespace LoanStarPortal
 
         private void ProcessRequest(String type)
         {
-            CenterRightPanelUpdateNeeded = true;
-            Session[Constants.CURRENTTOPFIRSTTABID] = MortgageTab.TABBORROWERID;
-            Session[Constants.CURRENTTOPSECONDTABINDEX] = Constants.TOPSECONDTABINDEX;
-            Session[Constants.CURRENTBOTTOMTABID] = Tabs.TABLOANINFOID;
-            Session[Constants.CURRENTCALCULATORTABID] = Calculator.TABLEADCALC;
-            Session[Constants.MESSAGEBOARDSHOWONLYNOTES] = false;
             if (MortgageId <= 0) return;
-            if (type == "notes")
+            if (type == "Notes")
             {
                 LoadNotes();
             }
-            else if (type == "conditions")
+            else if (type == "Conditions")
             {
                 LoadConditions();
             }
-            else if (type == "documents")
+            else if (type == "Docs")
             {
                 LoadDocuments();
             }

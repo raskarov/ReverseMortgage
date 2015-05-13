@@ -419,7 +419,10 @@
                                                                         <table style="width:100%" cellpadding="0" cellspacing="0" border="0">
                                                                             <tr>
                                                                                 <td>
-                                                                                    <asp:GridView ID="gProperties" runat="server" AutoGenerateColumns="False" AllowPaging="true" DataKeyNames="Id" GridLines="None" OnRowDataBound="G_ItemDataBound" EmptyDataText="No records to display" ForeColor="#333333" OnRowCommand="gProperties_ItemCommand" OnPageIndexChanged="G_PageIndexChanged" OnPageIndexChanging="G_PageIndexChanging"  EnableViewState="False" SkinID="TotalGrid" >
+                                                                                    <asp:GridView ID="gProperties" runat="server" AutoGenerateColumns="False" AllowPaging="true" 
+                                                                                        DataKeyNames="Id" GridLines="None" OnRowDataBound="G_ItemDataBound" EmptyDataText="No records to display" 
+                                                                                        ForeColor="#333333" OnRowCommand="gProperties_ItemCommand" OnPageIndexChanged="G_PageIndexChanged" 
+                                                                                        OnPageIndexChanging="G_PageIndexChanging"  EnableViewState="False" SkinID="TotalGrid" >
                                                                                     <Columns>
                                                                                         <asp:TemplateField HeaderText="Logical Op">
                                                                                             <ItemTemplate>                                                                                            
@@ -464,7 +467,7 @@
                                                                                         </asp:TemplateField>
                                                                                         <asp:TemplateField HeaderText="Action">
                                                                                             <ItemTemplate>
-                                                                                                <asp:ImageButton  id="btnDelete" ImageUrl="~/images/btn_grd_delete.gif" CommandName="deleteobject" AlternateText="Delete item" Runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"Id") %>'/>
+                                                                                                <asp:ImageButton  id="btnDelete" ImageUrl="~/images/btn_grd_delete.gif" CommandName="deleteobject" AlternateText="Delete item" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"Id") %>'/>
                                                                                             </ItemTemplate> 
                                                                                         <HeaderStyle HorizontalAlign="Center" Width="40px"/>
                                                                                             <ItemStyle HorizontalAlign="Center" />
@@ -1261,6 +1264,11 @@
         <radA:AjaxSetting AjaxControlID="btnCancelProperties">
             <UpdatedControls>
                 <radA:AjaxUpdatedControl ControlID="pnlEditRule" />
+            </UpdatedControls>
+        </radA:AjaxSetting>
+        <radA:AjaxSetting AjaxControlID="gProperties">
+            <UpdatedControls>
+                <radA:AjaxUpdatedControl ControlID="gProperties" />
             </UpdatedControls>
         </radA:AjaxSetting>
         <radA:AjaxSetting AjaxControlID="pnlEditRule">

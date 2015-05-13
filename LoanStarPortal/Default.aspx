@@ -91,7 +91,7 @@
                 }
             } 
             function ShowHelp(){
-<%--    var url = '<%=HelpUrl %>';
+                <%--    var url = '<%=HelpUrl %>';
     window.open(url);--%>
             }
         </script>
@@ -130,12 +130,16 @@
                 <radM:RadMenuItem Text="Loan" AccessKey="l" Value="Loan">
                     <Items>
                         <radM:RadMenuItem AccessKey="n" Text="New borrower" Value="NewBorrower"></radM:RadMenuItem>
-                        <radM:RadMenuItem AccessKey="m" Text="Message board" Value="Notes"></radM:RadMenuItem>
-                        <radM:RadMenuItem Text="Conditions" AccessKey="c" Value="Conditions"></radM:RadMenuItem>
-                        <radM:RadMenuItem Text="Documents" AccessKey="d" Value="Docs"></radM:RadMenuItem>
                         <radM:RadMenuItem Text="Field Changes" AccessKey="f" Value="FieldChanges" Enabled="false" Visible="false"></radM:RadMenuItem>
                     </Items>
                 </radM:RadMenuItem>
+            </Items>
+        </radM:RadMenu>
+        <radM:RadMenu runat="server" ID="RightMenu" Skin="Default" Style="position: absolute; top: 5px; right: 201px" OnItemClick="RightMenu_ItemClick" Height="26px">
+            <Items>
+                <radM:RadMenuItem AccessKey="m" Text="Message board" Value="Notes" CssClass="header-link"></radM:RadMenuItem>
+                <radM:RadMenuItem Text="Conditions" AccessKey="c" Value="Conditions" CssClass="header-link"></radM:RadMenuItem>
+                <radM:RadMenuItem Text="Documents" AccessKey="d" Value="Docs" CssClass="header-link"></radM:RadMenuItem>
             </Items>
         </radM:RadMenu>
         <div style="height: 100%">
@@ -190,7 +194,17 @@
                         <radA:AjaxUpdatedControl ControlID="rmMortgage" />
                     </UpdatedControls>
                 </radA:AjaxSetting>
-                <radA:AjaxSetting AjaxControlID="LeftPanel">
+                <radA:AjaxSetting AjaxControlID="RightMenu">
+                    <UpdatedControls>
+                        <radA:AjaxUpdatedControl ControlID="RightMenu" />
+                    </UpdatedControls>
+                </radA:AjaxSetting>
+                <radA:AjaxSetting AjaxControlID="RightMenu">
+                    <UpdatedControls>
+                        <radA:AjaxUpdatedControl ControlID="RightMenu" />
+                    </UpdatedControls>
+                </radA:AjaxSetting>
+                <radA:AjaxSetting AjaxControlID="RightPanel">
                     <UpdatedControls>
                         <radA:AjaxUpdatedControl ControlID="LeftPanel" />
                         <radA:AjaxUpdatedControl ControlID="CenterPanel" />

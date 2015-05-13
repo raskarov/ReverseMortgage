@@ -1327,6 +1327,7 @@ a.EmailLinks:active, a.EmailLinks:link, a.EmailLinks:visited, a.EmailLinks:hover
 .header-link {
     font-size: 16px;
     padding: 0 10px;
+    cursor: pointer !important;
 }
 
 .pnlDialog {

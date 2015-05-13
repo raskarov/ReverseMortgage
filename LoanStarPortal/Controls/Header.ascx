@@ -12,10 +12,10 @@
             </span>
         </td>
         <td style="padding-right: 150px; height: 25px;" class="logged" align="left">&nbsp;<asp:Literal ID="lblLogged" runat="server" Text="User: " /></td>
-       <%-- <td style="float:right">
-            <a href="javascript:openLinks('notes')" class="link header-link" runat="server"><span class="text" runat="server">Notes</span></a>
-            <a href="javascript:openLinks('documents')" class="link header-link" runat="server"><span class="text" runat="server">Documents</span></a>
-            <a href="javascript:openLinks('conditions')" class="link header-link" runat="server"><span class="text" runat="server">Conditions</span></a>
+        <%--<td style="float:right">
+            <a href="#" onclick="return openLinks('notes');" class="link header-link"><span class="text">Notes</span></a>
+            <a href="#" onclick="return openLinks('documents');" class="link header-link"><span class="text">Documents</span></a>
+            <a href="#" onclick="return openLinks('conditions');" class="link header-link"><span class="text">Conditions</span></a>
         </td>--%>
         <td style="height: 25px; width: 100px;">&nbsp;</td>
     </tr>
@@ -45,9 +45,5 @@
 	        AjaxNS.AR('rmMortgage', 'rmMortgage$m1$m10', 'RadAjaxManager1', event);
 	    }
 	}
-
-	function openLinks(type) {
-	    AjaxNS.AR('rmMortgage', type, 'RadAjaxManager1', event);
-	};
 </script>
 <input type="hidden" id="emailLinkId" value='<%=spEmail.ClientID %>' />

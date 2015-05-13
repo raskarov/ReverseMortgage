@@ -84,7 +84,7 @@ namespace LoanStarPortal.Administration.Controls
         private const string EDITDOCUMENTCOMMAND = "editdocument";
         private const string PAGECOMMAND = "page";
 //        private const string JSDELETECONFIRM = "if(!confirm('Are you sure you want to delete this item?'))return false;";
-        private const string JSDELETECONFIRM = "javascript:{{var r=confirm('Are you sure you want to delete this item?');if (!r)return false;}};";        
+        private const string JSDELETECONFIRM = "";//"var r=confirm('Are you sure you want to delete this item?');if (!r)return false;";        
         private const string EXPRESSIONGRIDNAME = "gProperties";
         private const string SHOWFIELDGRIDNAME = "gFields";
         private const string CONDITIONSGRIDNAME = "gConditions";
