@@ -131,7 +131,7 @@
                 </radM:RadMenuItem>
             </Items>
         </radM:RadMenu>
-        <radM:RadMenu runat="server" ID="RightMenu" Skin="Default" Style="position: absolute; top: 5px; right: 201px" OnItemClick="RightMenu_ItemClick" Height="26px">
+        <radM:RadMenu runat="server" ID="RightMenu" Skin="Default" style="position: absolute; top: 5px; right: 25px;" OnItemClick="RightMenu_ItemClick" Height="26px">
             <Items>
                 <radM:RadMenuItem AccessKey="m" Text="Message board" Value="Notes" CssClass="header-link"></radM:RadMenuItem>
                 <radM:RadMenuItem Text="Conditions" AccessKey="c" Value="Conditions" CssClass="header-link"></radM:RadMenuItem>
