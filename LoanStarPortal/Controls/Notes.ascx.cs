@@ -267,8 +267,8 @@ namespace LoanStarPortal.Controls
             newItem.Expanded = DisplayLevelSelection == DETAILSSELECTION;
             string Title = message.Title;
 
-            if (Title.Length > 17)
-                Title = Title.Substring(0, 17) + "...";
+            if (Title.Length > 27)
+                Title = Title.Substring(0, 27) + "...";
 
             string imgPath = "";
             DateTime dt = message.Created;

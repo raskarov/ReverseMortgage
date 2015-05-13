@@ -288,7 +288,7 @@ namespace LoanStarPortal
             {
                 if (Session["EMailDisplayed"] == null)
                     Session.Add("EMailDisplayed", false);
-                
+
                 if (MortgageId > 0)
                     Page.ClientScript.RegisterHiddenField("currentmortgageid", MortgageId.ToString());
             }
@@ -356,11 +356,11 @@ namespace LoanStarPortal
         }
         protected void Page_LoadComplete(object sender, EventArgs e)
         {
-            
+
         }
         protected void Page_PreRenderComplete(object sender, EventArgs e)
         {
-            
+
         }
         protected void Page_SaveStateComplete(object sender, EventArgs e)
         {
@@ -612,7 +612,7 @@ namespace LoanStarPortal
 
         protected void btnPanelDialogHide_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void RightMenu_ItemClick(object sender, RadMenuEventArgs e)

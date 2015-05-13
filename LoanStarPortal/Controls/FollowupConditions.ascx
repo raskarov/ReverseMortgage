@@ -60,6 +60,7 @@
                                         <ItemTemplate>
                                             <input type="hidden" class="row_id" value="<%# DataBinder.Eval(Container.DataItem, "ID") %>" />
                                             <input type="hidden" class="row_completed" value="<%# DataBinder.Eval(Container.DataItem, "Completed") %>" />
+                                             <input type="hidden" class="row_statusid" value="<%# DataBinder.Eval(Container.DataItem, "StatusId") %>" />
                                             <input type="hidden" class="row_diffdays" value="<%# DataBinder.Eval(Container.DataItem, "DiffDays") %>" />
                                             <span><%# DataBinder.Eval(Container.DataItem, "AuthorityLevelName") %></span>
                                         </ItemTemplate>
@@ -121,7 +122,7 @@
     </radspl:RadPane>
 </radspl:RadSplitter>
 
-<asp:Panel ID="panel_dialog" runat="server" Visible="false" CssClass="pnlConditionsDialog">
+<asp:Panel ID="panel_dialog" runat="server" Visible="false" CssClass="pnlDialog">
     <div class="paneGrid" style="width: 310px; height: 25px;">
         <b>Details</b>
         <asp:Button CssClass="rght" ID="btnHideDialog" runat="server" Text="X" OnClick="btnHideDialog_Click" />
@@ -203,7 +204,7 @@
 </asp:Panel>
 
 <style>
-    .pnlConditionsDialog {
+    .pnlDialog {
         z-index: 200;
         position: absolute;
         top: 70px;
@@ -214,3 +215,9 @@
         float: right;
     }
 </style>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        BindContextMenu();
+    });
+</script>

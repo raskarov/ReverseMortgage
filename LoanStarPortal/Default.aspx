@@ -45,7 +45,6 @@
     <script type="text/javascript" src="scripts/jquery.contextMenu.js"></script>
     <script type="text/javascript" src="scripts/jquery.ui.position.js"></script>
     <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="scripts/users/FollowupConditions.js"></script>
 </head>
 <body style="height: 100%; margin: 0;" scroll="no">
     <form id="form1" runat="server" style="height: 100%" name="form1" enctype='multipart/form-data'>
@@ -54,7 +53,6 @@
             {
                 window['<%=RadAjaxManager1.ClientID %>'].AjaxRequestWithTarget(uniqueID, parameter);
             }
-
             function CallApplicantList(parameter)
             {
                 window['<%=RadAjaxManager1.ClientID %>'].AjaxRequestWithTarget('<%= ApplicantList1.UniqueID %>', parameter);
@@ -65,7 +63,6 @@
                 if(visible) loadingpanel.Show("<%= ApplicantList1.RadPBMortgages.ClientID %>");
                 else loadingpanel.Hide("<%= ApplicantList1.RadPBMortgages.ClientID %>");
             }
-
             function ResizePane(displayMode)
             {
                 var pane = <%= RightPane.ClientID %>;
@@ -73,7 +70,6 @@
     
                 if(displayMode == "calendar")
                 {
-
                     var paneNewSize = 101;
                     for(iAdd = 1; paneNewSize >= 100 && paneNewSize <= 159 ; iAdd++)
                     {
