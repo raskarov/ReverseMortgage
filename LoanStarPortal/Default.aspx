@@ -44,7 +44,6 @@
 <script type="text/javascript" src="scripts/jquery.contextMenu.js"></script>
 <script type="text/javascript" src="scripts/jquery.ui.position.js"></script>
 <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
-<script type="text/javascript" src="scripts/users/FollowupConditions.js"></script>
 </head>  
 <body style="height:100%;margin:0;" scroll="no">    
 <form id="form1" runat="server" style="height:100%" name="form1" enctype='multipart/form-data'>

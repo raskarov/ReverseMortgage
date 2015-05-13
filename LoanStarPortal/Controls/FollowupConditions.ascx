@@ -60,6 +60,7 @@
                                         <ItemTemplate>
                                             <input type="hidden" class="row_id" value="<%# DataBinder.Eval(Container.DataItem, "ID") %>" />
                                             <input type="hidden" class="row_completed" value="<%# DataBinder.Eval(Container.DataItem, "Completed") %>" />
+                                             <input type="hidden" class="row_statusid" value="<%# DataBinder.Eval(Container.DataItem, "StatusId") %>" />
                                             <input type="hidden" class="row_diffdays" value="<%# DataBinder.Eval(Container.DataItem, "DiffDays") %>" />
                                             <span><%# DataBinder.Eval(Container.DataItem, "AuthorityLevelName") %></span>
                                         </ItemTemplate>

@@ -494,8 +494,8 @@ namespace LoanStarPortal.Controls
                                 ? System.Drawing.Color.Red
                                 : System.Drawing.Color.Black;
                         }
-
-                        var isCompleted = Convert.ToBoolean(row["Completed"].ToString());
+                        
+                        var isCompleted = Convert.ToInt32(row["StatusId"].ToString())==1;
 
                         if (isCompleted)
                         {
