@@ -1242,6 +1242,8 @@
         <radA:AjaxSetting AjaxControlID="btnDelete">
             <UpdatedControls>
                 <radA:AjaxUpdatedControl ControlID="btnDelete" />
+                
+                <radA:AjaxUpdatedControl ControlID="pnlExpressionGrid" />
             </UpdatedControls>
         </radA:AjaxSetting>
         <radA:AjaxSetting AjaxControlID="ddlSelectDoc">

@@ -25,7 +25,7 @@
                 <tr>
                     <td valign="top" width="100%" bordercolorlight="#000000">
 
-                        <radG:RadGrid ID="gridConditions" Skin="Default" runat="server" AutoGenerateColumns="False" EnableAJAX="False" GridLines="Vertical"
+                        <radG:RadGrid ID="gridConditions" Skin="Default" runat="server" AutoGenerateColumns="False"  EnableViewState="true" GridLines="Vertical"
                             AllowPaging="True" PageSize="30"
                             OnDetailTableDataBind="gridConditions_DetailTableDataBind"
                             OnNeedDataSource="gridConditions_NeedDataSource"
@@ -33,7 +33,7 @@
                             OnItemDataBound="gridConditions_ItemDataBound"
                             OnPreRender="gridConditions_PreRender"
                             OnPageIndexChanged="gridConditions_PageIndexChanged">
-                            <MasterTableView DataKeyNames="ID">
+                            <MasterTableView DataKeyNames="ID" HierarchyLoadMode="Server">
                                 <DetailTables>
                                     <radG:GridTableView DataKeyNames="ID" Name="Description" Width="100%" ShowHeader="False">
                                         <Columns>
@@ -45,10 +45,10 @@
                                 <NoRecordsTemplate>
                                     <h2>No items</h2>
                                 </NoRecordsTemplate>
-                                <%--<ExpandCollapseColumn Visible="False">
+                                <%--<ExpandCollapseColumn Visible="True">
                                     <HeaderStyle Width="19px" />
-                                </ExpandCollapseColumn>
-                                <RowIndicatorColumn Visible="False">
+                                </ExpandCollapseColumn>--%>
+                               <%-- <RowIndicatorColumn Visible="False">
                                     <HeaderStyle Width="20px" />
                                 </RowIndicatorColumn>--%>
                                 <Columns>
@@ -122,7 +122,7 @@
     </radspl:RadPane>
 </radspl:RadSplitter>
 
-<asp:Panel ID="panel_dialog" runat="server" Visible="false" CssClass="pnlDialog">
+<asp:Panel ID="panel_dialog" runat="server" Visible="false" CssClass="pnlFollowUpDialog">
     <div class="paneGrid" style="width: 310px; height: 25px;">
         <b>Details</b>
         <asp:Button CssClass="rght" ID="btnHideDialog" runat="server" Text="X" OnClick="btnHideDialog_Click" />
@@ -203,18 +203,6 @@
     </div>
 </asp:Panel>
 
-<style>
-    .pnlDialog {
-        z-index: 200;
-        position: absolute;
-        top: 70px;
-        left: 500px;
-    }
-
-    .rght {
-        float: right;
-    }
-</style>
 
 <script type="text/javascript">
     $(document).ready(function () {

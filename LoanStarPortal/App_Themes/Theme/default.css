@@ -144,9 +144,6 @@ table tr td {
 }
 
 #LoadingDiv {
-    /*	
-	background-color:#FF5353;
-*/
     background-color: #CC4444;
     width: 90px;
     height: 19px;
@@ -162,6 +159,7 @@ table tr td {
     color: #FFFFFF;
     font-weight: bold;
     visibility: hidden;
+    z-index: 100;
 }
 
 td.title {
@@ -1338,7 +1336,22 @@ a.EmailLinks:active, a.EmailLinks:link, a.EmailLinks:visited, a.EmailLinks:hover
     background-color: white;
     overflow: auto;
 }
+.pnlFollowUpDialog {
+        z-index: 200;
+        position: absolute;
+        top: 70px;
+        left: 500px;
+        margin: 0 auto;
+    outline: 1px solid gray;
+    max-height: 400px;
+    height: auto;
+    background-color: white;
+    overflow: auto;
+    }
 
+    .rght {
+        float: right;
+    }
 .left_hide {
     left: 3000px !important;
 }
