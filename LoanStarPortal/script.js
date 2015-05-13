@@ -1287,7 +1287,7 @@ function BindContextMenu() {
                     "Frequency-OnceMonth": { name: "Once a month" }
                 }
             },
-            "Completed": { name: "Change status to completed" }
+            "Completed": { name: "Change status to satisfied" }
         }
     });
 }

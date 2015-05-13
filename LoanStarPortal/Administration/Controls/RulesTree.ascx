@@ -467,7 +467,7 @@
                                                                                         </asp:TemplateField>
                                                                                         <asp:TemplateField HeaderText="Action">
                                                                                             <ItemTemplate>
-                                                                                                <asp:ImageButton  id="btnDelete" ImageUrl="~/images/btn_grd_delete.gif" CommandName="deleteobject" AlternateText="Delete item" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"Id") %>'/>
+                                                                                                <asp:ImageButton  id="btnDelete" ImageUrl="~/images/btn_grd_delete.gif" CausesValidation="false" CommandName="deleteobject" AlternateText="Delete item" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"Id") %>'/>
                                                                                             </ItemTemplate> 
                                                                                         <HeaderStyle HorizontalAlign="Center" Width="40px"/>
                                                                                             <ItemStyle HorizontalAlign="Center" />
@@ -1134,6 +1134,7 @@
         </radA:AjaxSetting>
         <radA:AjaxSetting AjaxControlID="pnlExpressionGrid">
             <UpdatedControls>
+                <radA:AjaxUpdatedControl ControlID="pnlExpressionGrid" />
                 <radA:AjaxUpdatedControl ControlID="lblRuleName" />
                 <radA:AjaxUpdatedControl ControlID="lblRuleExpression" />
                 <radA:AjaxUpdatedControl ControlID="pvGeneral" />
