@@ -33,7 +33,7 @@
                             OnItemDataBound="gridConditions_ItemDataBound"
                             OnPreRender="gridConditions_PreRender"
                             OnPageIndexChanged="gridConditions_PageIndexChanged">
-                            <MasterTableView DataKeyNames="ID" HierarchyLoadMode="Server">
+                            <MasterTableView DataKeyNames="ID">
                                 <DetailTables>
                                     <radG:GridTableView DataKeyNames="ID" Name="Description" Width="100%" ShowHeader="False">
                                         <Columns>

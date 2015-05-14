@@ -155,7 +155,7 @@ namespace LoanStarPortal.Controls
             {
                 gridtr.Visible = false;
                 BindDetails();
-            }            
+            }
         }
         private void BindDetails()
         {
@@ -205,8 +205,8 @@ namespace LoanStarPortal.Controls
                 ddlAffiliation.SelectedValue = OTHERAFFILIATEID.ToString();
                 tbAffiliation.Text = affiliation;
             }
-            trAffiliation.Attributes.Add("style",style);
-            ddlAffiliation.Attributes.Add(ONCHANGEATTRIBUTE,String.Format(ONCHANGEJS,trAffiliation.ClientID));
+            trAffiliation.Attributes.Add("style", style);
+            ddlAffiliation.Attributes.Add(ONCHANGEATTRIBUTE, String.Format(ONCHANGEJS, trAffiliation.ClientID));
         }
 
         private void BindBasicInfo()
@@ -351,14 +351,15 @@ namespace LoanStarPortal.Controls
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //if (Page.IsPostBack) return;
             BindData();
         }
 
         protected void btnSaveAffiliation_Click(object sender, EventArgs e)
         {
-            if(ddlAffiliation.SelectedValue==OTHERAFFILIATEID.ToString())
+            if (ddlAffiliation.SelectedValue == OTHERAFFILIATEID.ToString())
             {
-                if(VendorGlobal.SetAffiliationForCompany(Vendor.ID, CurrentUser.CompanyId, tbAffiliation.Text))
+                if (VendorGlobal.SetAffiliationForCompany(Vendor.ID, CurrentUser.CompanyId, tbAffiliation.Text))
                 {
                     lblMessage.Text = Constants.SUCCESSMESSAGE;
                 }

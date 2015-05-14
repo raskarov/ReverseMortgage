@@ -646,6 +646,7 @@ namespace LoanStarPortal.Controls
             
             ReloadMessageBoard(-1);
             ClearConditionFields();
+            ddlRecurrence.SelectedIndex = 3;
             panel_dialog.Visible = true;
         }
 

@@ -41,7 +41,7 @@
     <link href="scripts/jquery-ui.structure.min.css" rel="Stylesheet" type="text/css" />
     <link href="scripts/jquery-ui.theme.min.css" rel="Stylesheet" type="text/css" />
     <script type="text/javascript" src="scripts/jquery-2.1.3.min.js"></script>
-    <script type="text/javascript" src="script.js" language="javascript"></script>
+    <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="scripts/jquery.contextMenu.js"></script>
     <script type="text/javascript" src="scripts/jquery.ui.position.js"></script>
     <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
@@ -167,6 +167,7 @@
                     <uc2:Footer ID="Footer1" runat="server"></uc2:Footer>
                 </radspl:RadPane>
             </radspl:RadSplitter>
+
             <asp:Panel runat="server" ID="DialogWrapperPanel" CssClass="pnlDialog left_hide">
                 <div class="paneGrid" style="width: 100%; height: 25px;">
                     <b>Details</b>
@@ -195,11 +196,6 @@
                         <radA:AjaxUpdatedControl ControlID="RightMenu" />
                     </UpdatedControls>
                 </radA:AjaxSetting>
-                <radA:AjaxSetting AjaxControlID="RightMenu">
-                    <UpdatedControls>
-                        <radA:AjaxUpdatedControl ControlID="RightMenu" />
-                    </UpdatedControls>
-                </radA:AjaxSetting>
                 <radA:AjaxSetting AjaxControlID="RightPanel">
                     <UpdatedControls>
                         <radA:AjaxUpdatedControl ControlID="LeftPanel" />
@@ -210,11 +206,6 @@
                 <radA:AjaxSetting AjaxControlID="CenterPanel">
                     <UpdatedControls>
                         <radA:AjaxUpdatedControl ControlID="CenterPanel" />
-                    </UpdatedControls>
-                </radA:AjaxSetting>
-                <radA:AjaxSetting AjaxControlID="RightPanel">
-                    <UpdatedControls>
-                        <radA:AjaxUpdatedControl ControlID="RightPanel" />
                     </UpdatedControls>
                 </radA:AjaxSetting>
                 <radA:AjaxSetting AjaxControlID="RadAjaxManager1">

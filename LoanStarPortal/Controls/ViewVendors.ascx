@@ -4,7 +4,7 @@
 <%@ Register Assembly="RadTabStrip.Net2" Namespace="Telerik.WebControls" TagPrefix="radTS" %>
 <%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" %>
 <script language="javascript" type="text/javascript">
-<!--
+
 function ValidateAffiliation(src,arg){
     var o = document.getElementById(src.id);
     o=document.getElementById(o.getAttribute('controltovalidate'));
@@ -39,7 +39,7 @@ function SetAffiliateRow(o,tr1){
         t.style.display = vis;
     }
 }
--->
+
 </script>
 <div style="padding-left:10px;padding-top:5px;">
 <table border="0" width="100%" cellpadding="0" cellspacing="0">

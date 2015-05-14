@@ -525,8 +525,15 @@ namespace LoanStarPortal
             else if (e.Item.Value == "Vendors")
             {
                 Session[Constants.VENDORVIEW] = Constants.VENDORVIEWGRID;
-                RemoveAjaxSetting(RadAjaxManager1, DialogPanel);
-                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, DialogPanel, null);
+
+                //RemoveAjaxSetting(CenterPanel, RightPanel);
+                //RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, CenterPanel, null);
+                //RemoveAjaxSetting(CenterPanel, RightPanel);
+                //CenterPanel.Controls.Clear();
+                //updateControlID = CenterPanel.ID;
+                //LoadUserControl(Constants.FECTLVENDORSPUBLIC, CenterPanel, CenterLoadedControlName);
+
+                //RadAjaxManager1.AjaxSettings.AddAjaxSetting(DialogPanel, RadAjaxManager1, null);
                 DialogPanel.Controls.Clear();
                 updateControlID = DialogPanel.ID;
                 LoadUserControl(Constants.FECTLVENDORSPUBLIC, DialogPanel, DialogLoadedControlName);
@@ -542,12 +549,12 @@ namespace LoanStarPortal
             }
             else if (e.Item.Value == "GFE")
             {
-                RemoveAjaxSetting(CenterPanel, RightPanel);
-                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, CenterPanel, null);
-                RemoveAjaxSetting(CenterPanel, RightPanel);
-                CenterPanel.Controls.Clear();
+                RemoveAjaxSetting(CenterPanel, DialogPanel);
+                RadAjaxManager1.AjaxSettings.AddAjaxSetting(rmMortgage, DialogPanel, null);
+                RemoveAjaxSetting(CenterPanel, DialogPanel);
+                DialogPanel.Controls.Clear();
                 updateControlID = CenterPanel.ID;
-                LoadUserControl(Constants.FECTLGFE, CenterPanel, CenterLoadedControlName);
+                LoadUserControl(Constants.FECTLGFE, DialogPanel, DialogLoadedControlName);
             }
             else if (e.Item.Value == "Reports")
             {

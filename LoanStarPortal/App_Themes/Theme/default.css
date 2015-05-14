@@ -1326,9 +1326,21 @@ a.EmailLinks:active, a.EmailLinks:link, a.EmailLinks:visited, a.EmailLinks:hover
     z-index: 200;
     position: absolute;
     top: 200px;
-    left: 300px;
     bottom: 0;
-    width: 800px;
+    width: 50%;
+    left: 25%;
+    margin: 0 auto;
+    outline: 1px solid gray;
+    max-height: 400px;
+    background-color: #E7F0FB;
+    overflow: auto;
+}
+
+.pnlFollowUpDialog {
+    z-index: 200;
+    position: absolute;
+    top: 70px;
+    left: 500px;
     margin: 0 auto;
     outline: 1px solid gray;
     max-height: 400px;
@@ -1336,22 +1348,11 @@ a.EmailLinks:active, a.EmailLinks:link, a.EmailLinks:visited, a.EmailLinks:hover
     background-color: white;
     overflow: auto;
 }
-.pnlFollowUpDialog {
-        z-index: 200;
-        position: absolute;
-        top: 70px;
-        left: 500px;
-        margin: 0 auto;
-    outline: 1px solid gray;
-    max-height: 400px;
-    height: auto;
-    background-color: white;
-    overflow: auto;
-    }
 
-    .rght {
-        float: right;
-    }
+.rght {
+    float: right;
+}
+
 .left_hide {
     left: 3000px !important;
 }
