@@ -1,4 +1,5 @@
 using System;
+using System.Configuration;
 using System.Data;
 using System.Web.UI.WebControls;
 using LoanStar.Common;
@@ -50,7 +51,7 @@ namespace LoanStarPortal.Controls
             }
             set { Session["condition_message"] = value; }
         }
-        private int MortgageID
+        protected int MortgageID
         {
             get
             {
@@ -413,6 +414,7 @@ namespace LoanStarPortal.Controls
         {
             if (!IsActive) return;
             hasEmail = CurrentUser.HasEmail;
+            MortgageIDControl.Attributes["value"] = MortgageID.ToString();
             if (ViewState[FIRST_LOAD] == null)
             {
                 ConditionID = -1;
@@ -475,56 +477,56 @@ namespace LoanStarPortal.Controls
 
         protected void gridConditions_PreRender(object sender, EventArgs e)
         {
-                foreach (GridDataItem item in gridConditions.Items)
+            foreach (GridDataItem item in gridConditions.Items)
+            {
+                if (item.OwnerTableView.Name == "Description") continue;
+                int id = Convert.ToInt32(item.OwnerTableView.DataKeyValues[item.ItemIndex]["ID"].ToString());
+                if (ConditionID == id)
                 {
-                    if (item.OwnerTableView.Name == "Description") continue;
-                    int id = Convert.ToInt32(item.OwnerTableView.DataKeyValues[item.ItemIndex]["ID"].ToString());
-                    if (ConditionID == id)
+                    item.Selected = true;
+                }
+                DataRowView row = (DataRowView)item.DataItem;
+
+                if (row != null)
+                {
+                    var diffDays = row["DiffDays"].ToString();
+                    if (diffDays.Length > 0)
                     {
-                        item.Selected = true;
+                        item.ForeColor = Convert.ToInt16(row["DiffDays"]) >= 0
+                            ? System.Drawing.Color.Red
+                            : System.Drawing.Color.Black;
                     }
-                    DataRowView row = (DataRowView)item.DataItem;
 
-                    if (row != null)
+                    var isCompleted = Convert.ToInt32(row["StatusId"].ToString()) == 1;
+
+                    if (isCompleted)
                     {
-                        var diffDays = row["DiffDays"].ToString();
-                        if (diffDays.Length > 0)
-                        {
-                            item.ForeColor = Convert.ToInt16(row["DiffDays"]) >= 0
-                                ? System.Drawing.Color.Red
-                                : System.Drawing.Color.Black;
-                        }
-                        
-                        var isCompleted = Convert.ToInt32(row["StatusId"].ToString())==1;
-
-                        if (isCompleted)
-                        {
-                            item.ForeColor = System.Drawing.Color.Gray;
-                        }
-
-                        Image img = (Image)item.FindControl("imgDoc");
-                        if (img != null)
-                        {
-                            if (
-                                String.Compare(row["Status"].ToString(), "Completed",
-                                    StringComparison.OrdinalIgnoreCase) == 0
-                                || isCompleted)
-                            {
-                                img.ImageUrl = "~/Images/doc_icon.gif";
-                            }
-                            else
-                            {
-                                img.Visible = false;
-                            }
-                        }
+                        item.ForeColor = System.Drawing.Color.Gray;
                     }
-                    if (hasEmail) continue;
-                    ImageButton btn = (ImageButton)item.FindControl("ibtnEmail");
-                    if (btn != null)
+
+                    Image img = (Image)item.FindControl("imgDoc");
+                    if (img != null)
                     {
-                        btn.Visible = false;
+                        if (
+                            String.Compare(row["Status"].ToString(), "Completed",
+                                StringComparison.OrdinalIgnoreCase) == 0
+                            || isCompleted)
+                        {
+                            img.ImageUrl = "~/Images/doc_icon.gif";
+                        }
+                        else
+                        {
+                            img.Visible = false;
+                        }
                     }
                 }
+                if (hasEmail) continue;
+                ImageButton btn = (ImageButton)item.FindControl("ibtnEmail");
+                if (btn != null)
+                {
+                    btn.Visible = false;
+                }
+            }
         }
         protected void gridConditions_ItemCommand(object source, GridCommandEventArgs e)
         {
@@ -569,7 +571,6 @@ namespace LoanStarPortal.Controls
         {
             if (e.Item.ItemType == GridItemType.Item || e.Item.ItemType == GridItemType.AlternatingItem)
             {
-
 
             }
         }
@@ -643,7 +644,7 @@ namespace LoanStarPortal.Controls
             ddlAuthLevel.Visible = true;
             lblAuthLevel.Visible = !ddlAuthLevel.Visible;
             btnSatisfy.Enabled = false;
-            
+
             ReloadMessageBoard(-1);
             ClearConditionFields();
             ddlRecurrence.SelectedIndex = 3;
