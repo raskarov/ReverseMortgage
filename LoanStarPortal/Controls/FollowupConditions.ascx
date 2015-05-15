@@ -2,10 +2,8 @@
 <%@ Register Assembly="RadSplitter.Net2" Namespace="Telerik.WebControls" TagPrefix="radspl" %>
 <%@ Register Assembly="RadGrid.Net2" Namespace="Telerik.WebControls" TagPrefix="radG" %>
 <%@ Register Assembly="RadCalendar.Net2" Namespace="Telerik.WebControls" TagPrefix="radCln" %>
-<%@ Register Assembly="RadPanelbar.Net2" Namespace="Telerik.WebControls" TagPrefix="radPnlB" %>
 <%@ Register Src="EmailAdd.ascx" TagName="EmailAdd" TagPrefix="uc1" %>
 <%@ Register Assembly="RadAjax.Net2" Namespace="Telerik.WebControls" TagPrefix="radA" %>
-
 
 <input type="hidden" id="MortgageIDControl" runat="server" />
 <radA:RadAjaxManager ID="RadAjaxManager1" runat="server">
@@ -41,7 +39,7 @@
                             OnItemCommand="gridConditions_ItemCommand"
                             OnPreRender="gridConditions_PreRender"
                             OnPageIndexChanged="gridConditions_PageIndexChanged">
-                            <MasterTableView DataKeyNames="ID" Name="Conditions" DataSourceID="SqlDataSource1" HierarchyDefaultExpanded="True" HierarchyLoadMode="Client">
+                            <MasterTableView DataKeyNames="ID" Name="Conditions" DataSourceID="SqlDataSource1" HierarchyLoadMode="Client">
                                 <DetailTables>
                                     <radG:GridTableView DataSourceID="SqlDataSource2" Name="Description" DataKeyNames="ID" Width="100%" ShowHeader="False" HierarchyLoadMode="Client">
                                         <ParentTableRelation>
@@ -58,7 +56,7 @@
                                     <h2>No items</h2>
                                 </NoRecordsTemplate>
                                 <Columns>
-                                    <radG:GridBoundColumn HeaderText="ID" DataField="ID" UniqueName="ID" Display="False">
+                                    <radG:GridBoundColumn HeaderText="ID" DataField="ID" UniqueName="ID" Display="False" ItemStyle-CssClass="SecondRow">
                                     </radG:GridBoundColumn>
                                     <radG:GridButtonColumn UniqueName="TitleColumn" HeaderText="Title" CommandName="LoadItem" DataTextField="Title" ItemStyle-CssClass="tdLinkToEdit" ItemStyle-Width="50%">
                                     </radG:GridButtonColumn>
@@ -84,6 +82,7 @@
                                 </Columns>
                             </MasterTableView>
                             <PagerStyle Mode="NumericPages" />
+                           
                             <ClientSettings EnablePostBackOnRowClick="false"></ClientSettings>
                         </radG:RadGrid>
                         <asp:SqlDataSource ID="SqlDataSource1" ConnectionString="<%$ appSettings:SqlConnectionString %>"
@@ -94,11 +93,11 @@
                         </asp:SqlDataSource>
                         <asp:SqlDataSource ID="SqlDataSource2" ConnectionString="<%$ appSettings:SqlConnectionString %>"
                             ProviderName="System.Data.SqlClient" SelectCommand="GetConditionByID" SelectCommandType="StoredProcedure" runat="server">
-                            <%--ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [Conditions] where ID = @ID" runat="server">--%>
                             <SelectParameters>
                                 <asp:SessionParameter Name="ID" SessionField="ID" Type="String"></asp:SessionParameter>
                             </SelectParameters>
                         </asp:SqlDataSource>
+
                         <br />
                         <br />
                         &nbsp;<asp:LinkButton ID="btnAddCondition" runat="server" Text="Add Condition/Task" CssClass="AddCondition" OnClick="btnAddCondition_Click"></asp:LinkButton>
@@ -218,5 +217,25 @@
 <script type="text/javascript">
     $(document).ready(function () {
         BindContextMenu();
+    });
+
+    $(document).ready(function () {
+        var plusIcon = "/RadControls/Grid/Skins/Default/SinglePlus.gif";
+        var minusIcon = "/RadControls/Grid/Skins/Default/SingleMinus.gif";
+        $(".SecondRow").prev().find('img').css("cursor", "pointer").on("click", itemClick);
+
+        function itemClick(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var that = $(this);
+            var tr = that.parent().parent();
+            var nextTr = tr.next();
+            nextTr.toggle();
+            if (nextTr.is(":visible")) {
+                this.src = minusIcon;
+            } else {
+                this.src = plusIcon;
+            }
+        };
     });
 </script>
