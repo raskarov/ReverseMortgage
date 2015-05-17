@@ -597,12 +597,12 @@ namespace LoanStarPortal.Controls
         #endregion
         protected void RefreshPage_Click(object sender, EventArgs e)
         {
-            ClearFollowupControls();
-            BindRecurrence();
+            //ClearFollowupControls();
+            //BindRecurrence();
 
-            int id = Convert.ToInt32(conditionActiveID.Value);
-            ConditionID = id;
-            LoadCondition();
+            //int id = Convert.ToInt32(conditionActiveID.Value);
+            //ConditionID = id;
+            //LoadCondition();
 
             MortgageDataChanged();
             RebindGrid();
@@ -619,12 +619,12 @@ namespace LoanStarPortal.Controls
                     newStatusId = Constants.CONDITIONSTATUSNOTSATISFIED;
                 }
                 cond_.StatusID = newStatusId;
-                cond_.RecurrenceID = 6;
-                cond_.ScheduleDate = null;
                 cond_.Save();
-                cond_.SaveFollowUpDetails();
                 if (newStatusId == Constants.CONDITIONSTATUSNOTSATISFIED)
                 {
+                    cond_.RecurrenceID = 6;
+                    cond_.ScheduleDate = null;
+                    cond_.SaveFollowUpDetails();
                     SaveEvent(Constants.EVENTTYPEIDCONDITIONUNSATISFIED, "Condition " + cond_.Title + " was unsatisfied by " + CurrentUser.FirstName + " " + CurrentUser.LastName + " at " + DateTime.Now.ToString("f"));
                 }
                 else
