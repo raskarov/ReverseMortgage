@@ -131,7 +131,7 @@
                 </radM:RadMenuItem>
             </Items>
         </radM:RadMenu>
-        <radM:RadMenu runat="server" ID="RightMenu" Skin="Default" style="position: absolute; top: 5px; right: 25px;" OnItemClick="RightMenu_ItemClick" Height="26px">
+        <radM:RadMenu runat="server" ID="RightMenu" Skin="Default" Style="position: absolute; top: 5px; right: 25px;" OnItemClick="RightMenu_ItemClick" Height="26px">
             <Items>
                 <radM:RadMenuItem AccessKey="m" Text="Message board" Value="Notes" CssClass="header-link"></radM:RadMenuItem>
                 <radM:RadMenuItem Text="Conditions" AccessKey="c" Value="Conditions" CssClass="header-link"></radM:RadMenuItem>
@@ -168,13 +168,16 @@
                 </radspl:RadPane>
             </radspl:RadSplitter>
 
-            <asp:Panel runat="server" ID="DialogWrapperPanel" CssClass="pnlDialog left_hide">
-                <div class="paneGrid" style="width: 100%; height: 25px;">
-                    <b>Details</b>
-                    <asp:Button CssClass="rght" ID="btnPanelDialogHide" runat="server" Text="X" OnClick="btnPanelDialogHide_Click" />
+            <asp:Panel runat="server" ID="DialogWrapperPanel" CssClass="pnlDialog" style="display: none;">
+                <div class="cover"></div>
+                <div class="pnlDialog_body">
+                    <div class="paneGrid" style="width: 100%; height: 25px;">
+                        <b>Details</b>
+                        <input type="button" class="rght" id="btnPanelDialogHide" value="X" onclick="hideDialog(this)" />
+                    </div>
+                    <asp:Panel ID="DialogPanel" runat="server">
+                    </asp:Panel>
                 </div>
-                <asp:Panel ID="DialogPanel" runat="server">
-                </asp:Panel>
             </asp:Panel>
         </div>
         <%--<rada:radajaxtimer id="MailTimer" Runat="server" AutoStart="false" style="width: 426px" OnTick="MailTimer_Tick"></rada:radajaxtimer>--%>

@@ -211,7 +211,7 @@ namespace LoanStarPortal.Controls
         protected void BindRecurrence()
         {
             DataView dv = Condition.GetRecurrenceList();
-            dv.RowFilter = "id<6";
+            //dv.RowFilter = "id<6";
             ddlRecurrence.DataSource = dv;
             ddlRecurrence.DataBind();
             ddlRecurrence.Items.Insert(0, new ListItem(" Select ", "0"));
@@ -272,13 +272,20 @@ namespace LoanStarPortal.Controls
             lblAuthLevel.Text = authLevel;
             lblAuthLevel.Visible = ConditionID > 0;
             ddlAuthLevel.Visible = !lblAuthLevel.Visible;
-            SetSatisfiedControls(cond.StatusID == Constants.CONDITIONSTATUSSATISFIED);
+            var isSatisfied = cond.StatusID == Constants.CONDITIONSTATUSSATISFIED;
+            SetSatisfiedControls(isSatisfied);
             AllowSaveCondition(cond.AuthorityLevelValue);
 
-            if (cond.RecurrenceID > 0 && cond.ScheduleDate != null)
+            if (cond.RecurrenceID > 0)
             {
                 ddlRecurrence.Items.FindByValue(cond.RecurrenceID.ToString()).Selected = true;
             }
+            //if(cond.RecurrenceID == 6)
+            //{
+            //    rdpStartDate.Style["display"] = "none";
+            //    lblNextWorkDate.Style["display"] = "none";
+            //}
+
             SetDates(cond, INIT);
             chkCredit.Checked = cond.CreditApproved;
             chkProperty.Checked = cond.PropertyApproved;
@@ -346,7 +353,15 @@ namespace LoanStarPortal.Controls
 
                     SaveEvent(Constants.EVENTTYPEIDCONDITIONCREATED, begining + "<b>" + GetEventTitle(scond.Title) + "</b> by " + CurrentUser.FirstName + " " + CurrentUser.LastName + " at " + DateTime.Now.ToString("f"));
                 }
-                scond.ScheduleDate = rdpStartDate.SelectedDate;
+
+                if (ddlRecurrence.SelectedIndex == 6)
+                {
+                    scond.ScheduleDate = null;
+                }
+                else
+                {
+                    scond.ScheduleDate = rdpStartDate.SelectedDate;
+                }
                 scond.RecurrenceID = ddlRecurrence.SelectedIndex;
                 scond.Save();
                 scond.SaveFollowUpDetails();
@@ -604,7 +619,10 @@ namespace LoanStarPortal.Controls
                     newStatusId = Constants.CONDITIONSTATUSNOTSATISFIED;
                 }
                 cond_.StatusID = newStatusId;
+                cond_.RecurrenceID = 6;
+                cond_.ScheduleDate = null;
                 cond_.Save();
+                cond_.SaveFollowUpDetails();
                 if (newStatusId == Constants.CONDITIONSTATUSNOTSATISFIED)
                 {
                     SaveEvent(Constants.EVENTTYPEIDCONDITIONUNSATISFIED, "Condition " + cond_.Title + " was unsatisfied by " + CurrentUser.FirstName + " " + CurrentUser.LastName + " at " + DateTime.Now.ToString("f"));
@@ -683,6 +701,5 @@ namespace LoanStarPortal.Controls
         {
             panel_dialog.Visible = false;
         }
-
     }
 }

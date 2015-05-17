@@ -180,12 +180,12 @@
                         <tr>
                             <td align="left" style="width: 110px; padding-left: 5px">Frequency</td>
                             <td>
-                                <asp:DropDownList ID="ddlRecurrence" runat="server" DataTextField="Name" DataValueField="ID" Width="150px" CssClass="task"></asp:DropDownList><asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="*" ValidationGroup="follow_val" ControlToValidate="ddlRecurrence" Type="Integer" MinimumValue="1" MaximumValue="100"></asp:RangeValidator></td>
+                                <asp:DropDownList ID="ddlRecurrence" runat="server" DataTextField="Name" DataValueField="ID" Width="150px" CssClass="task reccurence" onchange="toggleReccurence(this)"></asp:DropDownList><asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="*" ValidationGroup="follow_val" ControlToValidate="ddlRecurrence" Type="Integer" MinimumValue="1" MaximumValue="100"></asp:RangeValidator></td>
                         </tr>
                         <tr>
                             <td align="left" style="width: 110px; padding-left: 5px">Starting when</td>
                             <td>
-                                <radCln:RadDatePicker ID="rdpStartDate" runat="server" Width="150px" SkinID="Windows">
+                                <radCln:RadDatePicker ID="rdpStartDate" CssClass="rdpStartDate" runat="server" Width="150px" SkinID="Windows">
                                     <dateinput width="150px" height="18px" style="color: #000000; font-size: 12px; font-family: Arial, Helvetica, sans-serif; padding-left: 4px; border: 1px solid #7F9DB9; background: #FFFFFF;"></dateinput>
                                     <calendar skin="WebBlue"></calendar>
                                 </radCln:RadDatePicker>
@@ -237,5 +237,13 @@
                 this.src = plusIcon;
             }
         };
+
+        var dialog = $(".pnlFollowUpDialog");
+        if (dialog.length) {
+            var reccurence = dialog.find(".reccurence");
+            if (reccurence.length) {
+                toggleReccurence(reccurence[0]);
+            }
+        }
     });
 </script>

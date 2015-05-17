@@ -1323,17 +1323,34 @@ a.EmailLinks:active, a.EmailLinks:link, a.EmailLinks:visited, a.EmailLinks:hover
 }
 
 .pnlDialog {
-    z-index: 200;
-    position: absolute;
-    top: 200px;
+    position: fixed;
+    top: 0;
     bottom: 0;
-    width: 50%;
-    left: 25%;
-    margin: 0 auto;
-    outline: 1px solid gray;
-    max-height: 400px;
-    background-color: #E7F0FB;
-    overflow: auto;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: none;
+}
+
+    .pnlDialog .cover {
+        background: url('/RadControls/Window/Skins/WebBlue/Img/ModalImageBg.gif');
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        cursor: pointer;
+    }
+
+.pnlDialog_body {
+    position: absolute;
+    width: 600px;
+    min-height: 300px;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #E7F0FB;
 }
 
 .pnlFollowUpDialog {
@@ -1348,6 +1365,10 @@ a.EmailLinks:active, a.EmailLinks:link, a.EmailLinks:visited, a.EmailLinks:hover
     background-color: white;
     overflow: auto;
 }
+
+
+
+
 
 .rght {
     float: right;
