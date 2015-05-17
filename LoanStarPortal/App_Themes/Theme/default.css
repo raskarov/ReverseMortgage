@@ -148,7 +148,7 @@ table tr td {
     width: 90px;
     height: 19px;
     position: absolute;
-    top: 1px;
+    bottom: 1px;
     right: 0px;
     float: right;
     text-align: center;
