@@ -1034,6 +1034,7 @@ function OnClicking(sender, eventArgs) {
         ShowHelp();
         return false;
     }
+
     if (eventArgs.Item.Value == "Logout") {
         $.ajax({
             type: "POST",
@@ -1049,6 +1050,18 @@ function OnClicking(sender, eventArgs) {
             }
         });
     }
+
+
+    var dialogPanel = $("#DialogPanel");
+    var container = dialogPanel.parents('.pnlDialog');
+    var itemName = eventArgs.Item.Value;
+    var popups = ["Emails", "Vendors", "Reports", "Links", "MyProfile", "GFE"];
+
+    $.each(popups, function(i, item) {
+        if (item === itemName) {
+            container.show();
+        }
+    });
 }
 function AddNewMortgage(mortgageId) {
     //window.opener['RadAjaxManager1'].AjaxRequest();
@@ -1260,12 +1273,6 @@ function AjaxResponseEnd() {
     document.getElementById("LoadingDiv").style.visibility = 'hidden';
     RestoreErrors();
     window.setTimeout('SetActiveElement()', 500);
-    var dialogPanel = $("#DialogPanel");
-    if (dialogPanel.html().trim().length) {
-        dialogPanel.parents('.pnlDialog').show();
-    } else {
-        dialogPanel.parent('.pnlDialog').hide();
-    }
 }
 
 function hideDialog(btn) {

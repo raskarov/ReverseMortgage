@@ -168,7 +168,7 @@
                 </radspl:RadPane>
             </radspl:RadSplitter>
 
-            <asp:Panel runat="server" ID="DialogWrapperPanel" CssClass="pnlDialog" style="display: none;">
+            <radA:RadAjaxPanel runat="server" ID="DialogWrapperPanel" CssClass="pnlDialog" style="display: none;">
                 <div class="cover"></div>
                 <div class="pnlDialog_body">
                     <div class="paneGrid" style="width: 100%; height: 25px;">
@@ -178,7 +178,7 @@
                     <asp:Panel ID="DialogPanel" runat="server">
                     </asp:Panel>
                 </div>
-            </asp:Panel>
+            </radA:RadAjaxPanel>
         </div>
         <%--<rada:radajaxtimer id="MailTimer" Runat="server" AutoStart="false" style="width: 426px" OnTick="MailTimer_Tick"></rada:radajaxtimer>--%>
         <radA:RadAjaxManager ID="RadAjaxManager1" runat="server" OnResolveUpdatedControls="RadAjaxManager1_ResolveUpdatedControls" EnableOutsideScripts="true" EnablePageHeadUpdate="false">

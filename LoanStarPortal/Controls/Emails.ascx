@@ -79,7 +79,7 @@ function ShowEmailLinks(argsSelectedMenuItem, selectedMsg){
    SetAppListControl(mailMode, backColor, selectedMsg); 
 }
 function SetAppListControl(mailMode, backColor, selectedMsg) {
-    var appItems = document.getElementById("ApplicantList1_RadPBMortgages").all    
+    var appItems = document.getElementById("ApplicantList1_RadPBMortgages").all
     var iItemCount = appItems.length;
     var hostRoot = window.location.protocol + "//" +  window.location.host;
     while (iItemCount-- > 0) {
