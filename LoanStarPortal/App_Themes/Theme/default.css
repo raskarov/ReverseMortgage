@@ -1341,12 +1341,11 @@ a.EmailLinks:active, a.EmailLinks:link, a.EmailLinks:visited, a.EmailLinks:hover
         right: 0;
         cursor: pointer;
     }
-
+    
 .pnlDialog_body {
     position: absolute;
-    min-width: 600px;
-    max-width: 1200px;
-    min-height: 400px;
+    max-width: 600px;
+    min-height: 200px;
     top: 200px;
     left: 0;
     right: 0;
@@ -1354,13 +1353,19 @@ a.EmailLinks:active, a.EmailLinks:link, a.EmailLinks:visited, a.EmailLinks:hover
     background: #E7F0FB;
 }
 
-#Emails_RadSplitter2 {
+.pnlDialog.Emails .pnlDialog_body {
     height: 500px;
+    max-width: 800px;
 }
 
-#Emails_RadSplitter2 * {
-    height: 100%;
+#Emails_RadSplitter2 {
+    height: 500px;
+    width: 800px;
 }
+
+    #Emails_RadSplitter2 * {
+        height: 100%;
+    }
 
 .pnlFollowUpDialog {
     z-index: 200;

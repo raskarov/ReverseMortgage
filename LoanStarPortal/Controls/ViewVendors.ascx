@@ -3,7 +3,6 @@
 <%@ Register Assembly="RadGrid.Net2" Namespace="Telerik.WebControls" TagPrefix="radG" %>
 <%@ Register Assembly="RadTabStrip.Net2" Namespace="Telerik.WebControls" TagPrefix="radTS" %>
 <%@ Register Assembly="RadInput.Net2" Namespace="Telerik.WebControls" TagPrefix="radI" %>
-<%@ Register Assembly="RadAjax.Net2" Namespace="Telerik.WebControls" TagPrefix="radA" %>
 <script language="javascript" type="text/javascript">
 
     function ValidateAffiliation(src, arg) {
@@ -21,7 +20,7 @@
     function GetParentTr(o) {
         var p = o;
         while (true) {
-            if (!p.parentElement) return null;
+            if (!p || !p.parentElement) return null;
             p = p.parentElement;
             if (p.tagName.toLowerCase() == 'tr') {
                 return p;
@@ -46,7 +45,8 @@
     <table border="0" width="100%" cellpadding="0" cellspacing="0">
         <tr id="gridtr" runat="server" visible="false">
             <td>
-                <radG:RadGrid ID="gVendors" Skin="WebBlue" runat="server" CssClass="RadGrid" GridLines="None" AllowPaging="True" PageSize="20" AllowSorting="true" Width="99%" AutoGenerateColumns="False" 
+                <radG:RadGrid ID="gVendors" Skin="WebBlue" runat="server" CssClass="RadGrid" GridLines="None" AllowPaging="True" PageSize="20" 
+                    AllowSorting="true" Width="99%" AutoGenerateColumns="False"
                     EnableAJAX="False" ShowStatusBar="false" HorizontalAlign="NotSet" OnItemCommand="gVendors_ItemCommand" 
                     OnSortCommand="gVendors_SortCommand" OnPageIndexChanged="gVendors_PageIndexChanged">
                     <MasterTableView GridLines="None" DataKeyNames="ID">
@@ -354,17 +354,3 @@
         </tr>
     </table>
 </div>
-<%--<radA:RadAjaxManager ID="RadAjaxManager2" runat="server" EnableOutsideScripts="true" EnablePageHeadUpdate="false">
-    <AjaxSettings>
-        <radA:AjaxSetting AjaxControlID="RadAjaxManager2">
-            <UpdatedControls>
-                <radA:AjaxUpdatedControl ControlID="DialogPanel" />
-            </UpdatedControls>
-        </radA:AjaxSetting>
-        <radA:AjaxSetting AjaxControlID="DialogPanel">
-            <UpdatedControls>
-                <radA:AjaxUpdatedControl ControlID="DialogPanel" />
-            </UpdatedControls>
-        </radA:AjaxSetting>
-    </AjaxSettings>
-</radA:RadAjaxManager>--%>

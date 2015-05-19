@@ -1057,15 +1057,16 @@ function OnClicking(sender, eventArgs) {
 
     $.each(popups, function(i, item) {
         if (item === itemName) {
-            showContainer();
+            showContainer(itemName);
         }
     });
 }
 
-function showContainer() {
+function showContainer(classToAdd) {
     var dialogPanel = $("#DialogPanel");
-    var container = dialogPanel.parents('.pnlDialog');
+    var container = dialogPanel.parents('.pnlDialog').removeClass(this.classToAdd).addClass(classToAdd);
     container.show();
+    this.classToAdd = classToAdd;
 };
 
 function AddNewMortgage(mortgageId) {
@@ -1280,8 +1281,12 @@ function AjaxResponseEnd() {
     window.setTimeout('SetActiveElement()', 500);
 }
 
-function hideDialog(btn) {
+function hideDialog(e) {
+    if (!e) return false;
+    var btn = e.target;
     var dialog = $(btn).parents('.pnlDialog').hide();
+    var dialogPanel = $("#DialogPanel");
+    dialogPanel.empty();
 };
 
 function toggleReccurence(item) {
@@ -1293,4 +1298,8 @@ function toggleReccurence(item) {
         rows.eq(1).show();
         rows.eq(2).show();
     }
+};
+
+function OnAjaxPanelRequestEnd() {
+    console.log(arguments);
 };

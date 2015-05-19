@@ -530,7 +530,7 @@ namespace WebMailPro
 
 		public static Account LoadFromDb(string email, string login, string password)
 		{
-			Account newAccount = new Account();
+			Account newAccount;
 
 			DbManagerCreator creator = new DbManagerCreator();
 			DbManager dbMan = creator.CreateDbManager();

@@ -214,6 +214,11 @@ namespace LoanStarPortal
             {
                 LoadUserControl(RightLoadedControlName, RightPanel, RightLoadedControlName);
             }
+
+            if (DialogLoadedControlName != null)
+            {
+                LoadUserControl(DialogLoadedControlName, DialogPanel, DialogLoadedControlName);
+            }
         }
 
         protected void MakePanesVisible()
@@ -261,6 +266,7 @@ namespace LoanStarPortal
                     panel.Controls.Add(userControl);
                     if (panel == CenterPanel) CenterLoadedControlName = controlName;
                     if (panel == RightPanel) RightLoadedControlName = controlName;
+                    if (panel == DialogPanel) DialogLoadedControlName = controlName;
                 }
                 return userControl;
             }
@@ -372,7 +378,7 @@ namespace LoanStarPortal
             RadAjaxManager1.AjaxSettings.AddAjaxSetting(RadAjaxManager1, CenterPanel, null);
             RadAjaxManager1.AjaxSettings.AddAjaxSetting(RadAjaxManager1, RadAjaxManager1, null);
             RadAjaxManager1.AjaxSettings.AddAjaxSetting(RadAjaxManager1, RightPanel, null);
-            RadAjaxManager1.AjaxSettings.AddAjaxSetting(RadAjaxManager1, DialogPanel, null);
+            //RadAjaxManager1.AjaxSettings.AddAjaxSetting(RadAjaxManager1, DialogPanel, null);
         }
         public void RemoveAjaxSetting(Control ajaxControl, Control updatedControl)
         {
@@ -754,6 +760,11 @@ namespace LoanStarPortal
             RightPanel.Controls.Clear();
             updateControlID = RightPanel.ID;
             LoadUserControl(Constants.FECTLNOTES, RightPanel, RightLoadedControlName);
+        }
+
+        protected void btnPanelDialogHide_OnClick(object sender, EventArgs e)
+        {
+            DialogLoadedControlName = null;
         }
     }
 }

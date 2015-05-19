@@ -168,17 +168,26 @@
                 </radspl:RadPane>
             </radspl:RadSplitter>
 
-            <radA:RadAjaxPanel runat="server" ID="DialogWrapperPanel" CssClass="pnlDialog" style="display: none;">
+            <div class="pnlDialog" style="display: block;">
                 <div class="cover"></div>
-                <div class="pnlDialog_body">
+                <radA:RadAjaxPanel runat="server" ID="DialogWrapperPanel" class="pnlDialog_body">
                     <div class="paneGrid" style="width: 100%; height: 25px;">
                         <b>Details</b>
-                        <input type="button" class="rght" id="btnPanelDialogHide" value="X" onclick="hideDialog(this)" />
+                        <asp:Button CssClass="rght" runat="server" ID="btnPanelDialogHide" Text="X" OnClick="btnPanelDialogHide_OnClick" />
                     </div>
                     <asp:Panel ID="DialogPanel" runat="server">
                     </asp:Panel>
-                </div>
-            </radA:RadAjaxPanel>
+                    <script type="text/javascript">
+                        var dialogPanel = $("#DialogPanel");
+                        var container = $(dialogPanel).parents('.pnlDialog');
+                        if (!dialogPanel.html().trim().length) {
+                            container.hide();
+                        }
+
+                        $('#btnPanelDialogHide').on('click', hideDialog);
+                    </script>
+                </radA:RadAjaxPanel>
+            </div>
         </div>
         <%--<rada:radajaxtimer id="MailTimer" Runat="server" AutoStart="false" style="width: 426px" OnTick="MailTimer_Tick"></rada:radajaxtimer>--%>
         <radA:RadAjaxManager ID="RadAjaxManager1" runat="server" OnResolveUpdatedControls="RadAjaxManager1_ResolveUpdatedControls" EnableOutsideScripts="true" EnablePageHeadUpdate="false">
@@ -214,10 +223,6 @@
                 <radA:AjaxSetting AjaxControlID="RadAjaxManager1">
                     <UpdatedControls>
                         <radA:AjaxUpdatedControl ControlID="CenterPanel" />
-                    </UpdatedControls>
-                </radA:AjaxSetting>
-                <radA:AjaxSetting AjaxControlID="DialogPanel">
-                    <UpdatedControls>
                         <radA:AjaxUpdatedControl ControlID="DialogPanel" />
                     </UpdatedControls>
                 </radA:AjaxSetting>

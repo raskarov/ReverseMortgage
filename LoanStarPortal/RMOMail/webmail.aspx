@@ -34,8 +34,8 @@
         <BaseWebmail:Logo ID="Control_Logo" runat="server" ></BaseWebmail:Logo>
     </div>
     <BaseWebmail:Copyright ID="Control_Copyright" runat="server" ></BaseWebmail:Copyright>
-    <iframe name="session_saver" id="session_saver" src="session_saver.aspx" class="wm_hide">
-    </iframe>
+    <%--<iframe name="session_saver" id="session_saver" src="session_saver.aspx" class="wm_hide">
+    </iframe>--%>
 </body>
 
 
