@@ -1051,18 +1051,23 @@ function OnClicking(sender, eventArgs) {
         });
     }
 
-
-    var dialogPanel = $("#DialogPanel");
-    var container = dialogPanel.parents('.pnlDialog');
+    
     var itemName = eventArgs.Item.Value;
     var popups = ["Emails", "Vendors", "Reports", "Links", "MyProfile", "GFE"];
 
     $.each(popups, function(i, item) {
         if (item === itemName) {
-            container.show();
+            showContainer();
         }
     });
 }
+
+function showContainer() {
+    var dialogPanel = $("#DialogPanel");
+    var container = dialogPanel.parents('.pnlDialog');
+    container.show();
+};
+
 function AddNewMortgage(mortgageId) {
     //window.opener['RadAjaxManager1'].AjaxRequest();
     //TurnOffProcessingMessage();

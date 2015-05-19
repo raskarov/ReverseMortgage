@@ -40,9 +40,11 @@
 	function DisplayLinks(displayMode) {
 	    if (displayMode === "email") {
 	        AjaxNS.AR('rmMortgage', 'EmailLinkClicked', 'RadAjaxManager1', event);
+	        showContainer();
 	    }
 	    if (displayMode === "calendar") {
 	        AjaxNS.AR('rmMortgage', 'rmMortgage$m1$m10', 'RadAjaxManager1', event);
+	        showContainer();
 	    }
 	}
 </script>
