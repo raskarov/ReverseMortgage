@@ -1064,6 +1064,7 @@ function OnClicking(sender, eventArgs) {
 
 function showContainer(classToAdd) {
     var dialogPanel = $("#DialogPanel");
+    dialogPanel.empty();
     var container = dialogPanel.parents('.pnlDialog').removeClass(this.classToAdd).addClass(classToAdd);
     container.show();
     this.classToAdd = classToAdd;
@@ -1120,157 +1121,177 @@ function ShowProcessImage(show) {
 
 function BindContextMenu() {
 
-
     $('#Tabs_CtrlTasks1_FollowupConditions1_gridConditions_ctl01').contextMenu({
         selector: 'tr',
-        callback: function (key, options) {
-            var id = $(this).find(".row_id").val();
+        build: function($trigger, e) {
+            var completed = +$trigger.find('.row_statusid').val() === 1;
 
-            $("#conditionActiveID").val(id);
+            var completedText = completed ? "Unsatisfy" : "Satisfy";
 
-            if (key == "Advance") {
-                $.ajax({
-                    type: "POST",
-                    url: "/Handlers/Advance.ashx",
-                    data: JSON.stringify({ id: id }),
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    success: function (msg) {
-                        AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
-                        return false;
-                    },
-                    error: function () {
-                        alert("Error");
-                    }
-                });
-
-                return false;
-            }
-            else if (key == "Frequency-Everyday") {
-                $.ajax({
-                    type: "POST",
-                    url: "/Handlers/FrequencyEveryday.ashx",
-                    data: JSON.stringify({ id: id }),
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    success: function (msg) {
-                        AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
-                        return false;
-                    },
-                    error: function () {
-                        alert("Error");
-                    }
-                });
-
-                return false;
-            }
-            else if (key == "Frequency-EveryOtherDay") {
-                $.ajax({
-                    type: "POST",
-                    url: "/Handlers/FrequencyEveryOtherDay.ashx",
-                    data: JSON.stringify({ id: id }),
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    success: function (msg) {
-                        AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
-                        return false;
-                    },
-                    error: function () {
-                        alert("Error");
-                    }
-                });
-
-                return false;
-            }
-            else if (key == "Frequency-OnceWeek") {
-                $.ajax({
-                    type: "POST",
-                    url: "/Handlers/FrequencyOnceWeek.ashx",
-                    data: JSON.stringify({ id: id }),
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    success: function (msg) {
-                        AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
-                        return false;
-                    },
-                    error: function () {
-                        alert("Error");
-                    }
-                });
-
-                return false;
-            }
-            else if (key == "Frequency-EveryOtherWeek") {
-                $.ajax({
-                    type: "POST",
-                    url: "/Handlers/FrequencyEveryOtherWeek.ashx",
-                    data: JSON.stringify({ id: id }),
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    success: function (msg) {
-                        AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
-                        return false;
-                    },
-                    error: function () {
-                        alert("Error");
-                    }
-                });
-
-                return false;
-            }
-            else if (key == "Frequency-OnceMonth") {
-                $.ajax({
-                    type: "POST",
-                    url: "/Handlers/FrequencyOnceMonth.ashx",
-                    data: JSON.stringify({ id: id }),
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    success: function (msg) {
-                        AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
-                        return false;
-                    },
-                    error: function () {
-                        alert("Error");
-                    }
-                });
-
-                return false;
-            }
-            else if (key == "Completed") {
-                $.ajax({
-                    type: "POST",
-                    url: "/Handlers/Completed.ashx",
-                    data: JSON.stringify({ id: id }),
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    success: function (msg) {
-                        AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
-                        return false;
-                    },
-                    error: function () {
-                        alert("Error");
-                    }
-                });
-
-                return false;
-            }
-        },
-        items: {
-            "Advance": { name: "Advance to the next follow-up date" },
-            "Frequency": {
-                name: "Change the follow-up frequency",
+            return {
+                callback: callback,
                 items: {
-                    "Frequency-Everyday": { name: "Everyday" },
-                    "Frequency-EveryOtherDay": { name: "Every other day" },
-                    "Frequency-OnceWeek": { name: "Once a week" },
-                    "Frequency-EveryOtherWeek": { name: "Every other week" },
-                    "Frequency-OnceMonth": { name: "Once a month" },
-                    //"Frequency-Never": { name: "Never" }
-                }
-            },
-            "Completed": { name: "Satisfy" }
+                    "Advance": { name: "Advance to the next follow-up date" },
+                    "Frequency": {
+                        name: "Change the follow-up frequency",
+                        items: {
+                            "Frequency-Everyday": { name: "Everyday" },
+                            "Frequency-EveryOtherDay": { name: "Every other day" },
+                            "Frequency-OnceWeek": { name: "Once a week" },
+                            "Frequency-EveryOtherWeek": { name: "Every other week" },
+                            "Frequency-OnceMonth": { name: "Once a month" },
+                            "Frequency-Never": { name: "Never" }
+                        }
+                    },
+                    "Completed": { name: completedText }
+                },
+            };
         }
     });
+
+    function callback(key, options) {
+        var id = $(this).find(".row_id").val();
+
+        $("#conditionActiveID").val(id);
+
+        if (key == "Advance") {
+            $.ajax({
+                type: "POST",
+                url: "/Handlers/Advance.ashx",
+                data: JSON.stringify({ id: id }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(msg) {
+                    AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
+                    return false;
+                },
+                error: function() {
+                    alert("Error");
+                }
+            });
+
+            return false;
+        } else if (key == "Frequency-Everyday") {
+            $.ajax({
+                type: "POST",
+                url: "/Handlers/FrequencyEveryday.ashx",
+                data: JSON.stringify({ id: id }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(msg) {
+                    AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
+                    return false;
+                },
+                error: function() {
+                    alert("Error");
+                }
+            });
+
+            return false;
+        } else if (key == "Frequency-EveryOtherDay") {
+            $.ajax({
+                type: "POST",
+                url: "/Handlers/FrequencyEveryOtherDay.ashx",
+                data: JSON.stringify({ id: id }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(msg) {
+                    AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
+                    return false;
+                },
+                error: function() {
+                    alert("Error");
+                }
+            });
+
+            return false;
+        } else if (key == "Frequency-OnceWeek") {
+            $.ajax({
+                type: "POST",
+                url: "/Handlers/FrequencyOnceWeek.ashx",
+                data: JSON.stringify({ id: id }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(msg) {
+                    AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
+                    return false;
+                },
+                error: function() {
+                    alert("Error");
+                }
+            });
+
+            return false;
+        } else if (key == "Frequency-EveryOtherWeek") {
+            $.ajax({
+                type: "POST",
+                url: "/Handlers/FrequencyEveryOtherWeek.ashx",
+                data: JSON.stringify({ id: id }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(msg) {
+                    AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
+                    return false;
+                },
+                error: function() {
+                    alert("Error");
+                }
+            });
+
+            return false;
+        } else if (key == "Frequency-OnceMonth") {
+            $.ajax({
+                type: "POST",
+                url: "/Handlers/FrequencyOnceMonth.ashx",
+                data: JSON.stringify({ id: id }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(msg) {
+                    AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
+                    return false;
+                },
+                error: function() {
+                    alert("Error");
+                }
+            });
+
+            return false;
+        } else if (key == "Frequency-Never") {
+            $.ajax({
+                type: "POST",
+                url: "/Handlers/FrequencyNever.ashx",
+                data: JSON.stringify({ id: id }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(msg) {
+                    AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
+                    return false;
+                },
+                error: function() {
+                    alert("Error");
+                }
+            });
+
+            return false;
+        } else if (key == "Completed") {
+            $.ajax({
+                type: "POST",
+                url: "/Handlers/Completed.ashx",
+                data: JSON.stringify({ id: id }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(msg) {
+                    AjaxNS.AR('Tabs$CtrlTasks1$FollowupConditions1$btnRefresh', '', 'RadAjaxManager1', event);
+                    return false;
+                },
+                error: function() {
+                    alert("Error");
+                }
+            });
+
+            return false;
+        }
+    }
 }
 
 function AjaxResponseEnd() {
@@ -1285,8 +1306,8 @@ function hideDialog(e) {
     if (!e) return false;
     var btn = e.target;
     var dialog = $(btn).parents('.pnlDialog').hide();
-    var dialogPanel = $("#DialogPanel");
-    dialogPanel.empty();
+    //var dialogPanel = $("#DialogPanel");
+    //dialogPanel.empty();
 };
 
 function toggleReccurence(item) {

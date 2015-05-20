@@ -1978,7 +1978,6 @@ namespace LoanStarPortal.Administration.Controls
                         tabsState[TABPROPERTYID] = CurrentEditNode.HasUnits ? 1 : -1;
                         AddControlToUpdate(rtvRule.ID,2);
                         AddControlToUpdate(pvGeneral.ID, 2);
-                        BindEditorDictionaries();
                         UpdateAfterExpressionChanges();
                     }
                     break;

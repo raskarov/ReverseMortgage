@@ -1272,6 +1272,9 @@
         <radA:AjaxSetting AjaxControlID="gProperties">
             <UpdatedControls>
                 <radA:AjaxUpdatedControl ControlID="gProperties" />
+                <radA:AjaxUpdatedControl ControlID="lblRuleName" />
+                <radA:AjaxUpdatedControl ControlID="lblRuleExpression" />
+                <radA:AjaxUpdatedControl ControlID="rtvRule" />
             </UpdatedControls>
         </radA:AjaxSetting>
         <radA:AjaxSetting AjaxControlID="pnlEditRule">

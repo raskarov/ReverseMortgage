@@ -354,14 +354,7 @@ namespace LoanStarPortal.Controls
                     SaveEvent(Constants.EVENTTYPEIDCONDITIONCREATED, begining + "<b>" + GetEventTitle(scond.Title) + "</b> by " + CurrentUser.FirstName + " " + CurrentUser.LastName + " at " + DateTime.Now.ToString("f"));
                 }
 
-                if (ddlRecurrence.SelectedIndex == 6)
-                {
-                    scond.ScheduleDate = null;
-                }
-                else
-                {
-                    scond.ScheduleDate = rdpStartDate.SelectedDate;
-                }
+                scond.ScheduleDate = ddlRecurrence.SelectedIndex == 6 ? null : rdpStartDate.SelectedDate;
                 scond.RecurrenceID = ddlRecurrence.SelectedIndex;
                 scond.Save();
                 scond.SaveFollowUpDetails();
@@ -507,7 +500,7 @@ namespace LoanStarPortal.Controls
                     var diffDays = row["DiffDays"].ToString();
                     if (diffDays.Length > 0)
                     {
-                        item.ForeColor = Convert.ToInt16(row["DiffDays"]) >= 0
+                        item.ForeColor = Convert.ToInt16(diffDays) >= 0
                             ? System.Drawing.Color.Red
                             : System.Drawing.Color.Black;
                     }

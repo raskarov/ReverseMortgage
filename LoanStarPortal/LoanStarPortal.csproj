@@ -1193,6 +1193,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Classes\GlobalAdmin.cs" />
+    <Compile Include="Handlers\FrequencyNever.ashx.cs">
+      <DependentUpon>FrequencyNever.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handlers\Advance.ashx.cs">
       <DependentUpon>Advance.ashx</DependentUpon>
     </Compile>
@@ -7012,6 +7015,7 @@
     <Content Include="Handlers\FrequencyOnceWeek.ashx" />
     <Content Include="Handlers\FrequencyEveryOtherWeek.ashx" />
     <Content Include="Handlers\FrequencyOnceMonth.ashx" />
+    <Content Include="Handlers\FrequencyNever.ashx" />
     <None Include="Properties\PublishProfiles\FTP.pubxml" />
     <None Include="Properties\PublishProfiles\LoanStarPortal - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\LoanStarPortal - Web Deploy.pubxml" />
@@ -7295,7 +7299,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
