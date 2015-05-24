@@ -1402,3 +1402,1034 @@
 [14:03:59.47] [RECV] 221 2.0.0 closing connection d4sm4078529fga.8\r\n
 [14:03:59.47] [INFO] Will disconnect from host "smtp.gmail.com".
 [14:03:59.49] [INFO] Disconnected from host "smtp.gmail.com".
+[07:28:47.35] [INFO] Assembly version: 4.0.2.114.
+[07:28:47.35] [INFO] Will resolve host "pop.gmail.com".
+[07:28:47.71] [INFO] Host "pop.gmail.com" resolved to IP address(es) 173.194.71.109, 173.194.71.108.
+[07:28:47.71] [INFO] Will connect to host "pop.gmail.com" on port 995.
+[07:28:47.72] [INFO] Socket connected to IP address 173.194.71.109 on port 995.
+[07:28:47.73] [INFO] Will create TLS/SSL credentials.
+[07:28:47.75] [INFO] TLS/SSL credentials created.
+[07:28:47.76] [INFO] Will start TLS/SSL negotiation sequence.
+[07:28:48.64] [INFO] TLS/SSL negotiation completed.
+[07:28:48.68] [RECV] +OK Gpop ready for requests from 46.41.81.243 bf17mb36906383lab\r\n
+[07:28:48.68] [INFO] Connected to mail service at host "pop.gmail.com" on port 995 and ready.
+[07:28:48.69] [INFO] Get the list of POP3 capabilities via CAPA command.
+[07:28:48.69] [SEND] CAPA\r\n
+[07:28:48.73] [RECV] +OK Capability list follows\r\nUSER\r\nRESP-CODES\r\nEXPIRE 0\r\nLOGIN-DELAY 300\r\nTOP\r\nUIDL\r\nX-GOOGLE-RICO\r\nSASL PLAIN XOAUTH2\r\n.\r\n
+[07:28:48.74] [INFO] Will login as "bpattersen1234@gmail.com".
+[07:28:48.74] [INFO] Will try regular USER/PASS authentication.
+[07:28:48.74] [SEND] USER bpattersen1234@gmail.com\r\n
+[07:28:48.78] [RECV] +OK send PASS\r\n
+[07:28:48.78] [SEND] PASS ********\r\n
+[07:28:49.00] [RECV] -ERR [AUTH] Web login required: https://support.google.com/mail/bin/answer.py?answer=78754\r\n
+[07:28:49.00] [INFO] Error: Wrong account name and/or password. The server responded: -ERR [AUTH] Web login required: https://support.google.com/mail/bin/answer.py?answer=78754.
+[07:28:49.01] [SEND] QUIT\r\n
+[07:28:49.04] [RECV] +OK Bye bf17mb36906383lab\r\n
+[07:28:49.04] [INFO] Will disconnect from host "pop.gmail.com".
+[07:28:49.06] [INFO] Disconnected from host "pop.gmail.com".
+[07:44:55.47] [INFO] Assembly version: 4.0.2.114.
+[07:44:55.47] [INFO] Will resolve host "pop.mail.ru".
+[07:44:55.47] [INFO] Host "pop.mail.ru" resolved to IP address(es) 94.100.180.74.
+[07:44:55.47] [INFO] Will connect to host "pop.mail.ru" on port 995.
+[07:44:55.47] [INFO] Socket connected to IP address 94.100.180.74 on port 995.
+[07:44:55.47] [INFO] Will create TLS/SSL credentials.
+[07:44:55.49] [INFO] TLS/SSL credentials created.
+[07:44:55.49] [INFO] Will start TLS/SSL negotiation sequence.
+[07:44:55.60] [INFO] TLS/SSL negotiation completed.
+[07:44:55.61] [RECV] +OK\r\n
+[07:44:55.61] [INFO] Connected to mail service at host "pop.mail.ru" on port 995 and ready.
+[07:44:55.61] [INFO] Get the list of POP3 capabilities via CAPA command.
+[07:44:55.61] [SEND] CAPA\r\n
+[07:44:55.64] [RECV] +OK Capability list follows\r\nTOP\r\nUSER\r\nLOGIN-DELAY 120\r\nEXPIRE NEVER\r\nUIDL\r\nIMPLEMENTATION Mail.Ru\r\nSASL LOGIN PLAIN\r\n.\r\n
+[07:44:55.64] [INFO] Will login as "kepthxyz@mail.ru".
+[07:44:55.64] [INFO] Will try regular USER/PASS authentication.
+[07:44:55.64] [SEND] USER kepthxyz@mail.ru\r\n
+[07:44:55.67] [RECV] +OK\r\n
+[07:44:55.67] [SEND] PASS ********\r\n
+[07:45:00.20] [RECV] -ERR Password supplied for "kepthxyz@mail.ru" is incorrect\r\n
+[07:45:00.20] [INFO] Error: Wrong account name and/or password. The server responded: -ERR Password supplied for "kepthxyz@mail.ru" is incorrect.
+[07:45:00.20] [SEND] QUIT\r\n
+[07:45:00.24] [INFO] Error: Socket connection has been aborted by local machine. InnerException message follows: Программа на вашем хост-компьютере разорвала установленное подключение
+[07:45:00.24] [INFO] Will disconnect from host "pop.mail.ru".
+[07:45:00.24] [INFO] Disconnected from host "pop.mail.ru".
+[07:45:14.46] [INFO] Assembly version: 4.0.2.114.
+[07:45:14.46] [INFO] Will resolve host "pop.mail.ru".
+[07:45:14.46] [INFO] Host "pop.mail.ru" resolved to IP address(es) 94.100.180.74.
+[07:45:14.46] [INFO] Will connect to host "pop.mail.ru" on port 995.
+[07:45:14.46] [INFO] Socket connected to IP address 94.100.180.74 on port 995.
+[07:45:14.46] [INFO] Will create TLS/SSL credentials.
+[07:45:14.46] [INFO] TLS/SSL credentials created.
+[07:45:14.46] [INFO] Will start TLS/SSL negotiation sequence.
+[07:45:14.55] [INFO] TLS/SSL negotiation completed.
+[07:45:14.56] [RECV] +OK\r\n
+[07:45:14.56] [INFO] Connected to mail service at host "pop.mail.ru" on port 995 and ready.
+[07:45:14.56] [INFO] Get the list of POP3 capabilities via CAPA command.
+[07:45:14.56] [SEND] CAPA\r\n
+[07:45:14.58] [RECV] +OK Capability list follows\r\nTOP\r\nUSER\r\nLOGIN-DELAY 120\r\nEXPIRE NEVER\r\nUIDL\r\nIMPLEMENTATION Mail.Ru\r\nSASL LOGIN PLAIN\r\n.\r\n
+[07:45:14.58] [INFO] Will login as "kepthxyz@mail.ru".
+[07:45:14.58] [INFO] Will try regular USER/PASS authentication.
+[07:45:14.58] [SEND] USER kepthxyz@mail.ru\r\n
+[07:45:14.60] [RECV] +OK\r\n
+[07:45:14.60] [SEND] PASS ********\r\n
+[07:45:19.19] [RECV] -ERR Password supplied for "kepthxyz@mail.ru" is incorrect\r\n
+[07:45:19.19] [INFO] Error: Wrong account name and/or password. The server responded: -ERR Password supplied for "kepthxyz@mail.ru" is incorrect.
+[07:45:19.19] [SEND] QUIT\r\n
+[07:45:19.19] [INFO] Error: Socket connection has been aborted by local machine. InnerException message follows: Программа на вашем хост-компьютере разорвала установленное подключение
+[07:45:19.19] [INFO] Will disconnect from host "pop.mail.ru".
+[07:45:19.19] [INFO] Disconnected from host "pop.mail.ru".
+[07:45:35.29] [INFO] Assembly version: 4.0.2.114.
+[07:45:35.29] [INFO] Will resolve host "pop.mail.ru".
+[07:45:35.29] [INFO] Host "pop.mail.ru" resolved to IP address(es) 94.100.180.74.
+[07:45:35.42] [INFO] Will connect to host "pop.mail.ru" on port 995.
+[07:45:35.46] [INFO] Socket connected to IP address 94.100.180.74 on port 995.
+[07:45:35.46] [INFO] Will create TLS/SSL credentials.
+[07:45:35.46] [INFO] TLS/SSL credentials created.
+[07:45:35.46] [INFO] Will start TLS/SSL negotiation sequence.
+[07:45:35.58] [INFO] TLS/SSL negotiation completed.
+[07:45:35.59] [RECV] +OK\r\n
+[07:45:35.59] [INFO] Connected to mail service at host "pop.mail.ru" on port 995 and ready.
+[07:45:35.59] [INFO] Get the list of POP3 capabilities via CAPA command.
+[07:45:35.59] [SEND] CAPA\r\n
+[07:45:35.62] [RECV] +OK Capability list follows\r\nTOP\r\nUSER\r\nLOGIN-DELAY 120\r\nEXPIRE NEVER\r\nUIDL\r\nIMPLEMENTATION Mail.Ru\r\nSASL LOGIN PLAIN\r\n.\r\n
+[07:45:35.62] [INFO] Will login as "kepthxyz@mail.ru".
+[07:45:35.62] [INFO] Will try regular USER/PASS authentication.
+[07:45:35.62] [SEND] USER kepthxyz@mail.ru\r\n
+[07:45:35.65] [RECV] +OK\r\n
+[07:45:35.65] [SEND] PASS ********\r\n
+[07:45:40.19] [RECV] -ERR Password supplied for "kepthxyz@mail.ru" is incorrect\r\n
+[07:45:40.19] [INFO] Error: Wrong account name and/or password. The server responded: -ERR Password supplied for "kepthxyz@mail.ru" is incorrect.
+[07:45:40.19] [SEND] QUIT\r\n
+[07:45:40.19] [INFO] Error: Socket connection has been aborted by local machine. InnerException message follows: Программа на вашем хост-компьютере разорвала установленное подключение
+[07:45:40.19] [INFO] Will disconnect from host "pop.mail.ru".
+[07:45:40.19] [INFO] Disconnected from host "pop.mail.ru".
+[08:33:14.50] [INFO] Assembly version: 4.0.2.114.
+[08:33:14.50] [INFO] Will resolve host "pop.mail.ru".
+[08:33:14.58] [INFO] Host "pop.mail.ru" resolved to IP address(es) 217.69.139.74.
+[08:33:14.58] [INFO] Will connect to host "pop.mail.ru" on port 995.
+[08:33:14.58] [INFO] Socket connected to IP address 217.69.139.74 on port 995.
+[08:33:14.58] [INFO] Will create TLS/SSL credentials.
+[08:33:14.58] [INFO] TLS/SSL credentials created.
+[08:33:14.58] [INFO] Will start TLS/SSL negotiation sequence.
+[08:33:14.75] [INFO] TLS/SSL negotiation completed.
+[08:33:14.75] [RECV] +OK\r\n
+[08:33:14.75] [INFO] Connected to mail service at host "pop.mail.ru" on port 995 and ready.
+[08:33:14.75] [INFO] Get the list of POP3 capabilities via CAPA command.
+[08:33:14.76] [SEND] CAPA\r\n
+[08:33:14.78] [RECV] +OK Capability list follows\r\nTOP\r\nUSER\r\nLOGIN-DELAY 120\r\nEXPIRE NEVER\r\nUIDL\r\nIMPLEMENTATION Mail.Ru\r\nSASL LOGIN PLAIN\r\n.\r\n
+[08:33:14.78] [INFO] Will login as "kepthxyz@mail.ru".
+[08:33:14.78] [INFO] Will try regular USER/PASS authentication.
+[08:33:14.78] [SEND] USER kepthxyz@mail.ru\r\n
+[08:33:14.81] [RECV] +OK\r\n
+[08:33:14.81] [SEND] PASS ********\r\n
+[08:33:14.91] [RECV] +OK Welcome!\r\n
+[08:33:14.91] [INFO] Logged in as "kepthxyz@mail.ru".
+[08:33:14.91] [INFO] Download inbox statistics.
+[08:33:14.91] [SEND] STAT\r\n
+[08:33:14.94] [RECV] +OK 165 71480542\r\n
+[08:33:14.94] [INFO] Download the list of Unique-IDs of all messages in inbox.
+[08:33:14.94] [SEND] UIDL\r\n
+[08:33:15.01] [RECV] +OK 165 messages (71480542 octets)\r\n [Total 3057 bytes received.]
+[08:33:16.83] [INFO] Will download entire messages (startIndex=1, count=50).
+[08:33:16.83] [SEND] RETR 1\r\n
+[08:33:17.04] [RECV] +OK 10793 octets\r\n [Total 11158 bytes received.]
+[08:33:17.05] [SEND] RETR 2\r\n
+[08:33:17.13] [RECV] +OK 2654 octets\r\n [Total 2763 bytes received.]
+[08:33:17.13] [SEND] RETR 3\r\n
+[08:33:17.54] [RECV] +OK 517917 octets\r\n [Total 524736 bytes received.]
+[08:33:17.54] [SEND] RETR 4\r\n
+[08:33:17.99] [RECV] +OK 1905360 octets\r\n [Total 1930207 bytes received.]
+[08:33:18.00] [SEND] RETR 5\r\n
+[08:33:18.14] [RECV] +OK 76706 octets\r\n [Total 77792 bytes received.]
+[08:33:18.14] [SEND] RETR 6\r\n
+[08:33:18.21] [RECV] +OK 2305 octets\r\n [Total 2412 bytes received.]
+[08:33:18.21] [SEND] RETR 7\r\n
+[08:33:18.28] [RECV] +OK 2092 octets\r\n [Total 2189 bytes received.]
+[08:33:18.28] [SEND] RETR 8\r\n
+[08:33:20.36] [RECV] +OK 6936084 octets\r\n [Total 7026257 bytes received.]
+[08:33:20.36] [SEND] RETR 9\r\n
+[08:33:21.29] [RECV] +OK 2507748 octets\r\n [Total 2540413 bytes received.]
+[08:33:21.29] [SEND] RETR 10\r\n
+[08:33:21.38] [RECV] +OK 2695 octets\r\n [Total 2808 bytes received.]
+[08:33:21.39] [SEND] RETR 11\r\n
+[08:33:21.45] [RECV] +OK 2826 octets\r\n [Total 2942 bytes received.]
+[08:33:21.45] [SEND] RETR 12\r\n
+[08:33:21.53] [RECV] +OK 3171 octets\r\n [Total 3281 bytes received.]
+[08:33:21.53] [SEND] RETR 13\r\n
+[08:33:21.60] [RECV] +OK 3886 octets\r\n [Total 4010 bytes received.]
+[08:33:21.60] [SEND] RETR 14\r\n
+[08:33:21.68] [RECV] +OK 2718 octets\r\n [Total 2826 bytes received.]
+[08:33:21.68] [SEND] RETR 15\r\n
+[08:33:21.75] [RECV] +OK 2751 octets\r\n [Total 2860 bytes received.]
+[08:33:21.75] [SEND] RETR 16\r\n
+[08:33:21.82] [RECV] +OK 2400 octets\r\n [Total 2501 bytes received.]
+[08:33:21.82] [SEND] RETR 17\r\n
+[08:33:21.88] [RECV] +OK 6636 octets\r\n [Total 6822 bytes received.]
+[08:33:21.89] [SEND] RETR 18\r\n
+[08:33:21.95] [RECV] +OK 1686 octets\r\n [Total 1795 bytes received.]
+[08:33:21.95] [SEND] RETR 19\r\n
+[08:33:22.03] [RECV] +OK 3902 octets\r\n [Total 4038 bytes received.]
+[08:33:22.03] [SEND] RETR 20\r\n
+[08:33:22.10] [RECV] +OK 2912 octets\r\n [Total 3027 bytes received.]
+[08:33:22.10] [SEND] RETR 21\r\n
+[08:33:22.18] [RECV] +OK 1781 octets\r\n [Total 1890 bytes received.]
+[08:33:22.18] [SEND] RETR 22\r\n
+[08:33:22.26] [RECV] +OK 1588 octets\r\n [Total 1692 bytes received.]
+[08:33:22.26] [SEND] RETR 23\r\n
+[08:33:22.34] [RECV] +OK 2052 octets\r\n [Total 2153 bytes received.]
+[08:33:22.34] [SEND] RETR 24\r\n
+[08:33:22.42] [RECV] +OK 2318 octets\r\n [Total 2425 bytes received.]
+[08:33:22.42] [SEND] RETR 25\r\n
+[08:33:22.49] [RECV] +OK 7365 octets\r\n [Total 7592 bytes received.]
+[08:33:22.49] [SEND] RETR 26\r\n
+[08:33:22.56] [RECV] +OK 2937 octets\r\n [Total 3072 bytes received.]
+[08:33:22.56] [SEND] RETR 27\r\n
+[08:33:22.63] [RECV] +OK 1607 octets\r\n [Total 1714 bytes received.]
+[08:33:22.63] [SEND] RETR 28\r\n
+[08:33:22.70] [RECV] +OK 2089 octets\r\n [Total 2196 bytes received.]
+[08:33:22.70] [SEND] RETR 29\r\n
+[08:33:24.43] [RECV] +OK 6427432 octets\r\n [Total 6510994 bytes received.]
+[08:33:24.44] [SEND] RETR 30\r\n
+[08:33:24.57] [RECV] +OK 143107 octets\r\n [Total 145054 bytes received.]
+[08:33:24.57] [SEND] RETR 31\r\n
+[08:33:24.64] [RECV] +OK 2849 octets\r\n [Total 2959 bytes received.]
+[08:33:24.64] [SEND] RETR 32\r\n
+[08:33:24.71] [RECV] +OK 2849 octets\r\n [Total 2959 bytes received.]
+[08:33:24.72] [SEND] RETR 33\r\n
+[08:33:24.79] [RECV] +OK 6138 octets\r\n [Total 6358 bytes received.]
+[08:33:24.79] [SEND] RETR 34\r\n
+[08:33:24.86] [RECV] +OK 1001 octets\r\n [Total 1088 bytes received.]
+[08:33:24.86] [SEND] RETR 35\r\n
+[08:33:26.91] [RECV] +OK 12030135 octets\r\n [Total 12186464 bytes received.]
+[08:33:26.93] [SEND] RETR 36\r\n
+[08:33:27.02] [RECV] +OK 6250 octets\r\n [Total 6449 bytes received.]
+[08:33:27.02] [SEND] RETR 37\r\n
+[08:33:27.12] [RECV] +OK 26513 octets\r\n [Total 26938 bytes received.]
+[08:33:27.12] [SEND] RETR 38\r\n
+[08:33:27.18] [RECV] +OK 869 octets\r\n [Total 955 bytes received.]
+[08:33:27.18] [SEND] RETR 39\r\n
+[08:33:27.25] [RECV] +OK 1092 octets\r\n [Total 1184 bytes received.]
+[08:33:27.25] [SEND] RETR 40\r\n
+[08:33:27.34] [RECV] +OK 1309 octets\r\n [Total 1396 bytes received.]
+[08:33:27.34] [SEND] RETR 41\r\n
+[08:33:27.43] [RECV] +OK 15115 octets\r\n [Total 15358 bytes received.]
+[08:33:27.43] [SEND] RETR 42\r\n
+[08:33:27.53] [RECV] +OK 26910 octets\r\n [Total 27342 bytes received.]
+[08:33:27.53] [SEND] RETR 43\r\n
+[08:33:27.60] [RECV] +OK 4775 octets\r\n [Total 4917 bytes received.]
+[08:33:27.60] [SEND] RETR 44\r\n
+[08:33:27.67] [RECV] +OK 17998 octets\r\n [Total 18273 bytes received.]
+[08:33:27.68] [SEND] RETR 45\r\n
+[08:33:27.76] [RECV] +OK 21645 octets\r\n [Total 22006 bytes received.]
+[08:33:27.76] [SEND] RETR 46\r\n
+[08:33:27.84] [RECV] +OK 27493 octets\r\n [Total 27850 bytes received.]
+[08:33:27.85] [SEND] RETR 47\r\n
+[08:33:27.93] [RECV] +OK 5473 octets\r\n [Total 5644 bytes received.]
+[08:33:27.93] [SEND] RETR 48\r\n
+[08:33:28.00] [RECV] +OK 5471 octets\r\n [Total 5622 bytes received.]
+[08:33:28.00] [SEND] RETR 49\r\n
+[08:33:28.09] [RECV] +OK 27554 octets\r\n [Total 27991 bytes received.]
+[08:33:28.09] [SEND] RETR 50\r\n
+[08:33:28.17] [RECV] +OK 19336 octets\r\n [Total 19668 bytes received.]
+[08:33:28.17] [INFO] Downloaded entire messages (startIndex=1, count=50).
+[08:34:04.13] [SEND] QUIT\r\n
+[08:34:04.16] [RECV] +OK POP3 server at mail.ru signing off\r\n
+[08:34:04.16] [INFO] Will disconnect from host "pop.mail.ru".
+[08:34:04.16] [INFO] Disconnected from host "pop.mail.ru".
+[08:34:35.36] [INFO] Assembly version: 4.0.2.114.
+[08:34:35.36] [INFO] Will resolve host "pop.mail.ru".
+[08:34:35.44] [INFO] Host "pop.mail.ru" resolved to IP address(es) 217.69.139.74.
+[08:34:35.44] [INFO] Will connect to host "pop.mail.ru" on port 995.
+[08:34:35.44] [INFO] Socket connected to IP address 217.69.139.74 on port 995.
+[08:34:35.44] [INFO] Will create TLS/SSL credentials.
+[08:34:35.44] [INFO] TLS/SSL credentials created.
+[08:34:35.44] [INFO] Will start TLS/SSL negotiation sequence.
+[08:34:35.57] [INFO] TLS/SSL negotiation completed.
+[08:34:35.60] [RECV] +OK\r\n
+[08:34:35.60] [INFO] Connected to mail service at host "pop.mail.ru" on port 995 and ready.
+[08:34:35.60] [INFO] Get the list of POP3 capabilities via CAPA command.
+[08:34:35.60] [SEND] CAPA\r\n
+[08:34:35.63] [RECV] +OK Capability list follows\r\nTOP\r\nUSER\r\nLOGIN-DELAY 120\r\nEXPIRE NEVER\r\nUIDL\r\nIMPLEMENTATION Mail.Ru\r\nSASL LOGIN PLAIN\r\n.\r\n
+[08:34:35.64] [INFO] Will login as "kepthxyz@mail.ru".
+[08:34:35.64] [INFO] Will try regular USER/PASS authentication.
+[08:34:35.64] [SEND] USER kepthxyz@mail.ru\r\n
+[08:34:35.67] [RECV] +OK\r\n
+[08:34:35.67] [SEND] PASS ********\r\n
+[08:34:35.78] [RECV] +OK Welcome!\r\n
+[08:34:35.78] [INFO] Logged in as "kepthxyz@mail.ru".
+[08:34:35.78] [INFO] Download inbox statistics.
+[08:34:35.78] [SEND] STAT\r\n
+[08:34:35.82] [RECV] +OK 165 71480542\r\n
+[08:34:35.82] [INFO] Download the list of Unique-IDs of all messages in inbox.
+[08:34:35.82] [SEND] UIDL\r\n
+[08:34:35.90] [RECV] +OK 165 messages (71480542 octets)\r\n [Total 3057 bytes received.]
+[08:34:36.57] [INFO] Will download entire messages (startIndex=8, count=50).
+[08:34:36.57] [SEND] RETR 8\r\n
+[08:34:38.98] [RECV] +OK 6936084 octets\r\n [Total 7026257 bytes received.]
+[08:34:38.99] [SEND] RETR 9\r\n
+[08:34:40.02] [RECV] +OK 2507748 octets\r\n [Total 2540413 bytes received.]
+[08:34:40.02] [SEND] RETR 10\r\n
+[08:34:40.10] [RECV] +OK 2695 octets\r\n [Total 2808 bytes received.]
+[08:34:40.10] [SEND] RETR 11\r\n
+[08:34:40.19] [RECV] +OK 2826 octets\r\n [Total 2942 bytes received.]
+[08:34:40.19] [SEND] RETR 12\r\n
+[08:34:40.27] [RECV] +OK 3171 octets\r\n [Total 3281 bytes received.]
+[08:34:40.27] [SEND] RETR 13\r\n
+[08:34:40.35] [RECV] +OK 3886 octets\r\n [Total 4010 bytes received.]
+[08:34:40.35] [SEND] RETR 14\r\n
+[08:34:40.44] [RECV] +OK 2718 octets\r\n [Total 2826 bytes received.]
+[08:34:40.44] [SEND] RETR 15\r\n
+[08:34:40.52] [RECV] +OK 2751 octets\r\n [Total 2860 bytes received.]
+[08:34:40.52] [SEND] RETR 16\r\n
+[08:34:40.60] [RECV] +OK 2400 octets\r\n [Total 2501 bytes received.]
+[08:34:40.60] [SEND] RETR 17\r\n
+[08:34:40.69] [RECV] +OK 6636 octets\r\n [Total 6822 bytes received.]
+[08:34:40.69] [SEND] RETR 18\r\n
+[08:34:40.78] [RECV] +OK 1686 octets\r\n [Total 1795 bytes received.]
+[08:34:40.78] [SEND] RETR 19\r\n
+[08:34:40.86] [RECV] +OK 3902 octets\r\n [Total 4038 bytes received.]
+[08:34:40.86] [SEND] RETR 20\r\n
+[08:34:40.94] [RECV] +OK 2912 octets\r\n [Total 3027 bytes received.]
+[08:34:40.94] [SEND] RETR 21\r\n
+[08:34:41.03] [RECV] +OK 1781 octets\r\n [Total 1890 bytes received.]
+[08:34:41.03] [SEND] RETR 22\r\n
+[08:34:41.11] [RECV] +OK 1588 octets\r\n [Total 1692 bytes received.]
+[08:34:41.11] [SEND] RETR 23\r\n
+[08:34:41.20] [RECV] +OK 2052 octets\r\n [Total 2153 bytes received.]
+[08:34:41.20] [SEND] RETR 24\r\n
+[08:34:41.29] [RECV] +OK 2318 octets\r\n [Total 2425 bytes received.]
+[08:34:41.29] [SEND] RETR 25\r\n
+[08:34:41.38] [RECV] +OK 7365 octets\r\n [Total 7592 bytes received.]
+[08:34:41.39] [SEND] RETR 26\r\n
+[08:34:41.47] [RECV] +OK 2937 octets\r\n [Total 3072 bytes received.]
+[08:34:41.47] [SEND] RETR 27\r\n
+[08:34:41.56] [RECV] +OK 1607 octets\r\n [Total 1714 bytes received.]
+[08:34:41.56] [SEND] RETR 28\r\n
+[08:34:41.64] [RECV] +OK 2089 octets\r\n [Total 2196 bytes received.]
+[08:34:41.64] [SEND] RETR 29\r\n
+[08:34:43.51] [RECV] +OK 6427432 octets\r\n [Total 6510994 bytes received.]
+[08:34:43.52] [SEND] RETR 30\r\n
+[08:34:43.71] [RECV] +OK 143107 octets\r\n [Total 145054 bytes received.]
+[08:34:43.71] [SEND] RETR 31\r\n
+[08:34:43.79] [RECV] +OK 2849 octets\r\n [Total 2959 bytes received.]
+[08:34:43.80] [SEND] RETR 32\r\n
+[08:34:43.88] [RECV] +OK 2849 octets\r\n [Total 2959 bytes received.]
+[08:34:43.88] [SEND] RETR 33\r\n
+[08:34:43.96] [RECV] +OK 6138 octets\r\n [Total 6358 bytes received.]
+[08:34:43.96] [SEND] RETR 34\r\n
+[08:34:44.05] [RECV] +OK 1001 octets\r\n [Total 1088 bytes received.]
+[08:34:44.05] [SEND] RETR 35\r\n
+[08:34:46.52] [RECV] +OK 12030135 octets\r\n [Total 12186464 bytes received.]
+[08:34:46.53] [SEND] RETR 36\r\n
+[08:34:46.61] [RECV] +OK 6250 octets\r\n [Total 6449 bytes received.]
+[08:34:46.61] [SEND] RETR 37\r\n
+[08:34:46.70] [RECV] +OK 26513 octets\r\n [Total 26938 bytes received.]
+[08:34:46.70] [SEND] RETR 38\r\n
+[08:34:46.78] [RECV] +OK 869 octets\r\n [Total 955 bytes received.]
+[08:34:46.79] [SEND] RETR 39\r\n
+[08:34:46.87] [RECV] +OK 1092 octets\r\n [Total 1184 bytes received.]
+[08:34:46.87] [SEND] RETR 40\r\n
+[08:34:46.95] [RECV] +OK 1309 octets\r\n [Total 1396 bytes received.]
+[08:34:46.96] [SEND] RETR 41\r\n
+[08:34:47.05] [RECV] +OK 15115 octets\r\n [Total 15358 bytes received.]
+[08:34:47.05] [SEND] RETR 42\r\n
+[08:34:47.14] [RECV] +OK 26910 octets\r\n [Total 27342 bytes received.]
+[08:34:47.14] [SEND] RETR 43\r\n
+[08:34:47.23] [RECV] +OK 4775 octets\r\n [Total 4917 bytes received.]
+[08:34:47.23] [SEND] RETR 44\r\n
+[08:34:47.32] [RECV] +OK 17998 octets\r\n [Total 18273 bytes received.]
+[08:34:47.32] [SEND] RETR 45\r\n
+[08:34:47.42] [RECV] +OK 21645 octets\r\n [Total 22006 bytes received.]
+[08:34:47.42] [SEND] RETR 46\r\n
+[08:34:47.52] [RECV] +OK 27493 octets\r\n [Total 27850 bytes received.]
+[08:34:47.52] [SEND] RETR 47\r\n
+[08:34:47.61] [RECV] +OK 5473 octets\r\n [Total 5644 bytes received.]
+[08:34:47.61] [SEND] RETR 48\r\n
+[08:34:47.69] [RECV] +OK 5471 octets\r\n [Total 5622 bytes received.]
+[08:34:47.69] [SEND] RETR 49\r\n
+[08:34:47.78] [RECV] +OK 27554 octets\r\n [Total 27991 bytes received.]
+[08:34:47.78] [SEND] RETR 50\r\n
+[08:34:47.87] [RECV] +OK 19336 octets\r\n [Total 19668 bytes received.]
+[08:34:47.87] [SEND] RETR 51\r\n
+[08:34:47.96] [RECV] +OK 2489 octets\r\n [Total 2604 bytes received.]
+[08:34:47.96] [SEND] RETR 52\r\n
+[08:34:48.06] [RECV] +OK 2489 octets\r\n [Total 2604 bytes received.]
+[08:34:48.06] [SEND] RETR 53\r\n
+[08:34:48.14] [RECV] +OK 2490 octets\r\n [Total 2605 bytes received.]
+[08:34:48.14] [SEND] RETR 54\r\n
+[08:34:48.24] [RECV] +OK 1745 octets\r\n [Total 1858 bytes received.]
+[08:34:48.24] [SEND] RETR 55\r\n
+[08:34:48.35] [RECV] +OK 3435 octets\r\n [Total 3566 bytes received.]
+[08:34:48.35] [SEND] RETR 56\r\n
+[08:34:48.44] [RECV] +OK 2072 octets\r\n [Total 2174 bytes received.]
+[08:34:48.44] [SEND] RETR 57\r\n
+[08:34:48.53] [RECV] +OK 6461 octets\r\n [Total 6650 bytes received.]
+[08:34:48.53] [INFO] Downloaded entire messages (startIndex=8, count=50).
+[08:36:06.95] [SEND] QUIT\r\n
+[08:36:06.99] [RECV] +OK POP3 server at mail.ru signing off\r\n
+[08:36:06.99] [INFO] Will disconnect from host "pop.mail.ru".
+[08:36:06.99] [INFO] Disconnected from host "pop.mail.ru".
+[08:39:11.81] [INFO] Assembly version: 4.0.2.114.
+[08:39:11.81] [INFO] Will resolve host "pop.mail.ru".
+[08:39:11.88] [INFO] Host "pop.mail.ru" resolved to IP address(es) 217.69.139.74.
+[08:39:11.88] [INFO] Will connect to host "pop.mail.ru" on port 995.
+[08:39:11.88] [INFO] Socket connected to IP address 217.69.139.74 on port 995.
+[08:39:11.88] [INFO] Will create TLS/SSL credentials.
+[08:39:11.88] [INFO] TLS/SSL credentials created.
+[08:39:11.88] [INFO] Will start TLS/SSL negotiation sequence.
+[08:39:12.01] [INFO] TLS/SSL negotiation completed.
+[08:39:12.04] [RECV] +OK\r\n
+[08:39:12.04] [INFO] Connected to mail service at host "pop.mail.ru" on port 995 and ready.
+[08:39:12.04] [INFO] Get the list of POP3 capabilities via CAPA command.
+[08:39:12.04] [SEND] CAPA\r\n
+[08:39:12.08] [RECV] +OK Capability list follows\r\nTOP\r\nUSER\r\nLOGIN-DELAY 120\r\nEXPIRE NEVER\r\nUIDL\r\nIMPLEMENTATION Mail.Ru\r\nSASL LOGIN PLAIN\r\n.\r\n
+[08:39:12.08] [INFO] Will login as "kepthxyz@mail.ru".
+[08:39:12.08] [INFO] Will try regular USER/PASS authentication.
+[08:39:12.08] [SEND] USER kepthxyz@mail.ru\r\n
+[08:39:12.11] [RECV] +OK\r\n
+[08:39:12.11] [SEND] PASS ********\r\n
+[08:39:12.21] [RECV] +OK Welcome!\r\n
+[08:39:12.21] [INFO] Logged in as "kepthxyz@mail.ru".
+[08:39:12.21] [INFO] Download inbox statistics.
+[08:39:12.21] [SEND] STAT\r\n
+[08:39:12.25] [RECV] +OK 165 71480542\r\n
+[08:39:12.25] [INFO] Download the list of Unique-IDs of all messages in inbox.
+[08:39:12.25] [SEND] UIDL\r\n
+[08:39:12.33] [RECV] +OK 165 messages (71480542 octets)\r\n [Total 3057 bytes received.]
+[08:39:15.76] [INFO] Will download entire messages (startIndex=8, count=50).
+[08:39:15.77] [SEND] RETR 8\r\n
+[08:39:18.10] [RECV] +OK 6936084 octets\r\n [Total 7026257 bytes received.]
+[08:39:18.10] [SEND] RETR 9\r\n
+[08:39:19.21] [RECV] +OK 2507748 octets\r\n [Total 2540413 bytes received.]
+[08:39:19.21] [SEND] RETR 10\r\n
+[08:39:19.30] [RECV] +OK 2695 octets\r\n [Total 2808 bytes received.]
+[08:39:19.30] [SEND] RETR 11\r\n
+[08:39:19.36] [RECV] +OK 2826 octets\r\n [Total 2942 bytes received.]
+[08:39:19.36] [SEND] RETR 12\r\n
+[08:39:19.45] [RECV] +OK 3171 octets\r\n [Total 3281 bytes received.]
+[08:39:19.45] [SEND] RETR 13\r\n
+[08:39:19.53] [RECV] +OK 3886 octets\r\n [Total 4010 bytes received.]
+[08:39:19.53] [SEND] RETR 14\r\n
+[08:39:19.62] [RECV] +OK 2718 octets\r\n [Total 2826 bytes received.]
+[08:39:19.62] [SEND] RETR 15\r\n
+[08:39:19.71] [RECV] +OK 2751 octets\r\n [Total 2860 bytes received.]
+[08:39:19.71] [SEND] RETR 16\r\n
+[08:39:19.79] [RECV] +OK 2400 octets\r\n [Total 2501 bytes received.]
+[08:39:19.79] [SEND] RETR 17\r\n
+[08:39:19.88] [RECV] +OK 6636 octets\r\n [Total 6822 bytes received.]
+[08:39:19.88] [SEND] RETR 18\r\n
+[08:39:19.97] [RECV] +OK 1686 octets\r\n [Total 1795 bytes received.]
+[08:39:19.97] [SEND] RETR 19\r\n
+[08:39:20.06] [RECV] +OK 3902 octets\r\n [Total 4038 bytes received.]
+[08:39:20.06] [SEND] RETR 20\r\n
+[08:39:20.15] [RECV] +OK 2912 octets\r\n [Total 3027 bytes received.]
+[08:39:20.15] [SEND] RETR 21\r\n
+[08:39:20.24] [RECV] +OK 1781 octets\r\n [Total 1890 bytes received.]
+[08:39:20.24] [SEND] RETR 22\r\n
+[08:39:20.33] [RECV] +OK 1588 octets\r\n [Total 1692 bytes received.]
+[08:39:20.33] [SEND] RETR 23\r\n
+[08:39:20.42] [RECV] +OK 2052 octets\r\n [Total 2153 bytes received.]
+[08:39:20.42] [SEND] RETR 24\r\n
+[08:39:20.51] [RECV] +OK 2318 octets\r\n [Total 2425 bytes received.]
+[08:39:20.52] [SEND] RETR 25\r\n
+[08:39:20.60] [RECV] +OK 7365 octets\r\n [Total 7592 bytes received.]
+[08:39:20.60] [SEND] RETR 26\r\n
+[08:39:20.69] [RECV] +OK 2937 octets\r\n [Total 3072 bytes received.]
+[08:39:20.69] [SEND] RETR 27\r\n
+[08:39:20.78] [RECV] +OK 1607 octets\r\n [Total 1714 bytes received.]
+[08:39:20.78] [SEND] RETR 28\r\n
+[08:39:20.88] [RECV] +OK 2089 octets\r\n [Total 2196 bytes received.]
+[08:39:20.88] [SEND] RETR 29\r\n
+[08:39:22.77] [RECV] +OK 6427432 octets\r\n [Total 6510994 bytes received.]
+[08:39:22.77] [SEND] RETR 30\r\n
+[08:39:22.92] [RECV] +OK 143107 octets\r\n [Total 145054 bytes received.]
+[08:39:22.92] [SEND] RETR 31\r\n
+[08:39:23.00] [RECV] +OK 2849 octets\r\n [Total 2959 bytes received.]
+[08:39:23.01] [SEND] RETR 32\r\n
+[08:39:23.09] [RECV] +OK 2849 octets\r\n [Total 2959 bytes received.]
+[08:39:23.09] [SEND] RETR 33\r\n
+[08:39:23.17] [RECV] +OK 6138 octets\r\n [Total 6358 bytes received.]
+[08:39:23.17] [SEND] RETR 34\r\n
+[08:39:23.26] [RECV] +OK 1001 octets\r\n [Total 1088 bytes received.]
+[08:39:23.27] [SEND] RETR 35\r\n
+[08:39:25.74] [RECV] +OK 12030135 octets\r\n [Total 12186464 bytes received.]
+[08:39:25.75] [SEND] RETR 36\r\n
+[08:39:25.83] [RECV] +OK 6250 octets\r\n [Total 6449 bytes received.]
+[08:39:25.83] [SEND] RETR 37\r\n
+[08:39:25.92] [RECV] +OK 26513 octets\r\n [Total 26938 bytes received.]
+[08:39:25.92] [SEND] RETR 38\r\n
+[08:39:25.97] [RECV] +OK 869 octets\r\n [Total 955 bytes received.]
+[08:39:25.97] [SEND] RETR 39\r\n
+[08:39:26.05] [RECV] +OK 1092 octets\r\n [Total 1184 bytes received.]
+[08:39:26.05] [SEND] RETR 40\r\n
+[08:39:26.14] [RECV] +OK 1309 octets\r\n [Total 1396 bytes received.]
+[08:39:26.14] [SEND] RETR 41\r\n
+[08:39:26.23] [RECV] +OK 15115 octets\r\n [Total 15358 bytes received.]
+[08:39:26.23] [SEND] RETR 42\r\n
+[08:39:26.32] [RECV] +OK 26910 octets\r\n [Total 27342 bytes received.]
+[08:39:26.32] [SEND] RETR 43\r\n
+[08:39:26.41] [RECV] +OK 4775 octets\r\n [Total 4917 bytes received.]
+[08:39:26.41] [SEND] RETR 44\r\n
+[08:39:26.51] [RECV] +OK 17998 octets\r\n [Total 18273 bytes received.]
+[08:39:26.51] [SEND] RETR 45\r\n
+[08:39:26.60] [RECV] +OK 21645 octets\r\n [Total 22006 bytes received.]
+[08:39:26.61] [SEND] RETR 46\r\n
+[08:39:26.70] [RECV] +OK 27493 octets\r\n [Total 27850 bytes received.]
+[08:39:26.70] [SEND] RETR 47\r\n
+[08:39:26.79] [RECV] +OK 5473 octets\r\n [Total 5644 bytes received.]
+[08:39:26.79] [SEND] RETR 48\r\n
+[08:39:26.88] [RECV] +OK 5471 octets\r\n [Total 5622 bytes received.]
+[08:39:26.88] [SEND] RETR 49\r\n
+[08:39:26.97] [RECV] +OK 27554 octets\r\n [Total 27991 bytes received.]
+[08:39:26.97] [SEND] RETR 50\r\n
+[08:39:27.06] [RECV] +OK 19336 octets\r\n [Total 19668 bytes received.]
+[08:39:27.06] [SEND] RETR 51\r\n
+[08:39:27.14] [RECV] +OK 2489 octets\r\n [Total 2604 bytes received.]
+[08:39:27.14] [SEND] RETR 52\r\n
+[08:39:27.23] [RECV] +OK 2489 octets\r\n [Total 2604 bytes received.]
+[08:39:27.23] [SEND] RETR 53\r\n
+[08:39:27.31] [RECV] +OK 2490 octets\r\n [Total 2605 bytes received.]
+[08:39:27.32] [SEND] RETR 54\r\n
+[08:39:27.41] [RECV] +OK 1745 octets\r\n [Total 1858 bytes received.]
+[08:39:27.41] [SEND] RETR 55\r\n
+[08:39:27.50] [RECV] +OK 3435 octets\r\n [Total 3566 bytes received.]
+[08:39:27.50] [SEND] RETR 56\r\n
+[08:39:27.59] [RECV] +OK 2072 octets\r\n [Total 2174 bytes received.]
+[08:39:27.60] [SEND] RETR 57\r\n
+[08:39:27.69] [RECV] +OK 6461 octets\r\n [Total 6650 bytes received.]
+[08:39:27.69] [INFO] Downloaded entire messages (startIndex=8, count=50).
+[08:40:07.35] [SEND] QUIT\r\n
+[08:40:07.40] [RECV] +OK POP3 server at mail.ru signing off\r\n
+[08:40:07.41] [INFO] Will disconnect from host "pop.mail.ru".
+[08:40:07.41] [INFO] Disconnected from host "pop.mail.ru".
+[08:40:26.31] [INFO] Assembly version: 4.0.2.114.
+[08:40:26.31] [INFO] Will resolve host "pop.mail.ru".
+[08:40:26.32] [INFO] Host "pop.mail.ru" resolved to IP address(es) 94.100.180.74.
+[08:40:26.32] [INFO] Will connect to host "pop.mail.ru" on port 995.
+[08:40:26.32] [INFO] Socket connected to IP address 94.100.180.74 on port 995.
+[08:40:26.32] [INFO] Will create TLS/SSL credentials.
+[08:40:26.32] [INFO] TLS/SSL credentials created.
+[08:40:26.32] [INFO] Will start TLS/SSL negotiation sequence.
+[08:40:26.43] [INFO] TLS/SSL negotiation completed.
+[08:40:26.45] [RECV] +OK\r\n
+[08:40:26.45] [INFO] Connected to mail service at host "pop.mail.ru" on port 995 and ready.
+[08:40:26.45] [INFO] Get the list of POP3 capabilities via CAPA command.
+[08:40:26.45] [SEND] CAPA\r\n
+[08:40:26.48] [RECV] +OK Capability list follows\r\nTOP\r\nUSER\r\nLOGIN-DELAY 120\r\nEXPIRE NEVER\r\nUIDL\r\nIMPLEMENTATION Mail.Ru\r\nSASL LOGIN PLAIN\r\n.\r\n
+[08:40:26.48] [INFO] Will login as "kepthxyz@mail.ru".
+[08:40:26.48] [INFO] Will try regular USER/PASS authentication.
+[08:40:26.48] [SEND] USER kepthxyz@mail.ru\r\n
+[08:40:26.51] [RECV] +OK\r\n
+[08:40:26.51] [SEND] PASS ********\r\n
+[08:40:26.62] [RECV] +OK Welcome!\r\n
+[08:40:26.62] [INFO] Logged in as "kepthxyz@mail.ru".
+[08:40:26.62] [INFO] Download inbox statistics.
+[08:40:26.62] [SEND] STAT\r\n
+[08:40:26.65] [RECV] +OK 165 71480542\r\n
+[08:40:26.65] [INFO] Download the list of Unique-IDs of all messages in inbox.
+[08:40:26.65] [SEND] UIDL\r\n
+[08:40:26.72] [RECV] +OK 165 messages (71480542 octets)\r\n [Total 3057 bytes received.]
+[08:40:27.40] [INFO] Will download entire messages (startIndex=8, count=50).
+[08:40:27.40] [SEND] RETR 8\r\n
+[08:40:29.47] [RECV] +OK 6936084 octets\r\n [Total 7026257 bytes received.]
+[08:40:29.48] [SEND] RETR 9\r\n
+[08:40:30.36] [RECV] +OK 2507748 octets\r\n [Total 2540413 bytes received.]
+[08:40:30.37] [SEND] RETR 10\r\n
+[08:40:30.43] [RECV] +OK 2695 octets\r\n [Total 2808 bytes received.]
+[08:40:30.43] [SEND] RETR 11\r\n
+[08:40:30.49] [RECV] +OK 2826 octets\r\n [Total 2942 bytes received.]
+[08:40:30.49] [SEND] RETR 12\r\n
+[08:40:30.56] [RECV] +OK 3171 octets\r\n [Total 3281 bytes received.]
+[08:40:30.56] [SEND] RETR 13\r\n
+[08:40:30.63] [RECV] +OK 3886 octets\r\n [Total 4010 bytes received.]
+[08:40:30.63] [SEND] RETR 14\r\n
+[08:40:30.69] [RECV] +OK 2718 octets\r\n [Total 2826 bytes received.]
+[08:40:30.70] [SEND] RETR 15\r\n
+[08:40:30.76] [RECV] +OK 2751 octets\r\n [Total 2860 bytes received.]
+[08:40:30.76] [SEND] RETR 16\r\n
+[08:40:30.82] [RECV] +OK 2400 octets\r\n [Total 2501 bytes received.]
+[08:40:30.83] [SEND] RETR 17\r\n
+[08:40:30.89] [RECV] +OK 6636 octets\r\n [Total 6822 bytes received.]
+[08:40:30.89] [SEND] RETR 18\r\n
+[08:40:30.96] [RECV] +OK 1686 octets\r\n [Total 1795 bytes received.]
+[08:40:30.96] [SEND] RETR 19\r\n
+[08:40:31.03] [RECV] +OK 3902 octets\r\n [Total 4038 bytes received.]
+[08:40:31.03] [SEND] RETR 20\r\n
+[08:40:31.10] [RECV] +OK 2912 octets\r\n [Total 3027 bytes received.]
+[08:40:31.10] [SEND] RETR 21\r\n
+[08:40:31.17] [RECV] +OK 1781 octets\r\n [Total 1890 bytes received.]
+[08:40:31.17] [SEND] RETR 22\r\n
+[08:40:31.25] [RECV] +OK 1588 octets\r\n [Total 1692 bytes received.]
+[08:40:31.25] [SEND] RETR 23\r\n
+[08:40:31.32] [RECV] +OK 2052 octets\r\n [Total 2153 bytes received.]
+[08:40:31.32] [SEND] RETR 24\r\n
+[08:40:31.39] [RECV] +OK 2318 octets\r\n [Total 2425 bytes received.]
+[08:40:31.39] [SEND] RETR 25\r\n
+[08:40:31.46] [RECV] +OK 7365 octets\r\n [Total 7592 bytes received.]
+[08:40:31.46] [SEND] RETR 26\r\n
+[08:40:31.53] [RECV] +OK 2937 octets\r\n [Total 3072 bytes received.]
+[08:40:31.53] [SEND] RETR 27\r\n
+[08:40:31.60] [RECV] +OK 1607 octets\r\n [Total 1714 bytes received.]
+[08:40:31.60] [SEND] RETR 28\r\n
+[08:40:31.67] [RECV] +OK 2089 octets\r\n [Total 2196 bytes received.]
+[08:40:31.67] [SEND] RETR 29\r\n
+[08:40:33.35] [RECV] +OK 6427432 octets\r\n [Total 6510994 bytes received.]
+[08:40:33.35] [SEND] RETR 30\r\n
+[08:40:33.49] [RECV] +OK 143107 octets\r\n [Total 145054 bytes received.]
+[08:40:33.49] [SEND] RETR 31\r\n
+[08:40:33.56] [RECV] +OK 2849 octets\r\n [Total 2959 bytes received.]
+[08:40:33.56] [SEND] RETR 32\r\n
+[08:40:33.62] [RECV] +OK 2849 octets\r\n [Total 2959 bytes received.]
+[08:40:33.62] [SEND] RETR 33\r\n
+[08:40:33.69] [RECV] +OK 6138 octets\r\n [Total 6358 bytes received.]
+[08:40:33.69] [SEND] RETR 34\r\n
+[08:40:33.75] [RECV] +OK 1001 octets\r\n [Total 1088 bytes received.]
+[08:40:33.75] [SEND] RETR 35\r\n
+[08:40:35.76] [RECV] +OK 12030135 octets\r\n [Total 12186464 bytes received.]
+[08:40:35.77] [SEND] RETR 36\r\n
+[08:40:35.83] [RECV] +OK 6250 octets\r\n [Total 6449 bytes received.]
+[08:40:35.83] [SEND] RETR 37\r\n
+[08:40:35.91] [RECV] +OK 26513 octets\r\n [Total 26938 bytes received.]
+[08:40:35.91] [SEND] RETR 38\r\n
+[08:40:35.94] [RECV] +OK 869 octets\r\n [Total 955 bytes received.]
+[08:40:35.94] [SEND] RETR 39\r\n
+[08:40:36.02] [RECV] +OK 1092 octets\r\n [Total 1184 bytes received.]
+[08:40:36.02] [SEND] RETR 40\r\n
+[08:40:36.09] [RECV] +OK 1309 octets\r\n [Total 1396 bytes received.]
+[08:40:36.09] [SEND] RETR 41\r\n
+[08:40:36.21] [RECV] +OK 15115 octets\r\n [Total 15358 bytes received.]
+[08:40:36.21] [SEND] RETR 42\r\n
+[08:40:36.28] [RECV] +OK 26910 octets\r\n [Total 27342 bytes received.]
+[08:40:36.28] [SEND] RETR 43\r\n
+[08:40:36.35] [RECV] +OK 4775 octets\r\n [Total 4917 bytes received.]
+[08:40:36.35] [SEND] RETR 44\r\n
+[08:40:36.42] [RECV] +OK 17998 octets\r\n [Total 18273 bytes received.]
+[08:40:36.42] [SEND] RETR 45\r\n
+[08:40:36.49] [RECV] +OK 21645 octets\r\n [Total 22006 bytes received.]
+[08:40:36.49] [SEND] RETR 46\r\n
+[08:40:36.57] [RECV] +OK 27493 octets\r\n [Total 27850 bytes received.]
+[08:40:36.57] [SEND] RETR 47\r\n
+[08:40:36.64] [RECV] +OK 5473 octets\r\n [Total 5644 bytes received.]
+[08:40:36.64] [SEND] RETR 48\r\n
+[08:40:36.72] [RECV] +OK 5471 octets\r\n [Total 5622 bytes received.]
+[08:40:36.72] [SEND] RETR 49\r\n
+[08:40:36.79] [RECV] +OK 27554 octets\r\n [Total 27991 bytes received.]
+[08:40:36.79] [SEND] RETR 50\r\n
+[08:40:36.87] [RECV] +OK 19336 octets\r\n [Total 19668 bytes received.]
+[08:40:36.87] [SEND] RETR 51\r\n
+[08:40:36.95] [RECV] +OK 2489 octets\r\n [Total 2604 bytes received.]
+[08:40:36.95] [SEND] RETR 52\r\n
+[08:40:37.02] [RECV] +OK 2489 octets\r\n [Total 2604 bytes received.]
+[08:40:37.02] [SEND] RETR 53\r\n
+[08:40:37.08] [RECV] +OK 2490 octets\r\n [Total 2605 bytes received.]
+[08:40:37.08] [SEND] RETR 54\r\n
+[08:40:37.15] [RECV] +OK 1745 octets\r\n [Total 1858 bytes received.]
+[08:40:37.15] [SEND] RETR 55\r\n
+[08:40:37.21] [RECV] +OK 3435 octets\r\n [Total 3566 bytes received.]
+[08:40:37.21] [SEND] RETR 56\r\n
+[08:40:37.28] [RECV] +OK 2072 octets\r\n [Total 2174 bytes received.]
+[08:40:37.28] [SEND] RETR 57\r\n
+[08:40:37.35] [RECV] +OK 6461 octets\r\n [Total 6650 bytes received.]
+[08:40:37.35] [INFO] Downloaded entire messages (startIndex=8, count=50).
+[08:40:47.79] [SEND] QUIT\r\n
+[08:40:47.82] [RECV] +OK POP3 server at mail.ru signing off\r\n
+[08:40:47.82] [INFO] Will disconnect from host "pop.mail.ru".
+[08:40:47.82] [INFO] Disconnected from host "pop.mail.ru".
+[09:04:32.20] [INFO] Assembly version: 4.0.2.114.
+[09:04:32.20] [INFO] Will resolve host "pop.mail.ru".
+[09:04:32.21] [INFO] Host "pop.mail.ru" resolved to IP address(es) 94.100.180.74.
+[09:04:32.21] [INFO] Will connect to host "pop.mail.ru" on port 995.
+[09:04:32.21] [INFO] Socket connected to IP address 94.100.180.74 on port 995.
+[09:04:32.21] [INFO] Will create TLS/SSL credentials.
+[09:04:32.21] [INFO] TLS/SSL credentials created.
+[09:04:32.21] [INFO] Will start TLS/SSL negotiation sequence.
+[09:04:32.80] [INFO] TLS/SSL negotiation completed.
+[09:04:32.80] [RECV] +OK\r\n
+[09:04:32.80] [INFO] Connected to mail service at host "pop.mail.ru" on port 995 and ready.
+[09:04:32.80] [INFO] Get the list of POP3 capabilities via CAPA command.
+[09:04:32.80] [SEND] CAPA\r\n
+[09:04:32.84] [RECV] +OK Capability list follows\r\nTOP\r\nUSER\r\nLOGIN-DELAY 120\r\nEXPIRE NEVER\r\nUIDL\r\nIMPLEMENTATION Mail.Ru\r\nSASL LOGIN PLAIN\r\n.\r\n
+[09:04:32.84] [INFO] Will login as "kepthxyz@mail.ru".
+[09:04:32.84] [INFO] Will try regular USER/PASS authentication.
+[09:04:32.84] [SEND] USER kepthxyz@mail.ru\r\n
+[09:04:32.88] [RECV] +OK\r\n
+[09:04:32.88] [SEND] PASS ********\r\n
+[09:04:32.97] [RECV] +OK Welcome!\r\n
+[09:04:32.97] [INFO] Logged in as "kepthxyz@mail.ru".
+[09:04:32.97] [INFO] Download inbox statistics.
+[09:04:32.97] [SEND] STAT\r\n
+[09:04:33.01] [RECV] +OK 165 71480542\r\n
+[09:04:33.01] [INFO] Download the list of Unique-IDs of all messages in inbox.
+[09:04:33.01] [SEND] UIDL\r\n
+[09:04:33.08] [RECV] +OK 165 messages (71480542 octets)\r\n [Total 3057 bytes received.]
+[09:04:34.71] [INFO] Will download entire messages (startIndex=8, count=50).
+[09:04:34.71] [SEND] RETR 8\r\n
+[09:04:38.10] [RECV] +OK 6936084 octets\r\n [Total 7026257 bytes received.]
+[09:04:38.11] [SEND] RETR 9\r\n
+[09:04:39.27] [RECV] +OK 2507748 octets\r\n [Total 2540413 bytes received.]
+[09:04:39.27] [SEND] RETR 10\r\n
+[09:04:39.32] [RECV] +OK 2695 octets\r\n [Total 2808 bytes received.]
+[09:04:39.32] [SEND] RETR 11\r\n
+[09:04:39.38] [RECV] +OK 2826 octets\r\n [Total 2942 bytes received.]
+[09:04:39.39] [SEND] RETR 12\r\n
+[09:04:39.43] [RECV] +OK 3171 octets\r\n [Total 3281 bytes received.]
+[09:04:39.43] [SEND] RETR 13\r\n
+[09:04:39.51] [RECV] +OK 3886 octets\r\n [Total 4010 bytes received.]
+[09:04:39.51] [SEND] RETR 14\r\n
+[09:04:39.59] [RECV] +OK 2718 octets\r\n [Total 2826 bytes received.]
+[09:04:39.59] [SEND] RETR 15\r\n
+[09:04:39.69] [RECV] +OK 2751 octets\r\n [Total 2860 bytes received.]
+[09:04:39.69] [SEND] RETR 16\r\n
+[09:04:39.78] [RECV] +OK 2400 octets\r\n [Total 2501 bytes received.]
+[09:04:39.78] [SEND] RETR 17\r\n
+[09:04:39.87] [RECV] +OK 6636 octets\r\n [Total 6822 bytes received.]
+[09:04:39.87] [SEND] RETR 18\r\n
+[09:04:39.95] [RECV] +OK 1686 octets\r\n [Total 1795 bytes received.]
+[09:04:39.96] [SEND] RETR 19\r\n
+[09:04:40.04] [RECV] +OK 3902 octets\r\n [Total 4038 bytes received.]
+[09:04:40.04] [SEND] RETR 20\r\n
+[09:04:40.15] [RECV] +OK 2912 octets\r\n [Total 3027 bytes received.]
+[09:04:40.15] [SEND] RETR 21\r\n
+[09:04:40.23] [RECV] +OK 1781 octets\r\n [Total 1890 bytes received.]
+[09:04:40.23] [SEND] RETR 22\r\n
+[09:04:40.31] [RECV] +OK 1588 octets\r\n [Total 1692 bytes received.]
+[09:04:40.31] [SEND] RETR 23\r\n
+[09:04:40.40] [RECV] +OK 2052 octets\r\n [Total 2153 bytes received.]
+[09:04:40.41] [SEND] RETR 24\r\n
+[09:04:40.50] [RECV] +OK 2318 octets\r\n [Total 2425 bytes received.]
+[09:04:40.50] [SEND] RETR 25\r\n
+[09:04:40.58] [RECV] +OK 7365 octets\r\n [Total 7592 bytes received.]
+[09:04:40.58] [SEND] RETR 26\r\n
+[09:04:40.66] [RECV] +OK 2937 octets\r\n [Total 3072 bytes received.]
+[09:04:40.66] [SEND] RETR 27\r\n
+[09:04:40.74] [RECV] +OK 1607 octets\r\n [Total 1714 bytes received.]
+[09:04:40.74] [SEND] RETR 28\r\n
+[09:04:40.82] [RECV] +OK 2089 octets\r\n [Total 2196 bytes received.]
+[09:04:40.82] [SEND] RETR 29\r\n
+[09:04:43.18] [RECV] +OK 6427432 octets\r\n [Total 6510994 bytes received.]
+[09:04:43.19] [SEND] RETR 30\r\n
+[09:04:43.50] [RECV] +OK 143107 octets\r\n [Total 145054 bytes received.]
+[09:04:43.50] [SEND] RETR 31\r\n
+[09:04:43.59] [RECV] +OK 2849 octets\r\n [Total 2959 bytes received.]
+[09:04:43.59] [SEND] RETR 32\r\n
+[09:04:43.67] [RECV] +OK 2849 octets\r\n [Total 2959 bytes received.]
+[09:04:43.67] [SEND] RETR 33\r\n
+[09:04:43.72] [RECV] +OK 6138 octets\r\n [Total 6358 bytes received.]
+[09:04:43.72] [SEND] RETR 34\r\n
+[09:04:43.76] [RECV] +OK 1001 octets\r\n [Total 1088 bytes received.]
+[09:04:43.77] [SEND] RETR 35\r\n
+[09:04:46.22] [RECV] +OK 12030135 octets\r\n [Total 12186464 bytes received.]
+[09:04:46.23] [SEND] RETR 36\r\n
+[09:04:46.32] [RECV] +OK 6250 octets\r\n [Total 6449 bytes received.]
+[09:04:46.32] [SEND] RETR 37\r\n
+[09:04:46.40] [RECV] +OK 26513 octets\r\n [Total 26938 bytes received.]
+[09:04:46.40] [SEND] RETR 38\r\n
+[09:04:46.45] [RECV] +OK 869 octets\r\n [Total 955 bytes received.]
+[09:04:46.45] [SEND] RETR 39\r\n
+[09:04:46.52] [RECV] +OK 1092 octets\r\n [Total 1184 bytes received.]
+[09:04:46.53] [SEND] RETR 40\r\n
+[09:04:46.60] [RECV] +OK 1309 octets\r\n [Total 1396 bytes received.]
+[09:04:46.60] [SEND] RETR 41\r\n
+[09:04:46.69] [RECV] +OK 15115 octets\r\n [Total 15358 bytes received.]
+[09:04:46.69] [SEND] RETR 42\r\n
+[09:04:46.77] [RECV] +OK 26910 octets\r\n [Total 27342 bytes received.]
+[09:04:46.77] [SEND] RETR 43\r\n
+[09:04:46.86] [RECV] +OK 4775 octets\r\n [Total 4917 bytes received.]
+[09:04:46.86] [SEND] RETR 44\r\n
+[09:04:46.95] [RECV] +OK 17998 octets\r\n [Total 18273 bytes received.]
+[09:04:46.95] [SEND] RETR 45\r\n
+[09:04:47.04] [RECV] +OK 21645 octets\r\n [Total 22006 bytes received.]
+[09:04:47.04] [SEND] RETR 46\r\n
+[09:04:47.12] [RECV] +OK 27493 octets\r\n [Total 27850 bytes received.]
+[09:04:47.12] [SEND] RETR 47\r\n
+[09:04:47.21] [RECV] +OK 5473 octets\r\n [Total 5644 bytes received.]
+[09:04:47.21] [SEND] RETR 48\r\n
+[09:04:47.30] [RECV] +OK 5471 octets\r\n [Total 5622 bytes received.]
+[09:04:47.30] [SEND] RETR 49\r\n
+[09:04:47.41] [RECV] +OK 27554 octets\r\n [Total 27991 bytes received.]
+[09:04:47.41] [SEND] RETR 50\r\n
+[09:04:47.50] [RECV] +OK 19336 octets\r\n [Total 19668 bytes received.]
+[09:04:47.50] [SEND] RETR 51\r\n
+[09:04:47.58] [RECV] +OK 2489 octets\r\n [Total 2604 bytes received.]
+[09:04:47.58] [SEND] RETR 52\r\n
+[09:04:47.66] [RECV] +OK 2489 octets\r\n [Total 2604 bytes received.]
+[09:04:47.66] [SEND] RETR 53\r\n
+[09:04:47.74] [RECV] +OK 2490 octets\r\n [Total 2605 bytes received.]
+[09:04:47.74] [SEND] RETR 54\r\n
+[09:04:47.82] [RECV] +OK 1745 octets\r\n [Total 1858 bytes received.]
+[09:04:47.82] [SEND] RETR 55\r\n
+[09:04:47.90] [RECV] +OK 3435 octets\r\n [Total 3566 bytes received.]
+[09:04:47.91] [SEND] RETR 56\r\n
+[09:04:47.99] [RECV] +OK 2072 octets\r\n [Total 2174 bytes received.]
+[09:04:47.99] [SEND] RETR 57\r\n
+[09:04:48.08] [RECV] +OK 6461 octets\r\n [Total 6650 bytes received.]
+[09:04:48.08] [INFO] Downloaded entire messages (startIndex=8, count=50).
+[09:04:51.32] [SEND] QUIT\r\n
+[09:04:51.37] [RECV] +OK POP3 server at mail.ru signing off\r\n
+[09:04:51.37] [INFO] Will disconnect from host "pop.mail.ru".
+[09:04:51.37] [INFO] Disconnected from host "pop.mail.ru".
+[09:06:07.28] [INFO] Assembly version: 4.0.2.114.
+[09:06:07.28] [INFO] Will resolve host "pop.mail.ru".
+[09:06:07.28] [INFO] Host "pop.mail.ru" resolved to IP address(es) 217.69.139.74.
+[09:06:07.29] [INFO] Will connect to host "pop.mail.ru" on port 995.
+[09:06:07.29] [INFO] Socket connected to IP address 217.69.139.74 on port 995.
+[09:06:07.29] [INFO] Will create TLS/SSL credentials.
+[09:06:07.29] [INFO] TLS/SSL credentials created.
+[09:06:07.29] [INFO] Will start TLS/SSL negotiation sequence.
+[09:06:07.42] [INFO] TLS/SSL negotiation completed.
+[09:06:07.43] [RECV] +OK\r\n
+[09:06:07.43] [INFO] Connected to mail service at host "pop.mail.ru" on port 995 and ready.
+[09:06:07.43] [INFO] Get the list of POP3 capabilities via CAPA command.
+[09:06:07.43] [SEND] CAPA\r\n
+[09:06:07.46] [RECV] +OK Capability list follows\r\nTOP\r\nUSER\r\nLOGIN-DELAY 120\r\nEXPIRE NEVER\r\nUIDL\r\nIMPLEMENTATION Mail.Ru\r\nSASL LOGIN PLAIN\r\n.\r\n
+[09:06:07.46] [INFO] Will login as "kepthxyz@mail.ru".
+[09:06:07.46] [INFO] Will try regular USER/PASS authentication.
+[09:06:07.46] [SEND] USER kepthxyz@mail.ru\r\n
+[09:06:07.49] [RECV] +OK\r\n
+[09:06:07.49] [SEND] PASS ********\r\n
+[09:06:07.59] [RECV] +OK Welcome!\r\n
+[09:06:07.59] [INFO] Logged in as "kepthxyz@mail.ru".
+[09:06:07.60] [INFO] Download inbox statistics.
+[09:06:07.60] [SEND] STAT\r\n
+[09:06:07.62] [RECV] +OK 165 71480542\r\n
+[09:06:07.63] [INFO] Download the list of Unique-IDs of all messages in inbox.
+[09:06:07.63] [SEND] UIDL\r\n
+[09:06:07.70] [RECV] +OK 165 messages (71480542 octets)\r\n [Total 3057 bytes received.]
+[09:06:08.39] [INFO] Will download entire messages (startIndex=8, count=50).
+[09:06:08.39] [SEND] RETR 8\r\n
+[09:06:10.48] [RECV] +OK 6936084 octets\r\n [Total 7026257 bytes received.]
+[09:06:10.49] [SEND] RETR 9\r\n
+[09:06:11.39] [RECV] +OK 2507748 octets\r\n [Total 2540413 bytes received.]
+[09:06:11.40] [SEND] RETR 10\r\n
+[09:06:11.43] [RECV] +OK 2695 octets\r\n [Total 2808 bytes received.]
+[09:06:11.43] [SEND] RETR 11\r\n
+[09:06:11.51] [RECV] +OK 2826 octets\r\n [Total 2942 bytes received.]
+[09:06:11.52] [SEND] RETR 12\r\n
+[09:06:11.59] [RECV] +OK 3171 octets\r\n [Total 3281 bytes received.]
+[09:06:11.59] [SEND] RETR 13\r\n
+[09:06:11.66] [RECV] +OK 3886 octets\r\n [Total 4010 bytes received.]
+[09:06:11.66] [SEND] RETR 14\r\n
+[09:06:11.73] [RECV] +OK 2718 octets\r\n [Total 2826 bytes received.]
+[09:06:11.73] [SEND] RETR 15\r\n
+[09:06:11.80] [RECV] +OK 2751 octets\r\n [Total 2860 bytes received.]
+[09:06:11.80] [SEND] RETR 16\r\n
+[09:06:11.87] [RECV] +OK 2400 octets\r\n [Total 2501 bytes received.]
+[09:06:11.87] [SEND] RETR 17\r\n
+[09:06:11.93] [RECV] +OK 6636 octets\r\n [Total 6822 bytes received.]
+[09:06:11.93] [SEND] RETR 18\r\n
+[09:06:11.99] [RECV] +OK 1686 octets\r\n [Total 1795 bytes received.]
+[09:06:12.00] [SEND] RETR 19\r\n
+[09:06:12.06] [RECV] +OK 3902 octets\r\n [Total 4038 bytes received.]
+[09:06:12.06] [SEND] RETR 20\r\n
+[09:06:12.15] [RECV] +OK 2912 octets\r\n [Total 3027 bytes received.]
+[09:06:12.15] [SEND] RETR 21\r\n
+[09:06:12.22] [RECV] +OK 1781 octets\r\n [Total 1890 bytes received.]
+[09:06:12.22] [SEND] RETR 22\r\n
+[09:06:12.28] [RECV] +OK 1588 octets\r\n [Total 1692 bytes received.]
+[09:06:12.28] [SEND] RETR 23\r\n
+[09:06:12.35] [RECV] +OK 2052 octets\r\n [Total 2153 bytes received.]
+[09:06:12.35] [SEND] RETR 24\r\n
+[09:06:12.42] [RECV] +OK 2318 octets\r\n [Total 2425 bytes received.]
+[09:06:12.42] [SEND] RETR 25\r\n
+[09:06:12.48] [RECV] +OK 7365 octets\r\n [Total 7592 bytes received.]
+[09:06:12.48] [SEND] RETR 26\r\n
+[09:06:12.55] [RECV] +OK 2937 octets\r\n [Total 3072 bytes received.]
+[09:06:12.55] [SEND] RETR 27\r\n
+[09:06:12.62] [RECV] +OK 1607 octets\r\n [Total 1714 bytes received.]
+[09:06:12.62] [SEND] RETR 28\r\n
+[09:06:12.68] [RECV] +OK 2089 octets\r\n [Total 2196 bytes received.]
+[09:06:12.68] [SEND] RETR 29\r\n
+[09:06:14.39] [RECV] +OK 6427432 octets\r\n [Total 6510994 bytes received.]
+[09:06:14.40] [SEND] RETR 30\r\n
+[09:06:14.57] [RECV] +OK 143107 octets\r\n [Total 145054 bytes received.]
+[09:06:14.57] [SEND] RETR 31\r\n
+[09:06:14.63] [RECV] +OK 2849 octets\r\n [Total 2959 bytes received.]
+[09:06:14.63] [SEND] RETR 32\r\n
+[09:06:14.69] [RECV] +OK 2849 octets\r\n [Total 2959 bytes received.]
+[09:06:14.69] [SEND] RETR 33\r\n
+[09:06:14.76] [RECV] +OK 6138 octets\r\n [Total 6358 bytes received.]
+[09:06:14.76] [SEND] RETR 34\r\n
+[09:06:14.83] [RECV] +OK 1001 octets\r\n [Total 1088 bytes received.]
+[09:06:14.83] [SEND] RETR 35\r\n
+[09:06:16.88] [RECV] +OK 12030135 octets\r\n [Total 12186464 bytes received.]
+[09:06:16.89] [SEND] RETR 36\r\n
+[09:06:16.96] [RECV] +OK 6250 octets\r\n [Total 6449 bytes received.]
+[09:06:16.96] [SEND] RETR 37\r\n
+[09:06:17.03] [RECV] +OK 26513 octets\r\n [Total 26938 bytes received.]
+[09:06:17.03] [SEND] RETR 38\r\n
+[09:06:17.09] [RECV] +OK 869 octets\r\n [Total 955 bytes received.]
+[09:06:17.09] [SEND] RETR 39\r\n
+[09:06:17.16] [RECV] +OK 1092 octets\r\n [Total 1184 bytes received.]
+[09:06:17.16] [SEND] RETR 40\r\n
+[09:06:17.22] [RECV] +OK 1309 octets\r\n [Total 1396 bytes received.]
+[09:06:17.22] [SEND] RETR 41\r\n
+[09:06:17.29] [RECV] +OK 15115 octets\r\n [Total 15358 bytes received.]
+[09:06:17.29] [SEND] RETR 42\r\n
+[09:06:17.37] [RECV] +OK 26910 octets\r\n [Total 27342 bytes received.]
+[09:06:17.37] [SEND] RETR 43\r\n
+[09:06:17.44] [RECV] +OK 4775 octets\r\n [Total 4917 bytes received.]
+[09:06:17.44] [SEND] RETR 44\r\n
+[09:06:17.51] [RECV] +OK 17998 octets\r\n [Total 18273 bytes received.]
+[09:06:17.52] [SEND] RETR 45\r\n
+[09:06:17.59] [RECV] +OK 21645 octets\r\n [Total 22006 bytes received.]
+[09:06:17.59] [SEND] RETR 46\r\n
+[09:06:17.67] [RECV] +OK 27493 octets\r\n [Total 27850 bytes received.]
+[09:06:17.67] [SEND] RETR 47\r\n
+[09:06:17.73] [RECV] +OK 5473 octets\r\n [Total 5644 bytes received.]
+[09:06:17.74] [SEND] RETR 48\r\n
+[09:06:17.81] [RECV] +OK 5471 octets\r\n [Total 5622 bytes received.]
+[09:06:17.81] [SEND] RETR 49\r\n
+[09:06:17.88] [RECV] +OK 27554 octets\r\n [Total 27991 bytes received.]
+[09:06:17.88] [SEND] RETR 50\r\n
+[09:06:17.95] [RECV] +OK 19336 octets\r\n [Total 19668 bytes received.]
+[09:06:17.95] [SEND] RETR 51\r\n
+[09:06:18.02] [RECV] +OK 2489 octets\r\n [Total 2604 bytes received.]
+[09:06:18.02] [SEND] RETR 52\r\n
+[09:06:18.08] [RECV] +OK 2489 octets\r\n [Total 2604 bytes received.]
+[09:06:18.08] [SEND] RETR 53\r\n
+[09:06:18.15] [RECV] +OK 2490 octets\r\n [Total 2605 bytes received.]
+[09:06:18.15] [SEND] RETR 54\r\n
+[09:06:18.21] [RECV] +OK 1745 octets\r\n [Total 1858 bytes received.]
+[09:06:18.21] [SEND] RETR 55\r\n
+[09:06:18.27] [RECV] +OK 3435 octets\r\n [Total 3566 bytes received.]
+[09:06:18.28] [SEND] RETR 56\r\n
+[09:06:18.34] [RECV] +OK 2072 octets\r\n [Total 2174 bytes received.]
+[09:06:18.34] [SEND] RETR 57\r\n
+[09:06:18.41] [RECV] +OK 6461 octets\r\n [Total 6650 bytes received.]
+[09:06:18.41] [INFO] Downloaded entire messages (startIndex=8, count=50).
+[09:06:21.61] [SEND] QUIT\r\n
+[09:06:21.64] [RECV] +OK POP3 server at mail.ru signing off\r\n
+[09:06:21.64] [INFO] Will disconnect from host "pop.mail.ru".
+[09:06:21.64] [INFO] Disconnected from host "pop.mail.ru".
+[09:29:33.46] [INFO] Assembly version: 4.0.2.114.
+[09:29:33.46] [INFO] Will resolve host "pop.mail.ru".
+[09:29:33.47] [INFO] Host "pop.mail.ru" resolved to IP address(es) 217.69.139.74.
+[09:29:33.47] [INFO] Will connect to host "pop.mail.ru" on port 995.
+[09:29:33.47] [INFO] Socket connected to IP address 217.69.139.74 on port 995.
+[09:29:33.47] [INFO] Will create TLS/SSL credentials.
+[09:29:33.47] [INFO] TLS/SSL credentials created.
+[09:29:33.47] [INFO] Will start TLS/SSL negotiation sequence.
+[09:29:33.56] [INFO] TLS/SSL negotiation completed.
+[09:29:33.56] [RECV] +OK\r\n
+[09:29:33.57] [INFO] Connected to mail service at host "pop.mail.ru" on port 995 and ready.
+[09:29:33.57] [INFO] Get the list of POP3 capabilities via CAPA command.
+[09:29:33.57] [SEND] CAPA\r\n
+[09:29:33.59] [RECV] +OK Capability list follows\r\nTOP\r\nUSER\r\nLOGIN-DELAY 120\r\nEXPIRE NEVER\r\nUIDL\r\nIMPLEMENTATION Mail.Ru\r\nSASL LOGIN PLAIN\r\n.\r\n
+[09:29:33.59] [INFO] Will login as "kepthxyz@mail.ru".
+[09:29:33.59] [INFO] Will try regular USER/PASS authentication.
+[09:29:33.59] [SEND] USER kepthxyz@mail.ru\r\n
+[09:29:33.61] [RECV] +OK\r\n
+[09:29:33.61] [SEND] PASS ********\r\n
+[09:29:33.69] [RECV] +OK Welcome!\r\n
+[09:29:33.69] [INFO] Logged in as "kepthxyz@mail.ru".
+[09:29:33.69] [INFO] Download inbox statistics.
+[09:29:33.69] [SEND] STAT\r\n
+[09:29:33.71] [RECV] +OK 165 71480542\r\n
+[09:29:33.72] [INFO] Download the list of Unique-IDs of all messages in inbox.
+[09:29:33.72] [SEND] UIDL\r\n
+[09:29:33.78] [RECV] +OK 165 messages (71480542 octets)\r\n [Total 3057 bytes received.]
+[09:29:35.37] [INFO] Will download entire messages (startIndex=8, count=50).
+[09:29:35.37] [SEND] RETR 8\r\n
+[09:29:37.24] [RECV] +OK 6936084 octets\r\n [Total 7026257 bytes received.]
+[09:29:37.25] [SEND] RETR 9\r\n
+[09:29:37.94] [RECV] +OK 2507748 octets\r\n [Total 2540413 bytes received.]
+[09:29:37.94] [SEND] RETR 10\r\n
+[09:29:37.97] [RECV] +OK 2695 octets\r\n [Total 2808 bytes received.]
+[09:29:37.97] [SEND] RETR 11\r\n
+[09:29:38.04] [RECV] +OK 2826 octets\r\n [Total 2942 bytes received.]
+[09:29:38.05] [SEND] RETR 12\r\n
+[09:29:38.12] [RECV] +OK 3171 octets\r\n [Total 3281 bytes received.]
+[09:29:38.12] [SEND] RETR 13\r\n
+[09:29:38.19] [RECV] +OK 3886 octets\r\n [Total 4010 bytes received.]
+[09:29:38.19] [SEND] RETR 14\r\n
+[09:29:38.27] [RECV] +OK 2718 octets\r\n [Total 2826 bytes received.]
+[09:29:38.27] [SEND] RETR 15\r\n
+[09:29:38.34] [RECV] +OK 2751 octets\r\n [Total 2860 bytes received.]
+[09:29:38.34] [SEND] RETR 16\r\n
+[09:29:38.42] [RECV] +OK 2400 octets\r\n [Total 2501 bytes received.]
+[09:29:38.42] [SEND] RETR 17\r\n
+[09:29:38.52] [RECV] +OK 6636 octets\r\n [Total 6822 bytes received.]
+[09:29:38.52] [SEND] RETR 18\r\n
+[09:29:38.58] [RECV] +OK 1686 octets\r\n [Total 1795 bytes received.]
+[09:29:38.58] [SEND] RETR 19\r\n
+[09:29:38.63] [RECV] +OK 3902 octets\r\n [Total 4038 bytes received.]
+[09:29:38.63] [SEND] RETR 20\r\n
+[09:29:38.68] [RECV] +OK 2912 octets\r\n [Total 3027 bytes received.]
+[09:29:38.69] [SEND] RETR 21\r\n
+[09:29:38.74] [RECV] +OK 1781 octets\r\n [Total 1890 bytes received.]
+[09:29:38.74] [SEND] RETR 22\r\n
+[09:29:38.79] [RECV] +OK 1588 octets\r\n [Total 1692 bytes received.]
+[09:29:38.79] [SEND] RETR 23\r\n
+[09:29:38.84] [RECV] +OK 2052 octets\r\n [Total 2153 bytes received.]
+[09:29:38.84] [SEND] RETR 24\r\n
+[09:29:38.89] [RECV] +OK 2318 octets\r\n [Total 2425 bytes received.]
+[09:29:38.89] [SEND] RETR 25\r\n
+[09:29:38.96] [RECV] +OK 7365 octets\r\n [Total 7592 bytes received.]
+[09:29:38.96] [SEND] RETR 26\r\n
+[09:29:39.01] [RECV] +OK 2937 octets\r\n [Total 3072 bytes received.]
+[09:29:39.01] [SEND] RETR 27\r\n
+[09:29:39.07] [RECV] +OK 1607 octets\r\n [Total 1714 bytes received.]
+[09:29:39.07] [SEND] RETR 28\r\n
+[09:29:39.12] [RECV] +OK 2089 octets\r\n [Total 2196 bytes received.]
+[09:29:39.12] [SEND] RETR 29\r\n
+[09:29:40.61] [RECV] +OK 6427432 octets\r\n [Total 6510994 bytes received.]
+[09:29:40.62] [SEND] RETR 30\r\n
+[09:29:40.71] [RECV] +OK 143107 octets\r\n [Total 145054 bytes received.]
+[09:29:40.71] [SEND] RETR 31\r\n
+[09:29:40.76] [RECV] +OK 2849 octets\r\n [Total 2959 bytes received.]
+[09:29:40.77] [SEND] RETR 32\r\n
+[09:29:40.82] [RECV] +OK 2849 octets\r\n [Total 2959 bytes received.]
+[09:29:40.82] [SEND] RETR 33\r\n
+[09:29:40.87] [RECV] +OK 6138 octets\r\n [Total 6358 bytes received.]
+[09:29:40.88] [SEND] RETR 34\r\n
+[09:29:40.93] [RECV] +OK 1001 octets\r\n [Total 1088 bytes received.]
+[09:29:40.93] [SEND] RETR 35\r\n
+[09:29:42.62] [RECV] +OK 12030135 octets\r\n [Total 12186464 bytes received.]
+[09:29:42.63] [SEND] RETR 36\r\n
+[09:29:42.68] [RECV] +OK 6250 octets\r\n [Total 6449 bytes received.]
+[09:29:42.68] [SEND] RETR 37\r\n
+[09:29:42.74] [RECV] +OK 26513 octets\r\n [Total 26938 bytes received.]
+[09:29:42.75] [SEND] RETR 38\r\n
+[09:29:42.78] [RECV] +OK 869 octets\r\n [Total 955 bytes received.]
+[09:29:42.78] [SEND] RETR 39\r\n
+[09:29:42.85] [RECV] +OK 1092 octets\r\n [Total 1184 bytes received.]
+[09:29:42.85] [SEND] RETR 40\r\n
+[09:29:42.93] [RECV] +OK 1309 octets\r\n [Total 1396 bytes received.]
+[09:29:42.93] [SEND] RETR 41\r\n
+[09:29:43.03] [RECV] +OK 15115 octets\r\n [Total 15358 bytes received.]
+[09:29:43.03] [SEND] RETR 42\r\n
+[09:29:43.10] [RECV] +OK 26910 octets\r\n [Total 27342 bytes received.]
+[09:29:43.10] [SEND] RETR 43\r\n
+[09:29:43.15] [RECV] +OK 4775 octets\r\n [Total 4917 bytes received.]
+[09:29:43.15] [SEND] RETR 44\r\n
+[09:29:43.21] [RECV] +OK 17998 octets\r\n [Total 18273 bytes received.]
+[09:29:43.21] [SEND] RETR 45\r\n
+[09:29:43.27] [RECV] +OK 21645 octets\r\n [Total 22006 bytes received.]
+[09:29:43.27] [SEND] RETR 46\r\n
+[09:29:43.33] [RECV] +OK 27493 octets\r\n [Total 27850 bytes received.]
+[09:29:43.33] [SEND] RETR 47\r\n
+[09:29:43.38] [RECV] +OK 5473 octets\r\n [Total 5644 bytes received.]
+[09:29:43.38] [SEND] RETR 48\r\n
+[09:29:43.43] [RECV] +OK 5471 octets\r\n [Total 5622 bytes received.]
+[09:29:43.43] [SEND] RETR 49\r\n
+[09:29:43.49] [RECV] +OK 27554 octets\r\n [Total 27991 bytes received.]
+[09:29:43.50] [SEND] RETR 50\r\n
+[09:29:43.55] [RECV] +OK 19336 octets\r\n [Total 19668 bytes received.]
+[09:29:43.55] [SEND] RETR 51\r\n
+[09:29:43.60] [RECV] +OK 2489 octets\r\n [Total 2604 bytes received.]
+[09:29:43.61] [SEND] RETR 52\r\n
+[09:29:43.66] [RECV] +OK 2489 octets\r\n [Total 2604 bytes received.]
+[09:29:43.66] [SEND] RETR 53\r\n
+[09:29:43.72] [RECV] +OK 2490 octets\r\n [Total 2605 bytes received.]
+[09:29:43.73] [SEND] RETR 54\r\n
+[09:29:43.78] [RECV] +OK 1745 octets\r\n [Total 1858 bytes received.]
+[09:29:43.78] [SEND] RETR 55\r\n
+[09:29:43.83] [RECV] +OK 3435 octets\r\n [Total 3566 bytes received.]
+[09:29:43.83] [SEND] RETR 56\r\n
+[09:29:43.88] [RECV] +OK 2072 octets\r\n [Total 2174 bytes received.]
+[09:29:43.88] [SEND] RETR 57\r\n
+[09:29:43.93] [RECV] +OK 6461 octets\r\n [Total 6650 bytes received.]
+[09:29:43.93] [INFO] Downloaded entire messages (startIndex=8, count=50).
+[09:29:47.13] [SEND] QUIT\r\n
+[09:29:47.15] [RECV] +OK POP3 server at mail.ru signing off\r\n
+[09:29:47.15] [INFO] Will disconnect from host "pop.mail.ru".
+[09:29:47.15] [INFO] Disconnected from host "pop.mail.ru".

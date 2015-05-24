@@ -172,10 +172,9 @@
                 <div class="cover"></div>
                 <radA:RadAjaxPanel runat="server" ID="DialogWrapperPanel" class="pnlDialog_body">
                     <div class="paneGrid" style="width: 100%; height: 25px;">
-                        <b>Details</b>
                         <asp:Button CssClass="rght" runat="server" ID="btnPanelDialogHide" Text="X" OnClick="btnPanelDialogHide_OnClick" />
                     </div>
-                    <asp:Panel ID="DialogPanel" runat="server">
+                    <asp:Panel ID="DialogPanel" runat="server" class="pnlDialog_cont">
                     </asp:Panel>
                     <script type="text/javascript">
                         var dialogPanel = $("#DialogPanel");
@@ -223,7 +222,7 @@
                 <radA:AjaxSetting AjaxControlID="RadAjaxManager1">
                     <UpdatedControls>
                         <radA:AjaxUpdatedControl ControlID="CenterPanel" />
-                        <radA:AjaxUpdatedControl ControlID="DialogPanel" />
+                        <%--<radA:AjaxUpdatedControl ControlID="DialogPanel" />--%>
                     </UpdatedControls>
                 </radA:AjaxSetting>
             </AjaxSettings>
