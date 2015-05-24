@@ -375,8 +375,9 @@ namespace LoanStarPortal
         #region Event Handler Methods
         protected void AddMortgageProfileAjaxSettings()
         {
+            RemoveAjaxSetting(RadAjaxManager1, RadAjaxManager1);
             RadAjaxManager1.AjaxSettings.AddAjaxSetting(RadAjaxManager1, CenterPanel, null);
-            RadAjaxManager1.AjaxSettings.AddAjaxSetting(RadAjaxManager1, RadAjaxManager1, null);
+            //RadAjaxManager1.AjaxSettings.AddAjaxSetting(RadAjaxManager1, RadAjaxManager1, null);
             RadAjaxManager1.AjaxSettings.AddAjaxSetting(RadAjaxManager1, RightPanel, null);
             //RadAjaxManager1.AjaxSettings.AddAjaxSetting(RadAjaxManager1, DialogPanel, null);
         }

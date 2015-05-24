@@ -641,8 +641,8 @@ function SendRequest(id, req) {
         url = url.substring(0, i);
     }
 
-    if (url.indexOf('default.aspx') == -1) {
-        url += '/default.aspx'
+    if (url.toLowerCase().indexOf('default.aspx') == -1) {
+        url += '/default.aspx';
     }
 
     url = url.toLowerCase().replace('default.aspx', 'ProcessRequest.aspx');
