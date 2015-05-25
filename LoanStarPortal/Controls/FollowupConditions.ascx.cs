@@ -74,9 +74,7 @@ namespace LoanStarPortal.Controls
         }
         private bool CanEditCondition(int AuthorityLevel)
         {
-            bool res = false;
-            if (CurrentUser.MaxAuthorityLevel() >= AuthorityLevel)
-                res = true;
+            bool res = CurrentUser.MaxAuthorityLevel() >= AuthorityLevel;
             return res;
         }
         private static DateTime GetNextSchedule(DateTime scheduleDate, int reccurence)
@@ -145,10 +143,7 @@ namespace LoanStarPortal.Controls
         protected void SetSatisfiedControls(bool satisfied)
         {
             btnSatisfy.Enabled = !satisfied;
-            if (satisfied)
-                btnSatisfy.Text = "Unsatisfy";
-            else
-                btnSatisfy.Text = "Satisfy";
+            btnSatisfy.Text = satisfied ? "Unsatisfy" : "Satisfy";
             btnSatisfy.Enabled = (ConditionID > 0);
         }
 
@@ -172,30 +167,48 @@ namespace LoanStarPortal.Controls
 
         protected void AllowSaveCondition(int AuthorityLevel)
         {
+            var disabled = "disabled";
             bool allow = CanEditCondition(AuthorityLevel);
             tbCondTitle.ReadOnly = !allow;
             tbCondDesc.ReadOnly = !allow;
             btnSatisfy.Visible = allow;
-            if (String.Compare(btnSatisfy.Text, "Satisfied", StringComparison.OrdinalIgnoreCase) == 0)
-                btnSatisfy.Enabled = false;
+            btnSatisfy.Enabled = String.Compare(btnSatisfy.Text, "Satisfied", StringComparison.OrdinalIgnoreCase) != 0 && allow;
+            lblDisabled.Visible = !allow;
+            btnSubmitFollow.Visible = allow;
+            btnSubmitFollow.Enabled = allow;
+            if (!allow)
+            {
+                tbCondTitle.Attributes[disabled] = disabled;
+                tbCondDesc.Attributes[disabled] = disabled;
+                ddlAuthLevel.Attributes[disabled] = disabled;
+                ddlRecurrence.Attributes[disabled] = disabled;
+                rdpStartDate.Attributes[disabled] = disabled;
+            }
             else
-                btnSatisfy.Enabled = allow;
+            {
+                tbCondTitle.Attributes.Remove(disabled);
+                tbCondDesc.Attributes.Remove(disabled);
+                ddlAuthLevel.Attributes.Remove(disabled);
+                ddlRecurrence.Attributes.Remove(disabled);
+                rdpStartDate.Attributes.Remove(disabled);
+            }
+
         }
         protected void BuildUnderwriterUI()
         {
-            bool CreditSatisfied = Condition.CheckConditionsSatisfied(Constants.CONDITIONCREDITCATEGORYID, MortgageID);
-            bool PropertySatisfied = Condition.CheckConditionsSatisfied(Constants.CONDITIONPROPERTYCATEGORYID, MortgageID);
-            if (CreditSatisfied || PropertySatisfied)
+            bool creditSatisfied = Condition.CheckConditionsSatisfied(Constants.CONDITIONCREDITCATEGORYID, MortgageID);
+            bool propertySatisfied = Condition.CheckConditionsSatisfied(Constants.CONDITIONPROPERTYCATEGORYID, MortgageID);
+            if (creditSatisfied || propertySatisfied)
                 PanelUnderwriter.Visible = true;
             else
                 PanelUnderwriter.Visible = false;
 
-            if (CreditSatisfied)
+            if (creditSatisfied)
             {
                 trCredit.Visible = true;
                 btnPrintCCDE.Visible = chkCredit.Checked;
             }
-            if (PropertySatisfied)
+            if (propertySatisfied)
             {
                 trProperty.Visible = true;
                 btnPrintDE.Visible = chkProperty.Checked;
@@ -221,7 +234,7 @@ namespace LoanStarPortal.Controls
             BindAuthLevel();
             BindRecurrence();
             rdpStartDate.SelectedDate = DateTime.Now;
-            gridConditions.Rebind();
+            //gridConditions.Rebind();
         }
 
         private static string GetEventTitle(string str)
@@ -280,11 +293,6 @@ namespace LoanStarPortal.Controls
             {
                 ddlRecurrence.Items.FindByValue(cond.RecurrenceID.ToString()).Selected = true;
             }
-            //if(cond.RecurrenceID == 6)
-            //{
-            //    rdpStartDate.Style["display"] = "none";
-            //    lblNextWorkDate.Style["display"] = "none";
-            //}
 
             SetDates(cond, INIT);
             chkCredit.Checked = cond.CreditApproved;
@@ -430,7 +438,7 @@ namespace LoanStarPortal.Controls
                 ViewState[FIRST_LOAD] = 1;
                 BindData();
                 BindFirstItem();
-                ResetConditionFilter();
+                //ResetConditionFilter();
                 BuildUnderwriterUI();
             }
             else
@@ -655,7 +663,7 @@ namespace LoanStarPortal.Controls
             ddlAuthLevel.Visible = true;
             lblAuthLevel.Visible = !ddlAuthLevel.Visible;
             btnSatisfy.Enabled = false;
-
+            AllowSaveCondition(0);
             ReloadMessageBoard(-1);
             ClearConditionFields();
             ddlRecurrence.SelectedIndex = 3;

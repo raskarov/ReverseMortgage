@@ -206,6 +206,11 @@
                                 <asp:HiddenField ID="conditionActiveID" ClientIDMode="Static" Value="0" runat="server" />
                             </td>
                         </tr>
+                        <tr>
+                            <td colspan="2">
+                                <asp:Label ForeColor="Red" ID="lblDisabled" Visible="False" runat="server" Text="Editing is not allowed for your authority level"></asp:Label>
+                            </td>
+                        </tr>
                     </table>
                 </td>
             </tr>
