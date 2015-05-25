@@ -234,7 +234,7 @@ namespace LoanStarPortal.Controls
             BindAuthLevel();
             BindRecurrence();
             rdpStartDate.SelectedDate = DateTime.Now;
-            //gridConditions.Rebind();
+            gridConditions.Rebind();
         }
 
         private static string GetEventTitle(string str)
